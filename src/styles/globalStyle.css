@@ -1,4 +1,4 @@
-.accordion_com {
+.accordion-com {
   max-width: 1318px;
   height: 64px;
   background-color: #000;
@@ -6,7 +6,7 @@
   padding: 0 0 30px 0 !important;
   transition: all 0.3s ease-in-out;
 }
-.accordion_com > .accordion_com_content {
+.accordion-com > .accordion_com_content {
   width: 100%;
   height: 34px;
   position: relative;
@@ -17,7 +17,7 @@
   gap: 20px;
   transition: all 0.3s ease-in-out;
 }
-.accordion_com > .accordion_com_content > h1 {
+.accordion-com > .accordion_com_content > h1 {
   background: linear-gradient(259deg, #ad8153 33.33%, #e2b36c 49.25%, #ffe1bb 65.17%, #dcac64 81.09%, #af8352 97%);
   font-family: Sansation;
   font-weight: 400;
@@ -27,7 +27,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.accordion_com > .accordion_com_content > p {
+.accordion-com > .accordion_com_content > p {
   color: white;
   font-family: Sansation;
   font-weight: 400;
@@ -37,7 +37,7 @@
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-.accordion_com > .accordion_com_content img {
+.accordion-com > .accordion_com_content img {
   width: 34px;
   height: 34px;
   position: absolute;
@@ -47,17 +47,180 @@
   transition: all 0.3s ease-in-out;
 }
 
-.activeInfo {
+.active-info {
   opacity: 1 !important;
   font-family: Sansation;
   font-size: 18px !important;
 }
 
-.activeContent {
+.active-content {
   height: 92px !important;
 }
 
-.activeCom {
+.active-com {
   height: 152px !important;
   padding: 30px 0 !important;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.box2-main {
+  height: 628px;
+  max-width: 1318px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.box2-main > h1 {
+  font-family: Sansation;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.box2-main > div {
+  display: flex;
+  gap: 40px;
+}
+.box2-main > div > div {
+  border-radius: 20px;
+  height: 468px;
+}
+.box2-main > div > .bg-box2-1 {
+  width: 710px;
+  background: url("../assets/icon/bg-box2-1.svg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+}
+.box2-main > div > .bg-box2-1 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  padding-top: 24px;
+}
+.box2-main > div > .bg-box2-1 > div > p {
+  width: 472px;
+  text-align: center;
+  font-family: Sansation;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.box2-main > div > .bg-box2-2 {
+  width: 568px;
+  background: url("../assets/icon/bg-box2-2.svg") center/cover no-repeat;
+  position: relative;
+}
+.box2-main > div > .bg-box2-2 > img {
+  width: 344px;
+  height: 543px;
+  top: -75px;
+  left: 112px;
+  position: absolute;
+}
+
+.box3-main {
+  height: 566px;
+  max-width: 1318px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.box3-main > h1 {
+  font-family: Sansation;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(232.39deg, #ad8153 30.05%, #e2b36c 40.23%, #fdecd6 50.4%, #dcac64 60.57%, #af8352 70.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.box3-main > div {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.box3-main > div > .bg-box3-1 {
+  background: url("../assets/icon/bg-box3-1.svg") center/cover no-repeat;
+  width: 591px;
+  height: 470px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box3-main > div > .bg-box3-1 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: start;
+  width: 431px;
+  height: 385px;
+}
+.box3-main > div > .bg-box3-1 > div > img {
+  width: 81px;
+  height: 91px;
+}
+.box3-main > div > .bg-box3-1 > div > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.box3-main > div > .bg-box3-1 > div > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.box3-main > div > .bg-box3-1 > div > div > div > h1 {
+  font-family: Sansation;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(259deg, #ad8153 33.33%, #e2b36c 49.25%, #ffe1bb 65.17%, #dcac64 81.09%, #af8352 97%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.box3-main > div > .bg-box3-1 > div > div > div > p {
+  font-family: Sansation;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.box3-main > div > .bg-box3-2 {
+  background: url("../assets/icon/bg-box3-2.svg") center/cover no-repeat;
+  width: 687px;
+  height: 357px;
+  overflow: hidden;
 }/*# sourceMappingURL=globalStyle.css.map */
