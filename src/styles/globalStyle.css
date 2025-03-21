@@ -1,17 +1,16 @@
 .accordion-com {
   max-width: 1318px;
-  height: 94px;
-  display: flex;
-  align-items: top;
-  justify-content: center;
+  height: 96px;
   background-color: #000;
+  transition: all 0.3s ease-in-out;
   border-top: 1px solid #545454;
   border-bottom: 1px solid transparent;
-  padding: 30px 0;
-  transition: all 0.3s ease-in-out;
+  padding-top: 30px;
+  cursor: pointer;
 }
 .accordion-com > .accordion_com_content {
   width: 100%;
+  height: 34px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -29,7 +28,6 @@
   letter-spacing: 0%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
 }
 .accordion-com > .accordion_com_content > p {
   color: white;
@@ -39,11 +37,17 @@
   line-height: 20px;
   letter-spacing: 0%;
   opacity: 0;
+  transition: all 0.3s ease-in-out;
   z-index: -1;
+  cursor: text;
 }
 .accordion-com > .accordion_com_content > div {
   opacity: 0;
+  transition: all 0.3s ease-in-out;
   z-index: -1;
+}
+.accordion-com > .accordion_com_content > div h1, .accordion-com > .accordion_com_content > div p, .accordion-com > .accordion_com_content > div h3, .accordion-com > .accordion_com_content > div ul, .accordion-com > .accordion_com_content > div ol {
+  cursor: text;
 }
 .accordion-com > .accordion_com_content img {
   width: 34px;
@@ -57,21 +61,17 @@
 
 .active-info {
   opacity: 1 !important;
+  z-index: 1 !important;
   font-family: Sansation;
   font-size: 18px !important;
-  z-index: 1 !important;
 }
 
 .active-content {
-  height: auto;
-  min-height: 94px;
-  transition: all 0.3s ease-in-out;
+  height: 192px !important;
 }
 
 .active-com {
-  height: auto;
-  min-height: 94px;
-  transition: all 0.3s ease-in-out;
+  padding: 30px 0 !important;
 }
 
 .ul-box4 {
@@ -146,6 +146,7 @@
   flex-direction: column;
   gap: 120px;
   align-items: center;
+  padding-bottom: 105px;
 }
 
 .line-545454 {
@@ -1016,6 +1017,35 @@
   min-height: 288px;
   top: 187px;
   left: -100px;
+}
+.box5-main > .footer-box5 {
+  margin: 0 auto;
+  margin-top: 59px;
+  display: flex;
+  max-width: 1197px;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+}
+.box5-main > .footer-box5 > p {
+  font-family: Sansation;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #545454;
+  margin-left: 389px;
+  width: 255px;
+}
+.box5-main > .footer-box5 > a {
+  width: 190px;
+  font-family: Sansation;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #ffffff;
+  margin-left: 300px;
 }
 
 .box5-main::after {

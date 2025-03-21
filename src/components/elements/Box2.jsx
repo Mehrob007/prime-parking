@@ -10,7 +10,7 @@ export default function Box2() {
   }, []);
   return (
     <div className="box2-main">
-      <h1 data-aos={"fade-down"} data-aos-duration="500">Эксклюзивный сервис</h1>
+      <h1 data-aos={"fade-down"} data-aos-duration="700">Эксклюзивный сервис</h1>
       <div>
         <div className="bg-box2-1">
           <div>

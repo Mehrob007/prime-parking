@@ -13,7 +13,7 @@ export default function Box4() {
   return (
     <div className="box4-main">
       <div className="header-box4">
-        <h1 data-aos={"fade-down"} data-aos-duration="500">
+        <h1 data-aos={"fade-down"} data-aos-duration="700">
           Тарифы на Valet Service
         </h1>
         <p>
@@ -135,6 +135,9 @@ export default function Box4() {
       <div className="content-bottom-box4">
         <AccordionCom
           title="Условия покупки подписки на абонемент Private Valet Service:"
+          activeStyle={{
+            height: "442px",
+          }}
           info={
             <span className="span-box4-1">
               Абонементы Private Valet Service действуют только на одну машину;
@@ -160,6 +163,9 @@ export default function Box4() {
         />
         <AccordionCom
           title="Условия аннулирования подписки:"
+          activeStyle={{
+            height: "182px",
+          }}
           info={
             <ul className="ul-box4">
               <li>
@@ -180,6 +186,9 @@ export default function Box4() {
         <AccordionCom
           title="Категории машиномест:"
           infoOff={false}
+          activeStyle={{
+            height: "367px",
+          }}
           htmlEl={
             <div className="box4-info3">
               <div>
@@ -205,6 +214,9 @@ export default function Box4() {
         />
         <AccordionCom
           title="Условия использования часового тарифа:"
+          activeStyle={{
+            height: "183px",
+          }}
           info={
             <ul className="ul-box4">
               <li>Бесплатное время указано в тарифе, если оно есть;</li>
@@ -219,17 +231,24 @@ export default function Box4() {
         <AccordionCom
           title="Специальные тарифы за нарушения регламента паркинга комплекса"
           style={{ borderBottomColor: "#545454" }}
+          activeStyle={{
+            height: "299px",
+          }}
           info={
             <ol className="ol-box4">
               <li>
                 Стоянка в неположенной зоне: 1 000 рублей -
                 <ul>
                   <li>
-                    <a href="">Ссылка на зоны</a> Hyde Park Tower, Gorky Park Tower, Imperial
-                    Park Tower,
+                    <a href="">Ссылка на зоны</a> Hyde Park Tower, Gorky Park
+                    Tower, Imperial Park Tower,
                   </li>
-                  <li><a href="">Ссылка на зоны</a> Regent's Park Tower,</li>
-                  <li><a href="">Ссылка на зоны</a> Central Park Tower.</li>
+                  <li>
+                    <a href="">Ссылка на зоны</a> Regent's Park Tower,
+                  </li>
+                  <li>
+                    <a href="">Ссылка на зоны</a> Central Park Tower.
+                  </li>
                 </ul>
               </li>
               <li>Заезд на разметку парковочного места: 500 рублей</li>

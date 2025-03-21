@@ -10,7 +10,7 @@ export default function Box3() {
   }, []);
   return (
     <div className="box3-main">
-      <h1 data-aos={"fade-down"} data-aos-duration="500">
+      <h1 data-aos={"fade-down"} data-aos-duration="700">
         Концепция паркинга
       </h1>
       <div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import imgBox5 from "../../assets/icon/img-box5.svg";
+import logoCF from "../../assets/icon/logoCF.svg";
 import AOS from "aos";
 import axios from "axios";
 
@@ -53,7 +54,7 @@ export default function Box5() {
 
   return (
     <div className="box5-main">
-      <h1 data-aos={"fade-down"} data-aos-duration="500">
+      <h1 data-aos={"fade-down"} data-aos-duration="700">
         Контакты
       </h1>
       <div className="content-box5">
@@ -117,6 +118,11 @@ export default function Box5() {
             alt="imgBox5"
           />
         </div>
+      </div>
+      <div className="footer-box5">
+        <img src={logoCF} alt="logoCF" />
+        <p>2025 © Prime Park Parking</p>
+        <a href="#">Вернуться наверх ▴</a>
       </div>
     </div>
   );

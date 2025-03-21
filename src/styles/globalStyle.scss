@@ -1,20 +1,19 @@
 .accordion-com {
   // @apply max-w-[1318px] h-[152px] bg-[#000] p-[30px_0];
   max-width: 1318px;
-  height: 94px;
-  display: flex;
-  align-items: top;
-  justify-content: center;
+  height: 96px;
   background-color: #000;
-  border-top: 1px solid #545454;
-  border-bottom: 1px solid transparent;
-  padding: 30px 0;
+  // padding: 30px 0;
   // padding: 0 0 30px 0 !important;
   transition: all 0.3s ease-in-out;
+  border-top: 1px solid #545454;
+  border-bottom: 1px solid transparent;
+  padding-top: 30px;
+  cursor: pointer;
   & > .accordion_com_content {
     // @apply w-full h-[92px] relative;
     width: 100%;
-    // height: 34px;
+    height: 34px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -38,7 +37,7 @@
       letter-spacing: 0%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-transform: uppercase;
+      // width: 394px;
     }
     & > p {
       color: white;
@@ -48,12 +47,17 @@
       line-height: 20px;
       letter-spacing: 0%;
       opacity: 0;
+      transition: all 0.3s ease-in-out;
       z-index: -1;
-      // transition: all 0.3s ease-in-out;
+      cursor: text;
     }
-    & > div {
+    & > div{
       opacity: 0;
+      transition: all 0.3s ease-in-out;
       z-index: -1;
+     & h1, p, h3, ul, ol {
+      cursor: text;
+     }
     }
     & img {
       // @apply absolute r-[0px];
@@ -69,23 +73,18 @@
 }
 .active-info {
   opacity: 1 !important;
+  z-index: 1 !important;
   font-family: Sansation;
   font-size: 18px !important;
-  // transition: all 0.3s ease-in-out;
-  z-index: 1 !important;
 }
 .active-content {
-  height: auto;
-  min-height: 94px;
-  transition: all 0.3s ease-in-out;
+  height: 192px !important;
 }
 .active-com {
-  height: auto;
-  min-height: 94px;
-  transition: all 0.3s ease-in-out;
   // height: 152px !important;
-  // padding: 30px 0 !important;
+  padding: 30px 0 !important;
 }
+
 .ul-box4 {
   font-family: Sansation;
   font-weight: 400;
@@ -107,7 +106,6 @@
     text-decoration: underline;
   }
 }
-
 .span-box4-1 {
   font-family: Sansation;
   font-weight: 400;
@@ -161,6 +159,7 @@
   flex-direction: column;
   gap: 120px;
   align-items: center;
+  padding-bottom: 105px;
 }
 // .a{
 //   max-width: 1318px;
@@ -1128,7 +1127,6 @@
         font-size: 18px;
         line-height: 100%;
         letter-spacing: 0%;
-       
       }
       & > span > .active-button-box5 {
         background: linear-gradient(
@@ -1216,6 +1214,36 @@
         top: 187px;
         left: -100px;
       }
+    }
+  }
+  & > .footer-box5{
+    margin: 0 auto;
+    margin-top: 59px;
+    display: flex;
+    max-width: 1197px;
+    width: 100%;
+    // flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    & > p{
+      font-family: Sansation;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #545454;
+      margin-left: 389px;
+      width: 255px;
+    }
+    & > a{
+      width: 190px;
+      font-family: Sansation;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: #ffffff;
+      margin-left: 300px;
     }
   }
 }

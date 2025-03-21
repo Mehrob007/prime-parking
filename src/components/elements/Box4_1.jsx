@@ -307,7 +307,7 @@ export default function Box4_1() {
   return (
     <div className="box4-main">
       <div className="header-box4">
-        <h1 data-aos={"fade-down"} data-aos-duration="500">
+        <h1 data-aos={"fade-down"} data-aos-duration="700">
           Тарифы на Private parking
         </h1>
         <p>
@@ -410,9 +410,17 @@ export default function Box4_1() {
       </div>
       <div className="content-bottom-box4">
         {/* <span className="line-545454"></span> */}
-        <AccordionCom title="Категории машиномест:" />
+        <AccordionCom
+          title="Категории машиномест:"
+          activeStyle={{
+            height: "155px",
+          }}
+        />
         {/* <span className="line-545454"></span> */}
         <AccordionCom
+         activeStyle={{
+          height: "252px",
+        }}
           info={
             <ul className="ul-box4">
               <li>S - от 13,2 до 13,5 м²;</li>
@@ -451,9 +459,15 @@ export default function Box4_1() {
             </span>
           }
           title="Условия покупки подписки на Private Parking:"
+          activeStyle={{
+            height: "322px",
+          }}
         />
         {/* <span className="line-545454"></span> */}
         <AccordionCom
+         activeStyle={{
+          height: "136px",
+        }}
           info={
             <ul className="ul-box4">
               <li>
@@ -466,6 +480,9 @@ export default function Box4_1() {
         />
         {/* <span className="line-545454"></span> */}
         <AccordionCom
+         activeStyle={{
+          height: "159px",
+        }}
           info={
             <ul className="ul-box4">
               <li>
