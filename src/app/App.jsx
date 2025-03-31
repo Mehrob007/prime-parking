@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../components/Layout";
-import "../styles/globalStyle.css";
+// import "../styles/globalStyleHome.css";
 import "aos/dist/aos.css";
+import Router from "./router/Router";
 
 export default function App() {
-  return <Layout />;
+  return <Router />;
 }

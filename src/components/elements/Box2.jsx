@@ -1,19 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import bgBox2Com from "../../assets/icon/bg-box2-2-com.svg";
 import bgBox2Com1 from "../../assets/icon/logoBox2-1.svg";
 import bgBox2Car from "../../assets/icon/box2-car.svg";
 import AOS from "aos";
+import Coso from "../../assets/icon/Колесо1.svg";
 
 export default function Box2() {
+  const [isAnimated, setIsAnimated] = useState(false);
   useEffect(() => {
-    AOS.init({ });
+    AOS.init({
+      duration: 2000,
+      once: false,
+    });
+
+    const handleAnimation = () => {
+      const car = document.querySelector(".car-container1");
+      if (car?.classList.contains("aos-animate")) {
+        setIsAnimated(true);
+      } else {
+        setIsAnimated(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleAnimation);
+    return () => window.removeEventListener("scroll", handleAnimation);
   }, []);
+
   return (
     <div className="box2-main">
-      <h1 data-aos={"fade-down"} data-aos-duration="700">Эксклюзивный сервис</h1>
+      <h1 data-aos={"fade-down"} data-aos-duration="700">
+        Эксклюзивный сервис
+      </h1>
       <div>
         <div className="bg-box2-1">
-          <div>
+          <div className="box2-1-div">
             <img src={bgBox2Com1} alt="bgBox2Com1" />
             <p>
               Первый в России ЖК, где на постоянной основе, 24/7, работает
@@ -26,10 +46,32 @@ export default function Box2() {
               абонементы.
             </p>
           </div>
-          <img data-aos={"slide-right"} data-aos-duration="1700" src={bgBox2Car} alt="bgBox2Car" />
+          <div
+            className="car-container1"
+            data-aos={"slide-right"}
+            data-aos-duration="1700"
+          >
+            <img src={bgBox2Car} className="car-mers" alt="bgBox2Car" />
+            <img
+              src={Coso}
+              className={`coso11 ${isAnimated ? "active-rotate1" : ""}`}
+              alt="Coso"
+            />
+            <img
+              src={Coso}
+              className={`coso12 ${isAnimated ? "active-rotate1" : ""}`}
+              alt="Coso"
+            />
+          </div>
         </div>
         <div className="bg-box2-2">
-          <img src={bgBox2Com} alt="bgBox2Com" />
+          <img
+            src={bgBox2Com}
+            data-aos="fade-left"
+            data-aos-offset="500"
+            data-aos-duration="1700"
+            alt="bgBox2Com"
+          />
         </div>
       </div>
     </div>

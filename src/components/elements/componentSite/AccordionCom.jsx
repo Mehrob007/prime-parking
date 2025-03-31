@@ -7,7 +7,7 @@ export default function AccordionCom({
   info,
   defActive = false,
   style,
-  htmlEl,
+  htmlEl = false,
   infoOff = true,
   activeStyle,
 }) {
@@ -20,7 +20,7 @@ export default function AccordionCom({
     >
       <div className={`accordion_com_content ${active && "active-content"}`}>
         <h1>{title || "Категории машиномест:"}</h1>
-        {infoOff && (
+        {infoOff && !htmlEl && (
           <p  onClick={(e) => e.stopPropagation()} className={active && "active-info"}>
             {info ||
               `VIP, Platinum, Gold, Silver, Green, White - категория устанавливается в зависимости от 

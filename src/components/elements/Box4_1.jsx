@@ -13,45 +13,45 @@ const defDataARR = [
     content: [
       {
         title: "S 13,2-13-5 м²",
-        price: "39.000 ₽",
+        price: `39.000`,
       },
       {
         title: "M 13,5-15 м²",
-        price: "42.000 ₽",
+        price: `42.000`,
       },
       {
         title: "L1 15-16 м²",
-        price: "44.250 ₽",
+        price: `44.250`,
       },
       {
         title: "B1 16,1-17 м²",
-        price: "45.750 ₽",
+        price: `45.750`,
       },
       {
         title: "B2 17-26,2 м²",
-        price: "48.000 ₽",
+        price: `48.000`,
       },
       {
         title: "F1 2x2 м",
-        price: "67.500 ₽",
+        price: `67.500`,
       },
       {
         title: "F2 2x2 м",
-        price: "68.625 ₽",
+        price: `68.625`,
       },
       {
         title: "F3 3м/м",
-        price: "115.388 ₽",
+        price: `115.388`,
       },
     ],
     subContent: [
       {
         title: "Мото 5,3-83,4 м²",
-        price: "13.200 ₽",
+        price: `13.200`,
       },
       {
         title: "Мото 5,3-83,4 м²",
-        price: "14.300 ₽",
+        price: `14.300`,
       },
     ],
   },
@@ -61,45 +61,45 @@ const defDataARR = [
     content: [
       {
         title: "S 13,2-13-5 м²",
-        price: "39.000 ₽",
+        price: `39.000`,
       },
       {
         title: "M 13,5-15 м²",
-        price: "42.000 ₽",
+        price: `42.000`,
       },
       {
         title: "L1 15-16 м²",
-        price: "44.250 ₽",
+        price: `44.250`,
       },
       {
         title: "B1 16,1-17 м²",
-        price: "45.750 ₽",
+        price: `45.750`,
       },
       {
         title: "B2 17-26,2 м²",
-        price: "48.000 ₽",
+        price: `48.000`,
       },
       {
         title: "F1 2x2 м",
-        price: "67.500 ₽",
+        price: `67.500`,
       },
       {
         title: "F2 2x2 м",
-        price: "68.625 ₽",
+        price: `68.625`,
       },
       {
         title: "F3 3м/м",
-        price: "115.388 ₽",
+        price: `115.388`,
       },
     ],
     subContent: [
       {
         title: "Мото 5,3-83,4 м²",
-        price: "13.200 ₽",
+        price: `13.200`,
       },
       {
         title: "Мото 5,3-83,4 м²",
-        price: "14.300 ₽",
+        price: `14.300`,
       },
     ],
   },
@@ -109,45 +109,45 @@ const defDataARR = [
     content: [
       {
         title: "S 13,2-13-5 м²",
-        price: "39.000 ₽",
+        price: `39.000`,
       },
       {
         title: "M 13,5-15 м²",
-        price: "42.000 ₽",
+        price: `42.000`,
       },
       {
         title: "L1 15-16 м²",
-        price: "44.250 ₽",
+        price: `44.250`,
       },
       {
         title: "B1 16,1-17 м²",
-        price: "45.750 ₽",
+        price: `45.750`,
       },
       {
         title: "B2 17-26,2 м²",
-        price: "48.000 ₽",
+        price: `48.000`,
       },
       {
         title: "F1 2x2 м",
-        price: "67.500 ₽",
+        price: `67.500`,
       },
       {
         title: "F2 2x2 м",
-        price: "68.625 ₽",
+        price: `68.625`,
       },
       {
         title: "F3 3м/м",
-        price: "115.388 ₽",
+        price: `115.388`,
       },
     ],
     subContent: [
       {
         title: "Мото 5,3-83,4 м²",
-        price: "13.200 ₽",
+        price: `13.200`,
       },
       {
         title: "Мото 5,3-83,4 м²",
-        price: "14.300 ₽",
+        price: `14.300`,
       },
     ],
   },
@@ -157,45 +157,45 @@ const defDataARR = [
     content: [
       {
         title: "S 13,2-13-5 м²",
-        price: "39.000 ₽",
+        price: `39.000`,
       },
       {
         title: "M 13,5-15 м²",
-        price: "42.000 ₽",
+        price: `42.000`,
       },
       {
         title: "L1 15-16 м²",
-        price: "44.250 ₽",
+        price: `44.250`,
       },
       {
         title: "B1 16,1-17 м²",
-        price: "45.750 ₽",
+        price: `45.750`,
       },
       {
         title: "B2 17-26,2 м²",
-        price: "48.000 ₽",
+        price: `48.000`,
       },
       {
         title: "F1 2x2 м",
-        price: "67.500 ₽",
+        price: `67.500`,
       },
       {
         title: "F2 2x2 м",
-        price: "68.625 ₽",
+        price: `68.625`,
       },
       {
         title: "F3 3м/м",
-        price: "115.388 ₽",
+        price: `115.388`,
       },
     ],
     subContent: [
       {
         title: "Мото 5,3-83,4 м²",
-        price: "13.200 ₽",
+        price: `13.200`,
       },
       {
         title: "Мото 5,3-83,4 м²",
-        price: "14.300 ₽",
+        price: `14.300`,
       },
     ],
   },
@@ -205,45 +205,45 @@ const defDataARR = [
     content: [
       {
         title: "S 13,2-13-5 м²",
-        price: "39.000 ₽",
+        price: `39.000`,
       },
       {
         title: "M 13,5-15 м²",
-        price: "42.000 ₽",
+        price: `42.000`,
       },
       {
         title: "L1 15-16 м²",
-        price: "44.250 ₽",
+        price: `44.250`,
       },
       {
         title: "B1 16,1-17 м²",
-        price: "45.750 ₽",
+        price: `45.750`,
       },
       {
         title: "B2 17-26,2 м²",
-        price: "48.000 ₽",
+        price: `48.000`,
       },
       {
         title: "F1 2x2 м",
-        price: "67.500 ₽",
+        price: `67.500`,
       },
       {
         title: "F2 2x2 м",
-        price: "68.625 ₽",
+        price: `68.625`,
       },
       {
         title: "F3 3м/м",
-        price: "115.388 ₽",
+        price: `115.388`,
       },
     ],
     subContent: [
       {
         title: "Мото 5,3-83,4 м²",
-        price: "13.200 ₽",
+        price: `13.200`,
       },
       {
         title: "Мото 5,3-83,4 м²",
-        price: "14.300 ₽",
+        price: `14.300`,
       },
     ],
   },
@@ -253,45 +253,45 @@ const defDataARR = [
     content: [
       {
         title: "S 13,2-13-5 м²",
-        price: "39.000 ₽",
+        price: `39.000`,
       },
       {
         title: "M 13,5-15 м²",
-        price: "42.000 ₽",
+        price: `42.000`,
       },
       {
         title: "L1 15-16 м²",
-        price: "44.250 ₽",
+        price: `44.250`,
       },
       {
         title: "B1 16,1-17 м²",
-        price: "45.750 ₽",
+        price: `45.750`,
       },
       {
         title: "B2 17-26,2 м²",
-        price: "48.000 ₽",
+        price: `48.000`,
       },
       {
         title: "F1 2x2 м",
-        price: "67.500 ₽",
+        price: `67.500`,
       },
       {
         title: "F2 2x2 м",
-        price: "68.625 ₽",
+        price: `68.625`,
       },
       {
         title: "F3 3м/м",
-        price: "115.388 ₽",
+        price: `115.388`,
       },
     ],
     subContent: [
       {
         title: "Мото 5,3-83,4 м²",
-        price: "13.200 ₽",
+        price: `13.200`,
       },
       {
         title: "Мото 5,3-83,4 м²",
-        price: "14.300 ₽",
+        price: `14.300`,
       },
     ],
   },
@@ -337,7 +337,16 @@ export default function Box4_1() {
                   {prev.content.map((e, i) => (
                     <div key={i}>
                       <h1>{e.title}</h1>
-                      <p>{e.price}</p>
+                      <p>
+                        {e.price}{" "}
+                        <span
+                          style={{
+                            fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
+                          }}
+                        >
+                          ₽
+                        </span>
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -362,12 +371,34 @@ export default function Box4_1() {
             <div className="content-top-box4-2-header">
               <div>
                 <h3>Подписка peivate +</h3>
-                <h1>5.000 ₽/мес.</h1>
+                <h1>
+                  5.000{" "}
+                  <span
+                    style={{
+                      fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
+                      fontSize: "34px",
+                    }}
+                  >
+                    ₽
+                  </span>
+                  /мес.
+                </h1>
                 <p>Стоимость дополнительной подписки</p>
               </div>
               <div>
                 <h3>Промо</h3>
-                <h1>1.000 ₽/мес.</h1>
+                <h1>
+                  1.000{" "}
+                  <span
+                    style={{
+                      fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
+                      fontSize: "34px",
+                    }}
+                  >
+                    ₽
+                  </span>
+                  /мес.
+                </h1>
                 <p>Первые 3 месяца</p>
               </div>
             </div>
@@ -384,7 +415,7 @@ export default function Box4_1() {
                   src={contentTopBox42Content2}
                   alt="contentTopBox42Content2"
                 />
-                <p>Зарядка электктричеством</p>
+                <p>Зарядка электричеством</p>
               </div>
               <div className="content-top-box4-2-content-3">
                 <img
@@ -418,10 +449,10 @@ export default function Box4_1() {
         />
         {/* <span className="line-545454"></span> */}
         <AccordionCom
-         activeStyle={{
-          height: "252px",
-        }}
-          info={
+          activeStyle={{
+            height: "252px",
+          }}
+          htmlEl={
             <ul className="ul-box4">
               <li>S - от 13,2 до 13,5 м²;</li>
               <li>M - от 13,5 до 15 м²;</li>
@@ -465,10 +496,10 @@ export default function Box4_1() {
         />
         {/* <span className="line-545454"></span> */}
         <AccordionCom
-         activeStyle={{
-          height: "136px",
-        }}
-          info={
+          activeStyle={{
+            height: "136px",
+          }}
+          htmlEl={
             <ul className="ul-box4">
               <li>
                 От 30 до 1 дня до окончания подписки - удерживается 30% от
@@ -480,10 +511,10 @@ export default function Box4_1() {
         />
         {/* <span className="line-545454"></span> */}
         <AccordionCom
-         activeStyle={{
-          height: "159px",
-        }}
-          info={
+          activeStyle={{
+            height: "159px",
+          }}
+          htmlEl={
             <ul className="ul-box4">
               <li>
                 За 1 неделю до окончания подписки, менеджер паркинга свяжется с

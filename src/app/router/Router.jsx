@@ -1,0 +1,25 @@
+import React, { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import Header from "../../components/elements/Header.jsx";
+const Home = lazy(() => import("../../components/Home.jsx"));
+const Services = lazy(() => import("../../components/Services.jsx"));
+const Offer = lazy(() => import("../../components/Offer.jsx"));
+const ParkingRules = lazy(() => import("../../components/ParkingRules.jsx"));
+
+export default function Router() {
+  return (
+    <>
+      <Header />
+      <div>
+        <Suspense fallback={<p>Loading...</p>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/offer" element={<Offer />} />
+            <Route path="/parking-rules" element={<ParkingRules />} />
+          </Routes>
+        </Suspense>
+      </div>
+    </>
+  );
+}

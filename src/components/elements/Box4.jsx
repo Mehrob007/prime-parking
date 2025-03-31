@@ -27,7 +27,17 @@ export default function Box4() {
               <h1>Valet Service</h1>
               <p>1 месяцa</p>
             </div>
-            <h3 className="content-top-box4-1-com-price">32.000 ₽/мес.</h3>
+            <h3 className="content-top-box4-1-com-price">
+              32.000{" "}
+              <span
+                style={{
+                  fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
+                }}
+              >
+                ₽
+              </span>
+              /мес.
+            </h3>
             <div className="content-top-box4-1-com-sub-text">
               <p>
                 Активация абонемента с даты покупки, не позднее{" "}
@@ -40,7 +50,17 @@ export default function Box4() {
               <h1>Пакет Valet Service</h1>
               <p>3 месяца</p>
             </div>
-            <h3 className="content-top-box4-1-com-price">28.000 ₽/мес.</h3>
+            <h3 className="content-top-box4-1-com-price">
+              28.000{" "}
+              <span
+                style={{
+                  fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
+                }}
+              >
+                ₽
+              </span>
+              /мес.
+            </h3>
             <div className="content-top-box4-1-com-sub-text">
               <p>
                 Активация абонемента с любой даты <span>от 14.08.2024</span>
@@ -55,7 +75,17 @@ export default function Box4() {
               <h1>Пакет Valet Service</h1>
               <p>6 месяцев</p>
             </div>
-            <h3 className="content-top-box4-1-com-price">27.000 ₽/мес.</h3>
+            <h3 className="content-top-box4-1-com-price">
+              27.000{" "}
+              <span
+                style={{
+                  fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
+                }}
+              >
+                ₽
+              </span>
+              /мес.
+            </h3>
             <div className="content-top-box4-1-com-sub-text">
               <p>
                 Активация абонемента с любой даты <span>от 14.08.2024</span>
@@ -70,7 +100,17 @@ export default function Box4() {
               <h1>Пакет Valet Service</h1>
               <p>12 месяцa</p>
             </div>
-            <h3 className="content-top-box4-1-com-price">26.000 ₽/мес.</h3>
+            <h3 className="content-top-box4-1-com-price">
+              26.000{" "}
+              <span
+                style={{
+                  fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
+                }}
+              >
+                ₽
+              </span>
+              /мес.
+            </h3>
             <div className="content-top-box4-1-com-sub-text">
               <p>
                 Активация абонемента с любой даты <span>от 14.08.2024</span>
@@ -86,12 +126,32 @@ export default function Box4() {
             <div className="content-top-box4-2-header">
               <div>
                 <h3>Valet +</h3>
-                <h1>3.000 ₽/мес.</h1>
+                <h1>
+                  3.000{" "}
+                  <span
+                    style={{
+                      fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
+                    }}
+                  >
+                    ₽
+                  </span>
+                  /мес.
+                </h1>
                 <p>Стоимость дополнительной подписки</p>
               </div>
               <div>
                 <h3>Промо</h3>
-                <h1>1.000 ₽/мес.</h1>
+                <h1>
+                  1.000{" "}
+                  <span
+                    style={{
+                      fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
+                    }}
+                  >
+                    ₽
+                  </span>
+                  /мес.
+                </h1>
                 <p>Первые 3 месяца</p>
               </div>
             </div>
@@ -166,7 +226,7 @@ export default function Box4() {
           activeStyle={{
             height: "182px",
           }}
-          info={
+          htmlEl={
             <ul className="ul-box4">
               <li>
                 От 30 до 1 дня до окончания подписки - удерживается 30% от
@@ -217,7 +277,7 @@ export default function Box4() {
           activeStyle={{
             height: "183px",
           }}
-          info={
+          htmlEl={
             <ul className="ul-box4">
               <li>Бесплатное время указано в тарифе, если оно есть;</li>
               <li>Неполный час округляется до полного часа.</li>
@@ -234,7 +294,7 @@ export default function Box4() {
           activeStyle={{
             height: "299px",
           }}
-          info={
+          htmlEl={
             <ol className="ol-box4">
               <li>
                 Стоянка в неположенной зоне: 1 000 рублей -

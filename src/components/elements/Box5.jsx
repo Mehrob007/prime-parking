@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import imgBox5 from "../../assets/icon/img-box5.svg";
+import Coso from "../../assets/icon/Колесо.svg";
 import logoCF from "../../assets/icon/logoCF.svg";
 import AOS from "aos";
 import axios from "axios";
 
-export default function Box5() {
+export default function Box5({ footerForm = 1 }) {
   const [allText, setAllText] = useState({
     userName: "",
     phoneNumber: "",
     description: "",
   });
   const [onActiv, setOnActive] = useState(false);
+  const [isAnimated, setIsAnimated] = useState(false);
 
   const sendInTelegram = async () => {
     try {
@@ -37,7 +39,22 @@ export default function Box5() {
   };
 
   useEffect(() => {
-    AOS.init({});
+    AOS.init({
+      duration: 2000,
+      once: false, // Чтобы срабатывало повторно
+    });
+
+    const handleAnimation = () => {
+      const car = document.querySelector(".car-container");
+      if (car?.classList.contains("aos-animate")) {
+        setIsAnimated(true);
+      } else {
+        setIsAnimated(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleAnimation);
+    return () => window.removeEventListener("scroll", handleAnimation);
   }, []);
   useEffect(() => {
     setOnActive(
@@ -49,11 +66,11 @@ export default function Box5() {
     );
   }, [allText]);
 
-  console.log("allText", allText);
-  console.log("onActiv", onActiv);
+  console.log("isAnimated", isAnimated);
+  // console.log("onActiv", onActiv);
 
   return (
-    <div className="box5-main">
+    <footer className={`box5-main ${footerForm === 2 ? "footer-form2" : ""}`}>
       <h1 data-aos={"fade-down"} data-aos-duration="700">
         Контакты
       </h1>
@@ -111,12 +128,15 @@ export default function Box5() {
               Круглосуточная поддержка <br /> +7 (495) 481 22 44 (доб.111)
             </h3>
           </div>
-          <img
+          <div
+            className="div-car-box5 car-container"
             data-aos={"slide-left"}
             data-aos-duration="1700"
-            src={imgBox5}
-            alt="imgBox5"
-          />
+          >
+            <img src={imgBox5} alt="imgBox5" />
+            <img src={Coso} className={`coso1 ${isAnimated ? "active-rotate" : ""}`} alt="Coso" />
+            <img src={Coso} className={`coso2 ${isAnimated ? "active-rotate" : ""}`} alt="Coso" />
+          </div>
         </div>
       </div>
       <div className="footer-box5">
@@ -124,6 +144,6 @@ export default function Box5() {
         <p>2025 © Prime Park Parking</p>
         <a href="#">Вернуться наверх ▴</a>
       </div>
-    </div>
+    </footer>
   );
 }
