@@ -4,6 +4,7 @@ import Coso from "../../assets/icon/Колесо.svg";
 import logoCF from "../../assets/icon/logoCF.svg";
 import AOS from "aos";
 import axios from "axios";
+import PhoneInput from "./com/Cleave";
 
 export default function Box5({ footerForm = 1 }) {
   const [allText, setAllText] = useState({
@@ -16,10 +17,13 @@ export default function Box5({ footerForm = 1 }) {
 
   const sendInTelegram = async () => {
     try {
-      const response = await axios.post(import.meta.env.VITE_ENV_URL, {
-        chat_id: import.meta.env.VITE_ENV_URL_CHAT_ID,
-        text: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_ENV_URL}/send-message`,
+        {
+          chatId: import.meta.env.VITE_ENV_URL_CHAT_ID,
+          message: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
+        },
+      );
       console.log("response", response.data);
       setAllText({
         userName: "",
@@ -85,12 +89,18 @@ export default function Box5({ footerForm = 1 }) {
                 type="text"
               />
             </div>
-            <div className="input-box5">
-              <input
+            <div className="input-box5 input-box5-number">
+              {/* <input
                 value={allText?.phoneNumber}
-                onChange={(e) => onChange("phoneNumber", e.target.value)}
+                onChange={(e) =>
+                  onChange("phoneNumber", e.target.value.replace(/\D/g, ""))
+                }
                 placeholder="Телефон"
                 type="text"
+              /> */}
+              <PhoneInput
+                value={allText?.phoneNumber}
+                onChange={(val) => onChange("phoneNumber", val)}
               />
             </div>
             <div className="input-box5 textarea-box5">
@@ -110,20 +120,29 @@ export default function Box5({ footerForm = 1 }) {
             </button>
           </span>
           <p>
-            Нажимая на кнопку, вы даете согласие на обработку персональных
-            данных и соглашаетесь c политикой конфиденциальности
+            Нажимая на кнопку,{" "}
+            <a href="https://drive.google.com/drive/folders/1FZsvRtHovV6E_oL7iDrtYlzUMVfM0Id3?usp=drive_link" target="_blank">
+              вы даете согласие на обработку персональных данных и соглашаетесь
+              c политикой конфиденциальности
+            </a>
           </p>
         </div>
         <div>
           <div className="info-contact-1">
-            <h1>Отдел продаж</h1>
+            <h1>
+              КЛИЕНТСКИЙ <br />
+              СЕРВИС
+            </h1>
             <h3>
               09:00 - 18:00, ПН - ПТ <br /> +7 (495) 481 22 44 <br />{" "}
               sales@primeparking.ru
             </h3>
           </div>
           <div className="info-contact-1">
-            <h1>Техническая служба</h1>
+            <h1>
+              Техническая <br />
+              служба
+            </h1>
             <h3>
               Круглосуточная поддержка <br /> +7 (495) 481 22 44 (доб.111)
             </h3>
@@ -134,8 +153,16 @@ export default function Box5({ footerForm = 1 }) {
             data-aos-duration="1700"
           >
             <img src={imgBox5} alt="imgBox5" />
-            <img src={Coso} className={`coso1 ${isAnimated ? "active-rotate" : ""}`} alt="Coso" />
-            <img src={Coso} className={`coso2 ${isAnimated ? "active-rotate" : ""}`} alt="Coso" />
+            <img
+              src={Coso}
+              className={`coso1 ${isAnimated ? "active-rotate" : ""}`}
+              alt="Coso"
+            />
+            <img
+              src={Coso}
+              className={`coso2 ${isAnimated ? "active-rotate" : ""}`}
+              alt="Coso"
+            />
           </div>
         </div>
       </div>

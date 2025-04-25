@@ -1,3 +1,8 @@
+$fontWeightText: 300;
+$fontWeightTitle: 300;
+$fontWeightSubTitle: 300;
+$fontWeightTextSpan: 400;
+
 .accordion-com {
   // @apply max-w-[1318px] h-[152px] bg-[#000] p-[30px_0];
   max-width: 1318px;
@@ -97,6 +102,19 @@
   letter-spacing: 0%;
   list-style-type: disc;
   margin-left: 16px;
+  & > li {
+    list-style-type: disc;
+    font-size: 12px;
+    & > p {
+      font-family: Sansation;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 130%;
+      letter-spacing: 0%;
+      list-style-type: disc;
+      margin-left: 8px;
+    }
+  }
 }
 .ol-box4 {
   font-family: Sansation;
@@ -169,7 +187,7 @@ header {
   height: 60px;
   width: 100%;
   backdrop-filter: blur(50px);
-  background-color: #00000099;
+  background-color: #090909;
   position: fixed;
   top: 0;
   z-index: 99999;
@@ -245,22 +263,47 @@ header {
     left: 0;
     position: absolute;
     width: 100%;
+    height: 94vh;
+    object-fit: cover;
     // height: 80vh;
+  }
+  & > div {
+    position: absolute;
+    z-index: 5;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > button {
+      cursor: pointer;
+      height: 50px;
+      width: 50px;
+      border-radius: 10px;
+      background: #0000004d;
+      backdrop-filter: blur(20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        background: #00000094;
+      }
+    }
   }
 }
 .box2-main {
   // @extend a;
-  height: 628px;
+  // height: 628px;
   max-width: 1318px;
   width: 100%;
   // margin: 0 auto;
   background-color: #000;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 40px;
   & > h1 {
     font-family: Sansation;
-    font-weight: 400;
+    font-weight: $fontWeightTitle;
     font-size: 50px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -282,11 +325,11 @@ header {
     gap: 40px;
     & > div {
       border-radius: 20px;
-      height: 468px;
+      height: 650px;
     }
     & > .bg-box2-1 {
       width: 710px;
-      background: url("../assets/icon/bg-box2-1.svg") center/ cover no-repeat;
+      background: url("../assets/icon/bg-box2-1.svg") center / cover no-repeat;
       display: flex;
       flex-direction: column;
       gap: 24px;
@@ -328,10 +371,9 @@ header {
         }
       }
       & > div > p {
-        width: 472px;
-        text-align: center;
+        width: 644px;
         font-family: Sansation;
-        font-weight: 300;
+        font-weight: $fontWeightText;
         font-size: 18px;
         line-height: 110%;
         letter-spacing: 0%;
@@ -342,12 +384,14 @@ header {
       width: 568px;
       background: url("../assets/icon/bg-box2-2.svg") center/ cover no-repeat;
       position: relative;
+      overflow: hidden;
       & > img {
         // margin-top: -75px;
         // margin-left: 112px;
-        width: 344px;
-        height: 543px;
-        top: -75px;
+        // width: 344px;
+        height: 621px;
+        // top: -75px;
+        top: 24px;
         left: 112px;
         position: absolute;
       }
@@ -355,7 +399,7 @@ header {
   }
 }
 .box3-main {
-  height: 566px;
+  // height: 566px;
   max-width: 1318px;
   width: 100%;
   // margin: 0 auto;
@@ -365,7 +409,7 @@ header {
   gap: 40px;
   & > h1 {
     font-family: Sansation;
-    font-weight: 400;
+    font-weight: $fontWeightTitle;
     font-size: 50px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -388,8 +432,9 @@ header {
     align-items: center;
     & > .bg-box3-1 {
       background: url("../assets/icon/bg-box3-1.svg") center / cover no-repeat;
-      width: 591px;
-      height: 470px;
+      width: 800px;
+      height: 586px;
+
       border-radius: 20px;
       display: flex;
       align-items: center;
@@ -400,8 +445,8 @@ header {
         gap: 30px;
         align-items: center;
         justify-content: start;
-        width: 431px;
-        height: 385px;
+        width: 635px;
+        height: 500px;
         & > img {
           width: 81px;
           height: 91px;
@@ -416,31 +461,34 @@ header {
           & > div {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            align-items: center;
+            gap: 20px;
             & > h1 {
               font-family: Sansation;
               font-weight: 400;
-              font-size: 28px;
+              font-size: 24px;
               line-height: 100%;
               letter-spacing: 0%;
               text-align: center;
               text-transform: uppercase;
+
               background: linear-gradient(
-                259deg,
-                #ad8153 33.33%,
-                #e2b36c 49.25%,
-                #ffe1bb 65.17%,
-                #dcac64 81.09%,
-                #af8352 97%
+                270deg,
+                #ad8153 0%,
+                #e2b36c 25%,
+                #fdecd6 50%,
+                #dcac64 75%,
+                #af8352 100%
               );
+
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
             }
             & > p {
               font-family: Sansation;
-              font-weight: 300;
+              font-weight: $fontWeightText;
               font-size: 18px;
-              line-height: 100%;
+              line-height: 125%;
               letter-spacing: 0%;
               text-align: center;
             }
@@ -453,6 +501,13 @@ header {
       width: 687px;
       height: 357px;
       overflow: hidden;
+      position: relative;
+      & > img {
+        // rotate: 90deg;
+        position: absolute;
+        top: 0px;
+        width: 585.79px !important;
+      }
     }
   }
 }
@@ -468,14 +523,14 @@ header {
   // justify-content: center;
   & > .header-box4 {
     width: 1094px;
-    height: 107px;
+    height: 147px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     & > h1 {
       font-family: Sansation;
-      font-weight: 400;
+      font-weight: $fontWeightTitle;
       font-size: 50px;
       line-height: 100%;
       letter-spacing: 0%;
@@ -493,7 +548,7 @@ header {
     }
     & > p {
       font-family: Sansation;
-      font-weight: 350;
+      font-weight: $fontWeightSubTitle;
       font-size: 28px;
       line-height: 100%;
       letter-spacing: 0%;
@@ -502,7 +557,7 @@ header {
       color: #ffffff;
       & > span {
         font-family: Sansation;
-        font-weight: 350;
+        font-weight: $fontWeightSubTitle;
         font-size: 28px;
         line-height: 100%;
         letter-spacing: 0%;
@@ -510,6 +565,14 @@ header {
         text-transform: uppercase;
         color: #ffffff66;
       }
+    }
+    & > h5 {
+      font-family: Sansation;
+      font-weight: $fontWeightText;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
     }
   }
   & > .content-top-box4_1 {
@@ -548,12 +611,12 @@ header {
       & > div::before {
         content: "";
         position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
+        top: -1.5px;
+        left: -1.5px;
+        right: -1.7px;
+        bottom: -1.5px;
         border-radius: 10px;
-        padding: 2px;
+        padding: 1.5px;
         z-index: -1;
         transition: all 0.6s ease-in;
       }
@@ -635,7 +698,7 @@ header {
           }
           & > p {
             font-family: Sansation;
-            font-weight: 300;
+            font-weight: $fontWeightText;
             font-size: 18px;
             line-height: 100%;
             letter-spacing: 0%;
@@ -669,13 +732,15 @@ header {
           & > p {
             font-family: Sansation;
             font-weight: 300;
-            font-size: 18px;
-            line-height: 100%;
+            font-size: 14px;
+            line-height: 120%;
             letter-spacing: 0%;
             text-align: center;
+            width: 349px;
+            color: #ffffff4d;
             & > span {
               font-family: Sansation;
-              font-weight: 400;
+              font-weight: $fontWeightTextSpan;
               font-size: 18px;
               line-height: 100%;
               letter-spacing: 0%;
@@ -707,6 +772,77 @@ header {
         background: url("../assets/icon/box4-top4.svg") center / cover no-repeat;
       }
     }
+    & > .content-top-box4-0 {
+      width: 1160px;
+      height: 225px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background: url("../assets/icon/bg-box3-0.svg") center / cover no-repeat;
+      & > div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 165px;
+        & > h1 {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 34px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-transform: uppercase;
+          background: linear-gradient(
+            270deg,
+            #ad8153 0%,
+            #e2b36c 25%,
+            #fdecd6 50%,
+            #dcac64 75%,
+            #af8352 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        & > h3 {
+          margin-top: 30px;
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-transform: uppercase;
+          background: linear-gradient(
+            270deg,
+            #ad8153 0%,
+            #e2b36c 25%,
+            #fdecd6 50%,
+            #dcac64 75%,
+            #af8352 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        & > p {
+          margin-top: 20px;
+          text-align: center;
+          font-family: Sansation;
+          font-weight: $fontWeightText;
+          font-size: 18px;
+          line-height: 150%;
+          letter-spacing: 0%;
+          text-align: center;
+        }
+      }
+    }
+    & > .content-top-box4_1-0 {
+      height: 255px;
+    }
+
     & > .content-top-box4_1-1 {
       display: flex;
       flex-direction: column;
@@ -717,6 +853,7 @@ header {
         width: 100%;
         height: 170px;
         display: flex;
+        justify-content: space-between;
         gap: 63px;
         padding: 0 29px;
         padding-top: 45px;
@@ -729,7 +866,7 @@ header {
           gap: 40px;
           & > h1 {
             font-family: Sansation;
-            font-weight: 400;
+            font-weight: $fontWeightTextSpan;
             font-size: 18px;
             line-height: 100%;
             letter-spacing: 0%;
@@ -748,7 +885,7 @@ header {
           }
           & > p {
             font-family: Sansation;
-            font-weight: 300;
+            font-weight: $fontWeightText;
             font-size: 18px;
             line-height: 100%;
             letter-spacing: 0%;
@@ -776,7 +913,7 @@ header {
             gap: 40px;
             & > h1 {
               font-family: Sansation;
-              font-weight: 400;
+              font-weight: $fontWeightTextSpan;
               font-size: 18px;
               line-height: 100%;
               letter-spacing: 0%;
@@ -794,7 +931,7 @@ header {
             }
             & > p {
               font-family: Sansation;
-              font-weight: 300;
+              font-weight: $fontWeightText;
               font-size: 18px;
               line-height: 100%;
               letter-spacing: 0%;
@@ -814,7 +951,7 @@ header {
     }
     & > .content-top-box4-2 {
       width: 1318px;
-      height: 480px;
+      height: 728px;
       border-radius: 20px;
       background: url("../assets/icon/box4-top5.svg") center / cover no-repeat;
       display: flex;
@@ -822,15 +959,26 @@ header {
       justify-content: center;
       & > div {
         width: 1161px;
-        height: 379.93572998046875px;
+        height: 668px;
         gap: 60px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        & > p {
+          font-family: Sansation;
+          font-weight: $fontWeightText;
+          font-size: 18px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+          width: 725px;
+          color: #ffffff4d;
+        }
         & > .content-top-box4-2-header {
           width: 922px;
           display: flex;
           justify-content: space-between;
+          flex-direction: row-reverse;
           & > div {
             width: 336px;
             height: 105px;
@@ -860,7 +1008,7 @@ header {
             }
             & > h1 {
               font-family: Sansation;
-              font-weight: 400;
+              font-weight: $fontWeightTextSpan;
               font-size: 34px;
               line-height: 100%;
               letter-spacing: 0%;
@@ -878,7 +1026,7 @@ header {
             }
             & > p {
               font-family: Sansation;
-              font-weight: 300;
+              font-weight: $fontWeightText;
               font-size: 18px;
               line-height: 100%;
               letter-spacing: 0%;
@@ -897,7 +1045,7 @@ header {
             align-items: center;
             & > p {
               font-family: Sansation;
-              font-weight: 300;
+              font-weight: $fontWeightText;
               font-size: 18px;
               line-height: 100%;
               letter-spacing: 0%;
@@ -921,20 +1069,48 @@ header {
             margin-left: 134px;
           }
         }
-        & > p {
-          font-family: Sansation;
-          font-weight: 300;
-          font-size: 18px;
-          line-height: 100%;
-          letter-spacing: 0%;
-          text-align: center;
-          width: 725px;
+        & > .content-top-box4-2-title {
+          width: 883px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          & > h1 {
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 34px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+            background: linear-gradient(
+              270deg,
+              #ad8153 0%,
+              #e2b36c 25%,
+              #fdecd6 50%,
+              #dcac64 75%,
+              #af8352 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          & > p {
+            font-family: Sansation;
+            font-weight: $fontWeightText;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+          }
+        }
+        & > .content-top-box4-2-title:last-child {
+          width: auto;
         }
       }
     }
     & > .content-top-box4_1-2 {
       width: 1318px;
-      height: 480px;
+      height: 590px;
       border-radius: 20px;
       background: url("../assets/icon/content-top-box4_1-2-content-4.svg")
         center / cover no-repeat;
@@ -943,15 +1119,26 @@ header {
       justify-content: center;
       & > div {
         width: 1161px;
-        height: 379.93572998046875px;
+        height: 530px;
         gap: 60px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        & > p {
+          font-family: Sansation;
+          font-weight: $fontWeightText;
+          font-size: 18px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+          width: 725px;
+          color: #ffffff4d;
+        }
         & > .content-top-box4-2-header {
           width: 922px;
           display: flex;
           justify-content: space-between;
+          flex-direction: row-reverse;
           & > div {
             width: 336px;
             height: 105px;
@@ -999,7 +1186,7 @@ header {
             }
             & > p {
               font-family: Sansation;
-              font-weight: 300;
+              font-weight: $fontWeightText;
               font-size: 18px;
               line-height: 100%;
               letter-spacing: 0%;
@@ -1018,7 +1205,7 @@ header {
             align-items: center;
             & > p {
               font-family: Sansation;
-              font-weight: 300;
+              font-weight: $fontWeightText;
               font-size: 18px;
               line-height: 100%;
               letter-spacing: 0%;
@@ -1042,14 +1229,42 @@ header {
             margin-left: 134px;
           }
         }
-        & > p {
-          font-family: Sansation;
-          font-weight: 300;
-          font-size: 18px;
-          line-height: 100%;
-          letter-spacing: 0%;
-          text-align: center;
-          width: 725px;
+        & > .content-top-box4-2-title {
+          width: 883px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          & > h1 {
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 34px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+            background: linear-gradient(
+              270deg,
+              #ad8153 0%,
+              #e2b36c 25%,
+              #fdecd6 50%,
+              #dcac64 75%,
+              #af8352 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          & > p {
+            font-family: Sansation;
+            font-weight: $fontWeightText;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+          }
+        }
+        & > .content-top-box4-2-title:last-child {
+          width: auto;
         }
       }
     }
@@ -1063,6 +1278,302 @@ header {
     flex-direction: column;
   }
 }
+
+.box-mid1 {
+  width: 1160px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 40px;
+  & > .box-mid1-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    & > h1 {
+      font-family: Sansation;
+      font-weight: $fontWeightTitle;
+      font-size: 50px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+      background: linear-gradient(
+        262.92deg,
+        #ad8153 5.53%,
+        #e2b36c 27.76%,
+        #fdecd6 50%,
+        #dcac64 72.24%,
+        #af8352 94.47%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    & > h3 {
+      font-family: Sansation;
+      font-weight: $fontWeightSubTitle;
+      font-size: 28px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  & > .box-mid1-content {
+    width: 1160px;
+    height: 180px;
+    border-radius: 20px;
+    background-color: #0c0c0c;
+    display: flex;
+    align-items: center;
+    padding: 0 57px;
+    gap: 46px;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      & > p {
+        font-family: Sansation;
+        font-weight: $fontWeightText;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+    }
+    & > nav {
+      width: 312px;
+      height: 80px;
+      border-radius: 15px;
+      position: relative;
+
+      & > button {
+        cursor: pointer;
+        background-color: #0c0c0c;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        position: relative;
+        & > span {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-transform: uppercase;
+          background: linear-gradient(
+            270deg,
+            #ad8153 0%,
+            #e2b36c 25%,
+            #fdecd6 50%,
+            #dcac64 75%,
+            #af8352 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: -1.5px;
+        left: -1.5px;
+        right: -1.5px;
+        bottom: -1.5px;
+        border-radius: 10px;
+        padding: 1.5px;
+        z-index: 1;
+        background: linear-gradient(
+          270deg,
+          #ad8153 0%,
+          #e2b36c 25%,
+          #fdecd6 50%,
+          #dcac64 75%,
+          #af8352 100%
+        );
+      }
+    }
+  }
+}
+.box-mid2 {
+  width: 1160px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 40px;
+  & > h1 {
+    font-family: Sansation;
+    font-weight: $fontWeightTitle;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(
+      262.92deg,
+      #ad8153 5.53%,
+      #e2b36c 27.76%,
+      #fdecd6 50%,
+      #dcac64 72.24%,
+      #af8352 94.47%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  & > .box-mid2-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      & > h1 {
+        font-family: Sansation;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        background: linear-gradient(
+          270deg,
+          #ad8153 0%,
+          #e2b36c 25%,
+          #fdecd6 50%,
+          #dcac64 75%,
+          #af8352 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      & > p {
+        font-family: Sansation;
+        font-weight: $fontWeightText;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: center;
+        & > a {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-decoration: underline;
+          text-decoration-style: solid;
+          text-decoration-offset: 0%;
+          text-decoration-thickness: 0%;
+          text-decoration-skip-ink: auto;
+          background: linear-gradient(
+            270deg,
+            #ad8153 0%,
+            #e2b36c 25%,
+            #fdecd6 50%,
+            #dcac64 75%,
+            #af8352 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+  & > .box-mid2-apk-mobile {
+    display: flex;
+    align-items: end;
+    gap: 83.5px;
+    width: 100%;
+    height: 416px;
+    & > .box-mid2-apk-mobile-left {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      width: 370px;
+      // padding-top: 63px;
+      & > .box-mid2-apk-mobile-left-header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & > h1 {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 50px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-transform: uppercase;
+
+          background: linear-gradient(
+            262.92deg,
+            #ad8153 5.53%,
+            #e2b36c 27.76%,
+            #fdecd6 50%,
+            #dcac64 72.24%,
+            #af8352 94.47%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        & > h3 {
+          font-family: Sansation;
+          font-weight: $fontWeightSubTitle;
+          font-size: 28px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+      & > p {
+        font-family: Sansation;
+        font-weight: $fontWeightText;
+        font-size: 18px;
+        line-height: 110%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+      & > .box-mid2-apk-mobile-left-get-apk {
+        display: flex;
+        gap: 20px;
+      }
+    }
+    & > .box-mid2-apk-mobile-right {
+      width: 712px;
+      height: 353px;
+      border-radius: 20px;
+      background: url("../assets/icon/bgPhone.svg");
+      position: relative;
+      // overflow: hidden;
+      & > div {
+        margin-top: -63px;
+        overflow: hidden;
+        height: 416px;
+        bottom: 0;
+        position: relative;
+        & > img {
+          position: absolute;
+          // bottom: 0;
+          left: 128.5px;
+        }
+        & > img:first-child {
+          left: 240px;
+        }
+      }
+    }
+  }
+}
+
 .box5-main {
   overflow: hidden;
   background-color: #0c0c0c;
@@ -1077,7 +1588,7 @@ header {
   position: relative;
   & > h1 {
     font-family: Sansation;
-    font-weight: 400;
+    font-weight: $fontWeightTitle;
     font-size: 50px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -1108,6 +1619,9 @@ header {
         flex-direction: column;
         gap: 20px;
       }
+      & > div > .input-box5-number::marker {
+        display: none;
+      }
       & > div > .input-box5 {
         position: relative;
         width: 420px;
@@ -1137,7 +1651,7 @@ header {
           max-height: 150px;
           position: absolute;
           font-family: Sansation;
-          font-weight: 350;
+          font-weight: 300;
           font-size: 18px;
           line-height: 100%;
           letter-spacing: 0%;
@@ -1158,12 +1672,12 @@ header {
       & > div > .input-box5::before {
         content: "";
         position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
+        top: -1.5px;
+        left: -1.5px;
+        right: -1.5px;
+        bottom: -1.5px;
         border-radius: 10px;
-        padding: 2px;
+        padding: 1.5px;
         z-index: 1;
         background: linear-gradient(
           270deg,
@@ -1193,9 +1707,8 @@ header {
         background: linear-gradient(
           270deg,
           #ad8153 0%,
-          #e2b36c 25%,
-          #fdecd6 50%,
-          #dcac64 75%,
+          #e2b36c 33.33%,
+          #dcac64 66.67%,
           #af8352 100%
         );
         transition: all 0.7s ease-out;
@@ -1230,6 +1743,19 @@ header {
         line-height: 100%;
         letter-spacing: 0%;
         color: #545454;
+        & > a {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-decoration: underline;
+          text-decoration-style: solid;
+          text-decoration-offset: 0%;
+          text-decoration-thickness: 0%;
+          text-decoration-skip-ink: auto;
+          color: #929292;
+        }
       }
     }
     & > div {
@@ -1241,7 +1767,7 @@ header {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        height: 141px;
+        height: 191px;
         & > h1 {
           font-family: Sansation;
           font-weight: 400;
@@ -1262,7 +1788,7 @@ header {
         }
         & > h3 {
           font-family: Sansation;
-          font-weight: 300;
+          font-weight: $fontWeightText;
           font-size: 18px;
           line-height: 30px;
           letter-spacing: 0%;
@@ -1384,7 +1910,7 @@ header {
       text-transform: uppercase;
       margin: 60px 0 20px 0;
     }
-    & > a {
+    & > nav {
       width: 100%;
       display: flex;
       align-items: center;
@@ -1396,6 +1922,11 @@ header {
       letter-spacing: 0%;
       text-align: center;
       text-transform: uppercase;
+      & > a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
     }
   }
   & > .services-box2 {
@@ -1605,11 +2136,12 @@ header {
   }
 }
 .offer {
-  background-color: white;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   padding-top: 60px;
   // padding-bottom: 120px;
   margin-top: 60px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1623,47 +2155,128 @@ header {
     text-align: center;
     text-transform: uppercase;
   }
-  & > div {
-    width: 856px;
+  & > .offer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 40px;
-    & > h1 {
-      font-family: Sansation;
-      font-weight: 300;
-      font-size: 24px;
-      line-height: 100%;
-      letter-spacing: 0%;
+    gap: 60px;
+    margin-bottom: 120px;
+    & > div {
+      width: 856px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      text-transform: uppercase;
-    }
-    & > button {
-      font-family: Sansation;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 100%;
-      letter-spacing: 0%;
-      text-align: center;
-      text-transform: uppercase;
-      width: 510px;
-      height: 80px;
-      border-radius: 15px;
-      border-width: 2px;
-      color: #b3997b;
-      cursor: pointer;
+      gap: 40px;
+      & > h1 {
+        font-family: Sansation;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & > div {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-transform: uppercase;
+          width: 510px;
+          height: 80px;
+          border-radius: 15px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          position: relative;
+          &:hover {
+            // transform: scale();
+            scale: 1.05;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: -2.2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 15px;
+            padding: 2px;
+            z-index: 1;
+            background: linear-gradient(
+              270deg,
+              #ad8153 0%,
+              #e2b36c 25%,
+              #fdecd6 50%,
+              #dcac64 75%,
+              #af8352 100%
+            );
+          }
+          & > button {
+            position: absolute;
+            cursor: pointer;
+            z-index: 5;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            border-radius: 15px;
+            & > h3 {
+              background: linear-gradient(
+                270deg,
+                #ad8153 0%,
+                #e2b36c 25%,
+                #fdecd6 50%,
+                #dcac64 75%,
+                #af8352 100%
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+        }
+        & > p {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          color: #6a6a6a;
+          & > a {
+            color: #fff;
+            font-family: Sansation;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-offset: 0%;
+            text-decoration-thickness: 0%;
+            text-decoration-skip-ink: auto;
+          }
+        }
+      }
     }
   }
 }
 .parking-rules {
-  background-color: white;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   padding-top: 60px;
   margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  // justify-content: start;
   gap: 60px;
   & > h1 {
     font-family: Sansation;
@@ -1673,6 +2286,16 @@ header {
     letter-spacing: 0%;
     text-align: center;
     text-transform: uppercase;
+    background: linear-gradient(
+      270deg,
+      #ad8153 0%,
+      #e2b36c 25%,
+      #fdecd6 50%,
+      #dcac64 75%,
+      #af8352 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   & > div {
     width: 1160px;
@@ -1689,14 +2312,14 @@ header {
     }
     & > p {
       font-family: Sansation;
-      font-weight: 400;
+      font-weight: $fontWeightText;
       font-size: 18px;
       line-height: 100%;
       letter-spacing: 0%;
       color: #6a6a6a;
     }
   }
-  & > a {
+  & > nav {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -1708,6 +2331,12 @@ header {
     text-align: start;
     width: 1160px;
     text-transform: uppercase;
+    cursor: pointer;
+    & > a {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
   }
 }
 .footer-com {
@@ -1739,18 +2368,18 @@ header {
     background-position-x: 0%;
   }
   .box2-main > div > .bg-box2-2 > img {
-    left: 33px;
+    left: 8px;
   }
   .box3-main {
     max-width: 1160px;
   }
   .box3-main > div > .bg-box3-2 {
-    width: 620px;
-    height: 322px;
+    width: 304.41px;
+    height: 585px;
   }
   .box3-main > div > .bg-box3-1 {
-    width: 500px;
-    height: 410px;
+    width: 800px;
+    height: 586px;
   }
   .box4-main {
     max-width: 1160px;
@@ -1798,7 +2427,61 @@ header {
     border-radius: 20px;
     background-position-x: 50%;
   }
+  .box4-main
+    > .content-top-box4
+    > .content-top-box4-2
+    > div
+    > .content-top-box4-2-content
+    .content-top-box4-2-content-2,
+  .box4-main
+    > .content-top-box4
+    > .content-top-box4_1-2
+    > div
+    > .content-top-box4-2-content
+    .content-top-box4-2-content-2 {
+    margin-left: 66px;
+  }
+  .box4-main
+    > .content-top-box4
+    > .content-top-box4-2
+    > div
+    > .content-top-box4-2-content
+    .content-top-box4-2-content-3,
+  .box4-main
+    > .content-top-box4
+    > .content-top-box4_1-2
+    > div
+    > .content-top-box4-2-content
+    .content-top-box4-2-content-3 {
+    margin-left: 45px;
+  }
 
+  .box4-main
+    > .content-top-box4
+    > .content-top-box4-2
+    > div
+    > .content-top-box4-2-content
+    .content-top-box4-2-content-4,
+  .box4-main
+    > .content-top-box4
+    > .content-top-box4_1-2
+    > div
+    > .content-top-box4-2-content
+    .content-top-box4-2-content-4 {
+    margin-left: 74px;
+  }
+  .box4-main
+    > .content-top-box4
+    > .content-top-box4-2
+    > div
+    > .content-top-box4-2-content,
+  .box4-main
+    > .content-top-box4
+    > .content-top-box4_1-2
+    > div
+    > .content-top-box4-2-content {
+    justify-content: center;
+  }
   .box4-main
     > .content-top-box4
     > .content-top-box4_1-1
@@ -1822,8 +2505,8 @@ header {
     width: 100%;
   }
   .box5-main > .content-box5 {
-    gap: 41px;
-    width: 1038px;
+    gap: 87px;
+    width: 1120px;
   }
   .box5-main > .content-box5 > .form-Box5 {
     width: 380px;

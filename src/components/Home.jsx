@@ -6,6 +6,8 @@ import Box4 from "./elements/Box4";
 import Box4_1 from "./elements/Box4_1";
 import Box5 from "./elements/Box5";
 import Box1 from "./elements/Box1";
+import BoxMid1 from "./elements/BoxMid1";
+import BoxMid2 from "./elements/BoxMid2";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <Box3 />
       <Box4 />
       <Box4_1 />
+      <BoxMid1 />
+      <BoxMid2 />
       <Box5 />
     </div>
   );

@@ -22,10 +22,15 @@ export default function ServicesBox1() {
         </p>
       </div>
       <img src={imgServices1} alt="imgServices1" />
-      <a>
-        <img src={iconPDF} alt="iconPDF" />
-        Прайс-лист на услуги мойки
-      </a>
+      <nav>
+        <a
+          target="_blank"
+          href="https://drive.google.com/drive/folders/1iYoBDTNTgsjke5-gNKozrOgLufNbQM6y?usp=drive_link"
+        >
+          <img src={iconPDF} alt="iconPDF" />
+          Прайс-лист на услуги мойки
+        </a>
+      </nav>
     </div>
   );
 }

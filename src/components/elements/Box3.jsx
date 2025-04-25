@@ -16,18 +16,41 @@ export default function Box3() {
       <div>
         <div className="bg-box3-1">
           <div>
-            <img src={logoIconBox3} alt="logoIconBox3" />
+            {/* <img src={logoIconBox3} alt="logoIconBox3" /> */}
             <div>
               <div>
-                <h1>Первый уровень подземного паркинга</h1>
-                <p>Сервисный трафик и Валет-сервис.</p>
+                <h1>ЗОНЫ У ЛОББИ</h1>
+                <p>
+                  Drop-off зона для посадки-высадки пассажиров
+                  <br />
+                  Зона передачи авто профессиональным парковщикам <br />
+                  Зона приёма и получения авто для гостей Жилого квартала Прайм
+                  Парк
+                </p>
               </div>
               <img src={iconLineBox3} alt="iconLineBox3" />
               <div>
-                <h1>Второй уровень подземного паркинга</h1>
+                <h1>
+                  ПЕРВЫЙ УРОВЕНЬ <br />
+                  ПОДЗЕМНОГО ПАРКИНГА
+                </h1>
                 <p>
-                  Доступ на паркинг имеется только у жителей, оформивших
-                  подписку на Private Parking.
+                  Зона хранения автомобилей Valet-Service <br />
+                  Зона подачи автомобилей для абонементов Valet-Service <br />
+                  Обособленные зоны для проведения погрузо-разгрузочных работ{" "}
+                  <br />
+                  Зона для аренды непривязанных машино-мест (Open Parking)
+                </p>
+              </div>
+              <img src={iconLineBox3} alt="iconLineBox3" />
+              <div>
+                <h1>
+                  ВТОРОЙ УРОВЕНЬ <br />
+                  ПОДЗЕМНОГО ПАРКИНГА
+                </h1>
+                <p>
+                  Приватная зона для аренды привязанных машино-мест (Private
+                  Parking)
                 </p>
               </div>
             </div>
@@ -35,7 +58,7 @@ export default function Box3() {
         </div>
         <div className="bg-box3-2">
           <img
-            data-aos={"slide-left"}
+            data-aos={"fade-up"}
             data-aos-duration="1700"
             src={bgBox3Car}
             alt="bgBox3Car"

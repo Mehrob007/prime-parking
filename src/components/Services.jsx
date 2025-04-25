@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <div className="services">
       <ServicesBox1 />
-      <ServicesBox2 />
+      {/* <ServicesBox2 /> */}
       <Box5/>
     </div>
   );

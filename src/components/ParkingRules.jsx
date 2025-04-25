@@ -1,6 +1,7 @@
 import React from "react";
 import Box5 from "./elements/Box5";
-import iconPDFB from "../assets/icon/iconPDF-b.svg"
+import iconPDFB from "../assets/icon/iconPDF.svg";
+// import iconPDF from "../../assets/icon/iconPDF.svg";
 
 export default function ParkingRules() {
   return (
@@ -251,9 +252,9 @@ export default function ParkingRules() {
           допускается.
         </p>
       </div>
-      <div>
+      {/* <div>
         <h1>Утверждено:</h1>
-      </div>
+      </div> */}
       <div>
         <h1>Исполнитель:</h1>
         <p>Индивидуальный Предприниматель Алексеев Владимир Сергеевич</p>
@@ -266,9 +267,11 @@ export default function ParkingRules() {
           <br /> ООО «ПРАЙМ ПАРК МЕНЕДЖМЕНТ» Мельникова И.В.
         </p>
       </div>
-      <a>
-        <img src={iconPDFB} alt="iconPDFB" /> <h1>Правила паркинга</h1>
-      </a>
+      <nav>
+        <a target="_blank" href="https://drive.google.com/drive/folders/1rRhQ8FnQxw-EzLyeQYr0tYjJ8IMFGkfa?usp=drive_link">
+          <img src={iconPDFB} alt="iconPDFB" /> <h1>Правила паркинга</h1>
+        </a>
+      </nav>
       <footer className="footer-com">
         <Box5 footerForm={2} />
       </footer>

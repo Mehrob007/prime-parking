@@ -61,35 +61,35 @@ const defDataARR = [
     content: [
       {
         title: "S 13,2-13-5 м²",
-        price: `39.000`,
+        price: `36.000`,
       },
       {
         title: "M 13,5-15 м²",
-        price: `42.000`,
+        price: `49.000`,
       },
       {
         title: "L1 15-16 м²",
-        price: `44.250`,
+        price: `41.250`,
       },
       {
         title: "B1 16,1-17 м²",
-        price: `45.750`,
+        price: `42.750`,
       },
       {
         title: "B2 17-26,2 м²",
-        price: `48.000`,
+        price: `45.000`,
       },
       {
         title: "F1 2x2 м",
-        price: `67.500`,
+        price: `59.250`,
       },
       {
         title: "F2 2x2 м",
-        price: `68.625`,
+        price: `61.500`,
       },
       {
         title: "F3 3м/м",
-        price: `115.388`,
+        price: `96.900`,
       },
     ],
     subContent: [
@@ -109,35 +109,35 @@ const defDataARR = [
     content: [
       {
         title: "S 13,2-13-5 м²",
-        price: `39.000`,
+        price: `34.500`,
       },
       {
         title: "M 13,5-15 м²",
-        price: `42.000`,
+        price: `36.000`,
       },
       {
         title: "L1 15-16 м²",
-        price: `44.250`,
+        price: `37.500`,
       },
       {
         title: "B1 16,1-17 м²",
-        price: `45.750`,
+        price: `39.000`,
       },
       {
         title: "B2 17-26,2 м²",
-        price: `48.000`,
+        price: `41.250`,
       },
       {
         title: "F1 2x2 м",
-        price: `67.500`,
+        price: `51.750`,
       },
       {
         title: "F2 2x2 м",
-        price: `68.625`,
+        price: `54.000`,
       },
       {
         title: "F3 3м/м",
-        price: `115.388`,
+        price: `92.900`,
       },
     ],
     subContent: [
@@ -157,35 +157,35 @@ const defDataARR = [
     content: [
       {
         title: "S 13,2-13-5 м²",
-        price: `39.000`,
+        price: `32.250`,
       },
       {
         title: "M 13,5-15 м²",
-        price: `42.000`,
+        price: `34.050`,
       },
       {
         title: "L1 15-16 м²",
-        price: `44.250`,
+        price: `35.550`,
       },
       {
         title: "B1 16,1-17 м²",
-        price: `45.750`,
+        price: `36.750`,
       },
       {
         title: "B2 17-26,2 м²",
-        price: `48.000`,
+        price: `37.500`,
       },
       {
         title: "F1 2x2 м",
-        price: `67.500`,
+        price: `51.075`,
       },
       {
         title: "F2 2x2 м",
-        price: `68.625`,
+        price: `53.325`,
       },
       {
         title: "F3 3м/м",
-        price: `115.388`,
+        price: `89.250`,
       },
     ],
     subContent: [
@@ -205,35 +205,31 @@ const defDataARR = [
     content: [
       {
         title: "S 13,2-13-5 м²",
-        price: `39.000`,
+        price: `30.000`,
       },
       {
         title: "M 13,5-15 м²",
-        price: `42.000`,
+        price: `31.800`,
       },
       {
         title: "L1 15-16 м²",
-        price: `44.250`,
+        price: `33.300`,
       },
       {
         title: "B1 16,1-17 м²",
-        price: `45.750`,
+        price: `36.000`,
       },
       {
         title: "B2 17-26,2 м²",
-        price: `48.000`,
+        price: `36.750`,
       },
       {
         title: "F1 2x2 м",
-        price: `67.500`,
-      },
-      {
-        title: "F2 2x2 м",
-        price: `68.625`,
+        price: `45.000`,
       },
       {
         title: "F3 3м/м",
-        price: `115.388`,
+        price: `66.600`,
       },
     ],
     subContent: [
@@ -253,35 +249,23 @@ const defDataARR = [
     content: [
       {
         title: "S 13,2-13-5 м²",
-        price: `39.000`,
+        price: `28.500`,
       },
       {
         title: "M 13,5-15 м²",
-        price: `42.000`,
+        price: `29.550`,
       },
       {
         title: "L1 15-16 м²",
-        price: `44.250`,
+        price: `32.250`,
       },
       {
         title: "B1 16,1-17 м²",
-        price: `45.750`,
-      },
-      {
-        title: "B2 17-26,2 м²",
-        price: `48.000`,
+        price: `34.500`,
       },
       {
         title: "F1 2x2 м",
-        price: `67.500`,
-      },
-      {
-        title: "F2 2x2 м",
-        price: `68.625`,
-      },
-      {
-        title: "F3 3м/м",
-        price: `115.388`,
+        price: `42.750`,
       },
     ],
     subContent: [
@@ -308,13 +292,27 @@ export default function Box4_1() {
     <div className="box4-main">
       <div className="header-box4">
         <h1 data-aos={"fade-down"} data-aos-duration="700">
-          Тарифы на Private parking
+          PRIVATE PARKING
         </h1>
-        <p>
-          -2 уровень паркинга <span>(Сервис привилегированного паркинга)</span>
-        </p>
+        <p>Приватная зона с индивидуальными парковочными местами</p>
+        <h5>
+          Выберите удобный формат аренды закреплённого за вами машино-места
+        </h5>
       </div>
       <div className="content-top-box4 content-top-box4_1">
+        <div className="content-top-box4-0 content-top-box4_1-0">
+          <div>
+            <h1>Абонементы PRIVATE PARKING</h1>
+            <h3>в абонемент PRIVATE PARKING входит:</h3>
+            <p>
+              Самостоятельная парковка на закреплённом за вами парковочном месте{" "}
+              <br />
+              Полная уверенность в наличии свободного места в любое время <br />
+              Высокий уровень приватности, комфорта и безопасности в парковочной
+              зоне
+            </p>
+          </div>
+        </div>
         <div className="content-navigate-box4_1">
           {defDataARR.map((prev, i) => (
             <div
@@ -328,6 +326,7 @@ export default function Box4_1() {
             </div>
           ))}
         </div>
+
         <div className="content-top-box4_1-1">
           {defDataARR
             .filter((e) => e.id === selection)
@@ -358,7 +357,16 @@ export default function Box4_1() {
                     >
                       <div>
                         <h1>{e.title}</h1>
-                        <p>{e.price}</p>
+                        <p>
+                          {e.price}{" "}
+                          <span
+                            style={{
+                              fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
+                            }}
+                          >
+                            ₽
+                          </span>
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -368,9 +376,17 @@ export default function Box4_1() {
         </div>
         <div className="content-top-box4_1-2">
           <div>
+            <div className="content-top-box4-2-title ">
+              <h1>дополнительные услуги private parking</h1>
+              <p>
+                Подписка Private+ к основному абонементу Private Parking
+                расширяет возможности сервиса и открывает доступ к эксклюзивным
+                услугам заправки, зарядки, мойки автомобиля и подачи напитков.
+              </p>
+            </div>
             <div className="content-top-box4-2-header">
               <div>
-                <h3>Подписка peivate +</h3>
+                <h3>private +</h3>
                 <h1>
                   5.000{" "}
                   <span
@@ -422,7 +438,9 @@ export default function Box4_1() {
                   src={contentTopBox42Content3}
                   alt="contentTopBox42Content3"
                 />
-                <p>Комплиментарный кофе при подаче автомобиля</p>
+                <p>
+                  Кофе и напитки <br /> при подаче автомобиля
+                </p>
               </div>
               <div className="content-top-box4-2-content-4">
                 <img
