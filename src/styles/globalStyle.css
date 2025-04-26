@@ -100,6 +100,19 @@
   list-style-type: disc;
   margin-left: 8px;
 }
+.ul-box4 > li > p > a {
+  font-family: Sansation;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-offset: 0%;
+  text-decoration-thickness: 0%;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
 
 .ol-box4 {
   font-family: Sansation;
@@ -1247,14 +1260,13 @@ header > .nav-bar > a {
   letter-spacing: 0%;
   text-align: center;
 }
-.box-mid2 > .box-mid2-content > div > p > a {
+.box-mid2 > .box-mid2-content > div > p > label {
   font-family: Sansation;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-decoration: underline;
   text-decoration-style: solid;
   text-decoration-offset: 0%;
   text-decoration-thickness: 0%;
