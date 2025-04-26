@@ -53,18 +53,27 @@ export default function BoxMid2() {
             </li>
             <li>
               <p>
-                <a href="#">Ссылка на зоны</a> Hyde Park Tower (R6), Gorky Park
-                Tower (R5), Imperial Park Tower (R4).
+                <a target="_blank" href="https://drive.google.com/drive/folders/1o0xhz5Y7ns4KADmx7448SNShufX3LkiJ?usp=drive_link">
+                  Ссылка на зоны
+                </a>{" "}
+                Hyde Park Tower (R6), Gorky Park Tower (R5), Imperial Park Tower
+                (R4).
               </p>
             </li>
             <li>
               <p>
-                <a href="#">Ссылка на зоны</a> Regent's Park Tower (R3).
+                <a target="_blank" href="https://drive.google.com/drive/folders/1к_3Y8NxEkoEzklQqamKWFGAza90bs-_6J?usp=drive_link">
+                  Ссылка на зоны
+                </a>{" "}
+                Regent's Park Tower (R3).
               </p>
             </li>
             <li>
               <p>
-                <a href="#">Ссылка на зоны</a> Central Park Tower (R7).
+                <a target="_blank" href="https://drive.google.com/drive/folders/1kr7hJFkpsThmRow8rb1BdHT2TDpxDEzE?usp=drive_link">
+                  Ссылка на зоны
+                </a>{" "}
+                Central Park Tower (R7).
               </p>
             </li>
             <li>

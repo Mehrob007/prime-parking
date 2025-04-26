@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "../../components/elements/Header.jsx";
+import ScrollToTop from "../../components/elements/com/ScrollToTop.jsx";
 const Home = lazy(() => import("../../components/Home.jsx"));
 const Services = lazy(() => import("../../components/Services.jsx"));
 const Offer = lazy(() => import("../../components/Offer.jsx"));
@@ -12,6 +13,7 @@ export default function Router() {
       <Header />
       <div>
         <Suspense fallback={<p>Loading...</p>}>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
