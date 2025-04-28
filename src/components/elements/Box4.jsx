@@ -5,8 +5,10 @@ import contentTopBox42Content3 from "../../assets/icon/content-top-box4-2-conten
 import contentTopBox42Content4 from "../../assets/icon/content-top-box4-2-content-4.svg";
 import AccordionCom from "./componentSite/AccordionCom";
 import AOS from "aos";
+import useMediaQuery from "../../function/useMediaQuery";
 
 export default function Box4() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
     AOS.init({});
   }, []);
@@ -16,16 +18,18 @@ export default function Box4() {
         <h1 data-aos={"fade-down"} data-aos-duration="700">
           VALET SERVICE
         </h1>
-        <p>УСЛУГИ ПРЕМИАЛЬНЫХ ПАРКОВЩИКОВ</p>
+        <p>УСЛУГИ ПРЕМИАЛЬНЫХ {isMobile && <br />} ПАРКОВЩИКОВ</p>
       </div>
       <div className="content-top-box4">
-        <div className="content-top-box4-0">
+        <div className="content-top-box4-0 content-top-bg-box4">
           <div>
-            <h1>Абонементы VALET service</h1>
-            <h3>в абонемент VALET-serviСe входит:</h3>
+            <h1>Абонементы {isMobile && <br />} VALET service</h1>
+            <h3>в абонемент {isMobile && <br />} VALET-serviСe входит:</h3>
             <p>
-              Прием автомобиля у лобби и подача автомобиля на -1 уровне <br />
-              Размещение автомобиля на подземный паркинг сотрудником
+              Прием автомобиля у лобби и подача {isMobile && <br />} автомобиля
+              на -1 уровне <br /> {isMobile && <br />}
+              Размещение автомобиля {isMobile && <br />} на подземный паркинг
+              сотрудником {isMobile && <br />}
               Валет-сервиса
             </p>
           </div>
@@ -50,8 +54,8 @@ export default function Box4() {
             <div className="content-top-box4-1-com-sub-text">
               <p>
                 *Активация абонемента с даты покупки <br /> Сгорают все
-                неиспользованные дни по истечению <br /> срока действия
-                абонемента
+                неиспользованные дни {isMobile && <br />} по истечению{" "}
+                {!isMobile && <br />} срока действия абонемента
               </p>
             </div>
           </div>
@@ -74,8 +78,8 @@ export default function Box4() {
             <div className="content-top-box4-1-com-sub-text">
               <p>
                 *Активация абонемента с даты покупки <br /> Сгорают все
-                неиспользованные дни по истечению <br /> срока действия
-                абонемента
+                неиспользованные дни {isMobile && <br />} по истечению{" "}
+                {!isMobile && <br />} срока действия абонемента
               </p>
             </div>
           </div>
@@ -98,8 +102,8 @@ export default function Box4() {
             <div className="content-top-box4-1-com-sub-text">
               <p>
                 *Активация абонемента с даты покупки <br /> Сгорают все
-                неиспользованные дни по истечению <br /> срока действия
-                абонемента
+                неиспользованные дни {isMobile && <br />} по истечению{" "}
+                {!isMobile && <br />} срока действия абонемента
               </p>
             </div>
           </div>
@@ -122,8 +126,8 @@ export default function Box4() {
             <div className="content-top-box4-1-com-sub-text">
               <p>
                 *Активация абонемента с даты покупки <br /> Сгорают все
-                неиспользованные дни по истечению <br /> срока действия
-                абонемента
+                неиспользованные дни {isMobile && <br />} по истечению{" "}
+                {!isMobile && <br />} срока действия абонемента
               </p>
             </div>
           </div>
@@ -131,11 +135,11 @@ export default function Box4() {
         <div className="content-top-box4-2">
           <div>
             <div className="content-top-box4-2-title">
-              <h1>дополнительные услуги VALET service</h1>
+              <h1>дополнительные {isMobile && <br />} услуги VALET {isMobile && <br />} service</h1>
               <p>
-                Подписка Valet+ к основному абонементу Valet Service расширяет
-                возможности сервиса и открывает доступ к эксклюзивным услугам
-                заправки, зарядки, мойки автомобиля и подачи напитков.
+                Подписка Valet+ к основному {isMobile && <br />} абонементу  Valet Service расширяет {isMobile && <br />}
+                возможности сервиса и открывает {isMobile && <br />} доступ к эксклюзивным услугам{isMobile && <br />}
+                заправки, зарядки, мойки автомобиля  и подачи напитков.
               </p>
             </div>
             <div className="content-top-box4-2-header">
@@ -205,13 +209,13 @@ export default function Box4() {
             </div>
             <p>
               *Стоимость услуги мойки / топлива / электрозарядки не включена и
-              оплачивается дополнительно в соответствии с действующими тарифами.
+              оплачивается дополнительно в соответствии {isMobile && <br />} с действующими тарифами.
             </p>
             <div className="content-top-box4-2-title">
               <h1>гостевой VALET service</h1>
               <p>
-                Парковка гостей с помощью услуги Valet Service с передачей и
-                получением автомобиля у лобби. Тариф: 250 руб./час
+                Парковка гостей с помощью услуги {isMobile && <br />} Valet Service с передачей и
+                получением {isMobile && <br />} автомобиля у лобби. Тариф: {isMobile && <br />} 250 руб./час
               </p>
             </div>
           </div>
@@ -221,7 +225,7 @@ export default function Box4() {
         <AccordionCom
           title="Условия покупки подписки на абонемент Valet Service:"
           activeStyle={{
-            height: "328px",
+            height: isMobile ? "405px" : "328px",
           }}
           htmlEl={
             <ul className="ul-box4">
@@ -264,7 +268,7 @@ export default function Box4() {
         <AccordionCom
           title="Условия аннулирования подписки:"
           activeStyle={{
-            height: "188px",
+            height: isMobile ? "220px" : "188px",
           }}
           htmlEl={
             <ul className="ul-box4">
@@ -292,7 +296,7 @@ export default function Box4() {
         <AccordionCom
           title="Условия использования часового тарифа"
           activeStyle={{
-            height: "188px",
+            height: isMobile ? "210px" : "188px",
           }}
           htmlEl={
             <ul className="ul-box4">

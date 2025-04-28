@@ -5,8 +5,10 @@ import logoCF from "../../assets/icon/logoCF.svg";
 import AOS from "aos";
 import axios from "axios";
 import PhoneInput from "./com/Cleave";
+import useMediaQuery from "../../function/useMediaQuery";
 
 export default function Box5({ footerForm = 1 }) {
+  const isMobile = useMediaQuery("(max-width: 768px)")
   const [allText, setAllText] = useState({
     userName: "",
     phoneNumber: "",

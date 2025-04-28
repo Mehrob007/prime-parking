@@ -2,12 +2,15 @@ import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "../../components/elements/Header.jsx";
 import ScrollToTop from "../../components/elements/com/ScrollToTop.jsx";
+import { functions } from "../../store/globalState.js";
+import ModalMenu from "../../components/elements/componentSite/ModalMenu.jsx";
 const Home = lazy(() => import("../../components/Home.jsx"));
 const Services = lazy(() => import("../../components/Services.jsx"));
 const Offer = lazy(() => import("../../components/Offer.jsx"));
 const ParkingRules = lazy(() => import("../../components/ParkingRules.jsx"));
 
 export default function Router() {
+  const { modalOpen } = functions();
   return (
     <>
       <Header />
@@ -22,6 +25,7 @@ export default function Router() {
           </Routes>
         </Suspense>
       </div>
+      {modalOpen && <ModalMenu />}
     </>
   );
 }

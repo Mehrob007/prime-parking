@@ -1,8 +1,10 @@
 import React from "react";
 import Box5 from "./elements/Box5";
 import { functions } from "../store/globalState";
+import useMediaQuery from "../function/useMediaQuery";
 
 export default function Offer() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const { redirect } = functions();
 
   return (
@@ -14,17 +16,26 @@ export default function Offer() {
             <h1>
               Публичная оферта на реализацию Программных <br />
               продуктов в целях обеспечения доступа <br />
-              на Паркинг Комплекса ЖК «Прайм Парк»
+              на Паркинг Комплекса {isMobile && <br />} ЖК «Прайм Парк»
             </h1>
             <div>
               <div>
-                <button onClick={() => redirect("https://drive.google.com/drive/folders/1L-w__kci-_71FF9MGxtBfbkIFuAGyeXn?usp=drive_link")}>
+                <button
+                  onClick={() =>
+                    redirect(
+                      "https://drive.google.com/drive/folders/1L-w__kci-_71FF9MGxtBfbkIFuAGyeXn?usp=drive_link",
+                    )
+                  }
+                >
                   <h3>Ознакомиться с основными положениями</h3>
                 </button>
               </div>
               <p>
                 Более старые версии:{" "}
-                <a target="_blank" href="https://drive.google.com/drive/folders/1PpXHaUU-0e-mxsfROheVtvCGLuzJk0xW?usp=drive_link">
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/drive/folders/1PpXHaUU-0e-mxsfROheVtvCGLuzJk0xW?usp=drive_link"
+                >
                   Скачать
                 </a>
               </p>
@@ -37,13 +48,22 @@ export default function Offer() {
             </h1>
             <div>
               <div>
-                <button onClick={() => redirect("https://drive.google.com/drive/folders/17uyCWydSeWQ9bGqzT-5PwrufZYXa-i6F?usp=drive_link")}>
+                <button
+                  onClick={() =>
+                    redirect(
+                      "https://drive.google.com/drive/folders/17uyCWydSeWQ9bGqzT-5PwrufZYXa-i6F?usp=drive_link",
+                    )
+                  }
+                >
                   <h3>Ознакомиться с основными положениями</h3>
                 </button>
               </div>
               <p>
                 Более старые версии:{" "}
-                <a target="_blank" href="https://drive.google.com/drive/folders/1-AjL6sUu7b1IX86NG1OU1d9JOBAs4fK7?usp=drive_link">
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/drive/folders/1-AjL6sUu7b1IX86NG1OU1d9JOBAs4fK7?usp=drive_link"
+                >
                   Скачать
                 </a>
               </p>
@@ -57,13 +77,22 @@ export default function Offer() {
             </h1>
             <div>
               <div>
-                <button onClick={() => redirect("https://drive.google.com/drive/folders/1TZ396IPBkTJ_Yeta5QHxn3Hw99hlip7M?usp=drive_link")}>
+                <button
+                  onClick={() =>
+                    redirect(
+                      "https://drive.google.com/drive/folders/1TZ396IPBkTJ_Yeta5QHxn3Hw99hlip7M?usp=drive_link",
+                    )
+                  }
+                >
                   <h3>Ознакомиться с основными положениями</h3>
                 </button>
               </div>
               <p>
                 Более старые версии:{" "}
-                <a target="_blank" href="https://drive.google.com/drive/folders/11s2I_6SG-bvTmKnRByd7opPQfx4zfSM0?usp=drive_link">
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/drive/folders/11s2I_6SG-bvTmKnRByd7opPQfx4zfSM0?usp=drive_link"
+                >
                   Скачать
                 </a>
               </p>

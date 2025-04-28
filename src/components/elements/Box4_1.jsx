@@ -5,6 +5,7 @@ import contentTopBox42Content3 from "../../assets/icon/content-top-box4-2-conten
 import contentTopBox42Content4 from "../../assets/icon/content-top-box4-2-content-4.svg";
 import AccordionCom from "./componentSite/AccordionCom";
 import AOS from "aos";
+import useMediaQuery from "../../function/useMediaQuery";
 
 const defDataARR = [
   {
@@ -282,6 +283,7 @@ const defDataARR = [
 ];
 
 export default function Box4_1() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const [selection, setSelection] = useState(1);
   useEffect(() => {
     AOS.init({});
@@ -302,14 +304,16 @@ export default function Box4_1() {
       <div className="content-top-box4 content-top-box4_1">
         <div className="content-top-box4-0 content-top-box4_1-0">
           <div>
-            <h1>Абонементы PRIVATE PARKING</h1>
-            <h3>в абонемент PRIVATE PARKING входит:</h3>
+            <h1>Абонементы {isMobile && <br />} PRIVATE PARKING</h1>
+            <h3>в абонемент PRIVATE {isMobile && <br />} PARKING входит:</h3>
             <p>
-              Самостоятельная парковка на закреплённом за вами парковочном месте{" "}
-              <br />
-              Полная уверенность в наличии свободного места в любое время <br />
-              Высокий уровень приватности, комфорта и безопасности в парковочной
-              зоне
+              Самостоятельная парковка {isMobile && <br />} на закреплённом за
+              вами {isMobile && <br />} парковочном месте <br />
+              {isMobile && <br />}
+              Полная уверенность в наличии {isMobile && <br />} свободного места
+              в любое время <br /> {isMobile && <br />}
+              Высокий уровень приватности, {isMobile && <br />} комфорта и
+              безопасности {isMobile && <br />} в парковочной зоне
             </p>
           </div>
         </div>
@@ -377,11 +381,15 @@ export default function Box4_1() {
         <div className="content-top-box4_1-2">
           <div>
             <div className="content-top-box4-2-title ">
-              <h1>дополнительные услуги private parking</h1>
+              <h1>
+                дополнительные {isMobile && <br />} услуги private{" "}
+                {isMobile && <br />} parking
+              </h1>
               <p>
                 Подписка Private+ к основному абонементу Private Parking
                 расширяет возможности сервиса и открывает доступ к эксклюзивным
-                услугам заправки, зарядки, мойки автомобиля и подачи напитков.
+                услугам заправки, зарядки, мойки автомобиля {isMobile && <br />}{" "}
+                и подачи напитков.
               </p>
             </div>
             <div className="content-top-box4-2-header">
@@ -392,14 +400,14 @@ export default function Box4_1() {
                   <span
                     style={{
                       fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
-                      fontSize: "34px",
+                      fontSize: isMobile ? "24px" : "34px",
                     }}
                   >
                     ₽
                   </span>
                   /мес.
                 </h1>
-                <p>Стоимость дополнительной подписки</p>
+                <p>Стоимость дополнительной {isMobile && <br />} подписки</p>
               </div>
               <div>
                 <h3>Промо</h3>
@@ -408,7 +416,7 @@ export default function Box4_1() {
                   <span
                     style={{
                       fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
-                      fontSize: "34px",
+                      fontSize: isMobile ? "24px" : "34px",
                     }}
                   >
                     ₽
@@ -478,7 +486,7 @@ export default function Box4_1() {
         <AccordionCom
           title="Размер машиномест:"
           activeStyle={{
-            height: "309px",
+            height: isMobile ? "260px" : "309px",
           }}
           htmlEl={
             <ul
@@ -507,9 +515,11 @@ export default function Box4_1() {
           }
         />
         <AccordionCom
-          title="Условия покупки подписки на Private Parking:"
+          title={`Условия покупки ${
+            isMobile && "\n"
+          } подписки на Private Parking:`}
           activeStyle={{
-            height: "368px",
+            height: isMobile ? "470px" : "368px",
           }}
           htmlEl={
             <ul
@@ -537,8 +547,8 @@ export default function Box4_1() {
               <li>
                 <p>
                   Услуга по смене машиноместа в середине срока подписки возможна
-                  на любое свободное машиноместо с доплатой разницы стоимости
-                  машиномест. Данная услуга оплачивается дополнительно и
+                  на любое свободноемашиноместо с доплатой разницы стоимости
+                  машиномест. Данная услуга оплачиваетсядополнительно и
                   составляет 2 000 рублей.
                 </p>
               </li>

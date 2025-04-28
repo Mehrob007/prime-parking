@@ -7,8 +7,10 @@ import phone2 from "../../assets/img/iPhoneSpaceBlackRight.svg";
 import bgPhone from "../../assets/icon/bgPhone.svg";
 import AOS from "aos";
 import { functions } from "../../store/globalState";
+import useMediaQuery from "../../function/useMediaQuery";
 
 export default function BoxMid2() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const { redirect } = functions();
   useEffect(() => {
     AOS.init({
@@ -26,12 +28,11 @@ export default function BoxMid2() {
           <h1>Сервисный тариф:</h1>
           <p>
             Заказ пропуска осуществляется через мобильное приложение{" "}
-            <label>PRIME PARK APP</label> <br />
-            Для башен Hyde Park Tower (R6), Gorky Park Tower (R5), Imperial Park
-            Tower (R4) и Regent's Park Tower (R3), <br /> Central Park Tower
-            (R7): 20 минут - бесплатно, с 21 минуты по 60 минуту - 200 рублей в
-            час. <br /> Со 2 часа (с 61 минуты) - 300 рублей в час. Далее каждый
-            последующий час 300 рублей.
+            <label>PRIME PARK APP</label> {!isMobile && <br />} Для башен Hyde Park Tower, Gorky Park
+            Tower, Imperial Park Tower {isMobile && <br />} и Regent's Park Tower, Central Park {isMobile && <br />}
+            Tower: 20 минут - бесплатно, {!isMobile && <br />} с 21 минуты - 200 руб. в час. Со 2 часа
+            (с 61 минуты) - 300 руб. {!isMobile && <br />} в час.Далее каждый последующий час 300
+            рублей.
           </p>
         </div>
         <div>
@@ -41,8 +42,12 @@ export default function BoxMid2() {
       </div>
       <AccordionCom
         activeStyle={{
-          height: "377px",
+          height: "460px",
         }}
+        activeContent={false}
+        title="Специальные тарифы за нарушения регламента паркинга комплекса"
+        style={{ borderBottomColor: "#545454", width: "100%", height: "80px"}}
+        styleAccordionCom={{height: "50px"}}
         htmlEl={
           <ul
             className="ul-box4"
@@ -53,7 +58,10 @@ export default function BoxMid2() {
             </li>
             <li>
               <p>
-                <a target="_blank" href="https://drive.google.com/drive/folders/1o0xhz5Y7ns4KADmx7448SNShufX3LkiJ?usp=drive_link">
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/drive/folders/1o0xhz5Y7ns4KADmx7448SNShufX3LkiJ?usp=drive_link"
+                >
                   Ссылка на зоны
                 </a>{" "}
                 Hyde Park Tower (R6), Gorky Park Tower (R5), Imperial Park Tower
@@ -62,7 +70,10 @@ export default function BoxMid2() {
             </li>
             <li>
               <p>
-                <a target="_blank" href="https://drive.google.com/drive/folders/1к_3Y8NxEkoEzklQqamKWFGAza90bs-_6J?usp=drive_link">
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/drive/folders/1к_3Y8NxEkoEzklQqamKWFGAza90bs-_6J?usp=drive_link"
+                >
                   Ссылка на зоны
                 </a>{" "}
                 Regent's Park Tower (R3).
@@ -70,7 +81,10 @@ export default function BoxMid2() {
             </li>
             <li>
               <p>
-                <a target="_blank" href="https://drive.google.com/drive/folders/1kr7hJFkpsThmRow8rb1BdHT2TDpxDEzE?usp=drive_link">
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/drive/folders/1kr7hJFkpsThmRow8rb1BdHT2TDpxDEzE?usp=drive_link"
+                >
                   Ссылка на зоны
                 </a>{" "}
                 Central Park Tower (R7).
@@ -93,8 +107,6 @@ export default function BoxMid2() {
             </li>
           </ul>
         }
-        title="Специальные тарифы за нарушения регламента паркинга комплекса"
-        style={{ borderBottomColor: "#545454", width: "100%" }}
       />
       <div className="box-mid2-apk-mobile">
         <div className="box-mid2-apk-mobile-left">

@@ -2,13 +2,15 @@ import React from "react";
 import Box5 from "./elements/Box5";
 import iconPDFB from "../assets/icon/iconPDF.svg";
 // import iconPDF from "../../assets/icon/iconPDF.svg";
+import useMediaQuery from "../function/useMediaQuery";
 
 export default function ParkingRules() {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <div className="parking-rules">
       <h1>
-        Правила паркинга жилого <br />
-        квартала PRIME PARK
+        Правила паркинга {isMobile && <br />} жилого {!isMobile && <br />}
+        квартала {isMobile && <br />} PRIME PARK
       </h1>
       <div>
         <h1>Общие положения</h1>
@@ -268,7 +270,10 @@ export default function ParkingRules() {
         </p>
       </div>
       <nav>
-        <a target="_blank" href="https://drive.google.com/drive/folders/1rRhQ8FnQxw-EzLyeQYr0tYjJ8IMFGkfa?usp=drive_link">
+        <a
+          target="_blank"
+          href="https://drive.google.com/drive/folders/1rRhQ8FnQxw-EzLyeQYr0tYjJ8IMFGkfa?usp=drive_link"
+        >
           <img src={iconPDFB} alt="iconPDFB" /> <h1>Правила паркинга</h1>
         </a>
       </nav>

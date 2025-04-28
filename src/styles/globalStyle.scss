@@ -1,7 +1,11 @@
 $fontWeightText: 300;
+$fontWeightTextMobile: 400;
 $fontWeightTitle: 300;
+$fontWeightTitleMobile: 400;
 $fontWeightSubTitle: 300;
+$fontWeightSubTitleMobile: 400;
 $fontWeightTextSpan: 400;
+$fontWeightTextSpanMonile: 400;
 
 .accordion-com {
   // @apply max-w-[1318px] h-[152px] bg-[#000] p-[30px_0];
@@ -14,6 +18,10 @@ $fontWeightTextSpan: 400;
   border-top: 1px solid #545454;
   border-bottom: 1px solid transparent;
   padding-top: 30px;
+  @media (max-width: "750px") {
+    padding-top: 16px;
+    height: 60px;
+  }
   cursor: pointer;
   & > .accordion_com_content {
     // @apply w-full h-[92px] relative;
@@ -26,23 +34,54 @@ $fontWeightTextSpan: 400;
     justify-content: start;
     gap: 20px;
     transition: all 0.3s ease-in-out;
-    & > h1 {
-      background: linear-gradient(
-        259deg,
-        #ad8153 33.33%,
-        #e2b36c 49.25%,
-        #ffe1bb 65.17%,
-        #dcac64 81.09%,
-        #af8352 97%
-      );
-      font-family: Sansation;
-      font-weight: 400;
-      font-size: 28px;
-      line-height: 31.34px;
-      letter-spacing: 0%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      // width: 394px;
+    @media (max-width: "750px") {
+    }
+    & > nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      & > h1 {
+        background: linear-gradient(
+          259deg,
+          #ad8153 33.33%,
+          #e2b36c 49.25%,
+          #ffe1bb 65.17%,
+          #dcac64 81.09%,
+          #af8352 97%
+        );
+        font-family: Sansation;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 31.34px;
+        letter-spacing: 0%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        // width: 394px;
+        @media (max-width: "750px") {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-transform: uppercase;
+          width: 265px;
+        }
+      }
+      & img {
+        // @apply absolute r-[0px];
+        width: 34px;
+        height: 34px;
+        // position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @media (max-width: "750px") {
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
     & > p {
       color: white;
@@ -68,16 +107,6 @@ $fontWeightTextSpan: 400;
         cursor: text;
       }
     }
-    & img {
-      // @apply absolute r-[0px];
-      width: 34px;
-      height: 34px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-    }
   }
 }
 .active-info {
@@ -92,6 +121,9 @@ $fontWeightTextSpan: 400;
 .active-com {
   // height: 152px !important;
   padding: 30px 0 !important;
+  @media (max-height: "750px") {
+    padding: 16px 0 !important;
+  }
 }
 
 .ul-box4 {
@@ -114,6 +146,14 @@ $fontWeightTextSpan: 400;
       letter-spacing: 0%;
       list-style-type: disc;
       margin-left: 8px;
+      @media (max-width: "750px") {
+        font-family: Sansation;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        // text-align: center;
+      }
       & > a {
         font-family: Sansation;
         font-weight: 400;
@@ -195,6 +235,11 @@ $fontWeightTextSpan: 400;
   gap: 120px;
   align-items: center;
   padding-bottom: 105px;
+  @media (max-width: "750px") {
+    // padding-top: 100vh;
+    gap: 60px;
+    padding-bottom: 0;
+  }
 }
 header {
   height: 60px;
@@ -204,6 +249,9 @@ header {
   position: fixed;
   top: 0;
   z-index: 99999;
+  @media (max-width: "750px") {
+    padding: 0 10px;
+  }
   & > .nav-bar {
     display: flex;
     align-items: center;
@@ -212,9 +260,15 @@ header {
     margin: 0 auto;
     height: 60px;
     justify-content: space-between;
+    & > nav {
+      cursor: pointer;
+    }
     & > div {
       display: flex;
       gap: 40px;
+      @media (max-width: "750px") {
+        // display: none;
+      }
       & > a {
         font-family: Sansation;
         font-weight: 300;
@@ -238,6 +292,12 @@ header {
       width: 177.4241943359375px;
       height: 38.851593017578125px;
       cursor: pointer;
+      @media (max-width: 750px) {
+        width: 154.00015258789062px;
+        height: 33.16943359375px;
+        top: 13.65px;
+        left: 83px;
+      }
     }
     & > a {
       font-family: Sansation;
@@ -249,6 +309,9 @@ header {
       // margin-left: 424px;
       width: 366.25px;
       text-align: end;
+      @media (max-width: 750px) {
+        width: auto;
+      }
     }
   }
 }
@@ -267,12 +330,12 @@ header {
   width: 100%;
 }
 .box1-main {
-  height: 94vh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   position: relative;
   & > video {
-    top: 60px; 
+    top: 60px;
     left: 0;
     position: absolute;
     width: 100%;
@@ -333,13 +396,31 @@ header {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: "750px") {
+      // display: none;
+      font-family: Sansation;
+      font-weight: $fontWeightSubTitleMobile;
+      font-size: 30px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
   & > div {
     display: flex;
     gap: 40px;
+    @media (max-width: "750px") {
+      width: 100%;
+      justify-content: center;
+    }
     & > div {
       border-radius: 20px;
       height: 650px;
+      @media (max-width: "750px") {
+        width: 300px;
+        height: 760px;
+      }
     }
     & > .bg-box2-1 {
       width: 710px;
@@ -348,6 +429,12 @@ header {
       flex-direction: column;
       gap: 24px;
       overflow: hidden;
+      @media (max-width: "750px") {
+        width: 300px;
+        height: 760px;
+        background: url("../assets/icon/monile-bg-box2.svg");
+        gap: 29px;
+      }
       & > .box2-1-div {
         display: flex;
         flex-direction: column;
@@ -355,10 +442,22 @@ header {
         justify-content: start;
         gap: 20px;
         padding-top: 24px;
+        @media (max-width: "750px") {
+          // width: 170px;
+          // height: 536px;
+        }
+        & > img {
+          @media (max-width: "750px") {
+            width: 170px;
+            height: 34px;
+          }
+        }
       }
       & > .car-container1 {
         position: relative;
         height: 200px;
+        @media (max-width: "750px") {
+        }
         & > .coso11 {
           position: absolute;
           left: 155px;
@@ -367,6 +466,13 @@ header {
           height: 76px;
           transition: all 1.7s ease;
           transform: rotate(-300deg);
+          @media (max-width: "750px") {
+            // display: none;
+            left: -155px;
+            top: 105px;
+            width: 60px !important;
+            height: 60px !important;
+          }
         }
         & > .coso12 {
           position: absolute;
@@ -376,12 +482,26 @@ header {
           height: 76px;
           transform: rotate(-300deg);
           transition: all 1.7s ease;
+          @media (max-width: "750px") {
+            // display: none;
+            left: 174px;
+            top: 82px;
+            width: 62px !important;
+            height: 62px !important;
+            transform: rotate(-300deg);
+            transition: all 1.7s ease;
+          }
         }
         & > .active-rotate1 {
           transform: rotate(117deg);
         }
         & > .car-mers {
           min-width: 710px;
+          @media (max-width: "750px") {
+            margin-left: -300px;
+            width: 569px;
+            height: 159.48028564453125px;
+          }
         }
       }
       & > div > p {
@@ -392,6 +512,15 @@ header {
         line-height: 110%;
         letter-spacing: 0%;
         text-align: center;
+        @media (max-width: "750px") {
+          width: 270px;
+          font-family: Sansation;
+          font-weight: $fontWeightTextMobile;
+          font-size: 14px;
+          line-height: 114%;
+          letter-spacing: 0%;
+          text-align: center;
+        }
       }
     }
     & > .bg-box2-2 {
@@ -408,6 +537,9 @@ header {
         top: 24px;
         left: 112px;
         position: absolute;
+      }
+      @media (max-width: "750px") {
+        display: none;
       }
     }
   }
@@ -439,20 +571,37 @@ header {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: "750px") {
+      font-family: Sansation;
+      font-weight: $fontWeightSubTitleMobile;
+      font-size: 30px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
   & > div {
     display: flex;
     gap: 40px;
     align-items: center;
+    @media (max-width: "750px") {
+      flex-direction: column;
+      gap: 30px;
+    }
     & > .bg-box3-1 {
       background: url("../assets/icon/bg-box3-1.svg") center / cover no-repeat;
       width: 800px;
       height: 586px;
-
       border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
+      @media (max-width: "750px") {
+        width: 300px !important;
+        height: 632px !important;
+        gap: 30px;
+      }
       & > div {
         display: flex;
         flex-direction: column;
@@ -461,6 +610,11 @@ header {
         justify-content: start;
         width: 635px;
         height: 500px;
+        @media (max-width: "750px") {
+          width: 270px;
+          height: 592px;
+          gap: 10px;
+        }
         & > img {
           width: 81px;
           height: 91px;
@@ -497,6 +651,15 @@ header {
 
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
+              @media (max-width: "750px") {
+                font-family: Sansation;
+                font-weight: $fontWeightSubTitleMobile;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+                text-transform: uppercase;
+              }
             }
             & > p {
               font-family: Sansation;
@@ -505,6 +668,14 @@ header {
               line-height: 125%;
               letter-spacing: 0%;
               text-align: center;
+              @media (max-width: "750px") {
+                font-family: Sansation;
+                font-weight: $fontWeightTextMobile;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+              }
             }
           }
         }
@@ -516,11 +687,23 @@ header {
       height: 357px;
       overflow: hidden;
       position: relative;
+      @media (max-width: "750px") {
+        width: 300px;
+        height: 155.8px !important;
+        background: url("../assets/icon/mobile-bg-box3.svg") center / cover
+          no-repeat;
+      }
       & > img {
-        // rotate: 90deg;
         position: absolute;
         top: 0px;
         width: 585.79px !important;
+        @media (max-width: "750px") {
+          width: 156.3px !important;
+          height: 300px !important;
+          rotate: -90deg;
+          right: 70px;
+          top: -70px;
+        }
       }
     }
   }
@@ -534,6 +717,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: "750px") {
+    width: 300px;
+  }
   // justify-content: center;
   & > .header-box4 {
     width: 1094px;
@@ -542,6 +728,11 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    @media (max-width: "750px") {
+      width: 270px;
+      height: auto;
+      gap: 20px;
+    }
     & > h1 {
       font-family: Sansation;
       font-weight: $fontWeightTitle;
@@ -559,6 +750,15 @@ header {
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      @media (max-width: "750px") {
+        font-family: Sansation;
+        font-weight: $fontWeightSubTitleMobile;
+        font-size: 30px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+      }
     }
     & > p {
       font-family: Sansation;
@@ -569,6 +769,15 @@ header {
       text-align: center;
       text-transform: uppercase;
       color: #ffffff;
+      @media (max-width: "750px") {
+        font-family: Sansation;
+        font-weight: $fontWeightTextMobile;
+        font-size: 16px;
+        line-height: 110%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+      }
       & > span {
         font-family: Sansation;
         font-weight: $fontWeightSubTitle;
@@ -587,6 +796,15 @@ header {
       line-height: 100%;
       letter-spacing: 0%;
       text-align: center;
+      @media (max-width: "750px") {
+        font-family: Sansation;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 110%;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-top: -10px;
+      }
     }
   }
   & > .content-top-box4_1 {
@@ -597,8 +815,12 @@ header {
       height: 55px;
       display: flex;
       gap: 20px;
-
       width: 100%;
+      @media (max-width: "750px") {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 10px;
+      }
       & > div {
         width: 203px;
         height: 55px;
@@ -611,6 +833,12 @@ header {
         position: relative;
         // border: 3px solid transparent;
         transition: all 0.5s ease-in;
+        @media (max-width: "750px") {
+          width: 145px;
+          height: 45px;
+          border-radius: 8px;
+          // border-width: 1.5px;
+        }
         & > h1 {
           font-family: Sansation;
           font-weight: 700;
@@ -620,6 +848,15 @@ header {
           text-align: center;
           text-transform: uppercase;
           color: #545454;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+          }
         }
       }
       & > div::before {
@@ -649,6 +886,15 @@ header {
           -webkit-background-clip: text !important;
           -webkit-text-fill-color: transparent !important;
           transition: all 0.2s ease-in;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+          }
         }
       }
       & > .active-content-navigate-box4_1::before {
@@ -672,6 +918,9 @@ header {
     display: flex;
     flex-direction: column;
     gap: 19px;
+    @media (max-width: "750px") {
+      margin-top: 30px;
+    }
 
     // background-color: #0c0c0c;
     & > .content-top-box4-1 {
@@ -687,10 +936,20 @@ header {
         flex-direction: column;
         align-items: center;
         gap: 30px;
+        @media (max-width: "750px") {
+          width: 300px !important;
+          height: 190px;
+          padding-top: 20px;
+          gap: 20px;
+        }
         & > .content-top-box4-1-com-title {
           display: flex;
           flex-direction: column;
           gap: 10px;
+          @media (max-width: "750px") {
+            // width: 106px;
+            // height: 44px;
+          }
           & > h1 {
             font-family: Sansation;
             font-weight: 400;
@@ -709,6 +968,14 @@ header {
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            @media (max-width: "750px") {
+              font-family: Sansation;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              text-align: center;
+            }
           }
           & > p {
             font-family: Sansation;
@@ -718,6 +985,14 @@ header {
             letter-spacing: 0%;
             text-align: center;
             color: #ffffff;
+            @media (max-width: "750px") {
+              font-family: Sansation;
+              font-weight: $fontWeightTextMobile;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              text-align: center;
+            }
           }
         }
         & > .content-top-box4-1-com-price {
@@ -738,6 +1013,15 @@ header {
 
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+          }
         }
         & > .content-top-box4-1-com-sub-text {
           display: flex;
@@ -752,6 +1036,15 @@ header {
             text-align: center;
             width: 349px;
             color: #ffffff4d;
+            @media (max-width: "750px") {
+              font-family: Sansation;
+              font-weight: $fontWeightTextMobile;
+              font-size: 12px;
+              line-height: 120%;
+              letter-spacing: 0%;
+              text-align: center;
+              width: 270px;
+            }
             & > span {
               font-family: Sansation;
               font-weight: $fontWeightTextSpan;
@@ -786,6 +1079,9 @@ header {
         background: url("../assets/icon/box4-top4.svg") center / cover no-repeat;
       }
     }
+    & > .content-top-bg-box4 {
+      background: url("../assets/icon/bg-box3-0.svg") center / cover no-repeat;
+    }
     & > .content-top-box4-0 {
       width: 1160px;
       height: 225px;
@@ -794,7 +1090,13 @@ header {
       align-items: center;
       flex-direction: column;
       justify-content: center;
-      background: url("../assets/icon/bg-box3-0.svg") center / cover no-repeat;
+      background-color: #0c0c0c;
+      @media (max-width: "750px") {
+        width: 300px;
+        height: auto !important;
+        // border-radius: 15px;
+        padding: 20px 15px;
+      }
       & > div {
         height: 100%;
         display: flex;
@@ -802,6 +1104,10 @@ header {
         flex-direction: column;
         justify-content: center;
         height: 165px;
+        @media (max-width: "750px") {
+          height: auto !important;
+          // border-radius: 15px;
+        }
         & > h1 {
           font-family: Sansation;
           font-weight: 400;
@@ -820,6 +1126,15 @@ header {
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: $fontWeightSubTitleMobile;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+          }
         }
         & > h3 {
           margin-top: 30px;
@@ -840,6 +1155,16 @@ header {
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: $fontWeightSubTitleMobile;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 20px;
+          }
         }
         & > p {
           margin-top: 20px;
@@ -850,6 +1175,15 @@ header {
           line-height: 150%;
           letter-spacing: 0%;
           text-align: center;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: $fontWeightTextMobile;
+            font-size: 14px;
+            line-height: 110%;
+            letter-spacing: 0%;
+            text-align: center;
+            margin-top: 13px;
+          }
         }
       }
     }
@@ -871,6 +1205,12 @@ header {
         gap: 63px;
         padding: 0 29px;
         padding-top: 45px;
+        @media (max-width: "750px") {
+          height: auto;
+          flex-direction: column;
+          padding: 20px 15px;
+          gap: 0 !important;
+        }
         & > div {
           width: 102px;
           height: 80px;
@@ -878,6 +1218,15 @@ header {
           flex-direction: column;
           align-items: center;
           gap: 40px;
+          @media (max-width: "750px") {
+            height: 46px;
+            width: 270px;
+            padding: 0 21.5px;
+            flex-direction: row;
+            border-top: 1px solid #212121;
+            border-bottom: 1px solid #212121;
+            justify-content: space-between;
+          }
           & > h1 {
             font-family: Sansation;
             font-weight: $fontWeightTextSpan;
@@ -896,6 +1245,15 @@ header {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             width: 106px;
+            @media (max-width: "750px") {
+              font-family: Sansation;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              text-align: center;
+              width: auto;
+            }
           }
           & > p {
             font-family: Sansation;
@@ -904,6 +1262,14 @@ header {
             line-height: 100%;
             letter-spacing: 0%;
             text-align: center;
+            @media (max-width: "750px") {
+              font-family: Sansation;
+              font-weight: $fontWeightTextMobile;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              text-align: center;
+            }
           }
         }
       }
@@ -912,6 +1278,9 @@ header {
         height: 170px;
         display: flex;
         gap: 20px;
+        @media (max-width: "750px") {
+          display: none;
+        }
         & > div {
           width: 649px;
           height: 170px;
@@ -919,6 +1288,7 @@ header {
           display: flex;
           align-items: center;
           justify-content: center;
+
           & > div {
             width: 140px;
             height: 80px;
@@ -971,6 +1341,12 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
+      @media (max-width: "750px") {
+        gap: 30px;
+        width: 300px;
+        height: auto;
+        padding-bottom: 20px;
+      }
       & > div {
         width: 1161px;
         height: 668px;
@@ -978,6 +1354,12 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (max-width: "750px") {
+          gap: 30px;
+          width: 300px;
+          height: auto;
+          margin-top: 20px;
+        }
         & > p {
           font-family: Sansation;
           font-weight: $fontWeightText;
@@ -987,12 +1369,28 @@ header {
           text-align: center;
           width: 725px;
           color: #ffffff4d;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: $fontWeightTextMobile;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            width: 270px;
+            margin-top: 20px;
+          }
         }
         & > .content-top-box4-2-header {
           width: 922px;
           display: flex;
           justify-content: space-between;
           flex-direction: row-reverse;
+          @media (max-width: "750px") {
+            flex-direction: column-reverse;
+            width: 270px;
+            // height: 81px;
+            gap: 30px;
+          }
           & > div {
             width: 336px;
             height: 105px;
@@ -1001,6 +1399,10 @@ header {
             flex-direction: column;
             // justify-content: center;
             align-items: center;
+            @media (max-width: "750px") {
+              width: 270px;
+              height: auto;
+            }
             & > h3 {
               font-family: Sansation;
               font-weight: 400;
@@ -1019,6 +1421,15 @@ header {
               );
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
+              @media (max-width: "750px") {
+                font-family: Sansation;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+                text-transform: uppercase;
+              }
             }
             & > h1 {
               font-family: Sansation;
@@ -1037,6 +1448,15 @@ header {
               );
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
+              @media (max-width: "750px") {
+                font-family: Sansation;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+                text-transform: uppercase;
+              }
             }
             & > p {
               font-family: Sansation;
@@ -1045,6 +1465,15 @@ header {
               line-height: 100%;
               letter-spacing: 0%;
               text-align: center;
+              width: 260px;
+              @media (max-width: "750px") {
+                font-family: Sansation;
+                font-weight: $fontWeightTextMobile;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+              }
             }
           }
         }
@@ -1052,11 +1481,26 @@ header {
           width: 100%;
           height: 115px;
           display: flex;
+          @media (max-width: "750px") {
+            flex-direction: column;
+            width: 192px;
+            height: auto;
+            gap: 30px;
+            margin-top: 20px;
+          }
           & > div {
             display: flex;
             flex-direction: column;
             gap: 20px;
             align-items: center;
+            @media (max-width: "750px") {
+              margin: 0 !important;
+              width: 192px !important;
+              & > img{
+                width: 50px;
+                height: 50px;
+              }
+            }
             & > p {
               font-family: Sansation;
               font-weight: $fontWeightText;
@@ -1064,6 +1508,14 @@ header {
               line-height: 100%;
               letter-spacing: 0%;
               text-align: center;
+              @media (max-width: "750px") {
+                font-family: Sansation;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+              }
             }
           }
           .content-top-box4-2-content-1 {
@@ -1089,6 +1541,10 @@ header {
           flex-direction: column;
           align-items: center;
           gap: 20px;
+          @media (max-width: "750px") {
+            width: 270px;
+            // margin-top: 20px;
+          }
           & > h1 {
             font-family: Sansation;
             font-weight: 400;
@@ -1107,6 +1563,15 @@ header {
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            @media (max-width: "750px") {
+              font-family: Sansation;
+              font-weight: 400;
+              font-size: 24px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              text-align: center;
+              text-transform: uppercase;
+            }
           }
           & > p {
             font-family: Sansation;
@@ -1115,6 +1580,16 @@ header {
             line-height: 100%;
             letter-spacing: 0%;
             text-align: center;
+            @media (max-width: "750px") {
+              font-family: Sansation;
+              font-weight: $fontWeightSubTitleMobile;
+              font-size: 14px;
+              line-height: 110%;
+              letter-spacing: 0%;
+              text-align: center;
+              width: 273px;
+              // margin-top: 20px;
+            }
           }
         }
         & > .content-top-box4-2-title:last-child {
@@ -1131,6 +1606,11 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
+      @media (max-width: "750px") {
+        width: 270px;
+        height: auto;
+        padding-bottom: 20px;
+      }
       & > div {
         width: 1161px;
         height: 530px;
@@ -1138,6 +1618,11 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (max-width: "750px") {
+          width: 270px;
+          height: auto;
+          gap: 30px;
+        }
         & > p {
           font-family: Sansation;
           font-weight: $fontWeightText;
@@ -1147,12 +1632,27 @@ header {
           text-align: center;
           width: 725px;
           color: #ffffff4d;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            width: 270px;
+          }
         }
         & > .content-top-box4-2-header {
           width: 922px;
           display: flex;
           justify-content: space-between;
           flex-direction: row-reverse;
+          @media (max-width: "750px") {
+            flex-direction: column-reverse;
+            width: 270px;
+            height: auto;
+            gap: 30px;
+          }
           & > div {
             width: 336px;
             height: 105px;
@@ -1161,6 +1661,10 @@ header {
             flex-direction: column;
             // justify-content: center;
             align-items: center;
+            @media (max-width: "750px") {
+              width: 270px;
+              height: auto;
+            }
             & > h3 {
               font-family: Sansation;
               font-weight: 400;
@@ -1179,6 +1683,15 @@ header {
               );
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
+              @media (max-width: "750px") {
+                font-family: Sansation;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+                text-transform: uppercase;
+              }
             }
             & > h1 {
               font-family: Sansation;
@@ -1197,6 +1710,15 @@ header {
               );
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
+              @media (max-width: "750px") {
+                font-family: Sansation;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+                text-transform: uppercase;
+              }
             }
             & > p {
               font-family: Sansation;
@@ -1205,6 +1727,14 @@ header {
               line-height: 100%;
               letter-spacing: 0%;
               text-align: center;
+              @media (max-width: "750px") {
+                font-family: Sansation;
+                font-weight: $fontWeightTextMobile;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+              }
             }
           }
         }
@@ -1212,11 +1742,25 @@ header {
           width: 100%;
           height: 115px;
           display: flex;
+          @media (max-width: "750px") {
+            flex-direction: column;
+            height: auto;
+            gap: 30px;
+            margin-top: 10px;
+            align-items: center;
+          }
           & > div {
             display: flex;
             flex-direction: column;
             gap: 20px;
             align-items: center;
+            @media (max-width: "750px") {
+              margin: 0 !important;
+              & > img {
+                width: 50px;
+                height: 50px;
+              }
+            }
             & > p {
               font-family: Sansation;
               font-weight: $fontWeightText;
@@ -1224,6 +1768,14 @@ header {
               line-height: 100%;
               letter-spacing: 0%;
               text-align: center;
+              @media (max-width: "750px") {
+                font-family: Sansation;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+              }
             }
           }
           .content-top-box4-2-content-1 {
@@ -1249,6 +1801,10 @@ header {
           flex-direction: column;
           align-items: center;
           gap: 20px;
+          @media (max-width: "750px") {
+            width: 270px;
+            margin-top: 20px;
+          }
           & > h1 {
             font-family: Sansation;
             font-weight: 400;
@@ -1267,6 +1823,15 @@ header {
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            @media (max-width: "750px") {
+              font-family: Sansation;
+              font-weight: 400;
+              font-size: 24px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              text-align: center;
+              text-transform: uppercase;
+            }
           }
           & > p {
             font-family: Sansation;
@@ -1275,6 +1840,14 @@ header {
             line-height: 100%;
             letter-spacing: 0%;
             text-align: center;
+            @media (max-width: "750px") {
+              font-family: Sansation;
+              font-weight: $fontWeightSubTitleMobile;
+              font-size: 14px;
+              line-height: 110%;
+              letter-spacing: 0%;
+              text-align: center;
+            }
           }
         }
         & > .content-top-box4-2-title:last-child {
@@ -1290,6 +1863,9 @@ header {
     // align-items: center;
     // gap: 1px;
     flex-direction: column;
+    @media (max-width: "750px") {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -1301,12 +1877,26 @@ header {
   flex-direction: column;
   position: relative;
   gap: 40px;
+  @media (max-width: "750px") {
+    width: 300px;
+    height: 451px;
+    gap: 30px;
+  }
   & > .box-mid1-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     gap: 20px;
+    @media (max-width: "750px") {
+      font-family: Sansation;
+      font-weight: $fontWeightSubTitleMobile;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+    }
     & > h1 {
       font-family: Sansation;
       font-weight: $fontWeightTitle;
@@ -1325,6 +1915,15 @@ header {
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      @media (max-width: "750px") {
+        font-family: Sansation;
+        font-weight: $fontWeightSubTitleMobile;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+      }
     }
     & > h3 {
       font-family: Sansation;
@@ -1334,6 +1933,15 @@ header {
       letter-spacing: 0%;
       text-align: center;
       text-transform: uppercase;
+      @media (max-width: "750px") {
+        font-family: Sansation;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 115%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+      }
     }
   }
   & > .box-mid1-content {
@@ -1345,16 +1953,34 @@ header {
     align-items: center;
     padding: 0 57px;
     gap: 46px;
+    @media (max-width: "750px") {
+      width: 300px;
+      height: 302px;
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px 15px;
+    }
     & > div {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      @media (max-width: "750px") {
+        gap: 10px;
+      }
       & > p {
         font-family: Sansation;
         font-weight: $fontWeightText;
         font-size: 18px;
         line-height: 100%;
         letter-spacing: 0%;
+        @media (max-width: "750px") {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 115%;
+          letter-spacing: 0%;
+          text-align: center;
+        }
       }
     }
     & > nav {
@@ -1363,10 +1989,13 @@ header {
       border-radius: 15px;
       position: relative;
       transition: all 0.3s ease;
+      @media (max-width: "750px") {
+        width: 238px;
+        height: 46px;
+      }
       &:hover {
         scale: 1.05;
       }
-
       & > button {
         cursor: pointer;
         background-color: #0c0c0c;
@@ -1375,7 +2004,6 @@ header {
         height: 100%;
         border-radius: 10px;
         position: relative;
-
         & > span {
           font-family: Sansation;
           font-weight: 400;
@@ -1394,6 +2022,15 @@ header {
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+          }
         }
       }
       &::before {
@@ -1426,6 +2063,12 @@ header {
   flex-direction: column;
   position: relative;
   gap: 40px;
+  @media (max-width: "750px") {
+    width: 300px;
+    height: 474.0001220703125px;
+    gap: 30px;
+    height: auto;
+  }
   & > h1 {
     font-family: Sansation;
     font-weight: $fontWeightTitle;
@@ -1444,18 +2087,33 @@ header {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: "750px") {
+      font-family: Sansation;
+      font-weight: $fontWeightSubTitleMobile;
+      font-size: 30px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
   & > .box-mid2-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    @media (max-width: "750px") {
+      gap: 20px;
+    }
     & > div {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       gap: 20px;
+      @media (max-width: "750px") {
+        gap: 10px;
+      }
       & > h1 {
         font-family: Sansation;
         font-weight: 400;
@@ -1474,6 +2132,15 @@ header {
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        @media (max-width: "750px") {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 110%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-transform: uppercase;
+        }
       }
       & > p {
         font-family: Sansation;
@@ -1482,6 +2149,15 @@ header {
         line-height: 120%;
         letter-spacing: 0%;
         text-align: center;
+        @media (max-width: "750px") {
+          font-family: Sansation;
+          font-weight: $fontWeightTextMobile;
+          font-size: 14px;
+          line-height: 115%;
+          letter-spacing: 0%;
+          text-align: center;
+          width: 270px;
+        }
         & > label {
           font-family: Sansation;
           font-weight: 400;
@@ -1504,6 +2180,14 @@ header {
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+          }
         }
       }
     }
@@ -1514,16 +2198,30 @@ header {
     gap: 83.5px;
     width: 100%;
     height: 416px;
+    @media (max-width: "750px") {
+      // justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: auto;
+      margin-top: 30px;
+    }
     & > .box-mid2-apk-mobile-left {
       display: flex;
       flex-direction: column;
       gap: 40px;
       width: 370px;
       // padding-top: 63px;
+      @media (max-width: "750px") {
+        gap: 20px;
+        width: 300px;
+      }
       & > .box-mid2-apk-mobile-left-header {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        @media (max-width: "750px") {
+          // gap: 10px ;
+        }
         & > h1 {
           font-family: Sansation;
           font-weight: 400;
@@ -1543,6 +2241,15 @@ header {
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: $fontWeightSubTitleMobile;
+            font-size: 30px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+          }
         }
         & > h3 {
           font-family: Sansation;
@@ -1552,6 +2259,15 @@ header {
           letter-spacing: 0%;
           text-align: center;
           text-transform: uppercase;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+          }
         }
       }
       & > p {
@@ -1561,10 +2277,30 @@ header {
         line-height: 110%;
         letter-spacing: 0%;
         text-align: center;
+        @media (max-width: "750px") {
+          margin-top: -10px;
+          font-family: Sansation;
+          font-weight: $fontWeightTextMobile;
+          font-size: 14px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+        }
       }
       & > .box-mid2-apk-mobile-left-get-apk {
         display: flex;
         gap: 20px;
+        @media (max-width: "750px") {
+          gap: 10px;
+          justify-content: center;
+        }
+        & > img {
+          @media (max-width: "750px") {
+            width: 145px;
+            height: 45px;
+            border-radius: 8px;
+          }
+        }
       }
     }
     & > .box-mid2-apk-mobile-right {
@@ -1574,19 +2310,38 @@ header {
       background: url("../assets/icon/bgPhone.svg");
       position: relative;
       // overflow: hidden;
+      @media (max-width: "750px") {
+        width: 300px;
+        height: 175px;
+      }
       & > div {
         margin-top: -63px;
         overflow: hidden;
         height: 416px;
         bottom: 0;
         position: relative;
+        @media (max-width: "750px") {
+          width: 300px;
+          height: 230.16000366210938px;
+          margin-top: -54.9px;
+        }
         & > img {
           position: absolute;
           // bottom: 0;
           left: 128.5px;
+          @media (max-width: "750px") {
+            width: 138px;
+            left: 24.28px;
+            bottom: -55px;
+          }
         }
         & > img:first-child {
           left: 240px;
+          @media (max-width: "750px") {
+            width: 170px;
+            left: 90px;
+            bottom: -55px;
+          }
         }
       }
     }
@@ -1605,6 +2360,14 @@ header {
   align-items: center;
   flex-direction: column;
   position: relative;
+  @media (max-width: "750px") {
+    width: 100%;
+    border-radius: 0;
+    padding: 0 15px;
+    padding-top: 38.06px;
+    height: auto;
+    padding-bottom: 40px;
+  }
   & > h1 {
     font-family: Sansation;
     font-weight: $fontWeightTitle;
@@ -1622,29 +2385,63 @@ header {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: "750px") {
+      font-family: Sansation;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
   & > .content-box5 {
     width: 1197px;
     margin-top: 71px;
     display: flex;
     gap: 100px;
+    @media (max-width: "750px") {
+      flex-direction: column-reverse;
+      width: 271px !important;
+      height: auto !important;
+      gap: 30px !important;
+      margin-top: 30px;
+    }
     & > .form-Box5 {
       display: flex;
       flex-direction: column;
       width: 420px;
       gap: 30px;
+      @media (max-width: "750px") {
+        width: 271px !important;
+        height: auto;
+        gap: 15px !important;
+        flex-wrap: nowrap;
+      }
       & > div {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        @media (max-width: "750px") {
+          width: 271px;
+          height: auto;
+          gap: 15px;
+        }
       }
       & > div > .input-box5-number::marker {
         display: none;
+        @media (max-width: "750px") {
+        }
       }
       & > div > .input-box5 {
         position: relative;
         width: 420px;
         height: 60px;
+        @media (max-width: "750px") {
+          width: 271px !important;
+          height: 45px;
+          border-radius: 8px;
+        }
         & > input {
           // border: 1px solid;
           width: 420px;
@@ -1662,6 +2459,11 @@ header {
           font-size: 18px;
           line-height: 100%;
           letter-spacing: 0%;
+          @media (max-width: "750px") {
+            width: 271px;
+            height: 45px;
+            border-radius: 8px;
+          }
         }
         & > textarea {
           min-width: 420px;
@@ -1674,19 +2476,24 @@ header {
           font-size: 18px;
           line-height: 100%;
           letter-spacing: 0%;
-
-          // left: 2px;
           z-index: 2;
           background-color: #0c0c0c;
           border-radius: 10px;
           padding: 20px;
           outline: none;
+          @media (max-width: "750px") {
+            width: 271px;
+            height: 130px;
+            border-radius: 8px;
+          }
           // border-width: 1px;
         }
       }
       & > div > .textarea-box5 {
         width: 420px;
         height: 150px;
+        @media (max-width: "750px") {
+        }
       }
       & > div > .input-box5::before {
         content: "";
@@ -1706,6 +2513,8 @@ header {
           #dcac64 75%,
           #af8352 100%
         );
+        @media (max-width: "750px") {
+        }
       }
       & > span > button {
         width: 420px;
@@ -1721,6 +2530,8 @@ header {
         font-size: 18px;
         line-height: 100%;
         letter-spacing: 0%;
+        @media (max-width: "750px") {
+        }
       }
       & > span > .active-button-box5 {
         background: linear-gradient(
@@ -1732,6 +2543,8 @@ header {
         );
         transition: all 0.7s ease-out;
         color: #000;
+        @media (max-width: "750px") {
+        }
       }
       // & > .active-button-box5 {
       //   position: relative;
@@ -1762,6 +2575,14 @@ header {
         line-height: 100%;
         letter-spacing: 0%;
         color: #545454;
+        @media (max-width: "750px") {
+          font-family: Sansation;
+          font-weight: $fontWeightTextMobile;
+          font-size: 12px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+        }
         & > a {
           font-family: Sansation;
           font-weight: 400;
@@ -1774,6 +2595,19 @@ header {
           text-decoration-thickness: 0%;
           text-decoration-skip-ink: auto;
           color: #929292;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-offset: 0%;
+            text-decoration-thickness: 0%;
+            text-decoration-skip-ink: auto;
+          }
         }
       }
     }
@@ -1782,11 +2616,22 @@ header {
       gap: 100px;
       flex-wrap: wrap;
       position: relative;
+      @media (max-width: "750px") {
+        width: 271px;
+        height: 192px;
+        gap: 20px !important;
+        justify-content: center;
+      }
       & > .info-contact-1 {
         display: flex;
         flex-direction: column;
         gap: 20px;
         height: 191px;
+        @media (max-width: "750px") {
+          width: 191px;
+          height: 94px;
+          gap: 10px;
+        }
         & > h1 {
           font-family: Sansation;
           font-weight: 400;
@@ -1804,6 +2649,15 @@ header {
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 115%;
+            letter-spacing: 0%;
+            text-align: center;
+            text-transform: uppercase;
+          }
         }
         & > h3 {
           font-family: Sansation;
@@ -1811,6 +2665,14 @@ header {
           font-size: 18px;
           line-height: 30px;
           letter-spacing: 0%;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: $fontWeightTextMobile;
+            font-size: 14px;
+            line-height: 115%;
+            letter-spacing: 0%;
+            text-align: center;
+          }
         }
       }
       & > .div-car-box5 {
@@ -1819,6 +2681,9 @@ header {
         position: absolute;
         top: 187px;
         left: -100px;
+        @media (max-width: "750px") {
+          display: none;
+        }
         & > img {
           // min-width: 838px;
           // min-height: 288px;
@@ -1855,6 +2720,11 @@ header {
     // flex-direction: column;
     justify-content: start;
     align-items: center;
+    @media (max-width: "750px") {
+      flex-direction: column-reverse;
+      gap: 30px;
+      margin-top: 40px;
+    }
     & > p {
       font-family: Sansation;
       font-weight: 400;
@@ -1864,6 +2734,15 @@ header {
       color: #545454;
       margin-left: 389px;
       width: 255px;
+      @media (max-width: "750px") {
+        margin: 0 !important;
+        width: auto;
+        font-family: Sansation;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
     }
     & > a {
       width: 190px;
@@ -1874,6 +2753,16 @@ header {
       letter-spacing: 0%;
       color: #ffffff;
       margin-left: 300px;
+      @media (max-width: "750px") {
+        margin: 0 !important;
+        width: auto;
+        font-family: Sansation;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
     }
   }
 }
@@ -1912,13 +2801,21 @@ header {
   gap: 120px;
   display: flex;
   align-items: center;
-
+  @media (max-width: "750px") {
+    gap: 60px;
+  }
   & > .services-box1 {
     width: 1160px;
     display: flex;
     flex-direction: column;
     gap: 40px;
     align-items: center;
+    @media (max-width: "750px") {
+      gap: 30px;
+      width: 300px;
+      height: auto;
+      gap: 30px;
+    }
     & > h3 {
       font-family: Sansation;
       font-weight: 300;
@@ -1928,6 +2825,16 @@ header {
       text-align: center;
       text-transform: uppercase;
       margin: 60px 0 20px 0;
+      @media (max-width: "750px") {
+        font-family: Sansation;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 40px 0 -10px 0;
+      }
     }
     & > nav {
       width: 100%;
@@ -1941,10 +2848,21 @@ header {
       letter-spacing: 0%;
       text-align: center;
       text-transform: uppercase;
+      @media (max-width: "750px") {
+      }
       & > a {
         display: flex;
         align-items: center;
         gap: 20px;
+        @media (max-width: "750px") {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-transform: uppercase;
+          text-align: start;
+        }
       }
     }
   }
@@ -1954,23 +2872,31 @@ header {
     flex-direction: column;
     gap: 40px;
     align-items: center;
+    @media (max-width: "750px") {
+    }
     & > .service-box2-content {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 60px;
+      @media (max-width: "750px") {
+      }
       & > .service-box2-info-private-valet {
         display: grid;
         width: 100%;
         grid-template-columns: 288px 852px;
         grid-template-rows: repeat(3, 55px);
         gap: 20px;
+        @media (max-width: "750px") {
+        }
         & > div {
           background-color: #0c0c0c;
           border-radius: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
+          @media (max-width: "750px") {
+          }
         }
         & > .service-box2-info-private-valet-div-852 {
           display: flex;
@@ -1979,6 +2905,8 @@ header {
             align-items: center;
             justify-content: center;
             width: 50%;
+            @media (max-width: "750px") {
+            }
             & > h3 {
               font-family: Sansation;
               font-weight: 400;
@@ -1996,6 +2924,8 @@ header {
               );
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
+              @media (max-width: "750px") {
+              }
             }
             & > p {
               font-family: Sansation;
@@ -2004,6 +2934,8 @@ header {
               line-height: 100%;
               letter-spacing: 0%;
               text-align: center;
+              @media (max-width: "750px") {
+              }
             }
           }
         }
@@ -2016,6 +2948,8 @@ header {
           text-align: center;
           text-transform: uppercase;
           position: relative;
+          @media (max-width: "750px") {
+          }
           &::after {
             content: "";
             position: absolute;
@@ -2034,6 +2968,8 @@ header {
               #dcac64 75%,
               #af8352 100%
             );
+            @media (max-width: "750px") {
+            }
           }
           & > h3 {
             background: linear-gradient(
@@ -2046,6 +2982,8 @@ header {
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            @media (max-width: "750px") {
+            }
           }
         }
       }
@@ -2054,11 +2992,15 @@ header {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        @media (max-width: "750px") {
+        }
         & > .services-price-petrol-top {
           display: flex;
           align-items: center;
           justify-content: start;
           gap: 20px;
+          @media (max-width: "750px") {
+          }
           & > h1 {
             font-family: Sansation;
             font-weight: 400;
@@ -2067,11 +3009,15 @@ header {
             letter-spacing: 0%;
             text-align: center;
             text-transform: uppercase;
+            @media (max-width: "750px") {
+            }
           }
         }
         & > .services-price-petrol-bottom {
           display: flex;
           gap: 20px;
+          @media (max-width: "750px") {
+          }
           & > button {
             background-color: #0c0c0c;
             width: 203px;
@@ -2085,6 +3031,8 @@ header {
             letter-spacing: 0%;
             text-align: center;
             text-transform: uppercase;
+            @media (max-width: "750px") {
+            }
             & > span {
               background: linear-gradient(
                 270deg,
@@ -2096,6 +3044,8 @@ header {
               );
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
+              @media (max-width: "750px") {
+              }
             }
           }
           & > button::before {
@@ -2116,6 +3066,8 @@ header {
               #dcac64 75%,
               #af8352 100%
             );
+            @media (max-width: "750px") {
+            }
           }
         }
       }
@@ -2126,12 +3078,21 @@ header {
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    @media (max-width: "750px") {
+    }
     & > p {
       font-family: Sansation;
       font-weight: 300;
       font-size: 18px;
       line-height: 100%;
       letter-spacing: 0%;
+      @media (max-width: "750px") {
+        font-family: Sansation;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 115%;
+        letter-spacing: 0%;
+      }
     }
   }
   & .services-title {
@@ -2152,6 +3113,15 @@ header {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: "750px") {
+      font-family: Sansation;
+      font-weight: $fontWeightSubTitle;
+      font-size: 30px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
 }
 .offer {
@@ -2160,11 +3130,14 @@ header {
   padding-top: 60px;
   // padding-bottom: 120px;
   margin-top: 60px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
+  @media (max-width: "750px") {
+    padding-top: 40px;
+    gap: 40px;
+  }
   & > h1 {
     font-family: Sansation;
     font-weight: 300;
@@ -2173,6 +3146,25 @@ header {
     letter-spacing: 0%;
     text-align: center;
     text-transform: uppercase;
+    background: linear-gradient(
+      270deg,
+      #ad8153 0%,
+      #e2b36c 25%,
+      #fdecd6 50%,
+      #dcac64 75%,
+      #af8352 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media (max-width: "750px") {
+      font-family: Sansation;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
   & > .offer-content {
     display: flex;
@@ -2180,6 +3172,10 @@ header {
     align-items: center;
     gap: 60px;
     margin-bottom: 120px;
+    @media (max-width: "750px") {
+      gap: 40px;
+      margin-bottom: 60px;
+    }
     & > div {
       width: 856px;
       display: flex;
@@ -2187,6 +3183,11 @@ header {
       align-items: center;
       text-align: center;
       gap: 40px;
+      @media (max-width: "750px") {
+        gap: 30px;
+        width: 276px;
+        height: auto;
+      }
       & > h1 {
         font-family: Sansation;
         font-weight: 300;
@@ -2195,6 +3196,15 @@ header {
         letter-spacing: 0%;
         text-align: center;
         text-transform: uppercase;
+        @media (max-width: "750px") {
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+          text-transform: uppercase;
+        }
       }
       & > div {
         display: flex;
@@ -2214,6 +3224,13 @@ header {
           cursor: pointer;
           transition: all 0.3s ease;
           position: relative;
+          @media (max-width: "750px") {
+            width: 276px;
+            height: 62px;
+            gap: 10px;
+            border-radius: 8px;
+            // padding: 15px;
+          }
           &:hover {
             // transform: scale();
             scale: 1.05;
@@ -2236,6 +3253,14 @@ header {
               #dcac64 75%,
               #af8352 100%
             );
+            @media (max-width: "750px") {
+              top: -1px;
+              left: -1px;
+              right: -1px;
+              bottom: -1px;
+              border-radius: 15px;
+              padding: 1px;
+            }
           }
           & > button {
             position: absolute;
@@ -2248,6 +3273,15 @@ header {
             justify-content: center;
             background-color: #000;
             border-radius: 15px;
+            @media (max-width: "750px") {
+              font-family: Sansation;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              text-align: center;
+              text-transform: uppercase;
+            }
             & > h3 {
               background: linear-gradient(
                 270deg,
@@ -2269,6 +3303,14 @@ header {
           line-height: 100%;
           letter-spacing: 0%;
           color: #6a6a6a;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+          }
           & > a {
             color: #fff;
             font-family: Sansation;
@@ -2281,6 +3323,19 @@ header {
             text-decoration-offset: 0%;
             text-decoration-thickness: 0%;
             text-decoration-skip-ink: auto;
+            @media (max-width: "750px") {
+              font-family: Sansation;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              text-align: center;
+              text-decoration: underline;
+              text-decoration-style: solid;
+              text-decoration-offset: 0%;
+              text-decoration-thickness: 0%;
+              text-decoration-skip-ink: auto;
+            }
           }
         }
       }
@@ -2297,6 +3352,10 @@ header {
   align-items: center;
   // justify-content: start;
   gap: 60px;
+  @media (max-width: "750px") {
+    padding-top: 40px;
+    gap: 30px;
+  }
   & > h1 {
     font-family: Sansation;
     font-weight: 300;
@@ -2315,12 +3374,26 @@ header {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (max-width: "750px") {
+      font-family: Sansation;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
   & > div {
     width: 1160px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @media (max-width: "750px") {
+      width: 303px;
+      height: auto;
+      gap: 10px;
+    }
     & > h1 {
       font-family: Sansation;
       font-weight: 400;
@@ -2328,6 +3401,14 @@ header {
       line-height: 100%;
       letter-spacing: 0%;
       text-transform: uppercase;
+      @media (max-width: "750px") {
+        font-family: Sansation;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+      }
     }
     & > p {
       font-family: Sansation;
@@ -2336,6 +3417,13 @@ header {
       line-height: 100%;
       letter-spacing: 0%;
       color: #b8b8b8;
+      @media (max-width: "750px") {
+        font-family: Sansation;
+        font-weight: $fontWeightTextMobile;
+        font-size: 14px;
+        line-height: 115%;
+        letter-spacing: 0%;
+      }
     }
   }
   & > nav {
@@ -2351,6 +3439,15 @@ header {
     width: 1160px;
     text-transform: uppercase;
     cursor: pointer;
+    @media (max-width: "750px") {
+      width: 300px;
+      font-family: Sansation;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-transform: uppercase;
+    }
     & > a {
       display: flex;
       gap: 20px;
@@ -2374,6 +3471,60 @@ header {
   width: 569px;
   right: 0;
   z-index: 1;
+}
+.modal-menu {
+  z-index: 99999999;
+  width: 100%;
+  height: 100vh;
+  background-color: #0c0c0c;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background: #0c0c0c url("../assets/img/bgModalMenu.svg") center / cover
+    no-repeat;
+  & > .modal-menu-header {
+    width: 100%;
+    height: 60px;
+    padding: 18px 10px;
+    & > img {
+      cursor: pointer;
+    }
+  }
+  & > .modal-menu-content {
+    display: flex;
+    flex-direction: column;
+    width: 165px;
+    height: 315.4771423339844px;
+    gap: 70px;
+    margin: 0 auto;
+    margin-top: 20px;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      & > a {
+        font-family: Sansation;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+    }
+    & > a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: Sansation;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+  }
 }
 @media (max-width: 4010px) {
   header > .nav-bar {
