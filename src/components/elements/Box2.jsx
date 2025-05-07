@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import bgBox2Com from "../../assets/icon/bg-box2-2-com.svg";
+import bgBox2Com from "../../assets/icon/bg-box2-2-com.png";
 import bgBox2Com1 from "../../assets/icon/logoBox2-1.svg";
-import bgBox2Car from "../../assets/icon/box2-car.svg";
+import bgBox2Car from "../../assets/icon/box2-car.png";
 import AOS from "aos";
-import Coso from "../../assets/icon/Колесо1.svg";
+import Coso from "../../assets/icon/Колесо1.png";
 import useMediaQuery from "../../function/useMediaQuery";
 
 export default function Box2() {

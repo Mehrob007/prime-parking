@@ -8,7 +8,7 @@ const BannerVideo = ({}) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShouldLoadVideo(true);
-    }, 4000);
+    }, 0);
 
     return () => clearTimeout(timeout);
   }, []);

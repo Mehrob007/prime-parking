@@ -1,6 +1,6 @@
 import React from "react";
 import imgServices1 from "../../assets/img/imgServices1.svg";
-import imgServices2 from "../../assets/img/imgServices2.svg";
+import imgServices2 from "../../assets/img/imgServices2.png";
 import iconPDF from "../../assets/icon/iconPDF.svg";
 import greyIconLogo from "../../assets/icon/greyIconLogo.svg";
 import iconPetrol from "../../assets/icon/iconPetrol.svg";

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
-import bgBox3Car from "../../assets/icon/bg-box3-car.svg";
+import bgBox3Car from "../../assets/icon/bg-box3-car.png";
 import logoIconBox3 from "../../assets/icon/logo-icon-box3.svg";
 import iconLineBox3 from "../../assets/icon/icon-line-box3.svg";
 import useMediaQuery from "../../function/useMediaQuery";

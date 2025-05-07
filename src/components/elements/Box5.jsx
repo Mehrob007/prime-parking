@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import imgBox5 from "../../assets/icon/img-box5.svg";
-import Coso from "../../assets/icon/Колесо.svg";
+import imgBox5 from "../../assets/icon/img-box5.png";
+import Coso from "../../assets/icon/Колесо.png";
 import logoCF from "../../assets/icon/logoCF.svg";
 import AOS from "aos";
 import axios from "axios";
