@@ -138,7 +138,7 @@ export default function Box4() {
               <h1>дополнительные {isMobile && <br />} услуги VALET {isMobile && <br />} service</h1>
               <p>
                 Подписка Valet+ к основному {isMobile && <br />} абонементу  Valet Service расширяет {isMobile && <br />}
-                возможности сервиса и открывает {isMobile && <br />} доступ к эксклюзивным услугам{isMobile && <br />}
+                возможности сервиса и открывает {isMobile && <br />} доступ к эксклюзивным услугам {isMobile && <br />}
                 заправки, зарядки, мойки автомобиля  и подачи напитков.
               </p>
             </div>
@@ -225,7 +225,7 @@ export default function Box4() {
         <AccordionCom
           title="Условия покупки подписки на абонемент Valet Service:"
           activeStyle={{
-            height: isMobile ? "405px" : "328px",
+            height: isMobile ? "323px" : "328px",
           }}
           htmlEl={
             <ul className="ul-box4">
@@ -268,7 +268,7 @@ export default function Box4() {
         <AccordionCom
           title="Условия аннулирования подписки:"
           activeStyle={{
-            height: isMobile ? "220px" : "188px",
+            height: isMobile ? "195px" : "188px",
           }}
           htmlEl={
             <ul className="ul-box4">
@@ -296,7 +296,7 @@ export default function Box4() {
         <AccordionCom
           title="Условия использования часового тарифа"
           activeStyle={{
-            height: isMobile ? "210px" : "188px",
+            height: isMobile ? "170px" : "188px",
           }}
           htmlEl={
             <ul className="ul-box4">

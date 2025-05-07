@@ -28,11 +28,11 @@ export default function BoxMid2() {
           <h1>Сервисный тариф:</h1>
           <p>
             Заказ пропуска осуществляется через мобильное приложение{" "}
-            <label>PRIME PARK APP</label> {!isMobile && <br />} Для башен Hyde Park Tower, Gorky Park
-            Tower, Imperial Park Tower {isMobile && <br />} и Regent's Park Tower, Central Park {isMobile && <br />}
-            Tower: 20 минут - бесплатно, {!isMobile && <br />} с 21 минуты - 200 руб. в час. Со 2 часа
-            (с 61 минуты) - 300 руб. {!isMobile && <br />} в час.Далее каждый последующий час 300
-            рублей.
+            <label>PRIME PARK APP. {"  "}</label>  Для башен Hyde Park Tower (R6), Gorky Park Tower (R5), Imperial Park
+            Tower (R4) и Regent's Park Tower (R3), Central Park Tower (R7): 20
+            минут - бесплатно, с 21 минуты по 60 минуту - 200 рублей в час. Со 2
+            часа (с 61 минуты) - 300 рублей в час. Далее каждый последующий час
+            300 рублей.
           </p>
         </div>
         <div>
@@ -42,12 +42,16 @@ export default function BoxMid2() {
       </div>
       <AccordionCom
         activeStyle={{
-          height: "460px",
+          height: isMobile ? "355px" : "390px",
         }}
         activeContent={false}
         title="Специальные тарифы за нарушения регламента паркинга комплекса"
-        style={{ borderBottomColor: "#545454", width: "100%", height: "80px"}}
-        styleAccordionCom={{height: "50px"}}
+        style={{
+          borderBottomColor: "#545454",
+          width: "100%",
+          height: isMobile && "80px",
+        }}
+        styleAccordionCom={{ height: "50px" }}
         htmlEl={
           <ul
             className="ul-box4"

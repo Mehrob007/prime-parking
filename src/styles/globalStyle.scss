@@ -418,7 +418,7 @@ header {
       border-radius: 20px;
       height: 650px;
       @media (max-width: "750px") {
-        width: 300px;
+        width: 96%;
         height: 760px;
       }
     }
@@ -430,9 +430,10 @@ header {
       gap: 24px;
       overflow: hidden;
       @media (max-width: "750px") {
-        width: 300px;
-        height: 760px;
-        background: url("../assets/icon/monile-bg-box2.svg");
+        width: 96%;
+        height: auto;
+        background: url("../assets/icon/monile-bg-box2.svg") center / cover
+          no-repeat;
         gap: 29px;
       }
       & > .box2-1-div {
@@ -498,7 +499,7 @@ header {
         & > .car-mers {
           min-width: 710px;
           @media (max-width: "750px") {
-            margin-left: -300px;
+            margin-left: -301px;
             width: 569px;
             height: 159.48028564453125px;
           }
@@ -513,7 +514,9 @@ header {
         letter-spacing: 0%;
         text-align: center;
         @media (max-width: "750px") {
-          width: 270px;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
           font-family: Sansation;
           font-weight: $fontWeightTextMobile;
           font-size: 14px;
@@ -590,7 +593,8 @@ header {
       gap: 30px;
     }
     & > .bg-box3-1 {
-      background: url("../assets/icon/bg-box3-1.svg") center / cover no-repeat;
+      background: url("../assets/icon/bg-box3-1Des.svg") center / cover
+        no-repeat;
       width: 800px;
       height: 586px;
       border-radius: 20px;
@@ -598,9 +602,11 @@ header {
       align-items: center;
       justify-content: center;
       @media (max-width: "750px") {
-        width: 300px !important;
-        height: 632px !important;
+        background: url("../assets/icon/bg-box3-1.svg") center / cover no-repeat;
+        width: 96% !important;
+        height: auto !important;
         gap: 30px;
+        padding: 20px 0;
       }
       & > div {
         display: flex;
@@ -611,8 +617,10 @@ header {
         width: 635px;
         height: 500px;
         @media (max-width: "750px") {
-          width: 270px;
-          height: 592px;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+          height: auto;
           gap: 10px;
         }
         & > img {
@@ -688,22 +696,46 @@ header {
       overflow: hidden;
       position: relative;
       @media (max-width: "750px") {
-        width: 300px;
-        height: 155.8px !important;
+        width: 96vw !important;
+        height: 50vw !important;
+        // min-width: 300px;
         background: url("../assets/icon/mobile-bg-box3.svg") center / cover
           no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+      // @media (max-width: "661px") {
+      //   height: 28vh !important;
+      // }
+      // @media (max-width: "493px") {
+      //   width: 96vw !important;
+      //   height: 20vh !important;
+      // }
       & > img {
         position: absolute;
         top: 0px;
         width: 585.79px !important;
         @media (max-width: "750px") {
-          width: 156.3px !important;
-          height: 300px !important;
+          width: auto !important;
+          height: 100vw !important;
           rotate: -90deg;
-          right: 70px;
-          top: -70px;
+          // right: 170px;
+          // top: -170px;
+          position: static;
         }
+        // @media (max-width: "661px") {
+        //   width: 27vh !important;
+        //   height: 100vw !important;
+        //   right: 75px;
+        //   top: -125px;
+        // }
+        // @media (max-width: "493px") {
+        //   width: 20vh !important;
+        //   height: 100vw !important;
+        //   right: 75px;
+        //   top: -90px;
+        // }
       }
     }
   }
@@ -718,7 +750,7 @@ header {
   flex-direction: column;
   align-items: center;
   @media (max-width: "750px") {
-    width: 300px;
+    width: 96%;
   }
   // justify-content: center;
   & > .header-box4 {
@@ -729,7 +761,9 @@ header {
     align-items: center;
     gap: 20px;
     @media (max-width: "750px") {
-      width: 270px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
       height: auto;
       gap: 20px;
     }
@@ -817,7 +851,10 @@ header {
       gap: 20px;
       width: 100%;
       @media (max-width: "750px") {
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         height: auto;
         gap: 10px;
       }
@@ -834,7 +871,7 @@ header {
         // border: 3px solid transparent;
         transition: all 0.5s ease-in;
         @media (max-width: "750px") {
-          width: 145px;
+          width: auto;
           height: 45px;
           border-radius: 8px;
           // border-width: 1.5px;
@@ -937,9 +974,9 @@ header {
         align-items: center;
         gap: 30px;
         @media (max-width: "750px") {
-          width: 300px !important;
-          height: 190px;
-          padding-top: 20px;
+          width: 100% !important;
+          height: auto;
+          padding: 20px 0;
           gap: 20px;
         }
         & > .content-top-box4-1-com-title {
@@ -1043,7 +1080,9 @@ header {
               line-height: 120%;
               letter-spacing: 0%;
               text-align: center;
-              width: 270px;
+              width: 90%;
+              margin-left: auto;
+              margin-right: auto;
             }
             & > span {
               font-family: Sansation;
@@ -1067,20 +1106,43 @@ header {
         }
       }
       & > .content-top-box4-1-com-1 {
-        background: url("../assets/icon/box4-top1.svg") center / cover no-repeat;
+        background: url("../assets/icon/box4-top1Des.svg") center / cover
+          no-repeat;
+
+        @media (max-width: "750px") {
+          background: url("../assets/icon/box4-top1.svg") center / cover
+            no-repeat;
+        }
       }
       & > .content-top-box4-1-com-2 {
-        background: url("../assets/icon/box4-top2.svg") center / cover no-repeat;
+        background: url("../assets/icon/box4-top2Des.svg") center / cover no-repeat;
+        @media (max-width: "750px") {
+          background: url("../assets/icon/box4-top2.svg") center / cover
+            no-repeat;
+        }
       }
       & > .content-top-box4-1-com-3 {
-        background: url("../assets/icon/box4-top3.svg") center / cover no-repeat;
+        background: url("../assets/icon/box4-top3Des.svg") center / cover no-repeat;
+        @media (max-width: "750px") {
+          background: url("../assets/icon/box4-top3.svg") center / cover
+            no-repeat;
+        }
       }
       & > .content-top-box4-1-com-4 {
-        background: url("../assets/icon/box4-top4.svg") center / cover no-repeat;
-      }
+        background: url("../assets/icon/box4-top4Des.svg") center / cover no-repeat;
+        @media (max-width: "750px") {
+          background: url("../assets/icon/box4-top4.svg") center / cover
+            no-repeat;
+        }
+      } 
     }
     & > .content-top-bg-box4 {
-      background: url("../assets/icon/bg-box3-0.svg") center / cover no-repeat;
+      background: url("../assets/icon/bg-box3-0Des.svg") center / cover
+        no-repeat;
+
+      @media (max-width: "750px") {
+        background: url("../assets/icon/bg-box3-0.svg") center / cover no-repeat;
+      }
     }
     & > .content-top-box4-0 {
       width: 1160px;
@@ -1092,7 +1154,7 @@ header {
       justify-content: center;
       background-color: #0c0c0c;
       @media (max-width: "750px") {
-        width: 300px;
+        width: 100%;
         height: auto !important;
         // border-radius: 15px;
         padding: 20px 15px;
@@ -1189,23 +1251,31 @@ header {
     }
     & > .content-top-box4_1-0 {
       height: 255px;
+      background: url("../assets/icon/content-top-box4_1-2-content-0Des.svg")
+      center / cover no-repeat; 
     }
 
     & > .content-top-box4_1-1 {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      
+      @media (max-width: "750px"){
+        background-image: none;
+      }
       & > .content-top-box4_1-1-com-1 {
-        background: url("../assets/icon/content-top-box4_1-2-content-1.svg")
+        background: url("../assets/icon/content-top-box4_1-2-content-1Des.svg")
           center / cover no-repeat;
-        width: 100%;
-        height: 170px;
+        width: 100%; 
+        height: 170px; 
         display: flex;
         justify-content: space-between;
         gap: 63px;
         padding: 0 29px;
         padding-top: 45px;
         @media (max-width: "750px") {
+          background: url("../assets/icon/content-top-box4_1-2-content-1.svg")
+          center / cover no-repeat;
           height: auto;
           flex-direction: column;
           padding: 20px 15px;
@@ -1220,7 +1290,9 @@ header {
           gap: 40px;
           @media (max-width: "750px") {
             height: 46px;
-            width: 270px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
             padding: 0 21.5px;
             flex-direction: row;
             border-top: 1px solid #212121;
@@ -1336,14 +1408,16 @@ header {
     & > .content-top-box4-2 {
       width: 1318px;
       height: 728px;
-      border-radius: 20px;
-      background: url("../assets/icon/box4-top5.svg") center / cover no-repeat;
-      display: flex;
-      align-items: center;
+      border-radius: 20px; 
+      background: url("../assets/icon/box4-top5Des.svg") top / cover no-repeat;
+      display: flex; 
+      align-items: center; 
       justify-content: center;
-      @media (max-width: "750px") {
+      // background-position-x: -70%;
+      @media (max-width: "750px") { 
+        background: url("../assets/icon/box4-top5.svg") center / cover no-repeat;
         gap: 30px;
-        width: 300px;
+        width: 96%;  
         height: auto;
         padding-bottom: 20px;
       }
@@ -1356,7 +1430,7 @@ header {
         align-items: center;
         @media (max-width: "750px") {
           gap: 30px;
-          width: 300px;
+          width: 96%;
           height: auto;
           margin-top: 20px;
         }
@@ -1376,7 +1450,9 @@ header {
             line-height: 100%;
             letter-spacing: 0%;
             text-align: center;
-            width: 270px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
             margin-top: 20px;
           }
         }
@@ -1387,7 +1463,9 @@ header {
           flex-direction: row-reverse;
           @media (max-width: "750px") {
             flex-direction: column-reverse;
-            width: 270px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
             // height: 81px;
             gap: 30px;
           }
@@ -1400,7 +1478,9 @@ header {
             // justify-content: center;
             align-items: center;
             @media (max-width: "750px") {
-              width: 270px;
+              width: 90%;
+              margin-left: auto;
+              margin-right: auto;
               height: auto;
             }
             & > h3 {
@@ -1496,7 +1576,7 @@ header {
             @media (max-width: "750px") {
               margin: 0 !important;
               width: 192px !important;
-              & > img{
+              & > img {
                 width: 50px;
                 height: 50px;
               }
@@ -1542,7 +1622,9 @@ header {
           align-items: center;
           gap: 20px;
           @media (max-width: "750px") {
-            width: 270px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
             // margin-top: 20px;
           }
           & > h1 {
@@ -1601,13 +1683,17 @@ header {
       width: 1318px;
       height: 590px;
       border-radius: 20px;
-      background: url("../assets/icon/content-top-box4_1-2-content-4.svg")
+      background: url("../assets/icon/content-top-box4_1-2-content-4Des.svg")
         center / cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       @media (max-width: "750px") {
-        width: 270px;
+        background: url("../assets/icon/content-top-box4_1-2-content-4.svg")
+        center / cover no-repeat;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         height: auto;
         padding-bottom: 20px;
       }
@@ -1619,7 +1705,9 @@ header {
         flex-direction: column;
         align-items: center;
         @media (max-width: "750px") {
-          width: 270px;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
           height: auto;
           gap: 30px;
         }
@@ -1639,7 +1727,9 @@ header {
             line-height: 100%;
             letter-spacing: 0%;
             text-align: center;
-            width: 270px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
           }
         }
         & > .content-top-box4-2-header {
@@ -1649,7 +1739,9 @@ header {
           flex-direction: row-reverse;
           @media (max-width: "750px") {
             flex-direction: column-reverse;
-            width: 270px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
             height: auto;
             gap: 30px;
           }
@@ -1662,7 +1754,9 @@ header {
             // justify-content: center;
             align-items: center;
             @media (max-width: "750px") {
-              width: 270px;
+              width: 90%;
+              margin-left: auto;
+              margin-right: auto;
               height: auto;
             }
             & > h3 {
@@ -1802,7 +1896,9 @@ header {
           align-items: center;
           gap: 20px;
           @media (max-width: "750px") {
-            width: 270px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
             margin-top: 20px;
           }
           & > h1 {
@@ -1878,7 +1974,7 @@ header {
   position: relative;
   gap: 40px;
   @media (max-width: "750px") {
-    width: 300px;
+    width: 96%;
     height: 451px;
     gap: 30px;
   }
@@ -1954,11 +2050,12 @@ header {
     padding: 0 57px;
     gap: 46px;
     @media (max-width: "750px") {
-      width: 300px;
-      height: 302px;
+      width: 96%;
+      height: auto;
       flex-direction: column;
       gap: 30px;
       padding: 20px 15px;
+      padding-bottom: 25px;
     }
     & > div {
       display: flex;
@@ -2064,7 +2161,7 @@ header {
   position: relative;
   gap: 40px;
   @media (max-width: "750px") {
-    width: 300px;
+    width: 96%;
     height: 474.0001220703125px;
     gap: 30px;
     height: auto;
@@ -2156,7 +2253,9 @@ header {
           line-height: 115%;
           letter-spacing: 0%;
           text-align: center;
-          width: 270px;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
         }
         & > label {
           font-family: Sansation;
@@ -2213,7 +2312,7 @@ header {
       // padding-top: 63px;
       @media (max-width: "750px") {
         gap: 20px;
-        width: 300px;
+        width: 96%;
       }
       & > .box-mid2-apk-mobile-left-header {
         display: flex;
@@ -2308,11 +2407,14 @@ header {
       height: 353px;
       border-radius: 20px;
       background: url("../assets/icon/bgPhone.svg");
-      position: relative;
+
       // overflow: hidden;
       @media (max-width: "750px") {
-        width: 300px;
+        width: 100%;
         height: 175px;
+        display: flex;
+        // align-items: center;
+        justify-content: center;
       }
       & > div {
         margin-top: -63px;
@@ -2321,7 +2423,7 @@ header {
         bottom: 0;
         position: relative;
         @media (max-width: "750px") {
-          width: 300px;
+          width: 230px;
           height: 230.16000366210938px;
           margin-top: -54.9px;
         }
@@ -2331,7 +2433,7 @@ header {
           left: 128.5px;
           @media (max-width: "750px") {
             width: 138px;
-            left: 24.28px;
+            left: 0;
             bottom: -55px;
           }
         }
@@ -2339,7 +2441,7 @@ header {
           left: 240px;
           @media (max-width: "750px") {
             width: 170px;
-            left: 90px;
+            left: 66px;
             bottom: -55px;
           }
         }
@@ -2402,10 +2504,11 @@ header {
     gap: 100px;
     @media (max-width: "750px") {
       flex-direction: column-reverse;
-      width: 271px !important;
+      width: 96% !important;
       height: auto !important;
       gap: 30px !important;
       margin-top: 30px;
+      align-items: center;
     }
     & > .form-Box5 {
       display: flex;
@@ -2413,17 +2516,18 @@ header {
       width: 420px;
       gap: 30px;
       @media (max-width: "750px") {
-        width: 271px !important;
+        width: 92vw !important;
         height: auto;
         gap: 15px !important;
         flex-wrap: nowrap;
+        align-items: center;
       }
       & > div {
         display: flex;
         flex-direction: column;
         gap: 20px;
         @media (max-width: "750px") {
-          width: 271px;
+          width: 100%;
           height: auto;
           gap: 15px;
         }
@@ -2438,7 +2542,7 @@ header {
         width: 420px;
         height: 60px;
         @media (max-width: "750px") {
-          width: 271px !important;
+          width: 100% !important;
           height: 45px;
           border-radius: 8px;
         }
@@ -2460,9 +2564,14 @@ header {
           line-height: 100%;
           letter-spacing: 0%;
           @media (max-width: "750px") {
-            width: 271px;
+            width: 100%;
             height: 45px;
             border-radius: 8px;
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
           }
         }
         & > textarea {
@@ -2482,9 +2591,14 @@ header {
           padding: 20px;
           outline: none;
           @media (max-width: "750px") {
-            width: 271px;
+            width: 100%;
             height: 130px;
             border-radius: 8px;
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
           }
           // border-width: 1px;
         }
@@ -2516,21 +2630,34 @@ header {
         @media (max-width: "750px") {
         }
       }
-      & > span > button {
-        width: 420px;
+      & > span {
+        width: 380px;
         height: 60px;
-        border-radius: 10px;
-        background-color: #111111;
-        color: #545454;
-        cursor: pointer;
-        position: relative;
-        z-index: 2;
-        font-family: Sansation;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 100%;
-        letter-spacing: 0%;
+        & > button {
+          border-radius: 10px;
+          background-color: #111111;
+          color: #545454;
+          cursor: pointer;
+          position: relative;
+          z-index: 2;
+          font-family: Sansation;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          height: 60px;
+          @media (max-width: "750px") {
+            font-family: Sansation;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            height: 45px;
+          }
+        }
         @media (max-width: "750px") {
+          width: 100%;
+          height: 45px;
         }
       }
       & > span > .active-button-box5 {
@@ -2617,8 +2744,8 @@ header {
       flex-wrap: wrap;
       position: relative;
       @media (max-width: "750px") {
-        width: 271px;
-        height: 192px;
+        width: 100%;
+        height: auto;
         gap: 20px !important;
         justify-content: center;
       }
@@ -2752,7 +2879,7 @@ header {
       line-height: 100%;
       letter-spacing: 0%;
       color: #ffffff;
-      margin-left: 300px;
+      margin-left: 96%;
       @media (max-width: "750px") {
         margin: 0 !important;
         width: auto;
@@ -2803,6 +2930,7 @@ header {
   align-items: center;
   @media (max-width: "750px") {
     gap: 60px;
+    padding: 0;
   }
   & > .services-box1 {
     width: 1160px;
@@ -2812,7 +2940,7 @@ header {
     align-items: center;
     @media (max-width: "750px") {
       gap: 30px;
-      width: 300px;
+      width: 96%;
       height: auto;
       gap: 30px;
     }
@@ -3185,7 +3313,7 @@ header {
       gap: 40px;
       @media (max-width: "750px") {
         gap: 30px;
-        width: 276px;
+        width: 90%;
         height: auto;
       }
       & > h1 {
@@ -3210,6 +3338,10 @@ header {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        @media (max-width: "750px") {
+          width: 80%;
+        }
+
         & > div {
           font-family: Sansation;
           font-weight: 400;
@@ -3225,7 +3357,7 @@ header {
           transition: all 0.3s ease;
           position: relative;
           @media (max-width: "750px") {
-            width: 276px;
+            width: 100%;
             height: 62px;
             gap: 10px;
             border-radius: 8px;
@@ -3390,7 +3522,7 @@ header {
     flex-direction: column;
     gap: 20px;
     @media (max-width: "750px") {
-      width: 303px;
+      width: 96%;
       height: auto;
       gap: 10px;
     }
@@ -3440,7 +3572,7 @@ header {
     text-transform: uppercase;
     cursor: pointer;
     @media (max-width: "750px") {
-      width: 300px;
+      width: 96%;
       font-family: Sansation;
       font-weight: 400;
       font-size: 16px;
@@ -3587,7 +3719,7 @@ header {
   }
   .box4-main > .content-top-box4 > .content-top-box4-2 {
     width: 100%;
-    background-position-x: 50%;
+    // background-position-x: 50%;
   }
   .box4-main
     > .content-top-box4

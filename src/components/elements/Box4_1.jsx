@@ -21,7 +21,7 @@ const defDataARR = [
         price: `42.000`,
       },
       {
-        title: "L1 15-16 м²",
+        title: "L 15-16 м²",
         price: `44.250`,
       },
       {
@@ -69,7 +69,7 @@ const defDataARR = [
         price: `49.000`,
       },
       {
-        title: "L1 15-16 м²",
+        title: "L 15-16 м²",
         price: `41.250`,
       },
       {
@@ -117,7 +117,7 @@ const defDataARR = [
         price: `36.000`,
       },
       {
-        title: "L1 15-16 м²",
+        title: "L 15-16 м²",
         price: `37.500`,
       },
       {
@@ -165,7 +165,7 @@ const defDataARR = [
         price: `34.050`,
       },
       {
-        title: "L1 15-16 м²",
+        title: "L 15-16 м²",
         price: `35.550`,
       },
       {
@@ -213,7 +213,7 @@ const defDataARR = [
         price: `31.800`,
       },
       {
-        title: "L1 15-16 м²",
+        title: "L 15-16 м²",
         price: `33.300`,
       },
       {
@@ -257,7 +257,7 @@ const defDataARR = [
         price: `29.550`,
       },
       {
-        title: "L1 15-16 м²",
+        title: "L 15-16 м²",
         price: `32.250`,
       },
       {
@@ -288,7 +288,6 @@ export default function Box4_1() {
   useEffect(() => {
     AOS.init({});
   }, []);
-  console.log("selection", selection);
 
   return (
     <div className="box4-main">
@@ -388,7 +387,7 @@ export default function Box4_1() {
               <p>
                 Подписка Private+ к основному абонементу Private Parking
                 расширяет возможности сервиса и открывает доступ к эксклюзивным
-                услугам заправки, зарядки, мойки автомобиля {isMobile && <br />}{" "}
+                услугам  заправки, зарядки, мойки автомобиля {isMobile && <br />}{" "}
                 и подачи напитков.
               </p>
             </div>
@@ -469,7 +468,7 @@ export default function Box4_1() {
         <AccordionCom
           title="Категории машиномест:"
           activeStyle={{
-            height: "164px",
+            height: isMobile ? "160px" : "164px",
           }}
           htmlEl={
             <ul className="ul-box4">
@@ -486,7 +485,7 @@ export default function Box4_1() {
         <AccordionCom
           title="Размер машиномест:"
           activeStyle={{
-            height: isMobile ? "260px" : "309px",
+            height: isMobile ? "240px" : "309px",
           }}
           htmlEl={
             <ul
@@ -516,10 +515,10 @@ export default function Box4_1() {
         />
         <AccordionCom
           title={`Условия покупки ${
-            isMobile && "\n"
+            isMobile ? "\n" : ""
           } подписки на Private Parking:`}
           activeStyle={{
-            height: isMobile ? "470px" : "368px",
+            height: isMobile ? "370px" : "368px",
           }}
           htmlEl={
             <ul

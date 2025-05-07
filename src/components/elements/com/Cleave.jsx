@@ -3,23 +3,31 @@ import IMask from "imask";
 
 const PhoneInput = ({ value, onChange }) => {
   const inputRef = useRef(null);
+  const maskRef = useRef(null);
 
   useEffect(() => {
-    const mask = IMask(inputRef.current, {
-      mask: '+{7} 000 000-00-00',
-    });
+    if (inputRef.current) {
+      maskRef.current = IMask(inputRef.current, {
+        mask: '+{7} 000 000-00-00',
+      });
 
-    mask.on('accept', () => {
-      onChange(mask.unmaskedValue); // возвращает только цифры, например 79991234567
-    });
+      maskRef.current.on('accept', () => {
+        onChange(maskRef.current.unmaskedValue);
+      });
+    }
 
-    return () => mask.destroy(); // очистка
+    return () => maskRef.current?.destroy();
   }, [onChange]);
+
+  useEffect(() => {
+    if (maskRef.current) {
+      maskRef.current.value = value || '';
+    }
+  }, [value]);
 
   return (
     <input
       ref={inputRef}
-      defaultValue={value}
       type="tel"
       placeholder="Телефон"
       className="phone-input"

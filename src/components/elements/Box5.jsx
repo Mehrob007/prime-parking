@@ -8,7 +8,7 @@ import PhoneInput from "./com/Cleave";
 import useMediaQuery from "../../function/useMediaQuery";
 
 export default function Box5({ footerForm = 1 }) {
-  const isMobile = useMediaQuery("(max-width: 768px)")
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const [allText, setAllText] = useState({
     userName: "",
     phoneNumber: "",
@@ -26,7 +26,6 @@ export default function Box5({ footerForm = 1 }) {
           message: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
         },
       );
-      console.log("response", response.data);
       setAllText({
         userName: "",
         phoneNumber: "",
@@ -71,9 +70,6 @@ export default function Box5({ footerForm = 1 }) {
       ),
     );
   }, [allText]);
-
-  console.log("isAnimated", isAnimated);
-  // console.log("onActiv", onActiv);
 
   return (
     <footer className={`box5-main ${footerForm === 2 ? "footer-form2" : ""}`}>
@@ -123,7 +119,10 @@ export default function Box5({ footerForm = 1 }) {
           </span>
           <p>
             Нажимая на кнопку,{" "}
-            <a href="https://drive.google.com/drive/folders/1FZsvRtHovV6E_oL7iDrtYlzUMVfM0Id3?usp=drive_link" target="_blank">
+            <a
+              href="https://drive.google.com/drive/folders/1FZsvRtHovV6E_oL7iDrtYlzUMVfM0Id3?usp=drive_link"
+              target="_blank"
+            >
               вы даете согласие на обработку персональных данных и соглашаетесь
               c политикой конфиденциальности
             </a>
@@ -131,13 +130,10 @@ export default function Box5({ footerForm = 1 }) {
         </div>
         <div>
           <div className="info-contact-1">
-            <h1>
-              КЛИЕНТСКИЙ <br />
-              СЕРВИС
-            </h1>
+            <h1>Консьерж <br />служба</h1>
             <h3>
               09:00 - 18:00, ПН - ПТ <br /> +7 (495) 481 22 44 <br />{" "}
-              sales@primeparking.ru
+              {/* sales@primeparking.ru */}
             </h3>
           </div>
           <div className="info-contact-1">

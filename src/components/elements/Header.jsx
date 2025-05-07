@@ -10,9 +10,6 @@ export default function Header() {
   const navigate = useNavigate();
   const { modalOpen, setModalOpen } = functions();
   const lacation = useLocation();
-
-  console.log("lacation", lacation?.pathname);
-
   useEffect(() => {
     if (modalOpen) {
       document.body.style.overflow = "hidden";
@@ -26,7 +23,9 @@ export default function Header() {
   }, [modalOpen]);
 
   useEffect(() => {
-    setModalOpen(modalOpen);
+    if(modalOpen){
+      setModalOpen(modalOpen);
+    }
   }, [lacation?.pathname]);
 
   return (

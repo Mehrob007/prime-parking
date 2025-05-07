@@ -13,7 +13,7 @@ export default function Box2() {
     AOS.init({
       duration: window.innerWidth < 768 ? 800 : 2000,
       once: false,
-      disable: !isMobile,
+      // disable: !isMobile,
       offset: window.innerWidth < 768 ? 0 : 120,
     });
 
@@ -30,10 +30,6 @@ export default function Box2() {
     return () => window.removeEventListener("scroll", handleAnimation);
   }, []);
 
-  console.log("====================================");
-  console.log(isMobile);
-  console.log("====================================");
-
   return (
     <div className="box2-main">
       <h1 data-aos={"fade-down"} data-aos-duration={"700"}>
@@ -44,37 +40,37 @@ export default function Box2() {
           <div className="box2-1-div">
             <img src={bgBox2Com1} alt="bgBox2Com1" />
             <p>
-              Первый в России Жилой Квартал, {isMobile && <br />} который
-              предлагает эксклюзивный {isMobile && <br />}
-              круглосуточный парковочный Valet-{isMobile && <br />}Service для
-              вашего максимального {isMobile && <br />}
-              комфорта. Забудьте о поиске мест {isMobile && <br />} – наши
-              профессиональные{isMobile && <br />}
+              Первый в России Жилой Квартал, который
+              предлагает эксклюзивный
+              круглосуточный парковочный ValetService для
+              вашего максимального
+              комфорта. Забудьте о поиске мест – наши
+              профессиональны
               {!isMobile && <br />}
-              парковщики безопасно переместят {isMobile && <br />} ваш
-              автомобиль от лобби{isMobile && <br />}
+              парковщики безопасно переместят ваш
+              автомобиль от лобб
               {!isMobile && <br />} на закрытую, охраняемую парковку
-              {isMobile && <br />} и подадут его ко входу по первому
-              {isMobile && <br />} запросу. Всего один клик – и ваш авто
-              {isMobile && <br />} уже ждёт вас у входа. Комфорт,
-              {isMobile && <br />} скорость и премиальное {isMobile && <br />}
-              обслуживание – только для {isMobile && <br />} резидентов и
-              {!isMobile && <br />} гостей  Жилого {isMobile && <br />}
+             и подадут его ко входу по первому
+             запросу. Всего один клик – и ваш авто
+             уже ждёт вас у входа. Комфорт,
+             скорость и премиальное
+              обслуживание – только для резидентов и
+              {!isMobile && <br />} гостей  Жилого
               Квартала Прайм Парк.
             </p>
             <p>
-              Для Гостей Жилого Квартала доступен {isMobile && <br />} Valet
-              Service {!isMobile && <br />} c почасовой {isMobile && <br />}
+              Для Гостей Жилого Квартала доступен Valet
+              Service {!isMobile && <br />} c почасовой
               тарификацией.
             </p>
             <p>
-              Для Резидентов, предпочитающих {isMobile && <br />}
+              Для Резидентов, предпочитающих
               самостоятельную парковку,
-              <br /> доступна аренда непривязанных {isMobile && <br />}
-              машиномест на первом уровне {isMobile && <br />} паркинга (Open
-              Parking) {isMobile && <br />} и аренда привязанных машиномест
-              {isMobile && <br />} на втором уровне подземного
-              {isMobile && <br />}
+              <br /> доступна аренда непривязанных
+              машиномест на первом уровне паркинга (Open
+              Parking) и аренда привязанных машиномест
+             на втором уровне подземного
+            
               паркинга (Private Parking).
             </p>
           </div>
