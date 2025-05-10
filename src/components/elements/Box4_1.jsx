@@ -387,7 +387,7 @@ export default function Box4_1() {
               <p>
                 Подписка Private+ к основному абонементу Private Parking
                 расширяет возможности сервиса и открывает доступ к эксклюзивным
-                услугам  заправки, зарядки, мойки автомобиля {isMobile && <br />}{" "}
+                услугам заправки, зарядки, мойки автомобиля {isMobile && <br />}{" "}
                 и подачи напитков.
               </p>
             </div>
@@ -468,7 +468,7 @@ export default function Box4_1() {
         <AccordionCom
           title="Категории машиномест:"
           activeStyle={{
-            height: isMobile ? "160px" : "164px",
+            height: true ? "auto" : "164px",
           }}
           htmlEl={
             <ul className="ul-box4">
@@ -485,7 +485,7 @@ export default function Box4_1() {
         <AccordionCom
           title="Размер машиномест:"
           activeStyle={{
-            height: isMobile ? "240px" : "309px",
+            height: true ? "auto" : "309px",
           }}
           htmlEl={
             <ul
@@ -518,7 +518,7 @@ export default function Box4_1() {
             isMobile ? "\n" : ""
           } подписки на Private Parking:`}
           activeStyle={{
-            height: isMobile ? "370px" : "368px",
+            height: true ? "auto" : "368px",
           }}
           htmlEl={
             <ul
@@ -563,7 +563,7 @@ export default function Box4_1() {
         <AccordionCom
           title="Условия аннулирования подписки:"
           activeStyle={{
-            height: "140px",
+            height: true ? "auto" : "140px",
           }}
           htmlEl={
             <ul

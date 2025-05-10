@@ -116,7 +116,8 @@ $fontWeightTextSpanMonile: 400;
   font-size: 18px !important;
 }
 .active-content {
-  height: 192px !important;
+  min-height: 192px !important;
+  // height: auto;
 }
 .active-com {
   // height: 152px !important;

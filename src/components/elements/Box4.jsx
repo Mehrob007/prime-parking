@@ -135,11 +135,16 @@ export default function Box4() {
         <div className="content-top-box4-2">
           <div>
             <div className="content-top-box4-2-title">
-              <h1>дополнительные {isMobile && <br />} услуги VALET {isMobile && <br />} service</h1>
+              <h1>
+                дополнительные {isMobile && <br />} услуги VALET{" "}
+                {isMobile && <br />} service
+              </h1>
               <p>
-                Подписка Valet+ к основному {isMobile && <br />} абонементу  Valet Service расширяет {isMobile && <br />}
-                возможности сервиса и открывает {isMobile && <br />} доступ к эксклюзивным услугам {isMobile && <br />}
-                заправки, зарядки, мойки автомобиля  и подачи напитков.
+                Подписка Valet+ к основному {isMobile && <br />} абонементу
+                Valet Service расширяет {isMobile && <br />}
+                возможности сервиса и открывает {isMobile && <br />} доступ к
+                эксклюзивным услугам {isMobile && <br />}
+                заправки, зарядки, мойки автомобиля и подачи напитков.
               </p>
             </div>
             <div className="content-top-box4-2-header">
@@ -209,13 +214,15 @@ export default function Box4() {
             </div>
             <p>
               *Стоимость услуги мойки / топлива / электрозарядки не включена и
-              оплачивается дополнительно в соответствии {isMobile && <br />} с действующими тарифами.
+              оплачивается дополнительно в соответствии {isMobile && <br />} с
+              действующими тарифами.
             </p>
             <div className="content-top-box4-2-title">
               <h1>гостевой VALET service</h1>
               <p>
-                Парковка гостей с помощью услуги {isMobile && <br />} Valet Service с передачей и
-                получением {isMobile && <br />} автомобиля у лобби. Тариф: {isMobile && <br />} 250 руб./час
+                Парковка гостей с помощью услуги {isMobile && <br />} Valet
+                Service с передачей и получением {isMobile && <br />} автомобиля
+                у лобби. Тариф: {isMobile && <br />} 250 руб./час
               </p>
             </div>
           </div>
@@ -225,7 +232,7 @@ export default function Box4() {
         <AccordionCom
           title="Условия покупки подписки на абонемент Valet Service:"
           activeStyle={{
-            height: isMobile ? "323px" : "328px",
+            height: true ? "auto" : "328px",
           }}
           htmlEl={
             <ul className="ul-box4">
@@ -268,7 +275,7 @@ export default function Box4() {
         <AccordionCom
           title="Условия аннулирования подписки:"
           activeStyle={{
-            height: isMobile ? "195px" : "188px",
+            height: true ? "auto" : "188px",
           }}
           htmlEl={
             <ul className="ul-box4">
@@ -296,7 +303,7 @@ export default function Box4() {
         <AccordionCom
           title="Условия использования часового тарифа"
           activeStyle={{
-            height: isMobile ? "170px" : "188px",
+            height: true ? "auto" : "188px",
           }}
           htmlEl={
             <ul className="ul-box4">

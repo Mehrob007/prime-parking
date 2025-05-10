@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import logoHeader from "../../assets/icon/logo-header.svg";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import callIcon from "../../assets/icon/callIcon.svg";
+import callIconDesk from "../../assets/icon/telDesk.svg";
 import burgerMenuIcon from "../../assets/icon/borgerMenuIcon.svg";
 import useMediaQuery from "../../function/useMediaQuery";
 import { functions } from "../../store/globalState";
@@ -44,9 +45,9 @@ export default function Header() {
         )}
         <img onClick={() => navigate("./")} src={logoHeader} alt="logoHeader" />
         <a href="tel: +7 (495) 481 22 44">
-          {!isMobile ? (
-            "+7 (495) 481 22 44"
-          ) : (
+          {!isMobile ? (<>
+            <img src={callIconDesk} alt="call-icon" /> <span>+7 (495) 481 22 44</span>
+          </>) : (
             <img src={callIcon} alt="call-icon" />
           )}
         </a>

@@ -130,7 +130,10 @@ export default function Box5({ footerForm = 1 }) {
         </div>
         <div>
           <div className="info-contact-1">
-            <h1>Консьерж <br />служба</h1>
+            <h1>
+              Консьерж <br />
+              служба
+            </h1>
             <h3>
               09:00 - 18:00, ПН - ПТ <br /> +7 (495) 481 22 44 <br />{" "}
               {/* sales@primeparking.ru */}
@@ -167,7 +170,9 @@ export default function Box5({ footerForm = 1 }) {
       <div className="footer-box5">
         <img src={logoCF} alt="logoCF" />
         <p>2025 © Prime Park Parking</p>
-        <a href="#">Вернуться наверх ▴</a>
+        <a onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          Вернуться наверх ▴
+        </a>
       </div>
     </footer>
   );
