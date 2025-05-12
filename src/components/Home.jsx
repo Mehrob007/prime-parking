@@ -8,6 +8,7 @@ import Box5 from "./elements/Box5";
 import Box1 from "./elements/Box1";
 import BoxMid1 from "./elements/BoxMid1";
 import BoxMid2 from "./elements/BoxMid2";
+import BannerVideo from "./elements/com/BannerVideo";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Box1 />
       <Box2 />
       <Box3 />
+      <BannerVideo />
       <Box4 />
       <Box4_1 />
       <BoxMid1 />

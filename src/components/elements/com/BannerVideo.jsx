@@ -1,8 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import bgBox1Video from "../../../assets/video/videoBanner.mp4";
+import playIcon from "../../../assets/icon/play.svg";
+import pauseIcon from "../../../assets/icon/pause.svg";
 
 const BannerVideo = ({}) => {
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const [play, setPlay] = useState(true);
+  const [tranparent, setTranparent] = useState(true);
+  // const videoRef = useRef(null);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -12,6 +17,18 @@ const BannerVideo = ({}) => {
 
     return () => clearTimeout(timeout);
   }, []);
+
+  const togglePlayPause = () => {
+    const video = videoRef.current;
+    if (play) {
+      video.muted = false;
+      video.play();
+      setPlay(false);
+    } else {
+      video.pause();
+      setPlay(true);
+    }
+  };
 
   useEffect(() => {
     if (shouldLoadVideo && videoRef.current) {
@@ -23,23 +40,39 @@ const BannerVideo = ({}) => {
     }
   }, [shouldLoadVideo, bgBox1Video]);
 
+  useEffect(() => {
+    if(play){
+      setTranparent(false);
+    }else{
+      setTimeout(() => setTranparent(true), 1000);
+    }
+  }, [play])
+
   return (
-    <>
+    <div className="banner-video">
       {shouldLoadVideo ? (
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          width="100%"
-          style={{ objectFit: "cover" }}
-        />
+        <div onClick={togglePlayPause}>
+          <video
+            ref={videoRef}
+            loop
+            playsInline
+            width="100%"
+            style={{ objectFit: "cover" }}
+          />
+
+          <div>
+            <img
+              className={tranparent ? "transparent-icon" : ""}
+              src={play ? playIcon : pauseIcon}
+              onClick={togglePlayPause}
+              alt="playIcon"
+            />
+          </div>
+        </div>
       ) : (
         <img src="/images/banner-placeholder.jpg" alt="Баннер" />
       )}
-    </>
+    </div>
   );
 };
 
