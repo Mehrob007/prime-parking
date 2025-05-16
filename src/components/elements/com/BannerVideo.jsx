@@ -3,10 +3,14 @@ import bgBox1Video from "../../../assets/video/videoBanner.mp4";
 import playIcon from "../../../assets/icon/play.svg";
 import pauseIcon from "../../../assets/icon/pause.svg";
 
+import audioTrue from "../../../assets/icon/1.svg";
+import audioFalse from "../../../assets/icon/2.svg";
+
 const BannerVideo = ({}) => {
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const [play, setPlay] = useState(true);
   const [tranparent, setTranparent] = useState(true);
+  const [activeAudeoBunner, setActiveAudeoBunner] = useState(true);
   // const videoRef = useRef(null);
   const videoRef = useRef(null);
 
@@ -30,6 +34,14 @@ const BannerVideo = ({}) => {
     }
   };
 
+  const toggleMute = () => {
+    if (videoRef.current) {
+      const newMuted = !videoRef.current.muted;
+      videoRef.current.muted = newMuted;
+      setActiveAudeoBunner(!newMuted);
+    }
+  };
+
   useEffect(() => {
     if (shouldLoadVideo && videoRef.current) {
       const source = document.createElement("source");
@@ -41,12 +53,12 @@ const BannerVideo = ({}) => {
   }, [shouldLoadVideo, bgBox1Video]);
 
   useEffect(() => {
-    if(play){
+    if (play) {
       setTranparent(false);
-    }else{
-      setTimeout(() => setTranparent(true), 1000);
+    } else {
+      setTimeout(() => setTranparent(true), 1500);
     }
-  }, [play])
+  }, [play]);
 
   return (
     <div className="banner-video">
@@ -72,6 +84,18 @@ const BannerVideo = ({}) => {
       ) : (
         <img src="/images/banner-placeholder.jpg" alt="Баннер" />
       )}
+      <nav className={play ? "off-media" : ""}>
+        <button
+          onClick={() => {
+            if (!play) {toggleMute()};
+          }}
+        >
+          <img
+            src={activeAudeoBunner ? audioTrue : audioFalse}
+            alt="sound-toggle"
+          />
+        </button>
+      </nav>
     </div>
   );
 };

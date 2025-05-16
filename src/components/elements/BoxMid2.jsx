@@ -53,9 +53,7 @@ export default function BoxMid2() {
         style={{
           borderBottomColor: "#545454",
           width: "100%",
-          height: isMobile && "80px",
         }}
-        // styleAccordionCom={{ height: "50px" }}
         htmlEl={
           <ul
             className="ul-box4"
@@ -80,7 +78,7 @@ export default function BoxMid2() {
               <p>
                 <a
                   target="_blank"
-                  href="https://drive.google.com/drive/folders/1к_3Y8NxEkoEzklQqamKWFGAza90bs-_6J?usp=drive_link"
+                  href="https://drive.google.com/file/d/1lhx9zuLwt9LdKaZJCpTSrsp037k7aRyR/view?usp=drive_link"
                 >
                   Ссылка на зоны
                 </a>{" "}

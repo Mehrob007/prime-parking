@@ -135,7 +135,7 @@ export default function Box5({ footerForm = 1 }) {
               служба
             </h1>
             <h3>
-              09:00 - 18:00, ПН - ПТ <br /> +7 (495) 481 22 44 <br />{" "}
+              Круглосуточная поддержка <br /> +7 (495) 481 22 44 <br />{" "}
               {/* sales@primeparking.ru */}
             </h3>
           </div>
