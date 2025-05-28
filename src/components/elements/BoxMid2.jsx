@@ -4,10 +4,10 @@ import appStor from "../../assets/icon/appStor.svg";
 import googlePlay from "../../assets/icon/googlePlay.svg";
 import phone from "../../assets/img/iPhoneSpaceBlackFront.png";
 import phone2 from "../../assets/img/iPhoneSpaceBlackRight.png";
-import bgPhone from "../../assets/icon/bgPhone.svg";
 import AOS from "aos";
 import { functions } from "../../store/globalState";
 import useMediaQuery from "../../function/useMediaQuery";
+import TextComponent from "./com/TextComponent";
 
 export default function BoxMid2() {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -19,9 +19,6 @@ export default function BoxMid2() {
     });
   });
 
-
-
-  
   return (
     <div className="box-mid2">
       <h1 data-aos={"fade-down"} data-aos-duration="700">
@@ -30,14 +27,30 @@ export default function BoxMid2() {
       <div className="box-mid2-content">
         <div>
           <h1>Сервисный тариф:</h1>
-          <p>
-            Заказ пропуска осуществляется через мобильное приложение{" "}
-            <label>PRIME PARK APP. {"  "}</label> Для башен Hyde Park Tower
-            (R6), Gorky Park Tower (R5), Imperial Park Tower (R4) и Regent's
-            Park Tower (R3), Central Park Tower (R7): 20 минут - бесплатно, с 21
-            минуты по 60 минуту - 200 рублей в час. Со 2 часа (с 61 минуты) -
-            300 рублей в час. Далее каждый последующий час 300 рублей.
-          </p>
+          {isMobile ? (
+            <p>
+              <TextComponent>
+                Заказ пропуска осуществляется через мобильное приложение{" "}
+              </TextComponent>
+              <label>PRIME PARK APP. {"  "}</label>
+              <TextComponent>
+                Для башен Hyde Park Tower (R6), Gorky Park Tower (R5), Imperial
+                Park Tower (R4) и Regent's Park Tower (R3), Central Park Tower
+                (R7): 20 минут - бесплатно, с 21 минуты по 60 минуту - 200
+                рублей в час. Со 2 часа (с 61 минуты) - 300 рублей в час. Далее
+                каждый последующий час 300 рублей.
+              </TextComponent>
+            </p>
+          ) : (
+            <p>
+              Заказ пропуска осуществляется через мобильное приложение{" "}
+              <label>PRIME PARK APP. {"  "}</label> Для башен Hyde Park Tower
+              (R6), Gorky Park Tower (R5), Imperial Park Tower (R4) и Regent's
+              Park Tower (R3), Central Park Tower (R7): 20 минут - бесплатно, с
+              21 минуты по 60 минуту - 200 рублей в час. Со 2 часа (с 61 минуты)
+              - 300 рублей в час. Далее каждый последующий час 300 рублей.
+            </p>
+          )}
         </div>
         <div>
           <h1>Сервисный тариф для негабаритных авто:</h1>
@@ -46,7 +59,7 @@ export default function BoxMid2() {
       </div>
       <AccordionCom
         activeStyle={{
-          height: true ? "auto" : "390px",
+          height: "auto",
         }}
         activeContent={false}
         title="Специальные тарифы за нарушения регламента паркинга комплекса"
@@ -60,7 +73,10 @@ export default function BoxMid2() {
             style={{ display: "flex", flexDirection: "column", gap: "10px" }}
           >
             <li>
-              <p> Стоянка в неположенной зоне: 1 000 рублей.</p>
+              <TextComponent>
+                {" "}
+                Стоянка в неположенной зоне: 1 000 рублей.
+              </TextComponent>
             </li>
             <li>
               <p>
@@ -97,19 +113,25 @@ export default function BoxMid2() {
               </p>
             </li>
             <li>
-              <p>Заезд на разметку парковочного места: 500 рублей.</p>
+              <TextComponent>
+                Заезд на разметку парковочного места: 500 рублей.
+              </TextComponent>
             </li>
             <li>
-              <p>Разгрузка/ погрузка на проезжей части: 1 500 рублей.</p>
+              <TextComponent>
+                Разгрузка/ погрузка на проезжей части: 1 500 рублей.
+              </TextComponent>
             </li>
             <li>
-              <p>Потеря парковочной карты: 5 000 рублей.</p>
+              <TextComponent>
+                Потеря парковочной карты: 5 000 рублей.
+              </TextComponent>
             </li>
             <li>
-              <p>
+              <TextComponent>
                 Нарушение правил паркинга и/или договора оферты: 5 000 рублей в
                 день (1 день - с 00:01 до 23:59)
-              </p>
+              </TextComponent>
             </li>
           </ul>
         }
@@ -123,11 +145,19 @@ export default function BoxMid2() {
             </h1>
             <h3>prime park app</h3>
           </div>
-          <p>
-            Единственный цифровой дом в Москве <br /> с дистанционным доступом
-            ко всем <br />
-            сервисам через смартфон
-          </p>
+          {isMobile ? (
+            <TextComponent>
+              Единственный цифровой дом в Москве с дистанционным доступом ко
+              всем сервисам через смартфон
+            </TextComponent>
+          ) : (
+            <p>
+              Единственный цифровой дом в Москве <br /> с дистанционным доступом
+              ко всем <br />
+              сервисам через смартфон
+            </p>
+          )}
+
           <div className="box-mid2-apk-mobile-left-get-apk">
             <img
               onClick={() =>

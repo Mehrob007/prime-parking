@@ -6,6 +6,7 @@ import contentTopBox42Content4 from "../../assets/icon/content-top-box4-2-conten
 import AccordionCom from "./componentSite/AccordionCom";
 import AOS from "aos";
 import useMediaQuery from "../../function/useMediaQuery";
+import TextComponent from "./com/TextComponent";
 
 const defDataARR = [
   {
@@ -295,9 +296,9 @@ export default function Box4_1() {
         <h1 data-aos={"fade-down"} data-aos-duration="700">
           PRIVATE PARKING
         </h1>
-        <p>Приватная зона с индивидуальными парковочными местами</p>
+        <TextComponent>Приватная зона с индивидуальными парковочными местами</TextComponent>
         <h5>
-          Выберите удобный формат аренды закреплённого за вами машино-места
+           <TextComponent>Выберите удобный формат аренды закреплённого за вами машино-места</TextComponent>
         </h5>
       </div>
       <div className="content-top-box4 content-top-box4_1">
@@ -305,15 +306,31 @@ export default function Box4_1() {
           <div>
             <h1>Абонементы {isMobile && <br />} PRIVATE PARKING</h1>
             <h3>в абонемент PRIVATE {isMobile && <br />} PARKING входит:</h3>
-            <p>
-              Самостоятельная парковка {isMobile && <br />} на закреплённом за
-              вами {isMobile && <br />} парковочном месте <br />
-              {isMobile && <br />}
-              Полная уверенность в наличии {isMobile && <br />} свободного места
-              в любое время <br /> {isMobile && <br />}
-              Высокий уровень приватности, {isMobile && <br />} комфорта и
-              безопасности {isMobile && <br />} в парковочной зоне
-            </p>
+            {isMobile ? (
+              <p>
+                <TextComponent>
+                  Самостоятельная парковка на закреплённом за вами парковочном
+                  месте{" "}
+                </TextComponent><br />
+                <TextComponent>
+                  Полная уверенность в наличии свободного места в любое время{" "}
+                </TextComponent><br />
+                <TextComponent>
+                  Высокий уровень приватности, комфорта и безопасности в
+                  парковочной зоне
+                </TextComponent>
+              </p>
+            ) : (
+              <p>
+                Самостоятельная парковка {isMobile && <br />} на закреплённом за
+                вами {isMobile && <br />} парковочном месте <br />
+                {isMobile && <br />}
+                Полная уверенность в наличии {isMobile && <br />} свободного
+                места в любое время <br /> {isMobile && <br />}
+                Высокий уровень приватности, {isMobile && <br />} комфорта и
+                безопасности {isMobile && <br />} в парковочной зоне
+              </p>
+            )}
           </div>
         </div>
         <div className="content-navigate-box4_1">
@@ -384,12 +401,21 @@ export default function Box4_1() {
                 дополнительные {isMobile && <br />} услуги private{" "}
                 {isMobile && <br />} parking
               </h1>
-              <p>
-                Подписка Private+ к основному абонементу Private Parking
-                расширяет возможности сервиса и открывает доступ к эксклюзивным
-                услугам заправки, зарядки, мойки автомобиля {isMobile && <br />}{" "}
-                и подачи напитков.
-              </p>
+              {isMobile ? (
+                <TextComponent>
+                  Подписка Private+ к основному абонементу Private Parking
+                  расширяет возможности сервиса и открывает доступ к
+                  эксклюзивным услугам заправки, зарядки, мойки автомобиля и
+                  подачи напитков.
+                </TextComponent>
+              ) : (
+                <p>
+                  Подписка Private+ к основному абонементу Private Parking
+                  расширяет возможности сервиса и открывает доступ к
+                  эксклюзивным услугам заправки, зарядки, мойки автомобиля{" "}
+                  {isMobile && <br />} и подачи напитков.
+                </p>
+              )}
             </div>
             <div className="content-top-box4-2-header">
               <div>
@@ -457,10 +483,10 @@ export default function Box4_1() {
                 <p>Организация мойки</p>
               </div>
             </div>
-            <p>
+            <TextComponent>
               *Стоимость услуги мойки / топлива / электрозарядки не включена и
               оплачивается дополнительно в соответствии с действующими тарифами.
-            </p>
+            </TextComponent>
           </div>
         </div>
       </div>
@@ -468,16 +494,16 @@ export default function Box4_1() {
         <AccordionCom
           title="Категории машиномест:"
           activeStyle={{
-            height: true ? "auto" : "164px",
+            height: "auto",
           }}
           htmlEl={
             <ul className="ul-box4">
               <li>
-                <p>
+                <TextComponent>
                   VIP, Platinum, Gold, Silver, Green, White - категория
-                  устанавливается в зависимости <br /> от удаленности от
-                  лифтовой группы и обособленности машиноместа.
-                </p>
+                  устанавливается в зависимости от удаленности от лифтовой
+                  группы и обособленности машиноместа.
+                </TextComponent>
               </li>
             </ul>
           }
@@ -485,7 +511,7 @@ export default function Box4_1() {
         <AccordionCom
           title="Размер машиномест:"
           activeStyle={{
-            height: true ? "auto" : "309px",
+            height: "auto",
           }}
           htmlEl={
             <ul
@@ -493,22 +519,26 @@ export default function Box4_1() {
               style={{ display: "flex", flexDirection: "column", gap: "10px" }}
             >
               <li>
-                <p>S - от 13,2 до 13,5 м²;</p>
+                <TextComponent>S - от 13,2 до 13,5 м²;</TextComponent>
               </li>
               <li>
-                <p>M - от 13,5 до 15 м²;</p>
+                <TextComponent>M - от 13,5 до 15 м²;</TextComponent>
               </li>
               <li>
-                <p>L - от 15 до 16 м²;</p>
+                <TextComponent>L - от 15 до 16 м²;</TextComponent>
               </li>
               <li>
-                <p>B1, B2 - от 16.1 до 26.2 м²;</p>
+                <TextComponent>B1, B2 - от 16.1 до 26.2 м²;</TextComponent>
               </li>
               <li>
-                <p>F1, F2 - 2 машиноместа, семейные (зависимые);</p>
+                <TextComponent>
+                  F1, F2 - 2 машиноместа, семейные (зависимые);
+                </TextComponent>
               </li>
               <li>
-                <p>F3 - 3 машиноместа, семейные (зависимые).</p>
+                <TextComponent>
+                  F3 - 3 машиноместа, семейные (зависимые).
+                </TextComponent>
               </li>
             </ul>
           }
@@ -518,7 +548,7 @@ export default function Box4_1() {
             isMobile ? "\n" : ""
           } подписки на Private Parking:`}
           activeStyle={{
-            height: true ? "auto" : "368px",
+            height: "auto",
           }}
           htmlEl={
             <ul
@@ -526,36 +556,42 @@ export default function Box4_1() {
               style={{ display: "flex", flexDirection: "column", gap: "10px" }}
             >
               <li>
-                <p>Доступный срок действия подписки - 1 месяц;</p>
+                <TextComponent>
+                  Доступный срок действия подписки - 1 месяц;
+                </TextComponent>
               </li>
               <li>
-                <p>
+                <TextComponent>
                   Для машиномест с доступом к электрозарядным станциям
                   осуществляется доплата 4 000 руб./мес.;
-                </p>
+                </TextComponent>
               </li>
               <li>
-                <p>Оплата подписки осуществляется по 100% предоплате;</p>
+                <TextComponent>
+                  Оплата подписки осуществляется по 100% предоплате;
+                </TextComponent>
               </li>
               <li>
-                <p>
+                <TextComponent>
                   За 1 неделю до окончания подписки, менеджер паркинга свяжется
                   с Вами для продления подписки;
-                </p>
+                </TextComponent>
               </li>
               <li>
-                <p>
+                <TextComponent>
                   Услуга по смене машиноместа в середине срока подписки возможна
                   на любое свободноемашиноместо с доплатой разницы стоимости
                   машиномест. Данная услуга оплачиваетсядополнительно и
                   составляет 2 000 рублей.
-                </p>
+                </TextComponent>
               </li>
               <li>
-                <p>Дополнительная парковочная карта - 1 000 рублей.</p>
+                <TextComponent>
+                  Дополнительная парковочная карта - 1 000 рублей.
+                </TextComponent>
               </li>
               <li>
-                <p>НДС 7% включен в стоимость услуги</p>
+                <TextComponent>НДС 7% включен в стоимость услуги</TextComponent>
               </li>
             </ul>
           }
@@ -563,7 +599,7 @@ export default function Box4_1() {
         <AccordionCom
           title="Условия аннулирования подписки:"
           activeStyle={{
-            height: true ? "auto" : "140px",
+            height: "auto",
           }}
           htmlEl={
             <ul
@@ -571,10 +607,10 @@ export default function Box4_1() {
               style={{ display: "flex", flexDirection: "column", gap: "10px" }}
             >
               <li>
-                <p>
+                <TextComponent>
                   От 30 до 1 дня до окончания подписки - удерживается 30% от
                   неиспользованной подписки
-                </p>
+                </TextComponent>
               </li>
             </ul>
           }
