@@ -5,10 +5,10 @@ import logoCF from "../../assets/icon/logoCF.svg";
 import AOS from "aos";
 import axios from "axios";
 import PhoneInput from "./com/Cleave";
-import useMediaQuery from "../../function/useMediaQuery";
+// import useMediaQuery from "../../function/useMediaQuery";
 
 export default function Box5({ footerForm = 1 }) {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  // const isMobile = useMediaQuery("(max-width: 768px)");
   const [allText, setAllText] = useState({
     userName: "",
     phoneNumber: "",
@@ -19,13 +19,10 @@ export default function Box5({ footerForm = 1 }) {
 
   const sendInTelegram = async () => {
     try {
-      const response = await axios.post(
-        `${import.meta.env.VITE_ENV_URL}/send-message`,
-        {
-          chatId: import.meta.env.VITE_ENV_URL_CHAT_ID,
-          message: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
-        },
-      );
+      await axios.post(`${import.meta.env.VITE_ENV_URL}/send-message`, {
+        chatId: import.meta.env.VITE_ENV_URL_CHAT_ID,
+        message: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
+      });
       setAllText({
         userName: "",
         phoneNumber: "",
@@ -46,7 +43,7 @@ export default function Box5({ footerForm = 1 }) {
   useEffect(() => {
     AOS.init({
       duration: 2000,
-      once: false, // Чтобы срабатывало повторно
+      once: false,
     });
 
     const handleAnimation = () => {
@@ -130,22 +127,18 @@ export default function Box5({ footerForm = 1 }) {
         </div>
         <div>
           <div className="info-contact-1">
-            <h1>
-              Консьерж <br />
-              служба
-            </h1>
+            <h1>Консьерж служба</h1>
             <h3>
-              Круглосуточная поддержка <br /> +7 (495) 481 22 44 <br />{" "}
-              {/* sales@primeparking.ru */}
+              Круглосуточная поддержка <br />
+              +7 (495) 481 22 44
             </h3>
           </div>
           <div className="info-contact-1">
-            <h1>
-              Техническая <br />
-              служба
-            </h1>
+            <h1>Отдел продаж</h1>
             <h3>
-              Круглосуточная поддержка <br /> +7 (495) 481 22 44 (доб.111)
+              Ежедневно, 09:00 - 21:00 <br />
+              +7 (495) 153 65 64 <br />
+              +7 (495) 445 30 16
             </h3>
           </div>
           <div
@@ -157,12 +150,12 @@ export default function Box5({ footerForm = 1 }) {
             <img
               src={Coso}
               className={`coso1 ${isAnimated ? "active-rotate" : ""}`}
-              alt="Coso"
+              alt=" "
             />
             <img
               src={Coso}
               className={`coso2 ${isAnimated ? "active-rotate" : ""}`}
-              alt="Coso"
+              alt=" "
             />
           </div>
         </div>

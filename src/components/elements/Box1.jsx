@@ -1,14 +1,33 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import carBox1 from "../../assets/icon/car-box1.png";
 import awDown from "../../assets/icon/aw-down.svg";
 import AOS from "aos";
+import { getData } from "../../function/getData";
+import P from "./com/P";
+
+const keys = ["box1_content_1", "box1_content_2"];
 
 export default function Box1() {
+  const [data, setData] = useState([]);
+
+  const getItems = async () => {
+    const res = await getData(keys);
+    console.log("res", res);
+
+    setData(res);
+  };
+
+  useEffect(() => {
+    getItems();
+  }, []);
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   }, []);
+  console.log("data", data);
+  console.log("data", data);
+
   return (
     <div className="box1-main">
       {/* <BannerVideo />
@@ -21,11 +40,11 @@ export default function Box1() {
         </button>
       </div> */}
       <div>
-        <img data-aos={"zoom-in"} src={ carBox1} alt="carBox1" />
+        <img data-aos={"zoom-in"} src={carBox1} alt=" " />
         <div>
-          <h1>Парковочное пространство</h1>
-          <p>Информация о парковке жилого квартала Prime Park</p>
-          <img src={awDown} alt="awDown" />
+          <h1>{data?.[0]}</h1>
+          <P>{data?.[1]}</P>
+          <img src={awDown} alt=" " />
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Box5 from "./elements/Box5";
 import { functions } from "../store/globalState";
 import useMediaQuery from "../function/useMediaQuery";
+import { Helmet } from "react-helmet";
 
 export default function Offer() {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -10,13 +11,21 @@ export default function Offer() {
   return (
     <>
       <div className="offer">
+        {/* <Helmet>
+          <title> Prime Parking - Оферта </title>
+          <meta
+            name="description"
+            content="Explore our parking services at Prime Parking. We offer a range of solutions to meet your parking needs."
+          />
+          <link rel="canonical" href="https://primeparking.ru/offer" />
+        </Helmet> */}
         <h1>ОФЕРТА</h1>
         <div className="offer-content">
           <div>
             <h1>
               Публичная оферта на реализацию Программных {!isMobile && <br />}
               продуктов в целях обеспечения доступа {!isMobile && <br />}
-              на Паркинг Комплекса  ЖК «Прайм Парк»
+              на Паркинг Комплекса ЖК «Прайм Парк»
             </h1>
             <div>
               <div>
@@ -43,8 +52,9 @@ export default function Offer() {
           </div>
           <div>
             <h1>
-              Публичная оферта на оказание услуг в целях обеспечения {!isMobile && <br />}{" "}
-              автомобилей клиентов Комплекса ЖК «Прайм Парк» топливом
+              Публичная оферта на оказание услуг в целях обеспечения{" "}
+              {!isMobile && <br />} автомобилей клиентов Комплекса ЖК «Прайм
+              Парк» топливом
             </h1>
             <div>
               <div>
@@ -71,9 +81,10 @@ export default function Offer() {
           </div>
           <div>
             <h1>
-              Публичная оферта на реализацию Программных продуктов в {!isMobile && <br />}{" "}
-              целях обеспечения оказания услуг мойки транспортных {!isMobile && <br />} средств
-              (далее – автомойка) Комплекса ЖК «Прайм Парк»
+              Публичная оферта на реализацию Программных продуктов в{" "}
+              {!isMobile && <br />} целях обеспечения оказания услуг мойки
+              транспортных {!isMobile && <br />} средств (далее – автомойка)
+              Комплекса ЖК «Прайм Парк»
             </h1>
             <div>
               <div>

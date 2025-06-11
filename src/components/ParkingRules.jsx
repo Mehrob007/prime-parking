@@ -1,13 +1,21 @@
-import React from "react";
 import Box5 from "./elements/Box5";
 import iconPDFB from "../assets/icon/iconPDF.svg";
 // import iconPDF from "../../assets/icon/iconPDF.svg";
 import useMediaQuery from "../function/useMediaQuery";
+import { Helmet } from "react-helmet";
 
 export default function ParkingRules() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <div className="parking-rules">
+      {/* <Helmet>
+        <title> Prime Parking - Правила паркинга </title>
+        <meta
+          name="description"
+          content="Explore our parking services at Prime Parking. We offer a range of solutions to meet your parking needs."
+        />
+        <link rel="canonical" href="https://primeparking.ru/parking-rules" />
+      </Helmet> */}
       <h1>
         Правила паркинга {isMobile && <br />} жилого {!isMobile && <br />}
         квартала {isMobile && <br />} PRIME PARK
@@ -266,7 +274,7 @@ export default function ParkingRules() {
         <p>
           Генеральный директор <br />
           <br /> Управляющей организации ЖК «ПРАЙМ ПАРК» <br />
-          <br /> ООО «ПРАЙМ ПАРК МЕНЕДЖМЕНТ» Мельникова И.В.
+          <br /> ООО «ПРАЙМ ПАРК МЕНЕДЖМЕНТ» Мельникова И.В.
         </p>
       </div>
       <nav>
@@ -274,7 +282,7 @@ export default function ParkingRules() {
           target="_blank"
           href="https://drive.google.com/drive/folders/1rRhQ8FnQxw-EzLyeQYr0tYjJ8IMFGkfa?usp=drive_link"
         >
-          <img src={iconPDFB} alt="iconPDFB" /> <h1>Правила паркинга</h1>
+          <img src={iconPDFB} alt=" " /> <h1>Правила паркинга</h1>
         </a>
       </nav>
       <footer className="footer-com">

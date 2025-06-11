@@ -1,7 +1,5 @@
 import React from "react";
-import imgServices1 from "../../assets/img/imgServices1.svg";
 import imgServices2 from "../../assets/img/imgServices2.png";
-import iconPDF from "../../assets/icon/iconPDF.svg";
 import greyIconLogo from "../../assets/icon/greyIconLogo.svg";
 import iconPetrol from "../../assets/icon/iconPetrol.svg";
 
@@ -26,7 +24,7 @@ export default function ServicesBox2() {
         </div>
         <div className="service-box2-info-private-valet">
           <div>
-            <img src={greyIconLogo} alt="greyIconLogo" />
+            <img src={greyIconLogo} alt=" " />
           </div>
           <div className="service-box2-info-private-valet-div-852">
             <div>
@@ -72,7 +70,7 @@ export default function ServicesBox2() {
         </div>
         <div className="services-price-petrol">
           <div className="services-price-petrol-top">
-            <img src={iconPetrol} alt="iconPetrol" />
+            <img src={iconPetrol} alt=" " />
             <h1>Актуальные цены на бензин:</h1>
           </div>
           <div className="services-price-petrol-bottom">
@@ -84,7 +82,7 @@ export default function ServicesBox2() {
             </button>
           </div>
         </div>
-        <img src={imgServices2} alt="imgServices2" />
+        <img src={imgServices2} alt=" " />
       </div>
     
     </div>

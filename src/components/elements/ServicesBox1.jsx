@@ -26,13 +26,13 @@ export default function ServicesBox1() {
           valet-парковщикам.
         </p>
       </div>
-      <img src={imgServices1} alt="imgServices1" />
+      <img src={imgServices1} alt=" " />
       <nav>
         <a
           target="_blank"
           href="https://drive.google.com/drive/folders/1iYoBDTNTgsjke5-gNKozrOgLufNbQM6y?usp=drive_link"
         >
-          <img src={iconPDF} alt="iconPDF" />
+          <img src={iconPDF} alt=" " />
           Прайс-лист на услуги мойки
         </a>
       </nav>

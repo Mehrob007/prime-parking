@@ -455,21 +455,21 @@ export default function Box4_1() {
               <div className="content-top-box4-2-content-1">
                 <img
                   src={contentTopBox42Content1}
-                  alt="contentTopBox42Content1"
+                  alt=" "
                 />
                 <p>Заправка топливом</p>
               </div>
               <div className="content-top-box4-2-content-2">
                 <img
                   src={contentTopBox42Content2}
-                  alt="contentTopBox42Content2"
+                  alt=" "
                 />
                 <p>Зарядка электричеством</p>
               </div>
               <div className="content-top-box4-2-content-3">
                 <img
                   src={contentTopBox42Content3}
-                  alt="contentTopBox42Content3"
+                  alt=" "
                 />
                 <p>
                   Кофе и напитки <br /> при подаче автомобиля
@@ -478,7 +478,7 @@ export default function Box4_1() {
               <div className="content-top-box4-2-content-4">
                 <img
                   src={contentTopBox42Content4}
-                  alt="contentTopBox42Content4"
+                  alt=" "
                 />
                 <p>Организация мойки</p>
               </div>

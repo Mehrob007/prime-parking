@@ -77,12 +77,12 @@ const BannerVideo = ({}) => {
               className={tranparent ? "transparent-icon" : ""}
               src={play ? playIcon : pauseIcon}
               onClick={togglePlayPause}
-              alt="playIcon"
+              alt=" "
             />
           </div>
         </div>
       ) : (
-        <img src="/images/banner-placeholder.jpg" alt="Баннер" />
+        <img src="/images/banner-placeholder.jpg" alt=" " />
       )}
       <nav className={play ? "off-media" : ""}>
         <button
@@ -92,7 +92,7 @@ const BannerVideo = ({}) => {
         >
           <img
             src={activeAudeoBunner ? audioTrue : audioFalse}
-            alt="sound-toggle"
+            alt=" "
           />
         </button>
       </nav>

@@ -1,19 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import bgBox3Car from "../../assets/icon/bg-box3-car.png";
-import logoIconBox3 from "../../assets/icon/logo-icon-box3.svg";
+// import logoIconBox3 from "../../assets/icon/logo-icon-box3.svg";
 import iconLineBox3 from "../../assets/icon/icon-line-box3.svg";
-import useMediaQuery from "../../function/useMediaQuery";
-
+// import useMediaQuery from "../../function/useMediaQuery";
+import { getData } from "../../function/getData";
+import P from "./com/P";
+const keys = [
+  "box3_content_1",
+  "box3_content_2",
+  "box3_content_3",
+  "box3_content_4",
+  "box3_content_5",
+  "box3_content_6",
+  "box3_content_7",
+];
 export default function Box3() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const [data, setData] = useState();
+  const getItems = async () => {
+    const res = await getData(keys);
+    console.log("res", res);
+
+    setData(res);
+  };
+  useEffect(() => {
+    getItems();
+  }, []);
+
+  // const isMobile = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
     AOS.init({});
   }, []);
   return (
     <div className="box3-main">
       <h1 data-aos={"fade-down"} data-aos-duration={"700"}>
-        Концепция {isMobile && <br />} паркинга
+        {/* Концепция {isMobile && <br />} паркинга */}
+        {data?.[0]}
       </h1>
       <div>
         <div className="bg-box3-1">
@@ -21,46 +43,18 @@ export default function Box3() {
             {/* <img src={logoIconBox3} alt="logoIconBox3" /> */}
             <div>
               <div>
-                <h1>ЗОНЫ У ЛОББИ</h1>
-                <p>
-                  Drop-off зона для посадки-высадки пассажиров
-                  <br />
-                  {isMobile && <br />}
-                  Зона передачи авто профессиональным парковщикам
-                  <br />
-                  {isMobile && <br />}
-                  Зона приёма и получения авто для гостей Жилого квартала Прайм
-                  Парк
-                </p>
+                <P element={"h1"}>{data?.[1]}</P>
+                <P>{data?.[2]}</P>
               </div>
-              <img src={iconLineBox3} alt="iconLineBox3" />
+              <img src={iconLineBox3} alt=" " />
               <div>
-                <h1>
-                  ПЕРВЫЙ УРОВЕНЬ <br />
-                  ПОДЗЕМНОГО ПАРКИНГА
-                </h1>
-                <p>
-                  Зона хранения автомобилей Valet-Service <br />
-                  {isMobile && <br />}
-                  Зона подачи автомобилей для абонементов Valet-Service{" "}
-                  <br />
-                  {isMobile && <br />}
-                  Обособленные зоны для проведения погрузо-разгрузочных работ{" "}
-                  <br />
-                  {isMobile && <br />}
-                  Зона для аренды непривязанных машино-мест (Open Parking)
-                </p>
+                <P element="h1">{data?.[3]}</P>
+                <p>{data?.[4]}</p>
               </div>
-              <img src={iconLineBox3} alt="iconLineBox3" />
+              <img src={iconLineBox3} alt=" " />
               <div>
-                <h1>
-                  ВТОРОЙ УРОВЕНЬ <br />
-                  ПОДЗЕМНОГО ПАРКИНГА
-                </h1>
-                <p>
-                  Приватная зона для аренды привязанных машино-мест (Private
-                  Parking)
-                </p>
+                <P element={"h1"}>{data?.[5]}</P>
+                <P>{data?.[6]}</P>
               </div>
             </div>
           </div>
@@ -70,7 +64,7 @@ export default function Box3() {
             data-aos={"fade-up"}
             data-aos-duration="1700"
             src={bgBox3Car}
-            alt="bgBox3Car"
+            alt=" "
           />
         </div>
       </div>

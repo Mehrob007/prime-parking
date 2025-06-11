@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import logoHeader from "../../assets/icon/logo-header.svg";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import callIcon from "../../assets/icon/callIcon.svg";
@@ -34,7 +34,7 @@ export default function Header() {
       <div className="nav-bar">
         {isMobile ? (
           <nav onClick={() => setModalOpen(modalOpen)}>
-            <img src={burgerMenuIcon} alt="burgerMenuIcon" />
+            <img src={burgerMenuIcon} alt=" " />
           </nav>
         ) : (
           <div>
@@ -43,12 +43,12 @@ export default function Header() {
             <NavLink to="./parking-rules">Правила паркинга</NavLink>
           </div>
         )}
-        <img onClick={() => navigate("./")} src={logoHeader} alt="logoHeader" />
+        <img onClick={() => navigate("./")} src={logoHeader} alt=" " />
         <a href="tel: +7 (495) 481 22 44">
           {!isMobile ? (<>
-            <img src={callIconDesk} alt="call-icon" /> <span>+7 (495) 481 22 44</span>
+            <img src={callIconDesk} alt=" " /> <span>+7 (495) 481 22 44</span>
           </>) : (
-            <img src={callIcon} alt="call-icon" />
+            <img src={callIcon} alt=" " />
           )}
         </a>
       </div>

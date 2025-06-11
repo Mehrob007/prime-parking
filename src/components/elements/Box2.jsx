@@ -6,8 +6,13 @@ import AOS from "aos";
 import Coso from "../../assets/icon/Колесо1.png";
 import useMediaQuery from "../../function/useMediaQuery";
 import TextComponent from "./com/TextComponent";
+import { getData } from "../../function/getData";
+import P from "./com/P";
+
+const keys = ["box2_content_1", "box2_content_2"];
 
 export default function Box2() {
+  const [data, setData] = useState();
   const [isAnimated, setIsAnimated] = useState(false);
   const isMobile = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
@@ -31,19 +36,30 @@ export default function Box2() {
     return () => window.removeEventListener("scroll", handleAnimation);
   }, []);
 
+  const getItems = async () => {
+    const res = await getData(keys);
+    console.log("res", res);
+
+    setData(res);
+  };
+  useEffect(() => {
+    getItems();
+  }, []);
+
   return (
     <div className="box2-main">
       <h1 data-aos={"fade-down"} data-aos-duration={"700"}>
-        Эксклюзивный {isMobile && <br />} сервис
+        {/* Эксклюзивный {isMobile && <br />} сервис */}
+        {data?.[0]}
       </h1>
       <div>
         <div className="bg-box2-1">
           <div className="box2-1-div">
-            <img src={bgBox2Com1} alt="bgBox2Com1" />
+            <img src={bgBox2Com1} alt=" " />
 
             {isMobile ? (
               <>
-                <TextComponent>
+                {/* <TextComponent>
                   Первый в России Жилой Квартал, который предлагает эксклюзивный
                   круглосуточный парковочный Valet-Service для вашего
                   максимального комфорта. Забудьте о поиске мест – наши
@@ -63,11 +79,12 @@ export default function Box2() {
                   доступна аренда непривязанных машиномест на первом уровне
                   паркинга (Open Parking) и аренда привязанных машиномест на
                   втором уровне подземного паркинга (Private Parking).
-                </TextComponent>
+                </TextComponent> */}
+                <TextComponent>{data?.[1]}</TextComponent>
               </>
             ) : (
               <>
-                <p>
+                {/* <p>
                   {" "}
                   Первый в России Жилой Квартал, который предлагает эксклюзивный
                   круглосуточный парковочный Valet-Service для вашего
@@ -77,7 +94,7 @@ export default function Box2() {
                   {!isMobile && <br />} на закрытую, охраняемую парковку и
                   подадут его ко входу по первому запросу. Всего один клик – и
                   ваш авто уже ждёт вас у входа. Комфорт, скорость и премиальное
-                  обслуживание – только для резидентов и {!isMobile && <br />}{" "}
+                  обслуживание – только для резидентов {!isMobile && <br />} и{" "}
                   гостей Жилого Квартала Прайм Парк.{" "}
                 </p>
                 <p>
@@ -90,7 +107,8 @@ export default function Box2() {
                   машиномест на первом уровне паркинга (Open Parking) и аренда
                   привязанных машиномест на втором уровне подземного паркинга
                   (Private Parking).
-                </p>
+                </p> */}
+                <P>{data?.[1]}</P>
               </>
             )}
           </div>
@@ -99,16 +117,16 @@ export default function Box2() {
             data-aos={!isMobile ? "slide-right" : "slide-right"}
             data-aos-duration={!isMobile ? "1700" : "1700"}
           >
-            <img src={bgBox2Car} className="car-mers" alt="bgBox2Car" />
+            <img src={bgBox2Car} className="car-mers" alt=" " />
             <img
               src={Coso}
               className={`coso11 ${isAnimated ? "active-rotate1" : ""}`}
-              alt="Coso"
+              alt=" "
             />
             <img
               src={Coso}
               className={`coso12 ${isAnimated ? "active-rotate1" : ""}`}
-              alt="Coso"
+              alt=" "
             />
           </div>
         </div>
@@ -118,7 +136,7 @@ export default function Box2() {
             data-aos={!isMobile && "fade-up"}
             // data-aos-offset="500"
             data-aos-duration={!isMobile && "1700"}
-            alt="bgBox2Com"
+            alt=" "
           />
         </div>
       </div>

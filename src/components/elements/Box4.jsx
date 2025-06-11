@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import contentTopBox42Content1 from "../../assets/icon/content-top-box4-2-content-1.svg";
 import contentTopBox42Content2 from "../../assets/icon/content-top-box4-2-content-2.svg";
 import contentTopBox42Content3 from "../../assets/icon/content-top-box4-2-content-3.svg";
@@ -7,50 +7,98 @@ import AccordionCom from "./componentSite/AccordionCom";
 import AOS from "aos";
 import useMediaQuery from "../../function/useMediaQuery";
 import TextComponent from "./com/TextComponent";
+import { getData } from "../../function/getData";
+import P from "./com/P";
 
+const keys = [
+  "",
+  "box4_content_1",
+  "box4_content_2",
+  "box4_content_3",
+  "box4_content_4",
+  "box4_content_5",
+  "box4_content_6",
+  "box4_content_7",
+  "box4_content_8",
+  "box4_content_9",
+  "box4_content_10",
+  "box4_content_11",
+  "box4_content_12",
+  "box4_content_13",
+  "box4_content_14",
+  "box4_content_15",
+  "box4_content_16",
+  "box4_content_17",
+  "box4_content_18",
+  "box4_content_19",
+  "box4_content_20",
+  "box4_content_21",
+  "box4_content_22",
+  "box4_content_23",
+  "box4_content_24",
+  "box4_content_25",
+  "box4_content_28",
+  "box4_content_27",
+  "box4_content_29",
+  "box4_content_30",
+  "box4_content_31",
+  "box4_content_32",
+  "box4_content_33",
+  "box4_content_34",
+  "box4_content_35",
+  "box4_content_36",
+  "box4_content_37",
+  "list_1_title",
+  "list_1_content",
+  "list_2_title",
+  "list_2_content",
+  "list_3_title",
+  "list_3_content",
+];
 export default function Box4() {
+  const [data, setData] = useState();
+  const getItems = async () => {
+    const res = await getData(keys);
+    console.log("res", res);
+
+    setData(res);
+  };
+  useEffect(() => {
+    getItems();
+  }, []);
   const isMobile = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
     AOS.init({});
   }, []);
+
   return (
     <div className="box4-main">
       <div className="header-box4">
         <h1 data-aos={"fade-down"} data-aos-duration="700">
-          VALET SERVICE
+          {data?.[0]}
         </h1>
-        <p>УСЛУГИ ПРЕМИАЛЬНЫХ {isMobile && <br />} ПАРКОВЩИКОВ</p>
+        <P>{data?.[1]}</P>
       </div>
       <div className="content-top-box4">
         <div className="content-top-box4-0 content-top-bg-box4">
           <div>
-            <h1>Абонементы {isMobile && <br />} VALET service</h1>
-            <h3>в абонемент {isMobile && <br />} VALET-serviСe входит:</h3>
+            <P element={"h1"}>{data?.[3]}</P>
+            <P element={"h3"}>{data?.[4]}</P>
             {isMobile ? (
-              <TextComponent>
-                Прием автомобиля у лобби и подача автомобиля на -1 уровне 
-                Размещение автомобиля на подземный паркинг сотрудником
-                Валет-сервиса
-              </TextComponent>
+              <TextComponent>{data?.[5]}</TextComponent>
             ) : (
-              <p>
-                Прием автомобиля у лобби и подача {isMobile && <br />}{" "}
-                автомобиля на -1 уровне <br /> {isMobile && <br />}
-                Размещение автомобиля {isMobile && <br />} на подземный паркинг
-                сотрудником {isMobile && <br />}
-                Валет-сервиса
-              </p>
+              <P>{data?.[5]}</P>
             )}
           </div>
         </div>
         <div className="content-top-box4-1">
           <div className="content-top-box4-1-com-1">
             <div className="content-top-box4-1-com-title">
-              <p>Абонемент</p>
-              <h1>на 1 месяц</h1>
+              <P>{data?.[6]}</P>
+              <P element={"h1"}>{data?.[7]}</P>
             </div>
-            <h3 className="content-top-box4-1-com-price">
-              32.000{" "}
+            <P element={"h3"} className="content-top-box4-1-com-price">
+              {data?.[8]}
               <span
                 style={{
                   fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
@@ -59,29 +107,22 @@ export default function Box4() {
                 ₽
               </span>
               /мес.
-            </h3>
+            </P>
             <div className="content-top-box4-1-com-sub-text">
               {isMobile ? (
-                <TextComponent>
-                  *Активация абонемента с даты покупки Сгорают все
-                  неиспользованные дни по истечению срока действия абонемента
-                </TextComponent>
+                <TextComponent>{data?.[9]}</TextComponent>
               ) : (
-                <p>
-                  *Активация абонемента с даты покупки <br /> Сгорают все
-                  неиспользованные дни {isMobile && <br />} по истечению{" "}
-                  {!isMobile && <br />} срока действия абонемента
-                </p>
+                <P>{data?.[9]}</P>
               )}
             </div>
           </div>
           <div className="content-top-box4-1-com-2">
             <div className="content-top-box4-1-com-title">
-              <p>Абонемент</p>
-              <h1>на 3 месяца</h1>
+              <P>{data?.[10]}</P>
+              <P element={"h1"}>{data?.[11]}</P>
             </div>
-            <h3 className="content-top-box4-1-com-price">
-              28.000{" "}
+            <P element={"h3"} className="content-top-box4-1-com-price">
+              {data?.[12]}{" "}
               <span
                 style={{
                   fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
@@ -90,29 +131,22 @@ export default function Box4() {
                 ₽
               </span>
               /мес.
-            </h3>
+            </P>
             <div className="content-top-box4-1-com-sub-text">
               {isMobile ? (
-                <TextComponent>
-                  *Активация абонемента с даты покупки Сгорают все
-                  неиспользованные дни по истечению срока действия абонемента
-                </TextComponent>
+                <TextComponent>{data?.[13]}</TextComponent>
               ) : (
-                <p>
-                  *Активация абонемента с даты покупки <br /> Сгорают все
-                  неиспользованные дни {isMobile && <br />} по истечению{" "}
-                  {!isMobile && <br />} срока действия абонемента
-                </p>
+                <P>{data?.[13]}</P>
               )}
             </div>
           </div>
           <div className="content-top-box4-1-com-3">
             <div className="content-top-box4-1-com-title">
-              <p>Абонемент</p>
-              <h1>на 6 месяцев</h1>
+              <P>{data?.[14]}</P>
+              <P element={"h1"}>{data?.[15]}</P>
             </div>
-            <h3 className="content-top-box4-1-com-price">
-              27.000{" "}
+            <P element={"h3"} className="content-top-box4-1-com-price">
+              {data?.[16]}
               <span
                 style={{
                   fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
@@ -121,29 +155,22 @@ export default function Box4() {
                 ₽
               </span>
               /мес.
-            </h3>
+            </P>
             <div className="content-top-box4-1-com-sub-text">
               {isMobile ? (
-                <TextComponent>
-                  *Активация абонемента с даты покупки Сгорают все
-                  неиспользованные дни по истечению срока действия абонемента
-                </TextComponent>
+                <TextComponent>{data?.[17]}</TextComponent>
               ) : (
-                <p>
-                  *Активация абонемента с даты покупки <br /> Сгорают все
-                  неиспользованные дни {isMobile && <br />} по истечению{" "}
-                  {!isMobile && <br />} срока действия абонемента
-                </p>
+                <p>{data?.[17]}</p>
               )}
             </div>
           </div>
           <div className="content-top-box4-1-com-4">
             <div className="content-top-box4-1-com-title">
-              <p>Абонемент</p>
-              <h1>на 12 месяцев</h1>
+              <P>{data?.[18]}</P>
+              <P element={"h1"}>{data?.[19]}</P>
             </div>
-            <h3 className="content-top-box4-1-com-price">
-              26.000{" "}
+            <P element={"h3"} className="content-top-box4-1-com-price">
+              {data?.[20]}{" "}
               <span
                 style={{
                   fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
@@ -152,20 +179,12 @@ export default function Box4() {
                 ₽
               </span>
               /мес.
-            </h3>
+            </P>
             <div className="content-top-box4-1-com-sub-text">
               {isMobile ? (
-                <TextComponent>
-                  {" "}
-                  *Активация абонемента с даты покупки Сгорают все
-                  неиспользованные дни по истечению срока действия абонемента
-                </TextComponent>
+                <TextComponent> {data?.[21]}</TextComponent>
               ) : (
-                <p>
-                  *Активация абонемента с даты покупки <br /> Сгорают все
-                  неиспользованные дни {isMobile && <br />} по истечению{" "}
-                  {!isMobile && <br />} срока действия абонемента
-                </p>
+                <P>{data?.[21]}</P>
               )}
             </div>
           </div>
@@ -173,31 +192,18 @@ export default function Box4() {
         <div className="content-top-box4-2">
           <div>
             <div className="content-top-box4-2-title">
-              <h1>
-                дополнительные {isMobile && <br />} услуги VALET{" "}
-                {isMobile && <br />} service
-              </h1>
+              <P element={"h1"}>{data?.[22]}</P>
               {isMobile ? (
-                <TextComponent>
-                  Подписка Valet+ к основному абонементу Valet Service расширяет
-                  возможности сервиса и открывает доступ к эксклюзивным услугам
-                  заправки, зарядки, мойки автомобиля и подачи напитков.
-                </TextComponent>
+                <TextComponent>{data?.[23]}</TextComponent>
               ) : (
-                <p>
-                  Подписка Valet+ к основному {isMobile && <br />} абонементу
-                  Valet Service расширяет {isMobile && <br />}
-                  возможности сервиса и открывает {isMobile && <br />} доступ к
-                  эксклюзивным услугам {isMobile && <br />}
-                  заправки, зарядки, мойки автомобиля и подачи напитков.
-                </p>
+                <P>{data?.[23]}</P>
               )}
             </div>
             <div className="content-top-box4-2-header">
               <div>
-                <h3>Valet +</h3>
-                <h1>
-                  3.000{" "}
+                <P element={"h3"}>{data?.[24]}</P>
+                <P element={"h1"}>
+                  {data?.[25]}
                   <span
                     style={{
                       fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
@@ -206,13 +212,13 @@ export default function Box4() {
                     ₽
                   </span>
                   /мес.
-                </h1>
-                <p>Стоимость дополнительной подписки</p>
+                </P>
+                <P>{data?.[26]}</P>
               </div>
               <div>
-                <h3>Промо</h3>
-                <h1>
-                  1.000{" "}
+                <P element={"h3"}>{data?.[27]}</P>
+                <P element={"h1"}>
+                  {data?.[28]}
                   <span
                     style={{
                       fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
@@ -221,60 +227,35 @@ export default function Box4() {
                     ₽
                   </span>
                   /мес.
-                </h1>
-                <p>Первые 3 месяца</p>
+                </P>
+                <P>{data?.[29]}</P>
               </div>
             </div>
             <div className="content-top-box4-2-content">
               <div className="content-top-box4-2-content-1">
-                <img
-                  src={contentTopBox42Content1}
-                  alt="contentTopBox42Content1"
-                />
-                <p>Заправка топливом</p>
+                <img src={contentTopBox42Content1} alt=" " />
+                <P>{data?.[30]}</P>
               </div>
               <div className="content-top-box4-2-content-2">
-                <img
-                  src={contentTopBox42Content2}
-                  alt="contentTopBox42Content2"
-                />
-                <p>Зарядка электричеством</p>
+                <img src={contentTopBox42Content2} alt=" " />
+                <P>{data?.[31]}</P>
               </div>
               <div className="content-top-box4-2-content-3">
-                <img
-                  src={contentTopBox42Content3}
-                  alt="contentTopBox42Content3"
-                />
-                <p>
-                  Кофе и напитки <br />
-                  при подаче автомобиля
-                </p>
+                <img src={contentTopBox42Content3} alt=" " />
+                <P>{data?.[32]}</P>
               </div>
               <div className="content-top-box4-2-content-4">
-                <img
-                  src={contentTopBox42Content4}
-                  alt="contentTopBox42Content4"
-                />
-                <p>Организация мойки</p>
+                <img src={contentTopBox42Content4} alt=" " />
+                <P>{data?.[33]}</P>
               </div>
             </div>
-            <TextComponent>
-              *Стоимость услуги мойки / топлива / электрозарядки не включена и
-              оплачивается дополнительно в соответствии с действующими тарифами.
-            </TextComponent>
+            <TextComponent>{data?.[34]}</TextComponent>
             <div className="content-top-box4-2-title">
-              <h1>гостевой VALET service</h1>
+              <P element={"h1"}>{data?.[35]}</P>
               {isMobile ? (
-                <TextComponent>
-                  Парковка гостей с помощью услуги Valet Service с передачей и
-                  получением автомобиля у лобби. Тариф: 250 руб./час
-                </TextComponent>
+                <TextComponent>{data?.[36]}</TextComponent>
               ) : (
-                <p>
-                  Парковка гостей с помощью услуги {isMobile && <br />} Valet
-                  Service с передачей и получением {isMobile && <br />}{" "}
-                  автомобиля у лобби. Тариф: {isMobile && <br />} 250 руб./час
-                </p>
+                <P>{data?.[36]}</P>
               )}
             </div>
           </div>
@@ -282,81 +263,32 @@ export default function Box4() {
       </div>
       <div className="content-bottom-box4">
         <AccordionCom
-          title="Условия покупки подписки на абонемент Valet Service:"
+          title={data?.[37]}
           activeStyle={{
             height: "auto",
           }}
           htmlEl={
             <ul className="ul-box4">
-              <li>
-                <TextComponent>
-                  Абонементы Valet Service действуют только на одну машину;
-                </TextComponent>
-              </li>
-              <li>
-                <TextComponent>
-                  Добавление второго автомобиля в подписку на абонемент возможно
-                  при условии, что только одна Valet-сессия может быть активна
-                  для одного из двух автомобилей (с доплатой 5 000 рублей в
-                  месяц).
-                </TextComponent>
-              </li>
-              <li>
-                <TextComponent>
-                  В случае, если два авто стоят одновременно, то идет гостевой
-                  тариф 250 рублей/час;
-                </TextComponent>
-              </li>
-              <li>
-                <TextComponent>
-                  В случае отсутствия активного абонемента по причине отсутствия
-                  своевременной оплаты, тариф меняется на 250 руб./час с даты
-                  окончания абонемента;
-                </TextComponent>
-              </li>
-              <li>
-                <TextComponent>
-                  Машину по абонементу можно менять не чаще 2 раз в месяц;
-                </TextComponent>
-              </li>
-              <li>
-                <TextComponent>
-                  Оплата подписки осуществляется по 100% предоплате.
-                </TextComponent>
-              </li>
-              <li>
-                <TextComponent>
-                  НДС 7% включен в стоимость услуги.
-                </TextComponent>
-              </li>
+              {data?.[38]?.split("$").map((e, i) => (
+                <li key={i}>
+                  <TextComponent>{e}</TextComponent>
+                </li>
+              ))}
             </ul>
           }
         />
         <AccordionCom
-          title="Условия аннулирования подписки:"
+          title={data?.[39]}
           activeStyle={{
             height: "auto",
           }}
           htmlEl={
             <ul className="ul-box4">
-              <li>
-                <TextComponent>
-                  От 30 до 1 дня до окончания подписки - удерживается 30% от
-                  неиспользованной подписки;
-                </TextComponent>
-              </li>
-              <li>
-                <TextComponent>
-                  От 60 до 31 дня до окончания подписки - удерживается 15% от
-                  неиспользованной подписки;
-                </TextComponent>
-              </li>
-              <li>
-                <TextComponent>
-                  От 61 и более дней - удерживается 10% от неиспользованной
-                  подписки.
-                </TextComponent>
-              </li>
+              {data?.[40]?.split("$").map((e, i) => (
+                <li key={i}>
+                  <TextComponent>{e}</TextComponent>
+                </li>
+              ))}
             </ul>
           }
         />

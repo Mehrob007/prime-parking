@@ -166,7 +166,7 @@ export default function BoxMid2() {
                 )
               }
               src={appStor}
-              alt="app stor"
+              alt=" "
             />
             <img
               onClick={() =>
@@ -175,7 +175,7 @@ export default function BoxMid2() {
                 )
               }
               src={googlePlay}
-              alt="google play"
+              alt=" "
             />
           </div>
         </div>
@@ -186,14 +186,14 @@ export default function BoxMid2() {
               data-aos={"fade-up"}
               data-aos-duration="1700"
               data-aos-easing="ease"
-              alt="phone"
+              alt=" "
             />
             <img
               src={phone}
               data-aos={"fade-up"}
               data-aos-duration="1700"
               data-aos-easing="ease"
-              alt="phone"
+              alt=" "
             />
           </div>
         </div>

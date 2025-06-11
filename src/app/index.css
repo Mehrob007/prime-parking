@@ -1003,7 +1003,7 @@ header > .nav-bar > a {
 }
 .box4-main > .header-box4 {
   width: 1094px;
-  height: 147px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3602,6 +3602,7 @@ header > .nav-bar > a {
   flex-direction: column;
   gap: 20px;
   height: 191px;
+    width: 301px;
 }
 @media (max-width: 750px) {
   .box5-main > .content-box5 > div > .info-contact-1 {
@@ -3612,7 +3613,7 @@ header > .nav-bar > a {
 }
 .box5-main > .content-box5 > div > .info-contact-1 > h1 {
   font-family: Sansation;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 28px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -3641,7 +3642,7 @@ header > .nav-bar > a {
 }
 .box5-main > .content-box5 > div > .info-contact-1 > h3 {
   font-family: Sansation;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   letter-spacing: 0%;
