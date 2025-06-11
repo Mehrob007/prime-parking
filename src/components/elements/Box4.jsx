@@ -261,7 +261,7 @@ export default function Box4() {
           </div>
         </div>
       </div>
-      <div className="content-bottom-box4">
+      <div className="content-bottom-box4"> 
         <AccordionCom
           title={data?.[37]}
           activeStyle={{
@@ -293,28 +293,17 @@ export default function Box4() {
           }
         />
         <AccordionCom
-          title="Условия использования часового тарифа"
+          title={data?.[41]}
           activeStyle={{
             height: "auto",
           }}
           htmlEl={
             <ul className="ul-box4">
-              <li>
+             {data?.[42]?.split("$")?.map((e, i) => ( <li key={i}>
                 <TextComponent>
-                  Бесплатное время указано в тарифе, если оно есть;
+                 {e}
                 </TextComponent>
-              </li>
-              <li>
-                <TextComponent>
-                  Неполный час округляется до полного часа.
-                </TextComponent>
-              </li>
-              <li>
-                <TextComponent>
-                  После услуг, оказанных автомойкой, 3 часа парковки
-                  предоставляются бесплатно, далее 150 рублей в час.
-                </TextComponent>
-              </li>
+              </li>))}
             </ul>
           }
         />
