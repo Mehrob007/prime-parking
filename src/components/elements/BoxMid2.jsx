@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AccordionCom from "./componentSite/AccordionCom";
 import appStor from "../../assets/icon/appStor.svg";
 import googlePlay from "../../assets/icon/googlePlay.svg";
@@ -8,8 +8,32 @@ import AOS from "aos";
 import { functions } from "../../store/globalState";
 import useMediaQuery from "../../function/useMediaQuery";
 import TextComponent from "./com/TextComponent";
+import { getData } from "../../function/getData";
+import P from "./com/P";
 
+const keys = [
+  "box_mid_2_content_1",
+  "box_mid_2_content_2",
+  "box_mid_2_content_3",
+  "box_mid_2_content_4",
+  "box_mid_2_content_5",
+  "list_8_title",
+  "list_8_content",
+  "box_mid_2_1_content_1",
+  "box_mid_2_1_content_2",
+  "box_mid_2_1_content_3",
+];
 export default function BoxMid2() {
+  const [data, setData] = useState();
+  const getItems = async () => {
+    const res = await getData(keys);
+    console.log("res", res);
+
+    setData(res);
+  };
+  useEffect(() => {
+    getItems();
+  }, []);
   const isMobile = useMediaQuery("(max-width: 768px)");
   const { redirect } = functions();
   useEffect(() => {
@@ -22,14 +46,15 @@ export default function BoxMid2() {
   return (
     <div className="box-mid2">
       <h1 data-aos={"fade-down"} data-aos-duration="700">
-        сервисный трафик
+        {data?.[0]}
       </h1>
       <div className="box-mid2-content">
         <div>
-          <h1>Сервисный тариф:</h1>
+          <h1>{data?.[1]}</h1>
           {isMobile ? (
-            <p>
-              <TextComponent>
+            <P>
+              {data?.[2]}
+              {/* <TextComponent>
                 Заказ пропуска осуществляется через мобильное приложение{" "}
               </TextComponent>
               <label>PRIME PARK APP. {"  "}</label>
@@ -39,123 +64,56 @@ export default function BoxMid2() {
                 (R7): 20 минут - бесплатно, с 21 минуты по 60 минуту - 200
                 рублей в час. Со 2 часа (с 61 минуты) - 300 рублей в час. Далее
                 каждый последующий час 300 рублей.
-              </TextComponent>
-            </p>
+              </TextComponent> */}
+            </P>
           ) : (
             <p>
-              Заказ пропуска осуществляется через мобильное приложение{" "}
+              {/* Заказ пропуска осуществляется через мобильное приложение{" "}
               <label>PRIME PARK APP. {"  "}</label> Для башен Hyde Park Tower
               (R6), Gorky Park Tower (R5), Imperial Park Tower (R4) и Regent's
               Park Tower (R3), Central Park Tower (R7): 20 минут - бесплатно, с
               21 минуты по 60 минуту - 200 рублей в час. Со 2 часа (с 61 минуты)
-              - 300 рублей в час. Далее каждый последующий час 300 рублей.
+              - 300 рублей в час. Далее каждый последующий час 300 рублей. */}
+              {data?.[2]}
             </p>
           )}
         </div>
         <div>
-          <h1>Сервисный тариф для негабаритных авто:</h1>
-          <p>1 час - бесплатно, 2 час и последующие - 500 руб. в час.</p>
+          <h1>{data?.[3]}</h1>
+          <p>{data?.[4]}</p>
         </div>
       </div>
       <AccordionCom
+        title={data?.[5]}
         activeStyle={{
           height: "auto",
         }}
-        activeContent={false}
-        title="Специальные тарифы за нарушения регламента паркинга комплекса"
-        style={{
-          borderBottomColor: "#545454",
-          width: "100%",
-        }}
         htmlEl={
-          <ul
-            className="ul-box4"
-            style={{ display: "flex", flexDirection: "column", gap: "10px" }}
-          >
-            <li>
-              <TextComponent>
-                {" "}
-                Стоянка в неположенной зоне: 1 000 рублей.
-              </TextComponent>
-            </li>
-            <li>
-              <p>
-                <a
-                  target="_blank"
-                  href="https://drive.google.com/drive/folders/1o0xhz5Y7ns4KADmx7448SNShufX3LkiJ?usp=drive_link"
-                >
-                  Ссылка на зоны
-                </a>{" "}
-                Hyde Park Tower (R6), Gorky Park Tower (R5), Imperial Park Tower
-                (R4).
-              </p>
-            </li>
-            <li>
-              <p>
-                <a
-                  target="_blank"
-                  href="https://drive.google.com/file/d/1lhx9zuLwt9LdKaZJCpTSrsp037k7aRyR/view?usp=drive_link"
-                >
-                  Ссылка на зоны
-                </a>{" "}
-                Regent's Park Tower (R3).
-              </p>
-            </li>
-            <li>
-              <p>
-                <a
-                  target="_blank"
-                  href="https://drive.google.com/drive/folders/1kr7hJFkpsThmRow8rb1BdHT2TDpxDEzE?usp=drive_link"
-                >
-                  Ссылка на зоны
-                </a>{" "}
-                Central Park Tower (R7).
-              </p>
-            </li>
-            <li>
-              <TextComponent>
-                Заезд на разметку парковочного места: 500 рублей.
-              </TextComponent>
-            </li>
-            <li>
-              <TextComponent>
-                Разгрузка/ погрузка на проезжей части: 1 500 рублей.
-              </TextComponent>
-            </li>
-            <li>
-              <TextComponent>
-                Потеря парковочной карты: 5 000 рублей.
-              </TextComponent>
-            </li>
-            <li>
-              <TextComponent>
-                Нарушение правил паркинга и/или договора оферты: 5 000 рублей в
-                день (1 день - с 00:01 до 23:59)
-              </TextComponent>
-            </li>
+          <ul className="ul-box4">
+            {data?.[6]?.split("$").map((e, i) => (
+              <li key={i}>
+                <TextComponent>{e}</TextComponent>
+              </li>
+            ))}
           </ul>
         }
       />
       <div className="box-mid2-apk-mobile">
         <div className="box-mid2-apk-mobile-left">
           <div className="box-mid2-apk-mobile-left-header">
-            <h1>
-              приложение <br />
-              prime park
-            </h1>
-            <h3>prime park app</h3>
+            <P element={"h1"}>
+              {data?.[7]}
+            </P>
+            <P element={"h3"}>{data?.[8]}</P>
           </div>
           {isMobile ? (
             <TextComponent>
-              Единственный цифровой дом в Москве с дистанционным доступом ко
-              всем сервисам через смартфон
+              {data?.[9]}
             </TextComponent>
           ) : (
-            <p>
-              Единственный цифровой дом в Москве <br /> с дистанционным доступом
-              ко всем <br />
-              сервисам через смартфон
-            </p>
+            <P>
+              {data?.[9]}
+            </P>
           )}
 
           <div className="box-mid2-apk-mobile-left-get-apk">

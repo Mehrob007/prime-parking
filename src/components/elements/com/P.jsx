@@ -25,19 +25,19 @@ const P = ({
       </React.Fragment>
     ));
   };
+  if (element === "h3") {
+    return (
+      <h3 className={className} style={style}>
+        {renderWithNewlines()}
+      </h3>
+    );
+  }
 
   if (element === "h1") {
     return (
       <h1 className={className} style={style}>
         {renderWithNewlines()}
       </h1>
-    );
-  }
-  if (element === "h3") {
-    return (
-      <h3 className={className} style={style}>
-        {renderWithNewlines()}
-      </h3>
     );
   }
 

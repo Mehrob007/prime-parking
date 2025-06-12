@@ -75,9 +75,9 @@ export default function Box4() {
     <div className="box4-main">
       <div className="header-box4">
         <h1 data-aos={"fade-down"} data-aos-duration="700">
-          {data?.[0]}
+          {data?.[1]}
         </h1>
-        <P>{data?.[1]}</P>
+        <P>{data?.[2]}</P>
       </div>
       <div className="content-top-box4">
         <div className="content-top-box4-0 content-top-bg-box4">

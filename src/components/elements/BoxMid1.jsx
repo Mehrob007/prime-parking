@@ -1,9 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import { functions } from "../../store/globalState";
 import useMediaQuery from "../../function/useMediaQuery";
 import TextComponent from "./com/TextComponent";
+import { getData } from "../../function/getData";
+import P from "./com/P";
+const keys = [
+  "box_mid_1_content_1",
+  "box_mid_1_content_2",
+  "box_mid_1_content_3",
+  "box_mid_1_content_4",
+];
 export default function BoxMid1() {
+  const [data, setData] = useState();
+  const getItems = async () => {
+    const res = await getData(keys);
+    console.log("res", res);
+
+    setData(res);
+  };
+  useEffect(() => {
+    getItems();
+  }, []);
   const { redirect } = functions();
   const isMobile = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
@@ -16,19 +34,17 @@ export default function BoxMid1() {
     <div className="box-mid1">
       <div className="box-mid1-header">
         <h1 data-aos={"fade-down"} data-aos-duration="700">
-          Open Parking
+          {data?.[0]}
         </h1>
         <h3>
           {isMobile ? (
             <TextComponent>
-              Парковочное пространство с арендуемыми непривязанными
-              машино-местами
+              {data?.[1]}
             </TextComponent>
           ) : (
-            <>
-              Парковочное пространство с арендуемыми <br />
-              непривязанными машино-местами
-            </>
+            <P>
+               {data?.[1]}
+            </P>
           )}
         </h3>
       </div>
@@ -36,32 +52,21 @@ export default function BoxMid1() {
         <div>
           {isMobile ? (
             <TextComponent>
-              Вы можете выбрать любое свободное место (согласно схеме),
-              подсвеченное специальным световым маячком зеленого цвета.
+              {data?.[2]}
             </TextComponent>
           ) : (
-            <p>
-              Вы можете выбрать любое свободное место (согласно схеме),
-              подсвеченное {!isMobile ? <br /> : ""} специальным световым
-              маячком зеленого цвета.
-            </p>
+            <P>
+              {data?.[2]}
+            </P>
           )}
           {isMobile ? (
             <TextComponent>
-              Мы заботимся о вашем автомобиле. На территории Open Parking
-              установлены {!isMobile ? <br /> : ""} камеры видеонаблюдения, а
-              также осуществляется круглосуточная охрана,{" "}
-              {!isMobile ? <br /> : ""} что гарантирует безопасность вашего
-              транспортного средства.
+             {data?.[3]}
             </TextComponent>
           ) : (
-            <p>
-              Мы заботимся о вашем автомобиле. На территории Open Parking
-              установлены {!isMobile ? <br /> : ""} камеры видеонаблюдения, а
-              также осуществляется круглосуточная охрана,{" "}
-              {!isMobile ? <br /> : ""} что гарантирует безопасность вашего
-              транспортного средства.
-            </p>
+            <P>
+              {data?.[3]}
+            </P>
           )}
         </div>
         <nav>
