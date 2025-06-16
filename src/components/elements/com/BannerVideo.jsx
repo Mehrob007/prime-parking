@@ -1,99 +1,127 @@
-import { use, useEffect, useRef, useState } from "react";
-import bgBox1Video from "../../../assets/video/videoBanner.mp4";
+import { useEffect, useRef, useState } from "react";
 import playIcon from "../../../assets/icon/play.svg";
 import pauseIcon from "../../../assets/icon/pause.svg";
+import audioOn from "../../../assets/icon/1.svg";
+import audioOff from "../../../assets/icon/2.svg";
+import axios from "axios";
 
-import audioTrue from "../../../assets/icon/1.svg";
-import audioFalse from "../../../assets/icon/2.svg";
+const VIDEO_URL = "file_video_content_1";
 
-const BannerVideo = ({}) => {
-  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
-  const [play, setPlay] = useState(true);
-  const [tranparent, setTranparent] = useState(true);
-  const [activeAudeoBunner, setActiveAudeoBunner] = useState(true);
-  // const videoRef = useRef(null);
+const BannerVideo = () => {
   const videoRef = useRef(null);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShouldLoadVideo(true);
-    }, 0);
+  const [videoSrc, setVideoSrc] = useState(null); // objectURL
+  const [shouldLoadVideo, setShouldLoad] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
+  const [iconsFade, setIconsFade] = useState(true);
+  const [soundOn, setSoundOn] = useState(true);
 
-    return () => clearTimeout(timeout);
+  useEffect(() => {
+    const t = setTimeout(() => setShouldLoad(true), 0);
+    return () => clearTimeout(t);
   }, []);
 
+  useEffect(() => {
+    if (!shouldLoadVideo) return;
+
+    (async () => {
+      try {
+        const res1 = await axios(
+          `${import.meta.env.VITE_PUBLIC_API_URL}api/files?key=${VIDEO_URL}`,
+        );
+        const res = await axios(
+          `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
+            res1.data.data?.fileName
+          }`,
+        ); 
+        const blob = await res.blob();
+        const url = URL.createObjectURL(blob);
+        setVideoSrc(url);
+      } catch (err) {
+        console.error("Не удалось загрузить видео:", err);
+      }
+    })();
+  }, [shouldLoadVideo]);
+
   const togglePlayPause = () => {
-    const video = videoRef.current;
-    if (play) {
-      video.muted = false;
-      video.play();
-      setPlay(false);
+    const v = videoRef.current;
+    if (!v) return;
+
+    if (isPaused) {
+      v.muted = false;
+      v.play();
     } else {
-      video.pause();
-      setPlay(true);
+      v.pause();
     }
+    setIsPaused(!isPaused);
   };
 
   const toggleMute = () => {
-    if (videoRef.current) {
-      const newMuted = !videoRef.current.muted;
-      videoRef.current.muted = newMuted;
-      setActiveAudeoBunner(!newMuted);
-    }
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = !v.muted;
+    setSoundOn(!v.muted);
   };
 
   useEffect(() => {
-    if (shouldLoadVideo && videoRef.current) {
-      const source = document.createElement("source");
-      source.src = bgBox1Video;
-      source.type = "video/mp4";
-      videoRef.current.appendChild(source);
-      videoRef.current.load();
-    }
-  }, [shouldLoadVideo, bgBox1Video]);
+    if (isPaused) setIconsFade(false);
+    else setTimeout(() => setIconsFade(true), 1500);
+  }, [isPaused]);
 
-  useEffect(() => {
-    if (play) {
-      setTranparent(false);
-    } else {
-      setTimeout(() => setTranparent(true), 1500);
+  const handleDownload = async () => {
+    try {
+      // если objectURL уже есть — используем его
+      let blobUrl = videoSrc;
+      if (!blobUrl) {
+        const res = await fetch(VIDEO_URL);
+        const blob = await res.blob();
+        blobUrl = URL.createObjectURL(blob);
+      }
+      const a = document.createElement("a");
+      a.href = blobUrl;
+      a.download = "banner.mp4";
+      a.click();
+      URL.revokeObjectURL(blobUrl);
+    } catch (err) {
+      console.error("Ошибка скачивания:", err);
     }
-  }, [play]);
+  };
 
   return (
     <div className="banner-video">
-      {shouldLoadVideo ? (
+      {videoSrc ? (
         <div onClick={togglePlayPause}>
           <video
             ref={videoRef}
+            src={videoSrc}
             loop
             playsInline
             width="100%"
             style={{ objectFit: "cover" }}
           />
 
+          {/* play / pause icon */}
           <div>
             <img
-              className={tranparent ? "transparent-icon" : ""}
-              src={play ? playIcon : pauseIcon}
-              onClick={togglePlayPause}
-              alt=" "
+              className={iconsFade ? "transparent-icon" : ""}
+              src={isPaused ? playIcon : pauseIcon}
+              alt=""
             />
           </div>
         </div>
       ) : (
-        <img src="/images/banner-placeholder.jpg" alt=" " />
+        <img src="/images/banner-placeholder.jpg" alt="" />
       )}
-      <nav className={play ? "off-media" : ""}>
-        <button
-          onClick={() => {
-            if (!play) {toggleMute()};
-          }}
-        >
-          <img
-            src={activeAudeoBunner ? audioTrue : audioFalse}
-            alt=" "
-          />
+
+      {/* mute / unmute */}
+      <nav className={isPaused ? "off-media" : ""}>
+        <button onClick={() => !isPaused && toggleMute()}>
+          <img src={soundOn ? audioOn : audioOff} alt="" />
+        </button>
+
+        {/* download */}
+        <button onClick={handleDownload} disabled={!videoSrc}>
+          Скачать
         </button>
       </nav>
     </div>

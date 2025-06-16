@@ -1,12 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Box5 from "./elements/Box5";
-import { functions } from "../store/globalState";
+// import { functions } from "../store/globalState";
 import useMediaQuery from "../function/useMediaQuery";
 import { Helmet } from "react-helmet";
+import { getData } from "../function/getData";
+import apiClient from "../utils/apiClient";
+import P from "./elements/com/P";
 
+const keys = [
+  "offer_content_1",
+  "offer_content_2",
+  "offer_content_3",
+  "offer_content_4",
+];
 export default function Offer() {
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const { redirect } = functions();
+  // const { redirect } = functions();
+  const [data, setData] = useState();
+  const getItems = async () => {
+    const res = await getData(keys);
+    console.log("res", res);
+
+    setData(res);
+  };
+
+  const onChangeURL = async (key) => {
+    try {
+      const res = await apiClient(`api/files?key=${key}`);
+      return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
+        res.data.data?.fileName
+      }`;
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  useEffect(() => {
+    getItems();
+  }, []);
 
   return (
     <>
@@ -15,26 +45,23 @@ export default function Offer() {
           <title> Prime Parking - Оферта </title>
           <meta
             name="description"
-            content="Explore our parking services at Prime Parking. We offer a range of solutions to meet your parking needs."
+            content="Explore our parking offers at Prime Parking. We offer a range of solutions to meet your parking needs."
           />
           <link rel="canonical" href="https://primeparking.ru/offer" />
         </Helmet> */}
-        <h1>ОФЕРТА</h1>
+        <P element={"h1"}>{data?.[0]}</P>
         <div className="offer-content">
           <div>
-            <h1>
-              Публичная оферта на реализацию Программных {!isMobile && <br />}
-              продуктов в целях обеспечения доступа {!isMobile && <br />}
-              на Паркинг Комплекса ЖК «Прайм Парк»
-            </h1>
+            <P element={"h1"}>{data?.[1]}</P>
             <div>
               <div>
                 <button
-                  onClick={() =>
-                    redirect(
-                      "https://drive.google.com/drive/folders/1L-w__kci-_71FF9MGxtBfbkIFuAGyeXn?usp=drive_link",
-                    )
-                  }
+                  onClick={async () => {
+                    const res = await onChangeURL("offer_file_content_1");
+                    if (res) {
+                      document.location.href = res;
+                    }
+                  }}
                 >
                   <h3>Ознакомиться с основными положениями</h3>
                 </button>
@@ -43,7 +70,12 @@ export default function Offer() {
                 Более старые версии:{" "}
                 <a
                   target="_blank"
-                  href="https://drive.google.com/drive/folders/1PpXHaUU-0e-mxsfROheVtvCGLuzJk0xW?usp=drive_link"
+                  onClick={async () => {
+                    const res = await onChangeURL("offer_file_content_2");
+                    if (res) {
+                      document.location.href = res;
+                    }
+                  }}
                 >
                   Скачать
                 </a>
@@ -51,19 +83,16 @@ export default function Offer() {
             </div>
           </div>
           <div>
-            <h1>
-              Публичная оферта на оказание услуг в целях обеспечения{" "}
-              {!isMobile && <br />} автомобилей клиентов Комплекса ЖК «Прайм
-              Парк» топливом
-            </h1>
+            <P element={"h1"}>{data?.[2]}</P>
             <div>
               <div>
                 <button
-                  onClick={() =>
-                    redirect(
-                      "https://drive.google.com/drive/folders/17uyCWydSeWQ9bGqzT-5PwrufZYXa-i6F?usp=drive_link",
-                    )
-                  }
+                  onClick={async () => {
+                    const res = await onChangeURL("offer_file_content_3");
+                    if (res) {
+                      document.location.href = res;
+                    }
+                  }}
                 >
                   <h3>Ознакомиться с основными положениями</h3>
                 </button>
@@ -72,7 +101,12 @@ export default function Offer() {
                 Более старые версии:{" "}
                 <a
                   target="_blank"
-                  href="https://drive.google.com/drive/folders/1-AjL6sUu7b1IX86NG1OU1d9JOBAs4fK7?usp=drive_link"
+                  onClick={async () => {
+                    const res = await onChangeURL("offer_file_content_4");
+                    if (res) {
+                      document.location.href = res;
+                    }
+                  }}
                 >
                   Скачать
                 </a>
@@ -80,20 +114,16 @@ export default function Offer() {
             </div>
           </div>
           <div>
-            <h1>
-              Публичная оферта на реализацию Программных продуктов в{" "}
-              {!isMobile && <br />} целях обеспечения оказания услуг мойки
-              транспортных {!isMobile && <br />} средств (далее – автомойка)
-              Комплекса ЖК «Прайм Парк»
-            </h1>
+            <P element={"h1"}>{data?.[3]}</P>
             <div>
               <div>
                 <button
-                  onClick={() =>
-                    redirect(
-                      "https://drive.google.com/drive/folders/1TZ396IPBkTJ_Yeta5QHxn3Hw99hlip7M?usp=drive_link",
-                    )
-                  }
+                  onClick={async () => {
+                    const res = await onChangeURL("offer_file_content_5");
+                    if (res) {
+                      document.location.href = res;
+                    }
+                  }}
                 >
                   <h3>Ознакомиться с основными положениями</h3>
                 </button>
@@ -102,7 +132,12 @@ export default function Offer() {
                 Более старые версии:{" "}
                 <a
                   target="_blank"
-                  href="https://drive.google.com/drive/folders/11s2I_6SG-bvTmKnRByd7opPQfx4zfSM0?usp=drive_link"
+                  onClick={async () => {
+                    const res = await onChangeURL("offer_file_content_6");
+                    if (res) {
+                      document.location.href = res;
+                    }
+                  }}
                 >
                   Скачать
                 </a>

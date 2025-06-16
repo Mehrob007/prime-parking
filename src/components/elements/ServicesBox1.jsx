@@ -1,36 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import imgServices1 from "../../assets/img/imgServices1.svg";
 import iconPDF from "../../assets/icon/iconPDF.svg";
-import useMediaQuery from "../../function/useMediaQuery";
+import apiClient from "../../utils/apiClient";
+import { getData } from "../../function/getData";
+import P from "./com/P";
 
+const keys = ["service_content_1", "service_content_2", "service_content_3"];
 export default function ServicesBox1() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const [data, setData] = useState();
+  const getItems = async () => {
+    const res = await getData(keys);
+    console.log("res", res);
+
+    setData(res);
+  };
+
+  const onChangeURL = async (key) => {
+    try {
+      const res = await apiClient(`api/files?key=${key}`);
+      return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
+        res.data.data?.fileName
+      }`;
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  useEffect(() => {
+    getItems();
+  }, []);
   return (
     <div className="services-box1">
-      <h3>Услуги</h3>
-      <h1 className="services-title">мойка</h1>
+      <P element={"h3"}>{data?.[0]}</P>
+      <h1 className="services-title">{data?.[1]}</h1>
       <div className="services-sub-text">
-        <p>
-          На территории отапливаемого подземного {isMobile && <br />} паркинга
-          квартала Prime Park работает {isMobile && <br />} собственный
-          детейлинг-центр, <br /> который предлагает премиальный{" "}
-          {isMobile && <br />} комплекс услуг для ухода за автомобилями{" "}
-          {isMobile && <br />} резидентов, включая автомойку <br />
-          на 8 боксов, 2 поста детейлинга и {isMobile && <br />} шиномонтаж.
-        </p>
-        <p>
-          Запись открыта по телефону: {isMobile && <br />} +7 (985) 474-86-87
-        </p>
-        <p>
-          Воспользоваться сервисом можно самостоятельно или передать автомобиль
-          valet-парковщикам.
-        </p>
+        <P>{data?.[2]}</P>
       </div>
       <img src={imgServices1} alt=" " />
       <nav>
         <a
           target="_blank"
-          href="https://drive.google.com/drive/folders/1iYoBDTNTgsjke5-gNKozrOgLufNbQM6y?usp=drive_link"
+          // href="https://drive.google.com/drive/folders/1iYoBDTNTgsjke5-gNKozrOgLufNbQM6y?usp=drive_link"
+          onClick={async () => {
+            const res = await onChangeURL("service_file_content_1");
+            if (res) {
+              document.location.href = res;
+            }
+          }}
         >
           <img src={iconPDF} alt=" " />
           Прайс-лист на услуги мойки

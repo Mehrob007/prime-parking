@@ -110,7 +110,7 @@ body {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     width: 265px;
   }
 }
@@ -196,6 +196,9 @@ body {
   letter-spacing: 0%;
   list-style-type: disc;
   margin-left: 8px;
+}
+.ul-box4 > li > p > a{
+  cursor: pointer;
 }
 @media (max-width: 750px) {
   .ul-box4 > li > p {
@@ -524,7 +527,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -543,7 +546,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .box1-main > div > div {
   display: flex;
@@ -589,7 +592,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
   .box1-main > div p {
     font-family: Sansation;
@@ -598,7 +601,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
   .box1-main > div > div > img {
     width: 18px;
@@ -642,7 +645,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -662,7 +665,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box2-main > div {
@@ -824,7 +827,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     232.39deg,
     #ad8153 30.05%,
@@ -844,7 +847,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box3-main > div {
@@ -918,7 +921,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -938,7 +941,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box3-main > div > .bg-box3-1 > div > div > div > p {
@@ -1025,7 +1028,7 @@ header > .nav-bar > a {
   font-size: 50px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     262.51deg,
     #ad8153 -26.06%,
@@ -1045,7 +1048,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main > .header-box4 > p {
@@ -1055,7 +1058,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #ffffff;
 }
 @media (max-width: 750px) {
@@ -1066,7 +1069,7 @@ header > .nav-bar > a {
     line-height: 110%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main > .header-box4 > p > span {
@@ -1076,7 +1079,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: rgba(255, 255, 255, 0.4);
 }
 .box4-main > .header-box4 > h5 {
@@ -1142,7 +1145,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #545454;
 }
 @media (max-width: 750px) {
@@ -1153,7 +1156,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main > .content-top-box4_1 > .content-navigate-box4_1 > div::before {
@@ -1204,7 +1207,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -1277,7 +1280,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     259deg,
     #ad8153 33.33%,
@@ -1367,7 +1370,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -1537,7 +1540,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -1557,7 +1560,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main > .content-top-box4 > .content-top-box4-0 > div > h3 {
@@ -1568,7 +1571,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -1588,7 +1591,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-top: 20px;
   }
 }
@@ -1967,7 +1970,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     259deg,
     #ad8153 33.33%,
@@ -1993,7 +1996,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2034,7 +2037,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2221,7 +2224,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -2246,7 +2249,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2409,7 +2412,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     259deg,
     #ad8153 33.33%,
@@ -2435,7 +2438,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2476,7 +2479,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2662,7 +2665,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -2687,7 +2690,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2768,7 +2771,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box-mid1 > .box-mid1-header > h1 {
@@ -2778,7 +2781,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     262.92deg,
     #ad8153 5.53%,
@@ -2798,7 +2801,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box-mid1 > .box-mid1-header > h3 {
@@ -2808,7 +2811,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 @media (max-width: 750px) {
   .box-mid1 > .box-mid1-header > h3 {
@@ -2818,7 +2821,7 @@ header > .nav-bar > a {
     line-height: 115%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box-mid1 > .box-mid1-content {
@@ -2900,7 +2903,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -2920,7 +2923,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box-mid1 > .box-mid1-content > nav::before {
@@ -2967,7 +2970,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     262.92deg,
     #ad8153 5.53%,
@@ -2987,7 +2990,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box-mid2 > .box-mid2-content {
@@ -3020,7 +3023,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -3040,7 +3043,7 @@ header > .nav-bar > a {
     line-height: 110%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box-mid2 > .box-mid2-content > div > p {
@@ -3143,7 +3146,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     262.92deg,
     #ad8153 5.53%,
@@ -3167,7 +3170,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box-mid2
@@ -3181,7 +3184,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 @media (max-width: 750px) {
   .box-mid2
@@ -3195,7 +3198,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box-mid2 > .box-mid2-apk-mobile > .box-mid2-apk-mobile-left > p {
@@ -3331,7 +3334,7 @@ header > .nav-bar > a {
   font-size: 50px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     264.81deg,
     #ad8153 6.89%,
@@ -3351,7 +3354,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box5-main > .content-box5 {
@@ -3618,7 +3621,7 @@ header > .nav-bar > a {
   font-size: 28px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     259deg,
     #ad8153 33.33%,
@@ -3638,7 +3641,7 @@ header > .nav-bar > a {
     line-height: 115%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .box5-main > .content-box5 > div > .info-contact-1 > h3 {
@@ -3813,7 +3816,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin: 60px 0 20px 0;
 }
 @media (max-width: 750px) {
@@ -3824,7 +3827,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin: 40px 0 -10px 0;
   }
 }
@@ -3839,12 +3842,13 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .services > .services-box1 > nav > a {
   display: flex;
   align-items: center;
   gap: 20px;
+  cursor: pointer;
 }
 @media (max-width: 750px) {
   .services > .services-box1 > nav > a {
@@ -3853,7 +3857,7 @@ header > .nav-bar > a {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-align: start;
   }
 }
@@ -3958,7 +3962,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   position: relative;
 }
 .services
@@ -4029,7 +4033,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .services
   > .services-box2
@@ -4056,7 +4060,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .services
   > .services-box2
@@ -4129,7 +4133,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -4149,7 +4153,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 
@@ -4176,7 +4180,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -4196,7 +4200,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .offer > .offer-content {
@@ -4234,7 +4238,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 @media (max-width: 750px) {
   .offer > .offer-content > div > h1 {
@@ -4244,7 +4248,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .offer > .offer-content > div > div {
@@ -4264,7 +4268,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   width: 510px;
   height: 80px;
   border-radius: 15px;
@@ -4332,7 +4336,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .offer > .offer-content > div > div > div > button > h3 {
@@ -4419,7 +4423,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -4439,7 +4443,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .parking-rules > div {
@@ -4461,7 +4465,7 @@ header > .nav-bar > a {
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 @media (max-width: 750px) {
   .parking-rules > div > h1 {
@@ -4470,7 +4474,7 @@ header > .nav-bar > a {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .parking-rules > div > p {
@@ -4501,7 +4505,7 @@ header > .nav-bar > a {
   letter-spacing: 0%;
   text-align: start;
   width: 1160px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   cursor: pointer;
 }
 @media (max-width: 750px) {
@@ -4512,7 +4516,7 @@ header > .nav-bar > a {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 }
 .parking-rules > nav > a {

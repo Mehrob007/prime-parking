@@ -10,6 +10,8 @@ import useMediaQuery from "../../function/useMediaQuery";
 import TextComponent from "./com/TextComponent";
 import { getData } from "../../function/getData";
 import P from "./com/P";
+import { Link } from "react-router-dom";
+import apiClient from "../../utils/apiClient";
 
 const keys = [
   "box_mid_2_content_1",
@@ -42,6 +44,16 @@ export default function BoxMid2() {
       once: false, // Чтобы срабатывало повторно
     });
   });
+  const onChangeURL = async (key) => {
+    try {
+      const res = await apiClient(`api/files?key=${key}`);
+      return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
+        res.data.data?.fileName
+      }`;
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   return (
     <div className="box-mid2">
@@ -92,7 +104,75 @@ export default function BoxMid2() {
           <ul className="ul-box4">
             {data?.[6]?.split("$").map((e, i) => (
               <li key={i}>
-                <TextComponent>{e}</TextComponent>
+                <p>
+                  {
+                    (console.log("e", e),
+                    e
+                      ? (() => {
+                          const parts = e.split("|");
+                          return (
+                            <>
+                              {parts[0]}{" "}
+                              {parts[1] && (
+                                <a
+                                  className="file_content_2"
+                                  onClick={async () => {
+                                    const res = await onChangeURL(
+                                      i === 2
+                                        ? "file_content_2"
+                                        : i === 3
+                                        ? "file_content_3"
+                                        : i === 4
+                                        ? "file_content_4"
+                                        : "",
+                                    );
+                                    if (res) {
+                                      document.location.href = res;
+                                    }
+                                  }}
+                                >
+                                  {parts[1]}
+                                </a>
+                              )}{" "}
+                              {parts[2]}{" "}
+                              {parts[3] && (
+                                <a
+                                  className="file_content_3"
+                                  onClick={async () => {
+                                    const res = await onChangeURL(
+                                      "file_content_3",
+                                    );
+                                    if (res) {
+                                      // document.location.href = res;
+                                    }
+                                  }}
+                                >
+                                  {parts[3]}
+                                </a>
+                              )}{" "}
+                              {parts[4]}{" "}
+                              {parts[5] && (
+                                <a
+                                  className="file_content_4"
+                                  onClick={async () => {
+                                    const res = await onChangeURL(
+                                      "file_content_4",
+                                    );
+                                    if (res) {
+                                      document.location.href = res;
+                                    }
+                                  }}
+                                >
+                                  {parts[5]}
+                                </a>
+                              )}{" "}
+                              {parts[6]}
+                            </>
+                          );
+                        })()
+                      : e)
+                  }
+                </p>
               </li>
             ))}
           </ul>
@@ -101,19 +181,13 @@ export default function BoxMid2() {
       <div className="box-mid2-apk-mobile">
         <div className="box-mid2-apk-mobile-left">
           <div className="box-mid2-apk-mobile-left-header">
-            <P element={"h1"}>
-              {data?.[7]}
-            </P>
+            <P element={"h1"}>{data?.[7]}</P>
             <P element={"h3"}>{data?.[8]}</P>
           </div>
           {isMobile ? (
-            <TextComponent>
-              {data?.[9]}
-            </TextComponent>
+            <TextComponent>{data?.[9]}</TextComponent>
           ) : (
-            <P>
-              {data?.[9]}
-            </P>
+            <P>{data?.[9]}</P>
           )}
 
           <div className="box-mid2-apk-mobile-left-get-apk">
