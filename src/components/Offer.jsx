@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Box5 from "./elements/Box5";
 // import { functions } from "../store/globalState";
-import useMediaQuery from "../function/useMediaQuery";
+// import useMediaQuery from "../function/useMediaQuery";
 import { Helmet } from "react-helmet";
 import { getData } from "../function/getData";
 import apiClient from "../utils/apiClient";
@@ -14,7 +14,7 @@ const keys = [
   "offer_content_4",
 ];
 export default function Offer() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  // const isMobile = useMediaQuery("(max-width: 768px)");
   // const { redirect } = functions();
   const [data, setData] = useState();
   const getItems = async () => {

@@ -370,7 +370,7 @@ export default function Box4_1() {
                   Высокий уровень приватности, комфорта и безопасности в
                   парковочной зоне
                 </TextComponent> */}
-                {data?.[5].split("\n").map((e, i) => (
+                {data?.[5]?.split("\n")?.map((e, i) => (
                   <div>
                     <TextComponent key={i}>{e}</TextComponent> <br />
                   </div>

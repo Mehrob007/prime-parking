@@ -19,10 +19,13 @@ export default function Box5({ footerForm = 1 }) {
 
   const sendInTelegram = async () => {
     try {
-      await axios.post(`${import.meta.env.VITE_ENV_URL}/send-message`, {
-        chatId: import.meta.env.VITE_ENV_URL_CHAT_ID,
-        message: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
-      });
+      await axios.post(
+        `${"https://back-telegram-bot-production.up.railway.app"}/send-message`,
+        {
+          chatId: "-4649546886",
+          message: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
+        },
+      );
       setAllText({
         userName: "",
         phoneNumber: "",
