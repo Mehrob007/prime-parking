@@ -33,10 +33,18 @@ const BannerVideo = () => {
           `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
             res1.data.data?.fileName
           }`,
-        ); 
-        const blob = await res.blob();
-        const url = URL.createObjectURL(blob);
-        setVideoSrc(url);
+        );
+        console.log("res", res);
+
+        // const blob = await res?.data?.blob();
+        // const url = URL.createObjectURL(blob);
+        // console.log("url", url);
+
+        setVideoSrc(
+          `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
+            res1.data.data?.fileName
+          }`,
+        );
       } catch (err) {
         console.error("Не удалось загрузить видео:", err);
       }
@@ -87,6 +95,8 @@ const BannerVideo = () => {
     }
   };
 
+  console.log("videoSrc", videoSrc);
+
   return (
     <div className="banner-video">
       {videoSrc ? (
@@ -117,11 +127,6 @@ const BannerVideo = () => {
       <nav className={isPaused ? "off-media" : ""}>
         <button onClick={() => !isPaused && toggleMute()}>
           <img src={soundOn ? audioOn : audioOff} alt="" />
-        </button>
-
-        {/* download */}
-        <button onClick={handleDownload} disabled={!videoSrc}>
-          Скачать
         </button>
       </nav>
     </div>
