@@ -3,9 +3,10 @@ import AOS from "aos";
 import bgBox3Car from "../../assets/icon/bg-box3-car.png";
 // import logoIconBox3 from "../../assets/icon/logo-icon-box3.svg";
 import iconLineBox3 from "../../assets/icon/icon-line-box3.svg";
-// import useMediaQuery from "../../function/useMediaQuery";
+import useMediaQuery from "../../function/useMediaQuery";
 import { getData } from "../../function/getData";
 import P from "./com/P";
+import TextComponent from "./com/TextComponent";
 const keys = [
   "box3_content_1",
   "box3_content_2",
@@ -27,7 +28,7 @@ export default function Box3() {
     getItems();
   }, []);
 
-  // const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
     AOS.init({});
   }, []);
@@ -41,22 +42,41 @@ export default function Box3() {
         <div className="bg-box3-1">
           <div>
             {/* <img src={logoIconBox3} alt="logoIconBox3" /> */}
-            <div>
+            {!isMobile ? (
               <div>
-                <P element={"h1"}>{data?.[1]}</P>
-                <P>{data?.[2]}</P>
+                <div>
+                  <P element={"h1"}>{data?.[1]}</P>
+                  <P>{data?.[2]}</P>
+                </div>
+                <img src={iconLineBox3} alt=" " />
+                <div>
+                  <P element="h1">{data?.[3]}</P>
+                  <P>{data?.[4]}</P>
+                </div>
+                <img src={iconLineBox3} alt=" " />
+                <div>
+                  <P element={"h1"}>{data?.[5]}</P>
+                  <P>{data?.[6]}</P>
+                </div>
               </div>
-              <img src={iconLineBox3} alt=" " />
+            ) : (
               <div>
-                <P element="h1">{data?.[3]}</P>
-                <p>{data?.[4]}</p>
+                <div>
+                  <P element={"h1"}>{data?.[1]}</P>
+                  <TextComponent>{data?.[2]}</TextComponent>
+                </div>
+                <img src={iconLineBox3} alt=" " />
+                <div>
+                  <P element="h1">{data?.[3]}</P>
+                  <TextComponent>{data?.[4]}</TextComponent>
+                </div>
+                <img src={iconLineBox3} alt=" " />
+                <div>
+                  <P element={"h1"}>{data?.[5]}</P>
+                  <TextComponent>{data?.[6]}</TextComponent>
+                </div>
               </div>
-              <img src={iconLineBox3} alt=" " />
-              <div>
-                <P element={"h1"}>{data?.[5]}</P>
-                <P>{data?.[6]}</P>
-              </div>
-            </div>
+            )}
           </div>
         </div>
         <div className="bg-box3-2">

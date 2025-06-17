@@ -5,6 +5,7 @@ import logoCF from "../../assets/icon/logoCF.svg";
 import AOS from "aos";
 import axios from "axios";
 import PhoneInput from "./com/Cleave";
+import Req200Status from "./com/Req200Status";
 // import useMediaQuery from "../../function/useMediaQuery";
 
 export default function Box5({ footerForm = 1 }) {
@@ -15,22 +16,21 @@ export default function Box5({ footerForm = 1 }) {
     description: "",
   });
   const [onActiv, setOnActive] = useState(false);
+  const [reqS, setReqS] = useState(false);
   const [isAnimated, setIsAnimated] = useState(false);
 
   const sendInTelegram = async () => {
     try {
-      await axios.post(
-        `${"https://back-telegram-bot-production.up.railway.app"}/send-message`,
-        {
-          chatId: "-4649546886",
-          message: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
-        },
-      );
+      await axios.post(`${"https://primeparking.ru/bots/"}send-message`, {
+        chatId: "-4649546886",
+        message: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
+      });
       setAllText({
         userName: "",
         phoneNumber: "",
         description: "",
       });
+      setReqS(true);
     } catch (error) {
       console.error(error);
     }
@@ -71,6 +71,12 @@ export default function Box5({ footerForm = 1 }) {
     );
   }, [allText]);
 
+  useEffect(() => {
+    if (reqS) {
+      setTimeout(() => setReqS(false), 1000);
+    }
+  }, [reqS]);
+
   return (
     <footer className={`box5-main ${footerForm === 2 ? "footer-form2" : ""}`}>
       <h1 data-aos={"fade-down"} data-aos-duration="700">
@@ -78,17 +84,18 @@ export default function Box5({ footerForm = 1 }) {
       </h1>
       <div className="content-box5">
         <div className="form-Box5">
-          <div>
-            <div className="input-box5">
-              <input
-                value={allText?.userName}
-                onChange={(e) => onChange("userName", e.target.value)}
-                placeholder="Ваше имя"
-                type="text"
-              />
-            </div>
-            <div className="input-box5 input-box5-number">
-              {/* <input
+          {!reqS ? (
+            <div>
+              <div className="input-box5">
+                <input
+                  value={allText?.userName}
+                  onChange={(e) => onChange("userName", e.target.value)}
+                  placeholder="Ваше имя"
+                  type="text"
+                />
+              </div>
+              <div className="input-box5 input-box5-number">
+                {/* <input
                 value={allText?.phoneNumber}
                 onChange={(e) =>
                   onChange("phoneNumber", e.target.value.replace(/\D/g, ""))
@@ -96,19 +103,23 @@ export default function Box5({ footerForm = 1 }) {
                 placeholder="Телефон"
                 type="text"
               /> */}
-              <PhoneInput
-                value={allText?.phoneNumber}
-                onChange={(val) => onChange("phoneNumber", val)}
-              />
+                <PhoneInput
+                  value={allText?.phoneNumber}
+                  onChange={(val) => onChange("phoneNumber", val)}
+                />
+              </div>
+              <div className="input-box5 textarea-box5">
+                <textarea
+                  value={allText?.description}
+                  onChange={(e) => onChange("description", e.target.value)}
+                  placeholder="Текст обращения"
+                ></textarea>
+              </div>
             </div>
-            <div className="input-box5 textarea-box5">
-              <textarea
-                value={allText?.description}
-                onChange={(e) => onChange("description", e.target.value)}
-                placeholder="Текст обращения"
-              ></textarea>
-            </div>
-          </div>
+          ) : (
+            <Req200Status />
+          )}
+
           <span>
             <button
               onClick={() => (onActiv ? sendInTelegram() : "")}

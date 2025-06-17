@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BUSE_URL = import.meta.env.VITE_PUBLIC_API_URL;
+const BUSE_URL = "http://176.124.222.203:3010/";
 
 const apiClient = axios.create({
   baseURL: BUSE_URL,

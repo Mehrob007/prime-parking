@@ -110,7 +110,6 @@ body {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    /* text-transform: uppercase; */
     width: 265px;
   }
 }
@@ -197,7 +196,7 @@ body {
   list-style-type: disc;
   margin-left: 8px;
 }
-.ul-box4 > li > p > a{
+.ul-box4 > li > p > a {
   cursor: pointer;
 }
 @media (max-width: 750px) {
@@ -409,13 +408,13 @@ header > .nav-bar > a {
   object-position: 100% 50%;
   border-radius: 20px;
 }
-.off-media{
+.off-media {
   /* z-index: -1; */
   opacity: 0;
   cursor: auto !important;
-  & > button{
+  & > button {
     cursor: auto !important;
-    & > img{
+    & > img {
       cursor: auto !important;
     }
   }
@@ -442,7 +441,7 @@ header > .nav-bar > a {
   width: 50px;
   height: 50px;
   border-radius: 10px;
-  background-color: #0000004D;
+  background-color: #0000004d;
   backdrop-filter: blur(20px);
   display: flex;
   align-items: center;
@@ -452,6 +451,9 @@ header > .nav-bar > a {
   position: relative;
   width: 100%;
   height: 100%;
+}
+.banner-video > img {
+  border-radius: 20px;
 }
 .banner-video > div > div {
   position: absolute;
@@ -527,7 +529,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -546,7 +547,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
 }
 .box1-main > div > div {
   display: flex;
@@ -592,7 +592,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
   .box1-main > div p {
     font-family: Sansation;
@@ -601,7 +600,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
+    width: 336px;
   }
   .box1-main > div > div > img {
     width: 18px;
@@ -645,7 +644,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -665,7 +663,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box2-main > div {
@@ -827,7 +824,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     232.39deg,
     #ad8153 30.05%,
@@ -847,7 +843,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box3-main > div {
@@ -921,7 +916,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -941,7 +935,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box3-main > div > .bg-box3-1 > div > div > div > p {
@@ -1028,7 +1021,6 @@ header > .nav-bar > a {
   font-size: 50px;
   line-height: 100%;
   letter-spacing: 0%;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     262.51deg,
     #ad8153 -26.06%,
@@ -1048,7 +1040,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main > .header-box4 > p {
@@ -1058,7 +1049,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   color: #ffffff;
 }
 @media (max-width: 750px) {
@@ -1069,7 +1059,6 @@ header > .nav-bar > a {
     line-height: 110%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main > .header-box4 > p > span {
@@ -1079,7 +1068,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   color: rgba(255, 255, 255, 0.4);
 }
 .box4-main > .header-box4 > h5 {
@@ -1145,7 +1133,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   color: #545454;
 }
 @media (max-width: 750px) {
@@ -1156,7 +1143,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main > .content-top-box4_1 > .content-navigate-box4_1 > div::before {
@@ -1207,7 +1193,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -1280,7 +1265,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     259deg,
     #ad8153 33.33%,
@@ -1370,7 +1354,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -1540,7 +1523,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -1560,7 +1542,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main > .content-top-box4 > .content-top-box4-0 > div > h3 {
@@ -1571,7 +1552,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -1591,7 +1571,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
     margin-top: 20px;
   }
 }
@@ -1970,7 +1949,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     259deg,
     #ad8153 33.33%,
@@ -1996,7 +1974,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2037,7 +2014,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2224,7 +2200,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -2249,7 +2224,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2412,7 +2386,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     259deg,
     #ad8153 33.33%,
@@ -2438,7 +2411,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2479,7 +2451,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2665,7 +2636,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -2690,7 +2660,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box4-main
@@ -2771,7 +2740,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box-mid1 > .box-mid1-header > h1 {
@@ -2781,7 +2749,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     262.92deg,
     #ad8153 5.53%,
@@ -2801,7 +2768,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box-mid1 > .box-mid1-header > h3 {
@@ -2811,7 +2777,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
 }
 @media (max-width: 750px) {
   .box-mid1 > .box-mid1-header > h3 {
@@ -2821,7 +2786,6 @@ header > .nav-bar > a {
     line-height: 115%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box-mid1 > .box-mid1-content {
@@ -2903,7 +2867,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -2923,7 +2886,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box-mid1 > .box-mid1-content > nav::before {
@@ -2970,7 +2932,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     262.92deg,
     #ad8153 5.53%,
@@ -2990,7 +2951,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box-mid2 > .box-mid2-content {
@@ -3023,7 +2983,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -3043,7 +3002,6 @@ header > .nav-bar > a {
     line-height: 110%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box-mid2 > .box-mid2-content > div > p {
@@ -3146,7 +3104,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     262.92deg,
     #ad8153 5.53%,
@@ -3170,7 +3127,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box-mid2
@@ -3184,7 +3140,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
 }
 @media (max-width: 750px) {
   .box-mid2
@@ -3198,7 +3153,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box-mid2 > .box-mid2-apk-mobile > .box-mid2-apk-mobile-left > p {
@@ -3334,7 +3288,6 @@ header > .nav-bar > a {
   font-size: 50px;
   line-height: 100%;
   letter-spacing: 0%;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     264.81deg,
     #ad8153 6.89%,
@@ -3354,7 +3307,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box5-main > .content-box5 {
@@ -3379,10 +3331,152 @@ header > .nav-bar > a {
   width: 420px;
   gap: 30px;
 }
+/* .req200::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -6px;
+  z-index: 99;
+  background-color: #000;
+  width: 392px;
+  height: 320px;
+  border-radius: 8px;
+  background: url("../assets/img/req200Status.svg") center / cover no-repeat;
+} */
+.req200 {
+  /* width: 271px !important; */
+  position: relative;
+  background-color: #000;
+  border-radius: 8px;
+  background: url("../assets/img/BGreq200Status.svg") center / cover no-repeat;
+}
+.req200 > div {
+  position: relative;
+  background: url("../assets/img/BGreq200Status.svg") center / cover no-repeat;
+  width: 100%;
+  min-height: 290px;
+  border-radius: 12px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+}
+.req200 > div > h1 {
+  font-family: Sansation;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  background: linear-gradient(
+    264.81deg,
+    #ad8153 6.89%,
+    #e2b36c 28.54%,
+    #fdecd6 50.19%,
+    #dcac64 71.84%,
+    #af8352 93.49%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.req200 > div > p {
+  font-family: Sansation;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  width: 312px;
+}
+.req200 > div > img {
+  width: 42px;
+  height: 50px;
+  border-radius: 8px;
+  /* border-width: 4px; */
+}
+.req200::before {
+  content: "";
+  position: absolute;
+  top: -1.5px;
+  left: -1px;
+  right: -1px;
+  bottom: -1.5px;
+  border-radius: 10px;
+  padding: 1.5px;
+  z-index: 1;
+  background: linear-gradient(
+    270deg,
+    #ad8153 0%,
+    #e2b36c 25%,
+    #fdecd6 50%,
+    #dcac64 75%,
+    #af8352 100%
+  );
+}
 @media (max-width: 750px) {
+  .req200 {
+    /* width: 271px !important; */
+    position: relative;
+    background-color: #000;
+    border-radius: 8px;
+    background: url("../assets/img/BGreq200Status.svg") center / cover no-repeat;
+  }
+  .req200 > div {
+    position: relative;
+    background: url("../assets/img/BGreq200Status.svg") center / cover no-repeat;
+    width: 100%;
+    min-height: 250px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 25px;
+  }
+  .req200 > div > h1 {
+    font-family: Sansation;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    background: linear-gradient(
+      264.81deg,
+      #ad8153 6.89%,
+      #e2b36c 28.54%,
+      #fdecd6 50.19%,
+      #dcac64 71.84%,
+      #af8352 93.49%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 220px;
+  }
+  .req200 > div > p {
+    font-family: Sansation;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+    width: 220px;
+  }
+  .req200 > div > img {
+    width: 42px;
+    height: 50px;
+    border-radius: 8px;
+    /* border-width: 4px; */
+  }
+
   .box5-main > .content-box5 > .form-Box5 {
     width: 92vw !important;
     height: auto;
+    left: none;
     gap: 15px !important;
     flex-wrap: nowrap;
     align-items: center;
@@ -3606,7 +3700,7 @@ header > .nav-bar > a {
   flex-direction: column;
   gap: 20px;
   height: 191px;
-    width: 301px;
+  width: 301px;
 }
 @media (max-width: 750px) {
   .box5-main > .content-box5 > div > .info-contact-1 {
@@ -3621,7 +3715,6 @@ header > .nav-bar > a {
   font-size: 28px;
   line-height: 100%;
   letter-spacing: 0%;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     259deg,
     #ad8153 33.33%,
@@ -3641,7 +3734,6 @@ header > .nav-bar > a {
     line-height: 115%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .box5-main > .content-box5 > div > .info-contact-1 > h3 {
@@ -3816,7 +3908,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   margin: 60px 0 20px 0;
 }
 @media (max-width: 750px) {
@@ -3827,7 +3918,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
     margin: 40px 0 -10px 0;
   }
 }
@@ -3842,7 +3932,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
 }
 .services > .services-box1 > nav > a {
   display: flex;
@@ -3857,7 +3946,6 @@ header > .nav-bar > a {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    /* text-transform: uppercase; */
     text-align: start;
   }
 }
@@ -3962,7 +4050,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   position: relative;
 }
 .services
@@ -4033,7 +4120,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
 }
 .services
   > .services-box2
@@ -4060,7 +4146,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
 }
 .services
   > .services-box2
@@ -4133,7 +4218,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -4153,7 +4237,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 
@@ -4180,7 +4263,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -4200,7 +4282,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .offer > .offer-content {
@@ -4238,7 +4319,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
 }
 @media (max-width: 750px) {
   .offer > .offer-content > div > h1 {
@@ -4248,7 +4328,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .offer > .offer-content > div > div {
@@ -4268,7 +4347,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   width: 510px;
   height: 80px;
   border-radius: 15px;
@@ -4336,7 +4414,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .offer > .offer-content > div > div > div > button > h3 {
@@ -4423,7 +4500,6 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  /* text-transform: uppercase; */
   background: linear-gradient(
     270deg,
     #ad8153 0%,
@@ -4443,7 +4519,6 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    /* text-transform: uppercase; */
   }
 }
 .parking-rules > div {
@@ -4465,7 +4540,6 @@ header > .nav-bar > a {
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0%;
-  /* text-transform: uppercase; */
 }
 @media (max-width: 750px) {
   .parking-rules > div > h1 {
@@ -4474,7 +4548,6 @@ header > .nav-bar > a {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    /* text-transform: uppercase; */
   }
 }
 .parking-rules > div > p {
@@ -4505,7 +4578,6 @@ header > .nav-bar > a {
   letter-spacing: 0%;
   text-align: start;
   width: 1160px;
-  /* text-transform: uppercase; */
   cursor: pointer;
 }
 @media (max-width: 750px) {
@@ -4516,7 +4588,6 @@ header > .nav-bar > a {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    /* text-transform: uppercase; */
   }
 }
 .parking-rules > nav > a {
@@ -4766,6 +4837,7 @@ header > .nav-bar > a {
   .box5-main > .content-box5 > .form-Box5 > div > .input-box5 {
     width: 380px;
   }
+
   .box5-main > .content-box5 > div > .div-car-box5 {
     min-width: 719px;
     z-index: 2;

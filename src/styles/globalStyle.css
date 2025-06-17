@@ -48,7 +48,7 @@
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    text-transform: uppercase;
+
     width: 265px;
   }
 }
@@ -373,7 +373,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -386,7 +386,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box2-main > div {
@@ -547,7 +547,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(232.39deg, #ad8153 30.05%, #e2b36c 40.23%, #fdecd6 50.4%, #dcac64 60.57%, #af8352 70.75%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -560,7 +560,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box3-main > div {
@@ -634,7 +634,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -647,7 +647,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box3-main > div > .bg-box3-1 > div > div > div > p {
@@ -734,7 +734,7 @@ header > .nav-bar > a {
   font-size: 50px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-transform: uppercase;
+
   background: linear-gradient(262.51deg, #ad8153 -26.06%, #e2b36c 4.03%, #fdecd6 34.11%, #dcac64 64.19%, #af8352 94.28%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -747,7 +747,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .header-box4 > p {
@@ -757,7 +757,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   color: #ffffff;
 }
 @media (max-width: 750px) {
@@ -768,7 +768,7 @@ header > .nav-bar > a {
     line-height: 110%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .header-box4 > p > span {
@@ -778,7 +778,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   color: rgba(255, 255, 255, 0.4);
 }
 .box4-main > .header-box4 > h5 {
@@ -844,7 +844,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   color: #545454;
 }
 @media (max-width: 750px) {
@@ -855,7 +855,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .content-top-box4_1 > .content-navigate-box4_1 > div::before {
@@ -888,7 +888,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .content-top-box4_1 > .content-navigate-box4_1 > .active-content-navigate-box4_1::before {
@@ -942,7 +942,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(259deg, #ad8153 33.33%, #e2b36c 49.25%, #ffe1bb 65.17%, #dcac64 81.09%, #af8352 97%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -995,7 +995,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .content-top-box4 > .content-top-box4-1 > div > .content-top-box4-1-com-sub-text {
@@ -1114,7 +1114,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1127,7 +1127,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .content-top-box4 > .content-top-box4-0 > div > h3 {
@@ -1138,7 +1138,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1151,7 +1151,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
     margin-top: 20px;
   }
 }
@@ -1418,7 +1418,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(259deg, #ad8153 33.33%, #e2b36c 49.25%, #ffe1bb 65.17%, #dcac64 81.09%, #af8352 97%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1431,7 +1431,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .content-top-box4 > .content-top-box4-2 > div > .content-top-box4-2-header > div > h1 {
@@ -1453,7 +1453,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .content-top-box4 > .content-top-box4-2 > div > .content-top-box4-2-header > div > p {
@@ -1559,7 +1559,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1572,7 +1572,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .content-top-box4 > .content-top-box4-2 > div > .content-top-box4-2-title > p {
@@ -1695,7 +1695,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(259deg, #ad8153 33.33%, #e2b36c 49.25%, #ffe1bb 65.17%, #dcac64 81.09%, #af8352 97%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1708,7 +1708,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .content-top-box4 > .content-top-box4_1-2 > div > .content-top-box4-2-header > div > h1 {
@@ -1730,7 +1730,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .content-top-box4 > .content-top-box4_1-2 > div > .content-top-box4-2-header > div > p {
@@ -1835,7 +1835,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1848,7 +1848,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box4-main > .content-top-box4 > .content-top-box4_1-2 > div > .content-top-box4-2-title > p {
@@ -1915,7 +1915,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box-mid1 > .box-mid1-header > h1 {
@@ -1925,7 +1925,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(262.92deg, #ad8153 5.53%, #e2b36c 27.76%, #fdecd6 50%, #dcac64 72.24%, #af8352 94.47%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1938,7 +1938,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box-mid1 > .box-mid1-header > h3 {
@@ -1948,7 +1948,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
 }
 @media (max-width: 750px) {
   .box-mid1 > .box-mid1-header > h3 {
@@ -1958,7 +1958,7 @@ header > .nav-bar > a {
     line-height: 115%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box-mid1 > .box-mid1-content {
@@ -2040,7 +2040,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2053,7 +2053,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box-mid1 > .box-mid1-content > nav::before {
@@ -2093,7 +2093,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(262.92deg, #ad8153 5.53%, #e2b36c 27.76%, #fdecd6 50%, #dcac64 72.24%, #af8352 94.47%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2106,7 +2106,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box-mid2 > .box-mid2-content {
@@ -2139,7 +2139,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2152,7 +2152,7 @@ header > .nav-bar > a {
     line-height: 110%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box-mid2 > .box-mid2-content > div > p {
@@ -2241,7 +2241,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(262.92deg, #ad8153 5.53%, #e2b36c 27.76%, #fdecd6 50%, #dcac64 72.24%, #af8352 94.47%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2254,7 +2254,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box-mid2 > .box-mid2-apk-mobile > .box-mid2-apk-mobile-left > .box-mid2-apk-mobile-left-header > h3 {
@@ -2264,7 +2264,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
 }
 @media (max-width: 750px) {
   .box-mid2 > .box-mid2-apk-mobile > .box-mid2-apk-mobile-left > .box-mid2-apk-mobile-left-header > h3 {
@@ -2274,7 +2274,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box-mid2 > .box-mid2-apk-mobile > .box-mid2-apk-mobile-left > p {
@@ -2391,7 +2391,7 @@ header > .nav-bar > a {
   font-size: 50px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-transform: uppercase;
+
   background: linear-gradient(264.81deg, #ad8153 6.89%, #e2b36c 28.54%, #fdecd6 50.19%, #dcac64 71.84%, #af8352 93.49%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2404,7 +2404,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box5-main > .content-box5 {
@@ -2658,7 +2658,7 @@ header > .nav-bar > a {
   font-size: 28px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-transform: uppercase;
+
   background: linear-gradient(259deg, #ad8153 33.33%, #e2b36c 49.25%, #ffe1bb 65.17%, #dcac64 81.09%, #af8352 97%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2671,7 +2671,7 @@ header > .nav-bar > a {
     line-height: 115%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .box5-main > .content-box5 > div > .info-contact-1 > h3 {
@@ -2845,7 +2845,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   margin: 60px 0 20px 0;
 }
 @media (max-width: 750px) {
@@ -2856,7 +2856,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
     margin: 40px 0 -10px 0;
   }
 }
@@ -2871,7 +2871,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
 }
 .services > .services-box1 > nav > a {
   display: flex;
@@ -2885,7 +2885,7 @@ header > .nav-bar > a {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    text-transform: uppercase;
+
     text-align: start;
   }
 }
@@ -2951,7 +2951,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   position: relative;
 }
 .services > .services-box2 > .service-box2-content > .service-box2-info-private-valet > .service-box2-info-private-valet-div-elit::after {
@@ -2990,7 +2990,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
 }
 .services > .services-box2 > .service-box2-content > .services-price-petrol > .services-price-petrol-bottom {
   display: flex;
@@ -3008,7 +3008,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
 }
 .services > .services-box2 > .service-box2-content > .services-price-petrol > .services-price-petrol-bottom > button > span {
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
@@ -3056,7 +3056,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3069,7 +3069,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 
@@ -3096,7 +3096,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3109,7 +3109,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .offer > .offer-content {
@@ -3147,7 +3147,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
 }
 @media (max-width: 750px) {
   .offer > .offer-content > div > h1 {
@@ -3157,7 +3157,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .offer > .offer-content > div > div {
@@ -3177,7 +3177,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   width: 510px;
   height: 80px;
   border-radius: 15px;
@@ -3238,7 +3238,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .offer > .offer-content > div > div > div > button > h3 {
@@ -3318,7 +3318,7 @@ header > .nav-bar > a {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  text-transform: uppercase;
+
   background: linear-gradient(270deg, #ad8153 0%, #e2b36c 25%, #fdecd6 50%, #dcac64 75%, #af8352 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3331,7 +3331,7 @@ header > .nav-bar > a {
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    text-transform: uppercase;
+
   }
 }
 .parking-rules > div {
@@ -3353,7 +3353,7 @@ header > .nav-bar > a {
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-transform: uppercase;
+
 }
 @media (max-width: 750px) {
   .parking-rules > div > h1 {
@@ -3362,7 +3362,7 @@ header > .nav-bar > a {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    text-transform: uppercase;
+
   }
 }
 .parking-rules > div > p {
@@ -3393,7 +3393,7 @@ header > .nav-bar > a {
   letter-spacing: 0%;
   text-align: start;
   width: 1160px;
-  text-transform: uppercase;
+
   cursor: pointer;
 }
 @media (max-width: 750px) {
@@ -3404,7 +3404,7 @@ header > .nav-bar > a {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
-    text-transform: uppercase;
+
   }
 }
 .parking-rules > nav > a {
