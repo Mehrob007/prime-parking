@@ -76,24 +76,24 @@ const BannerVideo = () => {
     else setTimeout(() => setIconsFade(true), 1500);
   }, [isPaused]);
 
-  const handleDownload = async () => {
-    try {
-      // если objectURL уже есть — используем его
-      let blobUrl = videoSrc;
-      if (!blobUrl) {
-        const res = await fetch(VIDEO_URL);
-        const blob = await res.blob();
-        blobUrl = URL.createObjectURL(blob);
-      }
-      const a = document.createElement("a");
-      a.href = blobUrl;
-      a.download = "banner.mp4";
-      a.click();
-      URL.revokeObjectURL(blobUrl);
-    } catch (err) {
-      console.error("Ошибка скачивания:", err);
-    }
-  };
+  // const handleDownload = async () => {
+  //   try {
+  //     // если objectURL уже есть — используем его
+  //     let blobUrl = videoSrc;
+  //     if (!blobUrl) {
+  //       const res = await fetch(VIDEO_URL);
+  //       const blob = await res.blob();
+  //       blobUrl = URL.createObjectURL(blob);
+  //     }
+  //     const a = document.createElement("a");
+  //     a.href = blobUrl;
+  //     a.download = "banner.mp4";
+  //     a.click();
+  //     URL.revokeObjectURL(blobUrl);
+  //   } catch (err) {
+  //     console.error("Ошибка скачивания:", err);
+  //   }
+  // };
 
   console.log("videoSrc", videoSrc);
 

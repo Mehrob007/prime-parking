@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BUSE_URL = "http://176.124.222.203:3010/";
+const BUSE_URL = import.meta.env.VITE_PUBLIC_API_URL;
 
 const apiClient = axios.create({
   baseURL: BUSE_URL,
@@ -8,7 +8,7 @@ const apiClient = axios.create({
     "Content-Type": "application/json",
   },
 });
-export default apiClient; 
+export default apiClient;
 // apiClient.interceptors.request.use(
 //   (config) => {
 //     const token = localStorage.getItem("token");
