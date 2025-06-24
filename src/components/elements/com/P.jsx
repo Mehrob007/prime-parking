@@ -7,7 +7,6 @@ const P = ({
   style = {},
   preserveNewlines = true,
 }) => {
-  // Если children не строка или отключена обработка переносов
   if (typeof children !== "string" || !preserveNewlines) {
     return (
       <p className={className} style={style}>
@@ -16,7 +15,6 @@ const P = ({
     );
   }
 
-  // Обработка переносов строк
   const renderWithNewlines = () => {
     return children.split("\n").map((line, index, array) => (
       <React.Fragment key={index}>
