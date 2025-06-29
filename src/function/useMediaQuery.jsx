@@ -8,9 +8,9 @@ const useMediaQuery = (query) => {
 
     const listener = () => setMatches(media.matches);
 
-    media.addEventListener("change", listener);
+    // media.addEventListener("change", listener);
 
-    return () => media.removeEventListener("change", listener);
+    // return () => media.removeEventListener("change", listener);
   }, [query]);
 
   return matches;
