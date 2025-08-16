@@ -38,42 +38,26 @@ export default function BoxMid1() {
         </h1>
         <h3>
           {isMobile ? (
-            <TextComponent>
-              {data?.[1]}
-            </TextComponent>
+            <TextComponent>{data?.[1]}</TextComponent>
           ) : (
-            <P>
-               {data?.[1]}
-            </P>
+            <P>{data?.[1]}</P>
           )}
         </h3>
       </div>
       <div className="box-mid1-content">
         <div>
-          {isMobile ? (
-            <TextComponent>
-              {data?.[2]}
-            </TextComponent>
-          ) : (
-            <P>
-              {data?.[2]}
-            </P>
-          )}
-          {isMobile ? (
-            <TextComponent>
-             {data?.[3]}
-            </TextComponent>
-          ) : (
-            <P>
-              {data?.[3]}
-            </P>
-          )}
+          {isMobile
+            ? data?.[2] && <TextComponent>{data?.[2]}</TextComponent>
+            : data?.[2] && <P>{data?.[2]}</P>}
+          {isMobile
+            ? data?.[3] && <TextComponent>{data?.[3]}</TextComponent>
+            : data?.[3] && <P>{data?.[3]}</P>}
         </div>
         <nav>
           <button
             onClick={() =>
               redirect(
-                "https://drive.google.com/drive/folders/1fs_Eic94UUFKag61hyNspeaYnkd-mp6i?usp=drive_link",
+                "https://drive.google.com/drive/folders/1fs_Eic94UUFKag61hyNspeaYnkd-mp6i?usp=drive_link"
               )
             }
           >
