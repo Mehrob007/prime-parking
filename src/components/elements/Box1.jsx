@@ -25,8 +25,7 @@ export default function Box1() {
       duration: 1000,
     });
   }, []);
-  console.log("data", data);
-  console.log("data", data);
+  console.table("box1-main", data);
 
   return (
     <div className="box1-main">
