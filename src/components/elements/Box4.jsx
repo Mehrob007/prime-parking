@@ -98,14 +98,7 @@ export default function Box4() {
               <P element={"h1"}>{data?.[7]}</P>
             </div>
             <P element={"h3"} className="content-top-box4-1-com-price">
-              {data?.[8]}
-              <span
-                style={{
-                  fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
-                }}
-              >
-                ₽
-              </span>
+              {data?.[8]} <span className="rouble">₽</span>
               /мес.
             </P>
             <div className="content-top-box4-1-com-sub-text">
@@ -122,14 +115,7 @@ export default function Box4() {
               <P element={"h1"}>{data?.[11]}</P>
             </div>
             <P element={"h3"} className="content-top-box4-1-com-price">
-              {data?.[12]}{" "}
-              <span
-                style={{
-                  fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
-                }}
-              >
-                ₽
-              </span>
+              {data?.[12]} <span className="rouble">₽</span>
               /мес.
             </P>
             <div className="content-top-box4-1-com-sub-text">
@@ -146,14 +132,7 @@ export default function Box4() {
               <P element={"h1"}>{data?.[15]}</P>
             </div>
             <P element={"h3"} className="content-top-box4-1-com-price">
-              {data?.[16]}
-              <span
-                style={{
-                  fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
-                }}
-              >
-                ₽
-              </span>
+              {data?.[16]} <span className="rouble">₽</span>
               /мес.
             </P>
             <div className="content-top-box4-1-com-sub-text">
@@ -170,14 +149,7 @@ export default function Box4() {
               <P element={"h1"}>{data?.[19]}</P>
             </div>
             <P element={"h3"} className="content-top-box4-1-com-price">
-              {data?.[20]}{" "}
-              <span
-                style={{
-                  fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
-                }}
-              >
-                ₽
-              </span>
+              {data?.[20]} <span className="rouble">₽</span>
               /мес.
             </P>
             <div className="content-top-box4-1-com-sub-text">
@@ -202,32 +174,18 @@ export default function Box4() {
             <div className="content-top-box4-2-header">
               <div>
                 <P element={"h3"}>{data?.[24]}</P>
-                <P element={"h1"}>
-                  {data?.[25]}
-                  <span
-                    style={{
-                      fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
-                    }}
-                  >
-                    ₽
-                  </span>
+                <h1>
+                  {data?.[25]} <span className="rouble">₽</span>
                   /мес.
-                </P>
+                </h1>
                 <P>{data?.[26]}</P>
               </div>
               <div>
                 <P element={"h3"}>{data?.[27]}</P>
-                <P element={"h1"}>
-                  {data?.[28]}
-                  <span
-                    style={{
-                      fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
-                    }}
-                  >
-                    ₽
-                  </span>
+                <h1>
+                  {data?.[28]} <span className="rouble">₽</span>
                   /мес.
-                </P>
+                </h1>
                 <P>{data?.[29]}</P>
               </div>
             </div>
@@ -261,7 +219,7 @@ export default function Box4() {
           </div>
         </div>
       </div>
-      <div className="content-bottom-box4"> 
+      <div className="content-bottom-box4">
         <AccordionCom
           title={data?.[37]}
           activeStyle={{
@@ -299,11 +257,11 @@ export default function Box4() {
           }}
           htmlEl={
             <ul className="ul-box4">
-             {data?.[42]?.split("$")?.map((e, i) => ( <li key={i}>
-                <TextComponent>
-                 {e}
-                </TextComponent>
-              </li>))}
+              {data?.[42]?.split("$")?.map((e, i) => (
+                <li key={i}>
+                  <TextComponent>{e}</TextComponent>
+                </li>
+              ))}
             </ul>
           }
         />

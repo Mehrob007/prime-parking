@@ -407,14 +407,7 @@ export default function Box4_1() {
                       <div key={i}>
                         <h1>{e.title}</h1>
                         <p>
-                          {e.price}{" "}
-                          <span
-                            style={{
-                              fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
-                            }}
-                          >
-                            ₽
-                          </span>
+                          {e.price} <span className="rouble">₽</span>
                         </p>
                       </div>
                     ))}
@@ -428,14 +421,7 @@ export default function Box4_1() {
                         <div>
                           <h1>{e.title}</h1>
                           <p>
-                            {e.price}{" "}
-                            <span
-                              style={{
-                                fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
-                              }}
-                            >
-                              ₽
-                            </span>
+                            {e.price} <span className="rouble">₽</span>
                           </p>
                         </div>
                       </div>
@@ -456,12 +442,12 @@ export default function Box4_1() {
             </div>
             <div className="content-top-box4-2-header">
               <div>
-                <h3> {data?.[9]}</h3>
+                <h3>{data?.[9]}</h3>
                 <h1>
                   {data?.[10]}{" "}
                   <span
+                    className="rouble"
                     style={{
-                      fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
                       fontSize: isMobile ? "24px" : "34px",
                     }}
                   >
@@ -471,13 +457,13 @@ export default function Box4_1() {
                 </h1>
                 <P> {data?.[11]}</P>
               </div>
-              <div>
-                <P element={"h3"}> {data?.[12]}</P>
+              <div className="test">
+                <h3> {data?.[12]}</h3>
                 <h1>
                   {data?.[13]}{" "}
                   <span
+                    className="rouble"
                     style={{
-                      fontFamily: `"Segoe UI Variable", "Segoe UI", sans-serif`,
                       fontSize: isMobile ? "24px" : "34px",
                     }}
                   >
@@ -541,7 +527,7 @@ export default function Box4_1() {
             </ul>
           }
         />
-         <AccordionCom
+        <AccordionCom
           title={data?.[24]}
           activeStyle={{
             height: "auto",
@@ -556,7 +542,7 @@ export default function Box4_1() {
             </ul>
           }
         />
-         <AccordionCom
+        <AccordionCom
           title={data?.[26]}
           activeStyle={{
             height: "auto",
