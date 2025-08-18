@@ -27,7 +27,7 @@ const BannerVideo = () => {
     (async () => {
       try {
         const res1 = await axios(
-          `${import.meta.env.VITE_PUBLIC_API_URL}api/files?key=${VIDEO_URL}`,
+          `${import.meta.env.VITE_PUBLIC_API_URL}/files?key=${VIDEO_URL}`,
         );
         const res = await axios(
           `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${

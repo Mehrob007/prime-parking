@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import apiClient from "../../../utils/apiClient";
 
-const FILE_ENDPOINT = "/api/files";
+const FILE_ENDPOINT = "/files";
 
 export default function FileViewer() {
   const { key } = useParams();
@@ -22,7 +22,11 @@ export default function FileViewer() {
 
       try {
         const res = await apiClient(`${FILE_ENDPOINT}?key=${key}`);
-        const resFile = await apiClient(`${import.meta.env.VITE_PUBLIC_API_URL_FILE}${res.data.data?.fileName}`);
+        const resFile = await apiClient(
+          `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
+            res.data.data?.fileName
+          }`
+        );
 
         if (!resFile.ok) throw new Error(`HTTP ${resFile.status}`);
 

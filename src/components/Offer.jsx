@@ -26,7 +26,7 @@ export default function Offer() {
 
   const onChangeURL = async (key) => {
     try {
-      const res = await apiClient(`api/files?key=${key}`);
+      const res = await apiClient(`/files?key=${key}`);
       return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
         res.data.data?.fileName
       }`;

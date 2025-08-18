@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
-import { functions } from "../../store/globalState";
+// import { functions } from "../../store/globalState";
 import useMediaQuery from "../../function/useMediaQuery";
 import TextComponent from "./com/TextComponent";
 import { getData } from "../../function/getData";
 import P from "./com/P";
+import apiClient from "../../utils/apiClient";
 const keys = [
   "box_mid_1_content_1",
   "box_mid_1_content_2",
   "box_mid_1_content_3",
   "box_mid_1_content_4",
+  "schema_parking",
 ];
 export default function BoxMid1() {
   const [data, setData] = useState();
@@ -22,7 +24,7 @@ export default function BoxMid1() {
   useEffect(() => {
     getItems();
   }, []);
-  const { redirect } = functions();
+  // const { redirect } = functions();
   const isMobile = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
     AOS.init({
@@ -30,6 +32,17 @@ export default function BoxMid1() {
       once: false,
     });
   });
+
+  const onChangeURL = async (key) => {
+    try {
+      const res = await apiClient(`/files?key=${key}`);
+      return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
+        res.data.data?.fileName
+      }`;
+    } catch (e) {
+      console.error(e);
+    }
+  };
   return (
     <div className="box-mid1">
       <div className="box-mid1-header">
@@ -55,11 +68,12 @@ export default function BoxMid1() {
         </div>
         <nav>
           <button
-            onClick={() =>
-              redirect(
-                "https://drive.google.com/drive/folders/1fs_Eic94UUFKag61hyNspeaYnkd-mp6i?usp=drive_link"
-              )
-            }
+            onClick={async () => {
+              const res = await onChangeURL("schema_parking");
+              if (res) {
+                document.location.href = res;
+              }
+            }}
           >
             <span>Ознакомиться со схемой</span>
           </button>

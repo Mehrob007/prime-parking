@@ -46,7 +46,7 @@ export default function BoxMid2() {
   });
   const onChangeURL = async (key) => {
     try {
-      const res = await apiClient(`api/files?key=${key}`);
+      const res = await apiClient(`/files?key=${key}`);
       return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
         res.data.data?.fileName
       }`;
@@ -124,7 +124,7 @@ export default function BoxMid2() {
                                         ? "file_content_3"
                                         : i === 4
                                         ? "file_content_4"
-                                        : "",
+                                        : ""
                                     );
                                     if (res) {
                                       document.location.href = res;
@@ -140,7 +140,7 @@ export default function BoxMid2() {
                                   className="file_content_3"
                                   onClick={async () => {
                                     const res = await onChangeURL(
-                                      "file_content_3",
+                                      "file_content_3"
                                     );
                                     if (res) {
                                       // document.location.href = res;
@@ -156,7 +156,7 @@ export default function BoxMid2() {
                                   className="file_content_4"
                                   onClick={async () => {
                                     const res = await onChangeURL(
-                                      "file_content_4",
+                                      "file_content_4"
                                     );
                                     if (res) {
                                       document.location.href = res;
@@ -194,7 +194,7 @@ export default function BoxMid2() {
             <img
               onClick={() =>
                 redirect(
-                  "https://apps.apple.com/ru/app/prime-park-app/id1531749823",
+                  "https://apps.apple.com/ru/app/prime-park-app/id1531749823"
                 )
               }
               src={appStor}
@@ -203,7 +203,7 @@ export default function BoxMid2() {
             <img
               onClick={() =>
                 redirect(
-                  "https://play.google.com/store/apps/details?id=ru.primepark.android&hl=ru&pli=1",
+                  "https://play.google.com/store/apps/details?id=ru.primepark.android&hl=ru&pli=1"
                 )
               }
               src={googlePlay}
