@@ -43,19 +43,18 @@
 }
 
 @font-face {
-  font-family: 'rouble';
-  src: url('rouble-webfont.eot');
-  src: url('rouble-webfont.eot?#iefix') format('embedded-opentype'),
-       url('rouble-webfont.woff') format('woff'),
-       url('rouble-webfont.ttf') format('truetype');
+  font-family: "rouble";
+  src: url("rouble-webfont.eot");
+  src: url("rouble-webfont.eot?#iefix") format("embedded-opentype"),
+    url("rouble-webfont.woff") format("woff"),
+    url("rouble-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 .rouble {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 
 body {
   font-family: "Sansation", sans-serif;
@@ -437,6 +436,8 @@ header > .nav-bar > a {
 .banner-video {
   max-width: 1160px;
   max-height: 652px;
+  width: 100%;
+  height: 652px;
   border-radius: 20px;
   position: relative;
   /*border-width: 1.5px; */
@@ -484,6 +485,10 @@ header > .nav-bar > a {
   cursor: pointer;
   transition: all 0.3s ease-in;
   opacity: 1;
+}
+.bannerPlaceholder{
+  width: 100%;
+  height: 100%;
 }
 .transparent-icon {
   opacity: 0 !important;
@@ -1149,6 +1154,7 @@ header > .nav-bar > a {
   letter-spacing: 0%;
   text-align: center;
   color: #545454;
+  text-transform: uppercase;
 }
 @media (max-width: 750px) {
   .box4-main > .content-top-box4_1 > .content-navigate-box4_1 > div > h1 {
@@ -2969,6 +2975,19 @@ header > .nav-bar > a {
     text-align: center;
   }
 }
+.file_content_2 {
+  font-family: Sansation;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+  text-decoration-skip-ink: auto;
+  cursor: pointer;
+}
 .box-mid2 > .box-mid2-content {
   display: flex;
   flex-direction: column;
@@ -4475,6 +4494,7 @@ header > .nav-bar > a {
   text-decoration-thickness: 0%;
   -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
+  cursor: pointer;
 }
 @media (max-width: 750px) {
   .offer > .offer-content > div > div > p > a {

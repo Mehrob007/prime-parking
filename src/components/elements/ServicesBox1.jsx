@@ -4,6 +4,7 @@ import iconPDF from "../../assets/icon/iconPDF.svg";
 import apiClient from "../../utils/apiClient";
 import { getData } from "../../function/getData";
 import P from "./com/P";
+import { handleDownload } from "../../utils/utlis";
 
 const keys = ["service_content_1", "service_content_2", "service_content_3"];
 export default function ServicesBox1() {
@@ -17,7 +18,7 @@ export default function ServicesBox1() {
 
   const onChangeURL = async (key) => {
     try {
-      const res = await apiClient(`/files?key=${key}`);
+      const res = await apiClient(`api/files?key=${key}`);
       return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
         res.data.data?.fileName
       }`;
@@ -43,7 +44,8 @@ export default function ServicesBox1() {
           onClick={async () => {
             const res = await onChangeURL("service_file_content_1");
             if (res) {
-              document.location.href = res;
+              // document.location.href = res;
+              handleDownload(res);
             }
           }}
         >

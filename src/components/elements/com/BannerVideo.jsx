@@ -3,6 +3,7 @@ import playIcon from "../../../assets/icon/play.svg";
 import pauseIcon from "../../../assets/icon/pause.svg";
 import audioOn from "../../../assets/icon/1.svg";
 import audioOff from "../../../assets/icon/2.svg";
+import bannerPlaceholder from "../../../assets/img/banner-placeholder.png";
 import axios from "axios";
 
 const VIDEO_URL = "file_video_content_1";
@@ -27,23 +28,22 @@ const BannerVideo = () => {
     (async () => {
       try {
         const res1 = await axios(
-          `${import.meta.env.VITE_PUBLIC_API_URL}/files?key=${VIDEO_URL}`,
+          `${import.meta.env.VITE_PUBLIC_API_URL}api/files?key=${VIDEO_URL}`
         );
         const res = await axios(
           `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
             res1.data.data?.fileName
-          }`,
+          }`
         );
         console.log("res", res);
 
         // const blob = await res?.data?.blob();
         // const url = URL.createObjectURL(blob);
         // console.log("url", url);
-
         setVideoSrc(
           `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
             res1.data.data?.fileName
-          }`,
+          }`
         );
       } catch (err) {
         console.error("Не удалось загрузить видео:", err);
@@ -101,14 +101,16 @@ const BannerVideo = () => {
     <div className="banner-video">
       {videoSrc ? (
         <div onClick={togglePlayPause}>
-          <video
-            ref={videoRef}
-            src={videoSrc}
-            loop
-            playsInline
-            width="100%"
-            style={{ objectFit: "cover" }}
-          />
+          {
+            <video
+              ref={videoRef}
+              src={videoSrc}
+              loop
+              playsInline
+              width="100%"
+              style={{ objectFit: "cover" }}
+            />
+          }
 
           {/* play / pause icon */}
           <div>
@@ -120,7 +122,11 @@ const BannerVideo = () => {
           </div>
         </div>
       ) : (
-        <img src="/images/banner-placeholder.jpg" alt="" />
+        <img
+          src={bannerPlaceholder}
+          className="bannerPlaceholder"
+          alt="bannerPlaceholder"
+        />
       )}
 
       {/* mute / unmute */}

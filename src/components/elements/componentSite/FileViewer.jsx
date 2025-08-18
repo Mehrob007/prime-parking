@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import apiClient from "../../../utils/apiClient";
 
-const FILE_ENDPOINT = "/files";
+const FILE_ENDPOINT = "api/files";
 
 export default function FileViewer() {
   const { key } = useParams();

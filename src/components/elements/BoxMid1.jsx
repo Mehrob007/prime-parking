@@ -6,6 +6,7 @@ import TextComponent from "./com/TextComponent";
 import { getData } from "../../function/getData";
 import P from "./com/P";
 import apiClient from "../../utils/apiClient";
+import { handleDownload } from "../../utils/utlis";
 const keys = [
   "box_mid_1_content_1",
   "box_mid_1_content_2",
@@ -35,7 +36,10 @@ export default function BoxMid1() {
 
   const onChangeURL = async (key) => {
     try {
-      const res = await apiClient(`/files?key=${key}`);
+      const res = await apiClient(`api/files?key=${key}`);
+
+
+      if(res.data.data?.fileName.split(".")[1] !== "rar")
       return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
         res.data.data?.fileName
       }`;
@@ -71,7 +75,8 @@ export default function BoxMid1() {
             onClick={async () => {
               const res = await onChangeURL("schema_parking");
               if (res) {
-                document.location.href = res;
+                // document.location.href = res;
+                handleDownload(res);
               }
             }}
           >

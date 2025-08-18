@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import { getData } from "../function/getData";
 import apiClient from "../utils/apiClient";
 import P from "./elements/com/P";
+import { handleDownload } from "../utils/utlis";
 
 const keys = [
   "offer_content_1",
@@ -26,7 +27,7 @@ export default function Offer() {
 
   const onChangeURL = async (key) => {
     try {
-      const res = await apiClient(`/files?key=${key}`);
+      const res = await apiClient(`api/files?key=${key}`);
       return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
         res.data.data?.fileName
       }`;
@@ -59,6 +60,7 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_1");
                     if (res) {
+                      // handleDownload(res);
                       document.location.href = res;
                     }
                   }}
@@ -73,7 +75,8 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_2");
                     if (res) {
-                      document.location.href = res;
+                      handleDownload(res);
+                      // document.location.href = res;
                     }
                   }}
                 >
@@ -90,6 +93,7 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_3");
                     if (res) {
+                      // handleDownload(res);
                       document.location.href = res;
                     }
                   }}
@@ -104,7 +108,8 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_4");
                     if (res) {
-                      document.location.href = res;
+                      handleDownload(res);
+                      // document.location.href = res;
                     }
                   }}
                 >
@@ -121,6 +126,7 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_5");
                     if (res) {
+                      // handleDownload(res);
                       document.location.href = res;
                     }
                   }}
@@ -135,7 +141,8 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_6");
                     if (res) {
-                      document.location.href = res;
+                      handleDownload(res);
+                      // document.location.href = res;
                     }
                   }}
                 >

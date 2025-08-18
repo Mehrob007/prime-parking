@@ -12,6 +12,7 @@ import { getData } from "../../function/getData";
 import P from "./com/P";
 import { Link } from "react-router-dom";
 import apiClient from "../../utils/apiClient";
+import { handleDownload } from "../../utils/utlis";
 
 const keys = [
   "box_mid_2_content_1",
@@ -46,7 +47,7 @@ export default function BoxMid2() {
   });
   const onChangeURL = async (key) => {
     try {
-      const res = await apiClient(`/files?key=${key}`);
+      const res = await apiClient(`api/files?key=${key}`);
       return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
         res.data.data?.fileName
       }`;
@@ -106,10 +107,12 @@ export default function BoxMid2() {
               <li key={i}>
                 <p>
                   {
-                    (console.log("e", e),
+                    (console.log("elist_8_content", e),
                     e
                       ? (() => {
                           const parts = e.split("|");
+                          console.log("elist_8_contentParts", parts);
+
                           return (
                             <>
                               {parts[0]}{" "}
@@ -127,7 +130,8 @@ export default function BoxMid2() {
                                         : ""
                                     );
                                     if (res) {
-                                      document.location.href = res;
+                                      // document.location.href = res;
+                                      handleDownload(res);
                                     }
                                   }}
                                 >
@@ -144,6 +148,7 @@ export default function BoxMid2() {
                                     );
                                     if (res) {
                                       // document.location.href = res;
+                                      handleDownload(res);
                                     }
                                   }}
                                 >
@@ -159,7 +164,8 @@ export default function BoxMid2() {
                                       "file_content_4"
                                     );
                                     if (res) {
-                                      document.location.href = res;
+                                      // document.location.href = res;
+                                      handleDownload(res);
                                     }
                                   }}
                                 >
@@ -175,6 +181,52 @@ export default function BoxMid2() {
                 </p>
               </li>
             ))}
+            <p>
+              <a
+                className="file_content_2"
+                onClick={async () => {
+                  const res = await onChangeURL("file_content_2");
+                  if (res) {
+                    // document.location.href = res;
+                    handleDownload(res);
+                  }
+                }}
+              >
+                Ссылка на зоны
+              </a>{" "}
+              Hyde Park Tower, Gorky Park Tower, Imperial Park Tower,{" "}
+            </p>
+            <p>
+              {" "}
+              <a
+                className="file_content_2"
+                onClick={async () => {
+                  const res = await onChangeURL("file_content_3");
+                  if (res) {
+                    // document.location.href = res;
+                    handleDownload(res);
+                  }
+                }}
+              >
+                Ссылка на зоны
+              </a>{" "}
+              Regent's Park Tower,{" "}
+            </p>
+            <p>
+              <a
+                className="file_content_2"
+                onClick={async () => {
+                  const res = await onChangeURL("file_content_4");
+                  if (res) {
+                    // document.location.href = res;
+                    handleDownload(res);
+                  }
+                }}
+              >
+                Ссылка на зоны
+              </a>{" "}
+              Central Park Tower.
+            </p>
           </ul>
         }
       />
