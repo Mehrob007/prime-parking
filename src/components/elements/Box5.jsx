@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import imgBox5 from "../../assets/icon/img-box5.png";
-import Coso from "../../assets/icon/Колесо.png";
+import Coso from "../../assets/icon/Coso.png";
 import logoCF from "../../assets/icon/logoCF.svg";
 import AOS from "aos";
 import axios from "axios";
@@ -24,7 +24,7 @@ export default function Box5({ footerForm = 1 }) {
         {
           chatId: import.meta.env.VITE_ENV_URL_CHAT_ID,
           message: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
-        },
+        }
       );
       setAllText({
         userName: "",
@@ -66,8 +66,8 @@ export default function Box5({ footerForm = 1 }) {
       Boolean(
         allText?.userName?.trim() &&
           allText?.phoneNumber?.trim() &&
-          allText?.description?.trim(),
-      ),
+          allText?.description?.trim()
+      )
     );
   }, [allText]);
 
