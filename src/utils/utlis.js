@@ -1,14 +1,24 @@
-import axios from "axios";
+import apiClient from "./apiClient";
 
-export const handleDownload = async (urlGET) => {
-  const response = await axios(urlGET);
-  const blob = await response.blob();
-  const url = window.URL.createObjectURL(blob);
+export const handleDownload = async (key, res) => {
+  try {
+    console.log("urlGET", key);
 
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = "file";
-  link.click();
+    const response = await apiClient.get(res);
 
-  window.URL.revokeObjectURL(url);
+    const blob = response.data; // axios
+    // const blob = await response.blob(); // если apiClient это fetch
+
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = key || "file"; // имя файла
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    window.URL.revokeObjectURL(url);
+  } catch (err) {
+    console.error("Ошибка при скачивании файла:", err);
+  }
 };

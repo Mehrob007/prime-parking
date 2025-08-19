@@ -131,7 +131,15 @@ export default function BoxMid2() {
                                     );
                                     if (res) {
                                       // document.location.href = res;
-                                      handleDownload(res);
+                                      handleDownload(
+                                        i === 2
+                                          ? "file_content_2"
+                                          : i === 3
+                                          ? "file_content_3"
+                                          : i === 4
+                                          ? "file_content_4"
+                                          : ""
+                                      , res);
                                     }
                                   }}
                                 >
@@ -148,7 +156,7 @@ export default function BoxMid2() {
                                     );
                                     if (res) {
                                       // document.location.href = res;
-                                      handleDownload(res);
+                                      handleDownload("file_content_3", res);
                                     }
                                   }}
                                 >
@@ -165,7 +173,7 @@ export default function BoxMid2() {
                                     );
                                     if (res) {
                                       // document.location.href = res;
-                                      handleDownload(res);
+                                      handleDownload("file_content_4", res);
                                     }
                                   }}
                                 >
@@ -188,7 +196,7 @@ export default function BoxMid2() {
                   const res = await onChangeURL("file_content_2");
                   if (res) {
                     // document.location.href = res;
-                    handleDownload(res);
+                    handleDownload("file_content_2", res);
                   }
                 }}
               >
@@ -204,7 +212,7 @@ export default function BoxMid2() {
                   const res = await onChangeURL("file_content_3");
                   if (res) {
                     // document.location.href = res;
-                    handleDownload(res);
+                    handleDownload("file_content_3", res);
                   }
                 }}
               >
@@ -219,7 +227,7 @@ export default function BoxMid2() {
                   const res = await onChangeURL("file_content_4");
                   if (res) {
                     // document.location.href = res;
-                    handleDownload(res);
+                    handleDownload("file_content_4", res);
                   }
                 }}
               >

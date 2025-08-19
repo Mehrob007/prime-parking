@@ -76,7 +76,7 @@ export default function BoxMid1() {
               const res = await onChangeURL("schema_parking");
               if (res) {
                 // document.location.href = res;
-                handleDownload(res);
+                handleDownload("schema_parking", res);
               }
             }}
           >

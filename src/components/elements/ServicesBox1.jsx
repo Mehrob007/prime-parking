@@ -45,7 +45,7 @@ export default function ServicesBox1() {
             const res = await onChangeURL("service_file_content_1");
             if (res) {
               // document.location.href = res;
-              handleDownload(res);
+              handleDownload("service_file_content_1", res);
             }
           }}
         >

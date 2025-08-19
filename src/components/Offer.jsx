@@ -60,7 +60,7 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_1");
                     if (res) {
-                      // handleDownload(res);
+                      // handleDownload("offer_file_content_1");
                       document.location.href = res;
                     }
                   }}
@@ -75,7 +75,7 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_2");
                     if (res) {
-                      handleDownload(res);
+                      handleDownload("offer_file_content_2", res);
                       // document.location.href = res;
                     }
                   }}
@@ -93,7 +93,7 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_3");
                     if (res) {
-                      // handleDownload(res);
+                      // handleDownload("offer_file_content_3");
                       document.location.href = res;
                     }
                   }}
@@ -108,7 +108,7 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_4");
                     if (res) {
-                      handleDownload(res);
+                      handleDownload("offer_file_content_4", res);
                       // document.location.href = res;
                     }
                   }}
@@ -126,7 +126,7 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_5");
                     if (res) {
-                      // handleDownload(res);
+                      // handleDownload("offer_file_content_5");
                       document.location.href = res;
                     }
                   }}
@@ -141,7 +141,7 @@ export default function Offer() {
                   onClick={async () => {
                     const res = await onChangeURL("offer_file_content_6");
                     if (res) {
-                      handleDownload(res);
+                      handleDownload("offer_file_content_6", res);
                       // document.location.href = res;
                     }
                   }}
