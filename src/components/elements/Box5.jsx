@@ -20,7 +20,8 @@ export default function Box5({ footerForm = 1 }) {
   const sendInTelegram = async () => {
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_ENV_URL}/send-message`,
+        `${import.meta.env.VITE_ENV_URL}/api/bot/send-message,
+`,
         {
           chatId: import.meta.env.VITE_ENV_URL_CHAT_ID,
           message: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
