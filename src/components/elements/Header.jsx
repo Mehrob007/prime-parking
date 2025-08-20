@@ -34,7 +34,7 @@ export default function Header() {
       <div className="nav-bar">
         {isMobile ? (
           <nav onClick={() => setModalOpen(modalOpen)}>
-            <img src={burgerMenuIcon} alt="burgerMenuIcon" />
+            <img src={burgerMenuIcon} alt="" />
           </nav>
         ) : (
           <div>
