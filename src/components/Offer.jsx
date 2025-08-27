@@ -73,11 +73,11 @@ export default function Offer() {
                 <a
                   target="_blank"
                   onClick={async () => {
-                    const res = await onChangeURL("offer_file_content_2");
-                    if (res) {
-                      handleDownload(res);
-                      // document.location.href = res;
-                    }
+                    // const res = await onChangeURL("offer_file_content_2");
+                    // if (res) {
+                    handleDownload("offer_file_content_2");
+                    // document.location.href = res;
+                    // }
                   }}
                 >
                   Скачать
@@ -106,11 +106,11 @@ export default function Offer() {
                 <a
                   target="_blank"
                   onClick={async () => {
-                    const res = await onChangeURL("offer_file_content_4");
-                    if (res) {
-                      handleDownload(res);
-                      // document.location.href = res;
-                    }
+                    // const res = await onChangeURL("offer_file_content_4");
+                    // if (res) {
+                    handleDownload("offer_file_content_4");
+                    // document.location.href = res;
+                    // }
                   }}
                 >
                   Скачать
@@ -139,11 +139,11 @@ export default function Offer() {
                 <a
                   target="_blank"
                   onClick={async () => {
-                    const res = await onChangeURL("offer_file_content_6");
-                    if (res) {
-                      handleDownload(res);
-                      // document.location.href = res;
-                    }
+                    // const res = await onChangeURL("offer_file_content_6");
+                    // if (res) {
+                    handleDownload("offer_file_content_6");
+                    // document.location.href = res;
+                    // }
                   }}
                 >
                   Скачать

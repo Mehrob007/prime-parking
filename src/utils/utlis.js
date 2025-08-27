@@ -1,14 +1,11 @@
-import axios from "axios";
 
-export const handleDownload = async (urlGET) => {
-  const response = await axios(urlGET);
-  const blob = await response.blob();
-  const url = window.URL.createObjectURL(blob);
-
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = "file";
-  link.click();
-
-  window.URL.revokeObjectURL(url);
+export const handleDownload = async (key) => {
+  try {
+    const link = document.createElement("a");
+    link.href = `${import.meta.env.VITE_PUBLIC_API_URL_FILE_DOW}?key=${key}`;
+    link.download;
+    link.click();
+  } catch (error) {
+    console.error("Ошибка при скачивании файла:", error);
+  }
 };
