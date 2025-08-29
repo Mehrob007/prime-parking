@@ -21,7 +21,7 @@ const PhoneInput = ({ value, onChange }) => {
 
   useEffect(() => {
     if (maskRef.current) {
-      maskRef.current.value = value || '';
+      maskRef.current.value = value || '+7';
     }
   }, [value]);
 
