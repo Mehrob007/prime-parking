@@ -165,11 +165,11 @@ export default function Box4() {
           <div>
             <div className="content-top-box4-2-title">
               <P element={"h1"}>{data?.[22]}</P>
-              {isMobile ? (
-                <TextComponent>{data?.[23]}</TextComponent>
-              ) : (
-                <P>{data?.[23]}</P>
-              )}
+                {isMobile ? (
+                  <TextComponent>{data?.[23]}</TextComponent>
+                ) : (
+                  <P>{data?.[23]}</P>
+                )}
             </div>
             <div className="content-top-box4-2-header">
               <div>
