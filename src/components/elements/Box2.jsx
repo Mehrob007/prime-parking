@@ -80,7 +80,12 @@ export default function Box2() {
                   паркинга (Open Parking) и аренда привязанных машиномест на
                   втором уровне подземного паркинга (Private Parking).
                 </TextComponent> */}
-                <TextComponent>{data?.[1]}</TextComponent>
+                {/* <TextComponent>{data?.[1]}</TextComponent> */}
+                {data?.[1]?.split("\n\n")?.map((e, i) => (
+                  <>
+                    <TextComponent key={i}>{e}</TextComponent> <br />
+                  </>
+                ))}
               </>
             ) : (
               <>
