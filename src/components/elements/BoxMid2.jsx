@@ -130,7 +130,7 @@ export default function BoxMid2() {
                                         : ""
                                     );
                                     if (res) {
-                                      // document.location.href = res;
+                                      // window.open(res, "_blank");
                                       handleDownload(res);
                                     }
                                   }}
@@ -147,7 +147,7 @@ export default function BoxMid2() {
                                       "file_content_3"
                                     );
                                     if (res) {
-                                      // document.location.href = res;
+                                      // window.open(res, "_blank");
                                       handleDownload(res);
                                     }
                                   }}
@@ -164,7 +164,7 @@ export default function BoxMid2() {
                                       "file_content_4"
                                     );
                                     if (res) {
-                                      // document.location.href = res;
+                                      // window.open(res, "_blank");
                                       handleDownload(res);
                                     }
                                   }}
@@ -187,7 +187,7 @@ export default function BoxMid2() {
                 onClick={async () => {
                   const res = await onChangeURL("file_content_2");
                   if (res) {
-                    document.location.href = res;
+                    window.open(res, "_blank");
                     // handleDownload(res);
                   }
                 }}
@@ -203,7 +203,7 @@ export default function BoxMid2() {
                 onClick={async () => {
                   const res = await onChangeURL("file_content_3");
                   if (res) {
-                    document.location.href = res;
+                    window.open(res, "_blank");
                     // handleDownload(res);
                   }
                 }}
@@ -218,7 +218,7 @@ export default function BoxMid2() {
                 onClick={async () => {
                   const res = await onChangeURL("file_content_4");
                   if (res) {
-                    document.location.href = res;
+                    window.open(res, "_blank");
                     // handleDownload(res);
                   }
                 }}
