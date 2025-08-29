@@ -62,10 +62,10 @@ export default function BoxMid1() {
       <div className="box-mid1-content">
         <div>
           {isMobile
-            ? data?.[2] && <TextComponent>{data?.[2]}</TextComponent>
+            ? data?.[2] && <P>{data?.[2]}</P>
             : data?.[2] && <P>{data?.[2]}</P>}
           {isMobile
-            ? data?.[3] && <TextComponent>{data?.[3]}</TextComponent>
+            ? data?.[3] && <P>{data?.[3]}</P>
             : data?.[3] && <P>{data?.[3]}</P>}
         </div>
         <nav>
