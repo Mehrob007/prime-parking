@@ -44,7 +44,7 @@ export default function ServicesBox1() {
           onClick={async () => {
             const res = await onChangeURL("service_file_content_1");
             if (res) {
-              // document.location.href = res;
+              // window.open(res, "_blank");
               handleDownload(res);
             }
           }}
