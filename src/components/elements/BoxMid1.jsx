@@ -73,7 +73,7 @@ export default function BoxMid1() {
             onClick={async () => {
               const res = await onChangeURL("schema_parking");
               if (res) {
-                document.location.href = res;
+                window.open(res, "_blank");
                 // handleDownload("schema_parking");
               }
             }}
