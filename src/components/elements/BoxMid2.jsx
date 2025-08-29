@@ -65,7 +65,7 @@ export default function BoxMid2() {
         <div>
           <h1>{data?.[1]}</h1>
           {isMobile ? (
-            <P>
+            <p>
               {data?.[2]}
               {/* <TextComponent>
                 Заказ пропуска осуществляется через мобильное приложение{" "}
@@ -78,9 +78,9 @@ export default function BoxMid2() {
                 рублей в час. Со 2 часа (с 61 минуты) - 300 рублей в час. Далее
                 каждый последующий час 300 рублей.
               </TextComponent> */}
-            </P>
+            </p>
           ) : (
-            <p>
+            <P>
               {/* Заказ пропуска осуществляется через мобильное приложение{" "}
               <label>PRIME PARK APP. {"  "}</label> Для башен Hyde Park Tower
               (R6), Gorky Park Tower (R5), Imperial Park Tower (R4) и Regent's
@@ -88,7 +88,7 @@ export default function BoxMid2() {
               21 минуты по 60 минуту - 200 рублей в час. Со 2 часа (с 61 минуты)
               - 300 рублей в час. Далее каждый последующий час 300 рублей. */}
               {data?.[2]}
-            </p>
+            </P>
           )}
         </div>
         <div>
@@ -181,14 +181,14 @@ export default function BoxMid2() {
                 </p>
               </li>
             ))}
-            <p>
+            <p style={{ marginTop: "20px" }}>
               <a
                 className="file_content_2"
                 onClick={async () => {
                   const res = await onChangeURL("file_content_2");
                   if (res) {
-                    // document.location.href = res;
-                    handleDownload(res);
+                    document.location.href = res;
+                    // handleDownload(res);
                   }
                 }}
               >
@@ -203,8 +203,8 @@ export default function BoxMid2() {
                 onClick={async () => {
                   const res = await onChangeURL("file_content_3");
                   if (res) {
-                    // document.location.href = res;
-                    handleDownload(res);
+                    document.location.href = res;
+                    // handleDownload(res);
                   }
                 }}
               >
@@ -218,8 +218,8 @@ export default function BoxMid2() {
                 onClick={async () => {
                   const res = await onChangeURL("file_content_4");
                   if (res) {
-                    // document.location.href = res;
-                    handleDownload(res);
+                    document.location.href = res;
+                    // handleDownload(res);
                   }
                 }}
               >
