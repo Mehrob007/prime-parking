@@ -61,7 +61,7 @@ export default function Offer() {
                     const res = await onChangeURL("offer_file_content_1");
                     if (res) {
                       // handleDownload(res);
-                      document.location.href = res;
+                      window.open(res, "_blank");
                     }
                   }}
                 >
@@ -76,7 +76,7 @@ export default function Offer() {
                     // const res = await onChangeURL("offer_file_content_2");
                     // if (res) {
                     handleDownload("offer_file_content_2");
-                    // document.location.href = res;
+                    // window.open(res, "_blank");
                     // }
                   }}
                 >
@@ -94,7 +94,7 @@ export default function Offer() {
                     const res = await onChangeURL("offer_file_content_3");
                     if (res) {
                       // handleDownload(res);
-                      document.location.href = res;
+                      window.open(res, "_blank");
                     }
                   }}
                 >
@@ -109,7 +109,7 @@ export default function Offer() {
                     // const res = await onChangeURL("offer_file_content_4");
                     // if (res) {
                     handleDownload("offer_file_content_4");
-                    // document.location.href = res;
+                    // window.open(res, "_blank");
                     // }
                   }}
                 >
@@ -127,7 +127,7 @@ export default function Offer() {
                     const res = await onChangeURL("offer_file_content_5");
                     if (res) {
                       // handleDownload(res);
-                      document.location.href = res;
+                      window.open(res, "_blank");
                     }
                   }}
                 >
@@ -142,7 +142,7 @@ export default function Offer() {
                     // const res = await onChangeURL("offer_file_content_6");
                     // if (res) {
                     handleDownload("offer_file_content_6");
-                    // document.location.href = res;
+                    // window.open(res, "_blank");
                     // }
                   }}
                 >
