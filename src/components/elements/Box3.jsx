@@ -46,34 +46,55 @@ export default function Box3() {
               <div>
                 <div>
                   <P element={"h1"}>{data?.[1]}</P>
-                  <P>{data?.[2]}</P>
+                  <P>{data?.[2].split("~").join(" ")}</P>
                 </div>
                 <img src={iconLineBox3} alt=" " />
                 <div>
                   <P element="h1">{data?.[3]}</P>
-                  <P>{data?.[4]}</P>
+                  <P>{data?.[4].split("~").join(" ")}</P>
                 </div>
                 <img src={iconLineBox3} alt=" " />
                 <div>
                   <P element={"h1"}>{data?.[5]}</P>
-                  <P>{data?.[6]}</P>
+                  <P>{data?.[6].split("~").join(" ")}</P>
                 </div>
               </div>
             ) : (
               <div>
                 <div>
                   <P element={"h1"}>{data?.[1]}</P>
-                  <TextComponent>{data?.[2]}</TextComponent>
+                  {data?.[2]
+                    ?.split("~")
+                    ?.slice(1)
+                    ?.map((e, i) => (
+                      <>
+                        <TextComponent key={i}>{e}</TextComponent>
+                      </>
+                    ))}
                 </div>
                 <img src={iconLineBox3} alt=" " />
                 <div>
                   <P element="h1">{data?.[3]}</P>
-                  <TextComponent>{data?.[4]}</TextComponent>
+                  {data?.[4]
+                    ?.split("~")
+                    ?.slice(1)
+                    ?.map((e, i) => (
+                      <>
+                        <TextComponent key={i}>{e}</TextComponent>
+                      </>
+                    ))}
                 </div>
                 <img src={iconLineBox3} alt=" " />
                 <div>
                   <P element={"h1"}>{data?.[5]}</P>
-                  <TextComponent>{data?.[6]}</TextComponent>
+                  {data?.[6]
+                    ?.split("~")
+                    ?.slice(1)
+                    ?.map((e, i) => (
+                      <>
+                        <TextComponent key={i}>{e}</TextComponent>
+                      </>
+                    ))}
                 </div>
               </div>
             )}
