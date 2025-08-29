@@ -15,7 +15,7 @@ const BannerVideo = () => {
   const [shouldLoadVideo, setShouldLoad] = useState(false);
   const [isPaused, setIsPaused] = useState(true);
   const [iconsFade, setIconsFade] = useState(true);
-  const [soundOn, setSoundOn] = useState(true);
+  const [soundOn, setSoundOn] = useState(false);
 
   useEffect(() => {
     const t = setTimeout(() => setShouldLoad(true), 0);
@@ -56,7 +56,7 @@ const BannerVideo = () => {
     if (!v) return;
 
     if (isPaused) {
-      v.muted = false;
+      v.muted = true;
       v.play();
     } else {
       v.pause();
@@ -107,6 +107,7 @@ const BannerVideo = () => {
               src={videoSrc}
               loop
               playsInline
+              muted
               width="100%"
               style={{ objectFit: "cover" }}
             />
