@@ -234,7 +234,7 @@ body {
     letter-spacing: 0%;
     margin-bottom: 10px;
   }
-  .file_content_2{
+  .file_content_2 {
     font-size: 14px !important;
   }
 }
@@ -746,8 +746,21 @@ header > .nav-bar > a {
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  gap: 10px;
+  gap: 20px;
   padding-top: 24px;
+}
+
+.box2-main > div > .bg-box2-1 > .box2-1-div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+}
+@supports (-moz-appearance: none) {
+  .box2-main > div > .bg-box2-1 > .box2-1-div > div {
+    gap: 10px;
+  }
 }
 @media (max-width: 750px) {
   .box2-main > div > .bg-box2-1 > .box2-1-div > img {
