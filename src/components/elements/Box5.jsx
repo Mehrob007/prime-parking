@@ -21,7 +21,7 @@ export default function Box5({ footerForm = 1 }) {
 
   const sendInTelegram = async () => {
     try {
-      await axios.post(`${"https://primeparking.ru/bots/"}send-message`, {
+      await axios.post(`${import.meta.env.VITE_ENV_URL}`, {
         chatId: "-4649546886",
         message: `👤Имя: ${allText.userName} \n📱Телефон: ${allText.phoneNumber} \n💬Текст обращения: ${allText.description}`,
       });
