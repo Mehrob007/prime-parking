@@ -46,7 +46,9 @@ export default function FileViewer() {
   }, [key]);
 
   if (loading) return <p>Загрузка…</p>;
-  if (error) return <p style={{ color: "red" }}>Ошибка: {error}</p>;
+  if (error) return <p style={{ color: "red" }}>
+    {/* Ошибка: {error} */}
+    </p>;
   if (!fileUrl) return null;
 
   if (mime.startsWith("image/"))
