@@ -13,9 +13,9 @@ const keys = [
   "box_mid_1_content_3",
   "box_mid_1_content_4",
   "schema_parking",
-  "box_mid_1_content_list_5",
+  "box_mid_1_title_list_5",
   "box_mid_1_content_list_6",
-  "box_mid_1_content_list_7",
+  "box_mid_1_title_list_7",
   "box_mid_1_content_list_8",
 ];
 export default function BoxMid1() {
