@@ -2790,7 +2790,7 @@ header > .nav-bar > a {
   width: 1160px;
   border-radius: 20px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
   position: relative;
   gap: 40px;
