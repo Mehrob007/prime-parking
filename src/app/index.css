@@ -756,6 +756,13 @@ header > .nav-bar > a {
   align-items: center;
   justify-content: start;
   text-align: center;
+  font-family: Sansation;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
 }
 @supports (-moz-appearance: none) {
   .box2-main > div > .bg-box2-1 > .box2-1-div > div {
@@ -766,6 +773,15 @@ header > .nav-bar > a {
   .box2-main > div > .bg-box2-1 > .box2-1-div > img {
     width: 170px;
     height: 34px;
+  }
+  .box2-main > div > .bg-box2-1 > .box2-1-div > div {
+    font-family: Sansation;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
   }
 }
 .box2-main > div > .bg-box2-1 > .car-container1 {
@@ -1951,7 +1967,8 @@ header > .nav-bar > a {
   > .content-top-box4-2-header {
   width: 922px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
   flex-direction: row-reverse;
 }
 @media (max-width: 750px) {
@@ -1977,6 +1994,7 @@ header > .nav-bar > a {
   height: 105px;
   gap: 10px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
@@ -2387,7 +2405,8 @@ header > .nav-bar > a {
   > .content-top-box4-2-header {
   width: 922px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
   flex-direction: row-reverse;
 }
 @media (max-width: 750px) {
@@ -2397,6 +2416,7 @@ header > .nav-bar > a {
     > div
     > .content-top-box4-2-header {
     flex-direction: column-reverse;
+    justify-content: center;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
