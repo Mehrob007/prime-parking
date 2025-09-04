@@ -172,14 +172,14 @@ export default function Box4() {
                 )}
             </div>
             <div className="content-top-box4-2-header">
-              <div>
+              {/* <div>
                 <P element={"h3"}>{data?.[24]}</P>
                 <h1>
                   {data?.[25]} <span className="rouble">₽</span>
                   /мес.
                 </h1>
                 <P>{data?.[26]}</P>
-              </div>
+              </div> */}
               <div>
                 <P element={"h3"}>{data?.[27]}</P>
                 <h1>
