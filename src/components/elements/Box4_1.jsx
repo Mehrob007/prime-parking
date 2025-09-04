@@ -441,7 +441,7 @@ export default function Box4_1() {
               )}
             </div>
             <div className="content-top-box4-2-header">
-              <div>
+              {/* <div>
                 <h3>{data?.[9]}</h3>
                 <h1>
                   {data?.[10]}{" "}
@@ -456,7 +456,7 @@ export default function Box4_1() {
                   /мес.
                 </h1>
                 <P> {data?.[11]}</P>
-              </div>
+              </div> */}
               <div className="test">
                 <h3> {data?.[12]}</h3>
                 <h1>
