@@ -2798,7 +2798,7 @@ header > .nav-bar > a {
 @media (max-width: 750px) {
   .box-mid1 {
     width: 96%;
-    height: 451px;
+    height: auto;
     gap: 30px;
   }
 }
