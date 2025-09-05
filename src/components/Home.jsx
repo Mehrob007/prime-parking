@@ -17,7 +17,7 @@ export default function Home() {
       {/* <Helmet>
         <title> Prime Parking </title>
       </Helmet> */}
-      <Box1 />
+      {/* <Box1 /> */}
       <Box2 />
       <Box3 />
       <BannerVideo />

@@ -17,7 +17,7 @@ export default function Router() {
       <Header />
       <div>
         <Suspense fallback={<p>Loading...</p>}>
-          <ScrollToTop />
+          <ScrollToTop /> 
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
