@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import logoHeader from "../../assets/icon/logo-header.svg";
+import PrimeParkingHeader from "../../assets/icon/logo-header.svg";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import callIcon from "../../assets/icon/callIcon.svg";
 import callIconDesk from "../../assets/icon/telDesk.svg";
-import burgerMenuIcon from "../../assets/icon/borgerMenuIcon.svg";
+import PrimeParking from "../../assets/icon/borgerMenuIcon.svg";
 import useMediaQuery from "../../function/useMediaQuery";
 import { functions } from "../../store/globalState";
 export default function Header() {
@@ -24,7 +24,7 @@ export default function Header() {
   }, [modalOpen]);
 
   useEffect(() => {
-    if(modalOpen){
+    if (modalOpen) {
       setModalOpen(modalOpen);
     }
   }, [lacation?.pathname]);
@@ -34,7 +34,7 @@ export default function Header() {
       <div className="nav-bar">
         {isMobile ? (
           <nav onClick={() => setModalOpen(modalOpen)}>
-            <img src={burgerMenuIcon} alt=" " />
+            <img src={PrimeParking} alt=" " />
           </nav>
         ) : (
           <div>
@@ -43,11 +43,13 @@ export default function Header() {
             <NavLink to="./parking-rules">Правила паркинга</NavLink>
           </div>
         )}
-        <img onClick={() => navigate("./")} src={logoHeader} alt=" " />
+        <img onClick={() => navigate("./")} src={PrimeParkingHeader} alt="" />
         <a href="tel: +7 (495) 481 22 44">
-          {!isMobile ? (<>
-            <img src={callIconDesk} alt=" " /> <span>+7 (495) 481 22 44</span>
-          </>) : (
+          {!isMobile ? (
+            <>
+              <img src={callIconDesk} alt=" " /> <span>+7 (495) 481 22 44</span>
+            </>
+          ) : (
             <img src={callIcon} alt=" " />
           )}
         </a>
