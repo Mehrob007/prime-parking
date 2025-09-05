@@ -9,7 +9,7 @@ import Box1 from "./elements/Box1";
 import BoxMid1 from "./elements/BoxMid1";
 import BoxMid2 from "./elements/BoxMid2";
 import BannerVideo from "./elements/com/BannerVideo";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       {/* <Helmet>
         <title> Prime Parking </title>
       </Helmet> */}
-      {/* <Box1 /> */}
+      <Box1 />
       <Box2 />
       <Box3 />
       <BannerVideo />
