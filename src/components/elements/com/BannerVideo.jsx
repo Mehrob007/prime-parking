@@ -91,7 +91,7 @@ const BannerVideo = () => {
   //     a.click();
   //     URL.revokeObjectURL(blobUrl);
   //   } catch (err) {
-  //     console.error("Ошибка скачивания:", err);
+  //     console.error(" ", err);
   //   }
   // };
 

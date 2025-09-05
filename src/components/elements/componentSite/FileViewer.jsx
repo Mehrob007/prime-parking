@@ -36,7 +36,7 @@ export default function FileViewer() {
         objectUrl = URL.createObjectURL(blob);
         setFileUrl(objectUrl);
       } catch (err) {
-        setError(err.message || "Неизвестная ошибка");
+        setError(err.message || " ");
       } finally {
         setLoading(false);
       }
@@ -47,7 +47,7 @@ export default function FileViewer() {
 
   if (loading) return <p>Загрузка…</p>;
   if (error) return <p style={{ color: "red" }}>
-    {/* Ошибка: {error} */}
+    {/*  */}
     </p>;
   if (!fileUrl) return null;
 

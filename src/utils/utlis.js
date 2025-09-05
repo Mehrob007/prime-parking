@@ -6,6 +6,6 @@ export const handleDownload = async (key) => {
     link.download;
     link.click();
   } catch (error) {
-    console.error("Ошибка при скачивании файла:", error);
+    console.error(" ", error);
   }
 };
