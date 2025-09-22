@@ -17,6 +17,10 @@ const keys = [
   "box_mid_1_content_list_6",
   "box_mid_1_title_list_7",
   "box_mid_1_content_list_8",
+  "ab_1_title",
+  "ab_1_price",
+  "ab_2_title",
+  "ab_2_price",
 ];
 export default function BoxMid1() {
   const [data, setData] = useState();
@@ -86,6 +90,26 @@ export default function BoxMid1() {
             <span>Ознакомиться со схемой</span>
           </button>
         </nav>
+      </div>
+      <div>
+        <div className="content-top-box4_1-1-com-2">
+          <div className={`content-top-box4_1-1-com-2-1`}>
+            <div>
+              <h1>{data?.[9]}</h1>
+              <p>
+                {data?.[10]} <span className="rouble">₽./мес</span>
+              </p>
+            </div>
+          </div>
+          <div className={`content-top-box4_1-1-com-2-2`}>
+            <div>
+              <h1>{data?.[11]}</h1>
+              <p>
+                {data?.[12]} <span className="rouble">₽./мес</span>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="content-bottom-box4">
         <AccordionCom
