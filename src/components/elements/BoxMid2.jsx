@@ -213,6 +213,22 @@ export default function BoxMid2() {
               Regent's Park Tower,{" "}
             </p>
             <p>
+              {" "}
+              <a
+                className="file_content_2"
+                onClick={async () => {
+                  const res = await onChangeURL("file_content_3_2");
+                  if (res) {
+                    window.open(res, "_blank");
+                    // handleDownload(res);
+                  }
+                }}
+              >
+                Ссылка на зоны
+              </a>{" "}
+              Queen Elizabeth Park Tower, R2{" "}
+            </p>
+            <p>
               <a
                 className="file_content_2"
                 onClick={async () => {
