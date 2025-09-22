@@ -93,21 +93,25 @@ export default function BoxMid1() {
       </div>
       <div>
         <div className="content-top-box4_1-1-com-2">
-          <div className={`content-top-box4_1-1-com-2-1`}>
-            <div>
-              <h1>{data?.[9]}</h1>
-              <p>
-                {data?.[10]} <span className="rouble">₽./мес</span>
-              </p>
+          <div className="content-top-box4-1-com-4">
+            <div className="content-top-box4-1-com-title">
+              <P>Абонемент</P>
+              <P element={"h1"}>{data?.[9]?.toUpperCase()}</P>
             </div>
+            <P element={"h3"} className="content-top-box4-1-com-price">
+              {data?.[10]} <span className="rouble">₽</span>
+              /мес.
+            </P>
           </div>
-          <div className={`content-top-box4_1-1-com-2-2`}>
-            <div>
-              <h1>{data?.[11]}</h1>
-              <p>
-                {data?.[12]} <span className="rouble">₽./мес</span>
-              </p>
+          <div className="content-top-box4-1-com-4">
+            <div className="content-top-box4-1-com-title">
+              <P>Абонемент</P>
+              <P element={"h1"}>{data?.[11]?.toUpperCase()}</P>
             </div>
+            <P element={"h3"} className="content-top-box4-1-com-price">
+              {data?.[12]} <span className="rouble">₽</span>
+              /мес.
+            </P>
           </div>
         </div>
       </div>
