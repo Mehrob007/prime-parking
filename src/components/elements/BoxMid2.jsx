@@ -194,7 +194,8 @@ export default function BoxMid2() {
               >
                 Ссылка на зоны
               </a>{" "}
-              Hyde Park Tower, Gorky Park Tower, Imperial Park Tower,{" "}
+              Зоны Hyde Park Tower (R6), Gorky Park Tower (R5), Imperial Park
+              Tower (R4){" "}
             </p>
             <p>
               {" "}
@@ -210,7 +211,7 @@ export default function BoxMid2() {
               >
                 Ссылка на зоны
               </a>{" "}
-              Regent's Park Tower,{" "}
+              Зоны Regent's Park Tower (R3){" "}
             </p>
             <p>
               {" "}
@@ -226,7 +227,7 @@ export default function BoxMid2() {
               >
                 Ссылка на зоны
               </a>{" "}
-              Queen Elizabeth Park Tower, R2{" "}
+              Зоны Queen Elizabeth Park Tower (R2){" "}
             </p>
             <p>
               <a
@@ -241,7 +242,7 @@ export default function BoxMid2() {
               >
                 Ссылка на зоны
               </a>{" "}
-              Central Park Tower.
+              Зоны Central Park Tower (R7)
             </p>
           </ul>
         }
