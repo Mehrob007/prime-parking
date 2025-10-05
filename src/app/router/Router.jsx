@@ -9,6 +9,7 @@ const Home = lazy(() => import("../../components/Home.jsx"));
 const Services = lazy(() => import("../../components/Services.jsx"));
 const Offer = lazy(() => import("../../components/Offer.jsx"));
 const ParkingRules = lazy(() => import("../../components/ParkingRules.jsx"));
+const Zoning = lazy(() => import("../../components/Zoning.jsx"));
 
 export default function Router() {
   const { modalOpen } = functions();
@@ -17,12 +18,13 @@ export default function Router() {
       <Header />
       <div>
         <Suspense fallback={<p>Loading...</p>}>
-          <ScrollToTop /> 
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/offer" element={<Offer />} />
             <Route path="/parking-rules" element={<ParkingRules />} />
+            <Route path="/parking-zoning" element={<Zoning />} />
             <Route path="/:key" element={<FileViewer />} />
           </Routes>
         </Suspense>
