@@ -348,7 +348,7 @@ header {
 header > .nav-bar {
   display: flex;
   align-items: center;
-  max-width: 1318px;
+  max-width: 1360px;
   width: 100%;
   margin: 0 auto;
   height: 60px;
@@ -4946,6 +4946,20 @@ header > .nav-bar > a {
 @media (max-width: 4010px) {
   header > .nav-bar {
     max-width: 1160px;
+    position: relative;
+  }
+  header > .nav-bar > main {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header > .nav-bar > nav {
+    position: relative;
+    z-index: 2;
+  }
+  header > .nav-bar > main > img {
   }
   .box2-main {
     max-width: 1160px;
