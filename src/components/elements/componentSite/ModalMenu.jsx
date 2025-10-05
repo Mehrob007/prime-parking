@@ -18,6 +18,7 @@ export default function ModalMenu() {
           <NavLink to="./services">Услуги</NavLink>
           <NavLink to="./offer">Оферта</NavLink>
           <NavLink to="./parking-rules">Правила паркинга</NavLink>
+          <NavLink to="./parking-zoning">Зонирование</NavLink>
         </div>
         <a href="tel: +7 (495) 481 22 44">
           <img src={callIcon} alt=" " />
