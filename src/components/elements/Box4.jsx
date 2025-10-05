@@ -9,6 +9,7 @@ import useMediaQuery from "../../function/useMediaQuery";
 import TextComponent from "./com/TextComponent";
 import { getData } from "../../function/getData";
 import P from "./com/P";
+import apiClient from "../../utils/apiClient";
 
 const keys = [
   "",
@@ -54,6 +55,7 @@ const keys = [
   "list_2_content",
   "list_3_title",
   "list_3_content",
+  "list_rule_title_VALET",
 ];
 export default function Box4() {
   const [data, setData] = useState();
@@ -62,6 +64,16 @@ export default function Box4() {
     console.log("res", res);
 
     setData(res);
+  };
+  const onChangeURL = async (key) => {
+    try {
+      const res = await apiClient(`api/files?key=${key}`);
+      return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
+        res.data.data?.fileName
+      }`;
+    } catch (e) {
+      console.error(e);
+    }
   };
   useEffect(() => {
     getItems();
@@ -165,11 +177,11 @@ export default function Box4() {
           <div>
             <div className="content-top-box4-2-title">
               <P element={"h1"}>{data?.[22]}</P>
-                {isMobile ? (
-                  <TextComponent>{data?.[23]}</TextComponent>
-                ) : (
-                  <P>{data?.[23]}</P>
-                )}
+              {isMobile ? (
+                <TextComponent>{data?.[23]}</TextComponent>
+              ) : (
+                <P>{data?.[23]}</P>
+              )}
             </div>
             <div className="content-top-box4-2-header">
               {/* <div>
@@ -220,6 +232,30 @@ export default function Box4() {
         </div>
       </div>
       <div className="content-bottom-box4">
+        <AccordionCom
+          title={data?.[44]}
+          activeStyle={{
+            height: "auto",
+          }}
+          htmlEl={
+            <ul className="ul-box4">
+              <p style={{ marginTop: "20px" }}>
+                <a
+                  className="file_content_2"
+                  onClick={async () => {
+                    const res = await onChangeURL("list_rule_file_VALET");
+                    if (res) {
+                      window.open(res, "_blank");
+                      // handleDownload(res);
+                    }
+                  }}
+                >
+                  Ссылка на условия пользования подпиской
+                </a>
+              </p>
+            </ul>
+          }
+        />
         <AccordionCom
           title={data?.[37]}
           activeStyle={{
