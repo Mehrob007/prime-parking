@@ -32,7 +32,10 @@ export default function Header() {
   return (
     <header>
       <div className="nav-bar">
-        {isMobile ? (
+        <main>
+          <img onClick={() => navigate("./")} src={PrimeParkingHeader} alt="" />
+        </main>
+        {/* {isMobile ? (
           <nav onClick={() => setModalOpen(modalOpen)}>
             <img src={PrimeParking} alt=" " />
           </nav>
@@ -41,9 +44,12 @@ export default function Header() {
             <NavLink to="./services">Услуги</NavLink>
             <NavLink to="./offer">Оферта</NavLink>
             <NavLink to="./parking-rules">Правила паркинга</NavLink>
+            <NavLink to="./parking-zoning">Зонирование</NavLink>
           </div>
-        )}
-        <img onClick={() => navigate("./")} src={PrimeParkingHeader} alt="" />
+        )} */}
+        <nav onClick={() => setModalOpen(modalOpen)}>
+          <img src={PrimeParking} alt=" " />
+        </nav>
         <a href="tel: +7 (495) 481 22 44">
           {!isMobile ? (
             <>
