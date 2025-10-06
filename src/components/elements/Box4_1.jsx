@@ -9,6 +9,7 @@ import useMediaQuery from "../../function/useMediaQuery";
 import TextComponent from "./com/TextComponent";
 import { getData } from "../../function/getData";
 import P from "./com/P";
+import apiClient from "../../utils/apiClient";
 
 // const defDataARR = [
 //   {
@@ -313,6 +314,7 @@ const keys = [
   "list_6_content",
   "list_7_title",
   "list_7_content",
+  "list_title_PRIVATE",
 ];
 export default function Box4_1() {
   const [defDataARR, setDefDataARR] = useState([]);
@@ -328,6 +330,17 @@ export default function Box4_1() {
   }, []);
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [selection, setSelection] = useState(1);
+  const onChangeURL = async (key) => {
+    try {
+      const res = await apiClient(`api/files?key=${key}`);
+      return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
+        res.data.data?.fileName
+      }`;
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   useEffect(() => {
     AOS.init({});
   }, []);
@@ -497,6 +510,28 @@ export default function Box4_1() {
         </div>
       </div>
       <div className="content-bottom-box4">
+        <AccordionCom
+          title={data?.[28]}
+          activeStyle={{
+            height: "auto",
+          }}
+          htmlEl={
+            <ul className="ul-box4">
+              <a
+                className="file_content_2"
+                onClick={async () => {
+                  const res = await onChangeURL("list_file_PRIVATE");
+                  if (res) {
+                    window.open(res, "_blank");
+                    // handleDownload(res);
+                  }
+                }}
+              >
+                Ссылка на условия пользования подпиской
+              </a>{" "}
+            </ul>
+          }
+        />
         <AccordionCom
           title={data?.[20]}
           activeStyle={{
