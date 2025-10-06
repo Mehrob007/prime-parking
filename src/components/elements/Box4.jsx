@@ -75,7 +75,6 @@ export default function Box4() {
       console.error(e);
     }
   };
-
   useEffect(() => {
     getItems();
   }, []);
