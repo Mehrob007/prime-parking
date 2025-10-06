@@ -517,18 +517,21 @@ export default function Box4_1() {
           }}
           htmlEl={
             <ul className="ul-box4">
-              <a
-                className="file_content_2"
-                onClick={async () => {
-                  const res = await onChangeURL("list_file_PRIVATE");
-                  if (res) {
-                    window.open(res, "_blank");
-                    // handleDownload(res);
-                  }
-                }}
-              >
-                Ссылка на условия пользования подпиской
-              </a>{" "}
+              <li></li>
+              <li>
+                <a
+                  className="file_content_2"
+                  onClick={async () => {
+                    const res = await onChangeURL("list_file_PRIVATE");
+                    if (res) {
+                      window.open(res, "_blank");
+                      // handleDownload(res);
+                    }
+                  }}
+                >
+                  Ссылка на условия пользования подпиской
+                </a>
+              </li>
             </ul>
           }
         />

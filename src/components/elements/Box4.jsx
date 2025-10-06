@@ -240,18 +240,21 @@ export default function Box4() {
           }}
           htmlEl={
             <ul className="ul-box4">
-              <a
-                className="file_content_2"
-                onClick={async () => {
-                  const res = await onChangeURL("list_file_VALET");
-                  if (res) {
-                    window.open(res, "_blank");
-                    // handleDownload(res);
-                  }
-                }}
-              >
-                Ссылка на условия пользования подпиской
-              </a>{" "}
+              <li></li>
+              <li>
+                <a
+                  className="file_content_2"
+                  onClick={async () => {
+                    const res = await onChangeURL("list_file_VALET");
+                    if (res) {
+                      window.open(res, "_blank");
+                      // handleDownload(res);
+                    }
+                  }}
+                >
+                  Ссылка на условия пользования подпиской
+                </a>{" "}
+              </li>
             </ul>
           }
         />
