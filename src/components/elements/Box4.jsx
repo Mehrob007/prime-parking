@@ -1,15 +1,3 @@
-import React, { useEffect, useState } from "react";
-import contentTopBox42Content1 from "../../assets/icon/content-top-box4-2-content-1.svg";
-import contentTopBox42Content2 from "../../assets/icon/content-top-box4-2-content-2.svg";
-import contentTopBox42Content3 from "../../assets/icon/content-top-box4-2-content-3.svg";
-import contentTopBox42Content4 from "../../assets/icon/content-top-box4-2-content-4.svg";
-import AccordionCom from "./componentSite/AccordionCom";
-import AOS from "aos";
-import useMediaQuery from "../../function/useMediaQuery";
-import TextComponent from "./com/TextComponent";
-import { getData } from "../../function/getData";
-import P from "./com/P";
-
 const keys = [
   "",
   "box4_content_1",
@@ -54,7 +42,21 @@ const keys = [
   "list_2_content",
   "list_3_title",
   "list_3_content",
+  "list_title_VALET",
 ];
+import React, { useEffect, useState } from "react";
+import contentTopBox42Content1 from "../../assets/icon/content-top-box4-2-content-1.svg";
+import contentTopBox42Content2 from "../../assets/icon/content-top-box4-2-content-2.svg";
+import contentTopBox42Content3 from "../../assets/icon/content-top-box4-2-content-3.svg";
+import contentTopBox42Content4 from "../../assets/icon/content-top-box4-2-content-4.svg";
+import AccordionCom from "./componentSite/AccordionCom";
+import AOS from "aos";
+import useMediaQuery from "../../function/useMediaQuery";
+import TextComponent from "./com/TextComponent";
+import { getData } from "../../function/getData";
+import P from "./com/P";
+import apiClient from "../../utils/apiClient";
+
 export default function Box4() {
   const [data, setData] = useState();
   const getItems = async () => {
@@ -63,6 +65,17 @@ export default function Box4() {
 
     setData(res);
   };
+  const onChangeURL = async (key) => {
+    try {
+      const res = await apiClient(`api/files?key=${key}`);
+      return `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
+        res.data.data?.fileName
+      }`;
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   useEffect(() => {
     getItems();
   }, []);
@@ -165,11 +178,11 @@ export default function Box4() {
           <div>
             <div className="content-top-box4-2-title">
               <P element={"h1"}>{data?.[22]}</P>
-                {isMobile ? (
-                  <TextComponent>{data?.[23]}</TextComponent>
-                ) : (
-                  <P>{data?.[23]}</P>
-                )}
+              {isMobile ? (
+                <TextComponent>{data?.[23]}</TextComponent>
+              ) : (
+                <P>{data?.[23]}</P>
+              )}
             </div>
             <div className="content-top-box4-2-header">
               {/* <div>
@@ -220,6 +233,28 @@ export default function Box4() {
         </div>
       </div>
       <div className="content-bottom-box4">
+        <AccordionCom
+          title={data?.[43]}
+          activeStyle={{
+            height: "auto",
+          }}
+          htmlEl={
+            <ul className="ul-box4">
+              <a
+                className="file_content_2"
+                onClick={async () => {
+                  const res = await onChangeURL("list_file_VALET");
+                  if (res) {
+                    window.open(res, "_blank");
+                    // handleDownload(res);
+                  }
+                }}
+              >
+                Ссылка на условия пользования подпиской
+              </a>{" "}
+            </ul>
+          }
+        />
         <AccordionCom
           title={data?.[37]}
           activeStyle={{
