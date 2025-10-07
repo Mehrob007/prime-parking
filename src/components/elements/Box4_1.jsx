@@ -10,6 +10,7 @@ import TextComponent from "./com/TextComponent";
 import { getData } from "../../function/getData";
 import P from "./com/P";
 import apiClient from "../../utils/apiClient";
+import { useSore } from "../../store/globalState";
 
 // const defDataARR = [
 //   {
@@ -318,18 +319,16 @@ const keys = [
 ];
 export default function Box4_1() {
   const [defDataARR, setDefDataARR] = useState([]);
-  const [data, setData] = useState();
-  const getItems = async () => {
-    const res = await getData(keys);
-    console.log("res", res);
-
-    setData(res);
-  };
-  useEffect(() => {
-    getItems();
-  }, []);
+  const { dataMain, setData } = useSore();
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [selection, setSelection] = useState(1);
+  const data = dataMain?.box4_1;
+  const getItems = async () => {
+    const res = await getData(keys);
+
+    setData({ box4_1: res });
+  };
+
   const onChangeURL = async (key) => {
     try {
       const res = await apiClient(`api/files?key=${key}`);
@@ -344,7 +343,9 @@ export default function Box4_1() {
   useEffect(() => {
     AOS.init({});
   }, []);
-
+  useEffect(() => {
+    if (!data) getItems();
+  }, []);
   useEffect(() => {
     if (data?.[6]) {
       setDefDataARR(JSON.parse(data?.[6]));
@@ -352,7 +353,7 @@ export default function Box4_1() {
   }, [data?.[6]]);
 
   return (
-    <div className="box4-main">
+    <div className="box4-main" id="prevate">
       <div className="header-box4">
         <h1 data-aos={"fade-down"} data-aos-duration="700">
           {/* PRIVATE PARKING */}
