@@ -20,7 +20,6 @@ export default function Offer() {
   const [data, setData] = useState();
   const getItems = async () => {
     const res = await getData(keys);
-    console.log("res", res);
 
     setData(res);
   };
