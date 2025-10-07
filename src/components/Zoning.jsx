@@ -1,14 +1,22 @@
 import Box5 from "./elements/Box5";
-import iconPDFB from "../assets/icon/iconPDF.svg";
 import zone1 from "../assets/img/zone1.png";
 import zone2 from "../assets/img/zone2.png";
 import zone3 from "../assets/img/zone3.png";
 import zone4 from "../assets/img/zone4.png";
-import useMediaQuery from "../function/useMediaQuery";
+// import useMediaQuery from "../function/useMediaQuery";
 import { Helmet } from "react-helmet";
+import { HashLink } from "react-router-hash-link";
 
 export default function Zoning() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  // const isMobile = useMediaQuery("(max-width: 768px)");
+
+  const scrollWithOffset = (el, behavior) => {
+    // Добавляем небольшую задержку (например, 100 мс) перед прокруткой
+    setTimeout(() => {
+      el.scrollIntoView({ behavior, block: "start" });
+    }, 100);
+  };
+
   return (
     <div className="parking-rules">
       {/* <Helmet>
@@ -23,10 +31,10 @@ export default function Zoning() {
       <div>
         <h1>ЗОНИРОВАНИЕ ПАРКОВКИ</h1>
         <p>
-          Для обеспечения порядка и безопасности на придомовой территории в
-          Жилом квартале действует система зонирования парковочных мест. Для
-          каждой категории пользователей предусмотрены конкретные места или
-          группа мест на подземной парковке -1 этажа.
+          Для обеспечения порядка и безопасности на подземной территории в Жилом
+          квартале действует система зонирования парковочных мест. Для каждой
+          категории пользователей предусмотрены конкретные места или группа мест
+          на подземной парковке -1 этажа.
         </p>
       </div>
       <div>
@@ -58,11 +66,17 @@ export default function Zoning() {
           PRIME PARK APP или консьерж-службу по номеру <br /> телефона +7 495
           481-22-44 тариф парковки будет регламентироваться, как для сервисного
           трафика. <br />
-          Подробнее о тарифах в разделе сервисный трафик <br /> <br /> 2.
-          Гостевая парковка доступна исключительно через Валет-сервис через
-          сотрудника, который перегоняет Ваш авто из точки высадки-посадки у
-          парадного входа на подземную парковку. Подробнее о тарифах в разделе
-          гостевой valet service
+          Подробнее о тарифах в разделе{" "}
+          <HashLink to="/#prevate" smooth={scrollWithOffset}>
+            сервисный трафик
+          </HashLink>{" "}
+          <br /> <br /> 2. Гостевая парковка доступна исключительно через
+          Валет-сервис через сотрудника, который перегоняет Ваш авто из точки
+          высадки-посадки у парадного входа на подземную парковку. Подробнее о
+          тарифах в разделе{" "}
+          <HashLink to="/#valet" smooth={scrollWithOffset}>
+            гостевой valet service
+          </HashLink>
           <br />
           <br />
           3. За нарушение зоны предусмотрен специальный тариф в размере 5 000
