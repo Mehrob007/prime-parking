@@ -56,7 +56,7 @@ export default function BoxMid2() {
   };
 
   return (<>
-    <div className="box-mid2">
+    <div  className="box-mid2">
       <h1 data-aos={"fade-down"} data-aos-duration="700">
         {data?.[0]}
       </h1>

@@ -8,7 +8,7 @@ export default function ModalMenu() {
   const { modalOpen, setModalOpen } = functions();
   const navigate = useNavigate();
   return (
-    <div className="modal-menu">
+    <div className={`modal-menu ${modalOpen ? "active-modal-menu" : ""}`}>
       <div className="modal-menu-header">
         <img src={iconCloase} onClick={() => setModalOpen(modalOpen)} alt=" " />
       </div>

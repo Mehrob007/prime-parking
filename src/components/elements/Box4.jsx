@@ -176,7 +176,7 @@ export default function Box4() {
         </div>
         <div className="content-top-box4-2">
           <div>
-            <div className="content-top-box4-2-title" id="valet">
+            <div className="content-top-box4-2-title">
               <P element={"h1"}>{data?.[22]}</P>
               {isMobile ? (
                 <TextComponent>{data?.[23]}</TextComponent>
@@ -216,8 +216,8 @@ export default function Box4() {
                 <P>{data?.[32]}</P>
               </div>
               <div className="content-top-box4-2-content-4">
-                <img src={contentTopBox42Content4} alt=" " />
-                <P>{data?.[33]}</P>
+                <img id="valet" src={contentTopBox42Content4} alt=" " />
+                <P >{data?.[33]}</P>
               </div>
             </div>
             <TextComponent>{data?.[34]}</TextComponent>
