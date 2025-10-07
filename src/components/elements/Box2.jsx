@@ -8,11 +8,13 @@ import useMediaQuery from "../../function/useMediaQuery";
 import TextComponent from "./com/TextComponent";
 import { getData } from "../../function/getData";
 import P from "./com/P";
+import { useSore } from "../../store/globalState";
 
 const keys = ["box2_content_1", "box2_content_2"];
 
 export default function Box2() {
-  const [data, setData] = useState();
+  const { dataMain, setData } = useSore();
+  const data = dataMain?.box2;
   const [isAnimated, setIsAnimated] = useState(false);
   const isMobile = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
@@ -38,12 +40,11 @@ export default function Box2() {
 
   const getItems = async () => {
     const res = await getData(keys);
-    console.log("res", res);
 
-    setData(res);
+    setData({ box2: res });
   };
   useEffect(() => {
-    getItems();
+    if (!data) getItems();
   }, []);
 
   return (
