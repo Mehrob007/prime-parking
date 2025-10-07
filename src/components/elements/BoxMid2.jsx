@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AccordionCom from "./componentSite/AccordionCom";
 import appStor from "../../assets/icon/appStor.svg";
 import googlePlay from "../../assets/icon/googlePlay.svg";
@@ -10,7 +10,6 @@ import useMediaQuery from "../../function/useMediaQuery";
 import TextComponent from "./com/TextComponent";
 import { getData } from "../../function/getData";
 import P from "./com/P";
-import { Link } from "react-router-dom";
 import apiClient from "../../utils/apiClient";
 import { handleDownload } from "../../utils/utlis";
 
@@ -56,7 +55,7 @@ export default function BoxMid2() {
     }
   };
 
-  return (
+  return (<>
     <div className="box-mid2">
       <h1 data-aos={"fade-down"} data-aos-duration="700">
         {data?.[0]}
@@ -299,5 +298,5 @@ export default function BoxMid2() {
         </div>
       </div>
     </div>
-  );
+  </>);
 }

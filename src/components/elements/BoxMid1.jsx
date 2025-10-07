@@ -146,7 +146,7 @@ export default function BoxMid1() {
             </ul>
           }
         />
-        <span className="line-545454"></span>
+        <span  id="prevate" className="line-545454"></span>
       </div>
     </div>
   );

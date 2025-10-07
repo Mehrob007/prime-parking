@@ -85,7 +85,7 @@ export default function Box4() {
   }, []);
 
   return (
-    <div className="box4-main" id="valet">
+    <div className="box4-main">
       <div className="header-box4">
         <h1 data-aos={"fade-down"} data-aos-duration="700">
           {data?.[1]}
@@ -176,7 +176,7 @@ export default function Box4() {
         </div>
         <div className="content-top-box4-2">
           <div>
-            <div className="content-top-box4-2-title">
+            <div className="content-top-box4-2-title" id="valet">
               <P element={"h1"}>{data?.[22]}</P>
               {isMobile ? (
                 <TextComponent>{data?.[23]}</TextComponent>

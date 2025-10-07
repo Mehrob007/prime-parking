@@ -353,7 +353,7 @@ export default function Box4_1() {
   }, [data?.[6]]);
 
   return (
-    <div className="box4-main" id="prevate">
+    <div className="box4-main" >
       <div className="header-box4">
         <h1 data-aos={"fade-down"} data-aos-duration="700">
           {/* PRIVATE PARKING */}
