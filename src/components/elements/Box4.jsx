@@ -44,7 +44,7 @@ const keys = [
   "list_3_content",
   "list_title_VALET",
 ];
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import contentTopBox42Content1 from "../../assets/icon/content-top-box4-2-content-1.svg";
 import contentTopBox42Content2 from "../../assets/icon/content-top-box4-2-content-2.svg";
 import contentTopBox42Content3 from "../../assets/icon/content-top-box4-2-content-3.svg";
@@ -56,14 +56,15 @@ import TextComponent from "./com/TextComponent";
 import { getData } from "../../function/getData";
 import P from "./com/P";
 import apiClient from "../../utils/apiClient";
+import { useSore } from "../../store/globalState";
 
 export default function Box4() {
-  const [data, setData] = useState();
+  const { dataMain, setData } = useSore();
+  const data = dataMain?.box4;
   const getItems = async () => {
     const res = await getData(keys);
-    console.log("res", res);
 
-    setData(res);
+    setData({ box4: res });
   };
   const onChangeURL = async (key) => {
     try {
@@ -76,7 +77,7 @@ export default function Box4() {
     }
   };
   useEffect(() => {
-    getItems();
+    if (!data) getItems();
   }, []);
   const isMobile = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
@@ -84,7 +85,7 @@ export default function Box4() {
   }, []);
 
   return (
-    <div className="box4-main">
+    <div className="box4-main" id="valet">
       <div className="header-box4">
         <h1 data-aos={"fade-down"} data-aos-duration="700">
           {data?.[1]}
