@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 // import { functions } from "../../store/globalState";
 import useMediaQuery from "../../function/useMediaQuery";
@@ -7,6 +7,7 @@ import { getData } from "../../function/getData";
 import P from "./com/P";
 import apiClient from "../../utils/apiClient";
 import AccordionCom from "./componentSite/AccordionCom";
+import { useSore } from "../../store/globalState";
 const keys = [
   "box_mid_1_content_1",
   "box_mid_1_content_2",
@@ -23,15 +24,14 @@ const keys = [
   "ab_2_price",
 ];
 export default function BoxMid1() {
-  const [data, setData] = useState();
+  const { dataMain, setData } = useSore();
+  const data = dataMain?.boxMid1;
   const getItems = async () => {
     const res = await getData(keys);
-    console.log("res", res);
-
-    setData(res);
+    setData({ boxMid1: res });
   };
   useEffect(() => {
-    getItems();
+    if (!data) getItems();
   }, []);
   // const { redirect } = functions();
   const isMobile = useMediaQuery("(max-width: 768px)");
