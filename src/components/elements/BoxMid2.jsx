@@ -5,7 +5,7 @@ import googlePlay from "../../assets/icon/googlePlay.svg";
 import phone from "../../assets/img/iPhoneSpaceBlackFront.png";
 import phone2 from "../../assets/img/iPhoneSpaceBlackRight.png";
 import AOS from "aos";
-import { functions } from "../../store/globalState";
+import { functions, useSore } from "../../store/globalState";
 import useMediaQuery from "../../function/useMediaQuery";
 import TextComponent from "./com/TextComponent";
 import { getData } from "../../function/getData";
@@ -27,15 +27,15 @@ const keys = [
   "box_mid_2_1_content_3",
 ];
 export default function BoxMid2() {
-  const [data, setData] = useState();
+  const { dataMain, setData } = useSore();
+  const data = dataMain?.boxMid2;
   const getItems = async () => {
     const res = await getData(keys);
-    console.log("res", res);
 
-    setData(res);
+    setData({ boxMid2: res });
   };
   useEffect(() => {
-    getItems();
+    if (!data) getItems();
   }, []);
   const isMobile = useMediaQuery("(max-width: 768px)");
   const { redirect } = functions();
@@ -107,11 +107,10 @@ export default function BoxMid2() {
               <li key={i}>
                 <p>
                   {
-                    (console.log("elist_8_content", e),
+                    (("elist_8_content", e),
                     e
                       ? (() => {
                           const parts = e.split("|");
-                          console.log("elist_8_contentParts", parts);
 
                           return (
                             <>
