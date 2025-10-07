@@ -30,16 +30,15 @@ const BannerVideo = () => {
         const res1 = await axios(
           `${import.meta.env.VITE_PUBLIC_API_URL}api/files?key=${VIDEO_URL}`
         );
-        const res = await axios(
+        await axios(
           `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
             res1.data.data?.fileName
           }`
         );
-        console.log("res", res);
 
         // const blob = await res?.data?.blob();
         // const url = URL.createObjectURL(blob);
-        // console.log("url", url);
+        //  ("url", url);
         setVideoSrc(
           `${import.meta.env.VITE_PUBLIC_API_URL_FILE}${
             res1.data.data?.fileName
@@ -95,7 +94,7 @@ const BannerVideo = () => {
   //   }
   // };
 
-  console.log("videoSrc", videoSrc);
+  //  ("videoSrc", videoSrc);
 
   return (
     <div className="banner-video">
