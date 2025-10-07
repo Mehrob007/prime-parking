@@ -4760,6 +4760,10 @@ header > .nav-bar > a {
   align-items: center;
   gap: 60px;
 }
+.parking-rules > div > p > a {
+  color: #fff;
+  text-decoration: underline;
+}
 @media (max-width: 750px) {
   .parking-rules {
     padding-top: 40px;
@@ -4906,6 +4910,14 @@ header > .nav-bar > a {
   margin: 0 auto;
   height: 60px;
   padding: 18px 0;
+}
+@media (max-width: 750px) {
+  .modal-menu > .modal-menu-header {
+    max-width: none;
+    top: 15px;
+    padding: 0 10px;
+    position: absolute;
+  }
 }
 .modal-menu > .modal-menu-header > img {
   cursor: pointer;
