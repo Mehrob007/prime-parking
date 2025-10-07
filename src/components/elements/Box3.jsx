@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import bgBox3Car from "../../assets/icon/bg-box3-car.png";
 // import logoIconBox3 from "../../assets/icon/logo-icon-box3.svg";
@@ -7,6 +7,7 @@ import useMediaQuery from "../../function/useMediaQuery";
 import { getData } from "../../function/getData";
 import P from "./com/P";
 import TextComponent from "./com/TextComponent";
+import { useSore } from "../../store/globalState";
 const keys = [
   "box3_content_1",
   "box3_content_2",
@@ -17,15 +18,15 @@ const keys = [
   "box3_content_7",
 ];
 export default function Box3() {
-  const [data, setData] = useState();
+  const { dataMain, setData } = useSore();
+  const data = dataMain?.box3;
   const getItems = async () => {
     const res = await getData(keys);
-    console.log("res", res);
 
-    setData(res);
+    setData({ box3: res });
   };
   useEffect(() => {
-    getItems();
+    if (!data) getItems();
   }, []);
 
   const isMobile = useMediaQuery("(max-width: 768px)");
