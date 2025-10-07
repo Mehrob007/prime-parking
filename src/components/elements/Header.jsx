@@ -6,6 +6,7 @@ import callIconDesk from "../../assets/icon/telDesk.svg";
 import PrimeParking from "../../assets/icon/borgerMenuIcon.svg";
 import useMediaQuery from "../../function/useMediaQuery";
 import { functions } from "../../store/globalState";
+import ModalMenu from "./componentSite/ModalMenu";
 export default function Header() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const navigate = useNavigate();
@@ -60,6 +61,7 @@ export default function Header() {
           )}
         </a>
       </div>
+      {modalOpen && <ModalMenu />}
     </header>
   );
 }
