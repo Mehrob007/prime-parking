@@ -357,11 +357,11 @@ header > .nav-bar {
 header > .nav-bar > nav {
   cursor: pointer;
 }
-header > .nav-bar > div {
+header > .nav-bar > div, header > .nav-bar > main {
   display: flex;
   gap: 40px;
 }
-header > .nav-bar > div > a {
+header > .nav-bar > div > a, header > .nav-bar > main > a {
   font-family: Sansation;
   font-weight: 300;
   font-size: 18px;
@@ -375,7 +375,7 @@ header > .nav-bar > div > a {
   transition: all 0.1s ease-out;
   color: #545454;
 }
-header > .nav-bar > div > a:hover {
+header > .nav-bar > div > a:hover,header > .nav-bar > main > a:hover {
   color: #ffffff;
   text-decoration: underline;
 }
