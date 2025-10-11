@@ -36,13 +36,14 @@ export default function Header() {
         {/* <main>
           <img onClick={() => navigate("./")} src={PrimeParkingHeader} alt="" />
         </main> */}
-        <img onClick={() => navigate("./")} src={PrimeParkingHeader} alt="" />
-
-        {isMobile ? (
+        {isMobile && (
           <nav onClick={() => setModalOpen(modalOpen)}>
             <img src={PrimeParking} alt=" " />
           </nav>
-        ) : (
+        )}
+        <img onClick={() => navigate("./")} src={PrimeParkingHeader} alt="" />
+
+        {!isMobile && (
           <main>
             <NavLink to="./services">Услуги</NavLink>
             <NavLink to="./offer">Оферта</NavLink>
