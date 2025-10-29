@@ -383,6 +383,7 @@ header > .nav-bar > img {
   width: 177.4241943359px;
   height: 38.8515930176px;
   cursor: pointer;
+  z-index: 99999;
 }
 @media (max-width: 750px) {
   header > .nav-bar > img {
