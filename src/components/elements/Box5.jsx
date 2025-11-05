@@ -73,7 +73,7 @@ export default function Box5({ footerForm = 1 }) {
 
   useEffect(() => {
     if (reqS) {
-      setTimeout(() => setReqS(false), 2000);
+      setTimeout(() => setReqS(false), 5000);
     }
   }, [reqS]);
 
