@@ -4102,6 +4102,7 @@ header > .nav-bar > a {
   letter-spacing: 0%;
   color: #ffffff;
   margin-left: 96%;
+  z-index: 4;
   cursor: pointer;
 }
 @media (max-width: 750px) {
