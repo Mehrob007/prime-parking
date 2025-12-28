@@ -43,9 +43,11 @@ const keys = [
   "list_3_title",
   "list_3_content",
   "list_title_VALET",
+  "box4_content_38",
 ];
 import { useEffect } from "react";
 import contentTopBox42Content1 from "../../assets/icon/content-top-box4-2-content-1.svg";
+import contentTopBox42Content1_1 from "../../assets/icon/content-top-box4-2-content-1_1.svg";
 import contentTopBox42Content2 from "../../assets/icon/content-top-box4-2-content-2.svg";
 import contentTopBox42Content3 from "../../assets/icon/content-top-box4-2-content-3.svg";
 import contentTopBox42Content4 from "../../assets/icon/content-top-box4-2-content-4.svg";
@@ -202,10 +204,14 @@ export default function Box4() {
                 <P>{data?.[29]}</P>
               </div>
             </div>
-            <div className="content-top-box4-2-content">
+            <div className="content-top-box4-2-content" style={{}}>
               <div className="content-top-box4-2-content-1">
                 <img src={contentTopBox42Content1} alt=" " />
                 <P>{data?.[30]}</P>
+              </div>
+              <div className="content-top-box4-2-content-1-1">
+                <img src={contentTopBox42Content1_1} alt=" " />
+                <P>{data?.[44]}</P>
               </div>
               <div className="content-top-box4-2-content-2">
                 <img src={contentTopBox42Content2} alt=" " />
@@ -217,7 +223,7 @@ export default function Box4() {
               </div>
               <div className="content-top-box4-2-content-4">
                 <img id="valet" src={contentTopBox42Content4} alt=" " />
-                <P >{data?.[33]}</P>
+                <P>{data?.[33]}</P>
               </div>
             </div>
             <TextComponent>{data?.[34]}</TextComponent>
