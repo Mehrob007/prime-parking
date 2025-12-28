@@ -54,6 +54,9 @@ export default function BoxMid1() {
       console.error(e);
     }
   };
+
+  console.table({keys, data});
+
   return (
     <div className="box-mid1">
       <div className="box-mid1-header">
