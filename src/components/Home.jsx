@@ -9,6 +9,7 @@ import Box1 from "./elements/Box1";
 import BoxMid1 from "./elements/BoxMid1";
 import BoxMid2 from "./elements/BoxMid2";
 import BannerVideo from "./elements/com/BannerVideo";
+import BoxMid1_1 from "./elements/BoxMid1_1";
 // import { Helmet } from "react-helmet";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <Box4 />
       <Box4_1 />
       <BoxMid1 />
+      <BoxMid1_1 />
       <BoxMid2 />
       <Box5 />
     </div>
