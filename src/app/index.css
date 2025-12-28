@@ -5251,6 +5251,7 @@ header > .nav-bar > a {
       padding: 20px 0;
       background: url("../assets/img/bg-boxMid1_1-content.png") center / cover
         no-repeat;
+        background-position: -150px 0px;
       border-radius: 20px;
     }
     .box-mid1_1-content > h1 {
