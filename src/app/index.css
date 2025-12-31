@@ -5212,6 +5212,17 @@ header > .nav-bar > a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .box-mid1-header > h3 > p {
+    font-family: Sansation;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+  }
   .box-mid1_1-content > main {
     max-width: 444px;
     display: flex;
@@ -5229,6 +5240,15 @@ header > .nav-bar > a {
     justify-content: center;
     gap: 20px;
   }
+  .box-mid1_1-content > main > div p {
+    font-family: Sansation;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
   .box-mid1_1-content > p {
     font-family: Sansation;
     font-weight: 400;
@@ -5242,6 +5262,19 @@ header > .nav-bar > a {
   }
 
   @media (max-width: 750px) {
+    .box-mid1_1-content > main > div p {
+      font-family: Sansation;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+    }
+    .box-mid1_1-content > main > div img {
+      width: 50px;
+      height: 50px;
+    }
     .box-mid1_1-content {
       display: flex;
       flex-direction: column;
@@ -5251,7 +5284,7 @@ header > .nav-bar > a {
       padding: 20px 0;
       background: url("../assets/img/bg-boxMid1_1-content.png") center / cover
         no-repeat;
-        background-position: -150px 0px;
+      background-position: -150px 0px;
       border-radius: 20px;
     }
     .box-mid1_1-content > h1 {
