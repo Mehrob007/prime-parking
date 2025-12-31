@@ -1,4 +1,5 @@
 import React from "react";
+import ReactLinkify from "react-linkify";
 
 const P = ({
   element,
@@ -10,7 +11,7 @@ const P = ({
   if (typeof children !== "string" || !preserveNewlines) {
     return (
       <p className={className} style={style}>
-        {children}
+        <ReactLinkify>{children}</ReactLinkify>
       </p>
     );
   }
@@ -26,7 +27,7 @@ const P = ({
   if (element === "h3") {
     return (
       <h3 className={className} style={style}>
-        {renderWithNewlines()}
+        <ReactLinkify>{renderWithNewlines()}</ReactLinkify>
       </h3>
     );
   }
@@ -34,14 +35,14 @@ const P = ({
   if (element === "h1") {
     return (
       <h1 className={className} style={style}>
-        {renderWithNewlines()}
+        <ReactLinkify>{renderWithNewlines()}</ReactLinkify>
       </h1>
     );
   }
 
   return (
     <p className={className} style={style}>
-      {renderWithNewlines()}
+      <ReactLinkify>{renderWithNewlines()}</ReactLinkify>
     </p>
   );
 };
