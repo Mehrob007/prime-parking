@@ -45,7 +45,8 @@
 @font-face {
   font-family: "rouble";
   src: url("rouble-webfont.eot");
-  src: url("rouble-webfont.eot?#iefix") format("embedded-opentype"),
+  src:
+    url("rouble-webfont.eot?#iefix") format("embedded-opentype"),
     url("rouble-webfont.woff") format("woff"),
     url("rouble-webfont.ttf") format("truetype");
   font-weight: normal;
@@ -5261,78 +5262,69 @@ header > .nav-bar > a {
     max-width: 450px;
   }
 
-  @media (max-width: 750px) {
-    .box-mid1_1-content > main > div p {
-      font-family: Sansation;
-      font-weight: 400;
-      font-style: Regular;
-      font-size: 14px;
-      line-height: 100%;
-      letter-spacing: 0%;
-      text-align: center;
-    }
-    .box-mid1_1-content > main > div img {
-      width: 50px;
-      height: 50px;
-    }
-    .box-mid1_1-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 60px;
-      width: 100%;
-      padding: 20px 0;
-      background: url("../assets/img/bg-boxMid1_1-content.png") center / cover
-        no-repeat;
-      background-position: -150px 0px;
-      border-radius: 20px;
-    }
-    .box-mid1_1-content > h1 {
-      font-family: Sansation;
-      font-weight: 400;
-      font-size: 34px;
-      line-height: 100%;
-      letter-spacing: 0%;
-      text-align: center;
-      background: linear-gradient(
-        270deg,
-        #ad8153 0%,
-        #e2b36c 25%,
-        #fdecd6 50%,
-        #dcac64 75%,
-        #af8352 100%
-      );
-      background-clip: border-box;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .box-mid1_1-content > main {
-      max-width: 444px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 12px;
-      width: 100%;
-      padding: 20px;
-    }
-    .box-mid1_1-content > main > div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-    }
-    .box-mid1_1-content > p {
-      font-family: Sansation;
-      font-weight: 400;
-      font-style: Regular;
-      font-size: 14px;
-      line-height: 100%;
-      letter-spacing: 0%;
-      text-align: center;
-      color: #ffffff4d;
-      max-width: 450px;
-    }
+}
+@media (max-width: 750px) {
+  .box-mid1_1-content > h1 {
+    font-family: Sansation;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .box-mid1_1-content > main > div p {
+    font-family: Sansation;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  .box-mid1_1-content > main > div img {
+    width: 50px;
+    height: 50px;
+  }
+  .box-mid1_1-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    padding: 20px 0;
+    background: url("../assets/img/bg-boxMid1_1-content.png") center / cover
+      no-repeat;
+    background-position: -150px 0px;
+    border-radius: 20px;
+  }
+  .box-mid1_1-content > main {
+    max-width: 444px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    width: 100%;
+    padding: 20px;
+  }
+  .box-mid1_1-content > main > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .box-mid1_1-content > p {
+    font-family: Sansation;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #ffffff4d;
+    max-width: 450px;
   }
 }
