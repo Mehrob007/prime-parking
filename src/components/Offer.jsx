@@ -13,6 +13,7 @@ const keys = [
   "offer_content_2",
   "offer_content_3",
   "offer_content_4",
+  "offer_content_5",
 ];
 export default function Offer() {
   // const isMobile = useMediaQuery("(max-width: 768px)");
@@ -141,6 +142,39 @@ export default function Offer() {
                     // const res = await onChangeURL("offer_file_content_6");
                     // if (res) {
                     handleDownload("offer_file_content_6");
+                    // window.open(res, "_blank");
+                    // }
+                  }}
+                >
+                  Скачать
+                </a>
+              </p>
+            </div>
+          </div>
+          <div>
+            <P element={"h1"}>{data?.[4]}</P>
+            <div>
+              <div>
+                <button
+                  onClick={async () => {
+                    const res = await onChangeURL("offer_file_content_7");
+                    if (res) {
+                      // handleDownload(res);
+                      window.open(res, "_blank");
+                    }
+                  }}
+                >
+                  <h3>Ознакомиться с основными положениями</h3>
+                </button>
+              </div>
+              <p>
+                Более старые версии:{" "}
+                <a
+                  target="_blank"
+                  onClick={async () => {
+                    // const res = await onChangeURL("offer_file_content_6");
+                    // if (res) {
+                    handleDownload("offer_file_content_8");
                     // window.open(res, "_blank");
                     // }
                   }}
