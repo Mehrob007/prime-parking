@@ -71,9 +71,9 @@ export default function BoxMid1_1() {
         </h3>
       </div>
       <div className="box-mid1_1-content">
-       {!isMobile && <h1 data-aos={"fade-down"} data-aos-duration="700">
+        <h1 data-aos={"fade-down"} data-aos-duration="700">
           {data?.[2]}
-        </h1>}
+        </h1>
         <main>
           <div>
             <img src={appIcon} alt="appIcon" />
