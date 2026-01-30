@@ -2862,7 +2862,15 @@ header > .nav-bar > a {
   > div
   > .content-top-box4-2-content
   .content-top-box4-2-content-1 {
-  width: 171px;
+  width: 160px;
+}
+.box4-main
+  > .content-top-box4
+  > .content-top-box4_1-2
+  > div
+  > .content-top-box4-2-content
+  .content-top-box4-2-content-1-1 {
+  width: 200px;
 }
 .box4-main
   > .content-top-box4
@@ -2870,8 +2878,8 @@ header > .nav-bar > a {
   > div
   > .content-top-box4-2-content
   .content-top-box4-2-content-2 {
-  width: 236px;
-  margin-left: 126px;
+  width: 160px;
+  margin-left: 25px !important;
 }
 
 .box4-main
@@ -2880,8 +2888,8 @@ header > .nav-bar > a {
   > div
   > .content-top-box4-2-content
   .content-top-box4-2-content-3 {
-  width: 214px;
-  margin-left: 104px;
+  width: 215px;
+  margin-left: 25px !important;
 }
 .box4-main
   > .content-top-box4
@@ -2889,8 +2897,8 @@ header > .nav-bar > a {
   > div
   > .content-top-box4-2-content
   .content-top-box4-2-content-4 {
-  width: 176px;
-  margin-left: 134px;
+  width: 156px;
+  margin-left: 25px !important;
 }
 .box4-main
   > .content-top-box4
