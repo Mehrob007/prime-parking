@@ -1760,6 +1760,7 @@ header > .nav-bar > a {
   .box4-main > .content-top-box4 > .content-top-box4_1-2 > div > .content-top-box4-2-content {
     flex-direction: column;
     height: auto;
+    /* justify-content: center; */
     gap: 30px;
     margin-top: 10px;
     align-items: center;
