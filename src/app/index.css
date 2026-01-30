@@ -1996,11 +1996,33 @@ header > .nav-bar > a {
 .content-top-box4-1-com-4 {
   /* height: 265px;  */
   border-radius: 20px;
-  padding: 30px;
+  padding: 30px 12.5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+}
+.content-top-box4-1-com-footer {
+  font-family: Sansation;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #FFFFFF4D;
+}
+
+.box-mid1-1 {
+  background: url("../assets/img/BoxMid1-1.png") center / cover no-repeat;
+}
+
+.box-mid1-2 {
+  background: url("../assets/img/BoxMid1-2.png") center / cover no-repeat;
+}
+
+.box-mid1-3 {
+  background: url("../assets/img/BoxMid1-3.png") center / cover no-repeat;
 }
 .box4-main
   > .content-top-box4
@@ -5261,7 +5283,6 @@ header > .nav-bar > a {
     color: #ffffff4d;
     max-width: 450px;
   }
-
 }
 @media (max-width: 750px) {
   .box-mid1_1-content > h1 {
