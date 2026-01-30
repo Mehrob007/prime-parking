@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import contentTopBox42Content1 from "../../assets/icon/content-top-box4-2-content-1.svg";
+import contentTopBox42Content1_1 from "../../assets/icon/content-top-box4-2-content-1_1.svg";
 import contentTopBox42Content2 from "../../assets/icon/content-top-box4-2-content-2.svg";
 import contentTopBox42Content3 from "../../assets/icon/content-top-box4-2-content-3.svg";
 import contentTopBox42Content4 from "../../assets/icon/content-top-box4-2-content-4.svg";
@@ -316,6 +317,7 @@ const keys = [
   "list_7_title",
   "list_7_content",
   "list_title_PRIVATE",
+  "box4_1_content_15",
 ];
 export default function Box4_1() {
   const [defDataARR, setDefDataARR] = useState([]);
@@ -353,7 +355,7 @@ export default function Box4_1() {
   }, [data?.[6]]);
 
   return (
-    <div className="box4-main" >
+    <div className="box4-main">
       <div className="header-box4">
         <h1 data-aos={"fade-down"} data-aos-duration="700">
           {/* PRIVATE PARKING */}
@@ -455,22 +457,6 @@ export default function Box4_1() {
               )}
             </div>
             <div className="content-top-box4-2-header">
-              {/* <div>
-                <h3>{data?.[9]}</h3>
-                <h1>
-                  {data?.[10]}{" "}
-                  <span
-                    className="rouble"
-                    style={{
-                      fontSize: isMobile ? "24px" : "34px",
-                    }}
-                  >
-                    ₽
-                  </span>
-                  /мес.
-                </h1>
-                <P> {data?.[11]}</P>
-              </div> */}
               <div className="test">
                 <h3> {data?.[12]}</h3>
                 <h1>
@@ -492,6 +478,10 @@ export default function Box4_1() {
               <div className="content-top-box4-2-content-1">
                 <img src={contentTopBox42Content1} alt=" " />
                 <P> {data?.[15]}</P>
+              </div>
+              <div className="content-top-box4-2-content-1-1">
+                <img src={contentTopBox42Content1_1} alt=" " />
+                <P>{data?.[29]}</P>
               </div>
               <div className="content-top-box4-2-content-2">
                 <img src={contentTopBox42Content2} alt=" " />
