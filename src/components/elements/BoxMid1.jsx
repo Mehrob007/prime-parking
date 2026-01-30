@@ -20,8 +20,13 @@ const keys = [
   "box_mid_1_content_list_8",
   "ab_1_title",
   "ab_1_price",
+  "ab_1_footer",
   "ab_2_title",
   "ab_2_price",
+  "ab_2_footer",
+  "ab_3_title",
+  "ab_3_price",
+  "ab_3_footer",
 ];
 export default function BoxMid1() {
   const { dataMain, setData } = useSore();
@@ -55,7 +60,7 @@ export default function BoxMid1() {
     }
   };
 
-  console.table({keys, data});
+  console.table({ keys, data });
 
   return (
     <div className="box-mid1">
@@ -96,7 +101,7 @@ export default function BoxMid1() {
       </div>
       <div>
         <div className="content-top-box4_1-1-com-2">
-          <div className="content-top-box4-1-com-4">
+          <div className="content-top-box4-1-com-4 box-mid1-1">
             <div className="content-top-box4-1-com-title">
               <P>Абонемент</P>
               <P element={"h1"}>{data?.[9]?.toUpperCase()}</P>
@@ -105,16 +110,29 @@ export default function BoxMid1() {
               {data?.[10]} <span className="rouble">₽</span>
               /мес.
             </P>
+            <P className="content-top-box4-1-com-footer">{data?.[11]}</P>
           </div>
-          <div className="content-top-box4-1-com-4">
+          <div className="content-top-box4-1-com-4 box-mid1-2">
             <div className="content-top-box4-1-com-title">
               <P>Абонемент</P>
-              <P element={"h1"}>{data?.[11]?.toUpperCase()}</P>
+              <P element={"h1"}>{data?.[12]?.toUpperCase()}</P>
             </div>
             <P element={"h3"} className="content-top-box4-1-com-price">
-              {data?.[12]} <span className="rouble">₽</span>
+              {data?.[13]} <span className="rouble">₽</span>
               /мес.
             </P>
+            <P className="content-top-box4-1-com-footer">{data?.[14]}</P>
+          </div>
+          <div className="content-top-box4-1-com-4 box-mid1-3">
+            <div className="content-top-box4-1-com-title">
+              <P>Абонемент</P>
+              <P element={"h1"}>{data?.[15]?.toUpperCase()}</P>
+            </div>
+            <P element={"h3"} className="content-top-box4-1-com-price">
+              {data?.[16]} <span className="rouble">₽</span>
+              /мес.
+            </P>
+            <P className="content-top-box4-1-com-footer">{data?.[17]}</P>
           </div>
         </div>
       </div>
@@ -149,7 +167,7 @@ export default function BoxMid1() {
             </ul>
           }
         />
-        <span  id="prevate" className="line-545454"></span>
+        <span id="prevate" className="line-545454"></span>
       </div>
     </div>
   );
